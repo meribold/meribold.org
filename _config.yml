@@ -4,7 +4,7 @@
 # Site settings.  These are accessed in the HTML files via {{ site.title }},
 # {{ site.email }}, and so on.  Any custom variable can be created and will be accessible
 # in the templates via {{ site.myvariable }}.
-title: meribold.github.io
+title: meribold
 author: Lukas Waymann
 email: meribold@gmail.com
 description: > # ignore newlines until `baseurl:`
