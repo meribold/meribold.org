@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Yak shaver.
+There is nothing interesting here yet.
