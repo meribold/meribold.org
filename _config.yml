@@ -19,7 +19,6 @@ minima:
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 
