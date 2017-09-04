@@ -7,4 +7,9 @@ body {
   max-width: 80ch;
 }
 
+article {
+  /* Fully justify text. */
+  text-align: justify;
+}
+
 /* vim: set tw=90 sts=-1 sw=2 et: */
