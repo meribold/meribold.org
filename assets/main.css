@@ -38,4 +38,14 @@ pre > code {
   padding-left: 0;
 }
 
+.post-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.post-meta {
+  color: #666;
+}
+
 /* vim: set tw=90 sts=-1 sw=2 et: */

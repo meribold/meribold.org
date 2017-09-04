@@ -4,11 +4,13 @@ layout: default
 
 <div>
   {{ content }}
-  <ul>
+
+  <h2>Posts</h2>
+  <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span>{{ post.date | date: site.date_format }}</span>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        <span class="post-meta">{{ post.date | date: site.date_format }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       </li>
     {% endfor %}
   </ul>
