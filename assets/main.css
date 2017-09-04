@@ -1,6 +1,10 @@
 body {
   /* Horizontally center everything. */
   margin: auto;
+  /* Make sure the text can't start and stop exactly at the screen edges; leave some
+   * space.
+   */
+  padding: 0 2mm;
   /* Set the maximum width in terms of the width of '0' in whatever font is used.  See
    * <https://developer.mozilla.org/en/docs/Web/CSS/length>.
    */
