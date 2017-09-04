@@ -5,6 +5,7 @@ body {
    * <https://developer.mozilla.org/en/docs/Web/CSS/length>.
    */
   max-width: 80ch;
+  line-height: 1.4;
 }
 
 article {
@@ -24,7 +25,7 @@ pre {
 }
 
 code {
-  padding: 1px 2px;
+  padding: 2px 4px;
 }
 
 pre > code {
