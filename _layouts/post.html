@@ -6,7 +6,7 @@ layout: default
   <header>
     <h1>{{ page.title | escape }}</h1>
     <p>
-      <time datetime="{{ page.date | date_to_xmlschema }}">
+      <time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: site.date_format }}
       </time>
   </header>
