@@ -1,5 +1,16 @@
-<header>
-  <!-- TODO? -->
+<header class="site-header" role="banner">
+  <nav>
+    <a class="header-link" href="{{ "/" | relative_url }}">Home</a>
+    <nav class="site-nav">
+      {% assign default_paths = site.pages | map: "path" %}
+      {% for path in default_paths %}
+        {% assign my_page = site.pages | where: "path", path | first %}
+        {% if my_page.title %}
+          <a class="header-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </nav>
 </header>
 
 <!-- vim: set tw=90 sts=-1 sw=2 et: -->

@@ -1,0 +1,19 @@
+.site-header {
+  padding-bottom: .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-link {
+  color: #888;
+}
+
+.site-nav {
+  float: right;
+}
+
+/* Add gaps between links.  Don't add space after the last child.  */
+.header-link:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* vim: set tw=90 sts=-1 sw=2 et: */
