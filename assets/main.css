@@ -17,6 +17,10 @@ article {
   text-align: justify;
 }
 
+h1, h2, h3 {
+  font-variant: small-caps;
+}
+
 /* Only underline links on mouseover. */
 a {
   text-decoration: none;
