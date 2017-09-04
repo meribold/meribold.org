@@ -1,0 +1,10 @@
+body {
+  /* Horizontally center everything. */
+  margin: auto;
+  /* Set the maximum width in terms of the width of '0' in whatever font is used.  See
+   * <https://developer.mozilla.org/en/docs/Web/CSS/length>.
+   */
+  max-width: 80ch;
+}
+
+/* vim: set tw=90 sts=-1 sw=2 et: */
