@@ -1,9 +1,9 @@
-# Settings that affect the whole blog.  This file is *NOT* reloaded automatically when
+# Settings that affect the whole site.  This file is *NOT* reloaded automatically when
 # using `bundle exec jekyll serve` -- the server process has to be restarted.
 
 # Site settings.  These are accessed in the HTML files via {{ site.title }},
 # {{ site.email }}, and so on.  Any custom variable can be created and will be accessible
-# in the templates via {{ site.myvariable }}.
+# in the templates via {{ site.my_variable }}.
 title: Yak Shaving
 author: Lukas Waymann
 email: meribold@gmail.com
