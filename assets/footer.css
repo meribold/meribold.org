@@ -1,0 +1,36 @@
+.site-footer {
+  padding-top: .2em;
+  border-top: 1px solid #ccc;
+  margin-bottom: .2em;
+}
+
+/* See <https://stackoverflow.com/a/32140682>. */
+.footer-list {
+  list-style: none; /* no bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-list li {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-list li:first-child {
+  text-align: left;
+}
+
+.footer-list li:last-child {
+  text-align: right;
+}
+
+.footer-list li > a {
+  color: #888;
+}
+
+.footer-link {
+  color: #888;
+}
+
+/* vim: set tw=90 sts=-1 sw=2 et: */
