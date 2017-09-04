@@ -12,4 +12,25 @@ article {
   text-align: justify;
 }
 
+pre, code {
+  background-color: #eee;
+}
+
+pre {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  overflow-x: scroll;
+}
+
+code {
+  padding: 1px 2px;
+}
+
+pre > code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /* vim: set tw=90 sts=-1 sw=2 et: */
