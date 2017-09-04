@@ -17,6 +17,15 @@ article {
   text-align: justify;
 }
 
+/* Only underline links on mouseover. */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline; // changed from text:decoration:none
+}
+
 pre, code {
   background-color: #eee;
 }
