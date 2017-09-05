@@ -51,6 +51,12 @@ pre > code {
   padding-left: 0;
 }
 
+/* Images */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
 .post-list {
   list-style: none;
   margin-left: 0;
