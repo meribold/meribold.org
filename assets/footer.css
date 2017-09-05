@@ -12,6 +12,14 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  /* Compensate for the margins of list items. */
+  width: calc(100% + 2ch);
+  position: relative;
+  left: -1ch;
+}
+
+.footer-list li {
+  margin: 0 1ch;
 }
 
 .footer-list li > a {
