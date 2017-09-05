@@ -17,7 +17,7 @@
 
 /* Add gaps between links.  Don't add space after the last child.  */
 .header-link:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 2ch;
 }
 
 /* vim: set tw=90 sts=-1 sw=2 et: */
