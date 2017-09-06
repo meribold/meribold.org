@@ -1,5 +1,5 @@
 .site-header {
-  padding-bottom: .2em;
+  padding: .2em 0;
   border-bottom: 1px solid #ccc;
   /* Makes sure the line is below all links when the viewport is really narrow and the
    * links get stacked vertically.  See <https://www.w3schools.com/css/css_float.asp>.
