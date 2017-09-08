@@ -4,8 +4,8 @@ title: TrackHack
 description: Single-particle tracking program written in C++
 ---
 
-[TrackHack](https://github.com/meribold/TrackHack) is a simple and fast semi-automatic
-single-particle tracking program written in C++.
+TrackHack is a simple and fast semi-automatic single-particle tracking program written in
+C++.
 
 <https://github.com/meribold/TrackHack>
 

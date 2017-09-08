@@ -4,10 +4,9 @@ title: MouselookHandler
 description: World of Warcraft addon
 ---
 
-[MouselookHandler](https://github.com/meribold/MouselookHandler) is an addon for the
-World of Warcraft MMOG that adapts the game controls to enable using [mouselook][] without
-the [RSI][]-inducing requirement of perpetually pressing a mouse button.  This makes the
-controls resemble those of most action games.
+MouselookHandler is an addon for the World of Warcraft MMOG that adapts the game controls
+to enable using [mouselook][] without the [RSI][]-inducing requirement of perpetually
+pressing a mouse button.  This makes the controls resemble those of most action games.
 
 <https://github.com/meribold/MouselookHandler><br>
 <https://mods.curse.com/addons/wow/mouselookhandler>
