@@ -9,6 +9,8 @@ description: >
 [signal-cli.bash][github] is a pair of Bash scripts that wrap [signal-cli][] to provide a
 more convenient interface and [desktop notifications][].
 
+<https://github.com/meribold/signal-cli.bash>
+
 [github]:https://github.com/meribold/signal-cli.bash
 [signal-cli]: https://github.com/AsamK/signal-cli
 [desktop notifications]: https://wiki.archlinux.org/index.php/Desktop_notifications
