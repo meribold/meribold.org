@@ -9,12 +9,13 @@ controls to enable using [mouselook][] without the [RSI][]-inducing requirement 
 perpetually pressing a mouse button.  This makes the controls resemble those of most
 action games.
 
-<https://github.com/meribold/MouselookHandler><br>
-<https://mods.curse.com/addons/wow/mouselookhandler>
+The addon is available on [Curse][] and the repository can be found on [GitHub][].
 
 [mouselook]: https://en.wikipedia.org/wiki/Free_look
 <!-- [mouselook]: https://en.wiktionary.org/wiki/mouselook -->
 [RSI]: https://en.wikipedia.org/wiki/Repetitive_strain_injury
+[Curse]: https://mods.curse.com/addons/wow/mouselookhandler
+[GitHub]: https://github.com/meribold/MouselookHandler
 
 *[MMOG]: Massively multiplayer online game
 
