@@ -18,5 +18,6 @@ The addon is available on [Curse][] and the repository can be found on [GitHub][
 [GitHub]: https://github.com/meribold/MouselookHandler
 
 *[MMOG]: Massively multiplayer online game
+*[RSI]: Repetitive strain injury
 
 <!-- vim: set tw=90 sts=-1 sw=4 et spell: -->
