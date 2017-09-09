@@ -6,7 +6,7 @@ description: >
     interactive use
 ---
 
-signal-cli.bash is collection of two Bash scripts that wrap [signal-cli][] to provide a
+signal-cli.bash is a collection of two Bash scripts that wrap [signal-cli][] to provide a
 more convenient interface and [desktop notifications][].
 
 <https://github.com/meribold/signal-cli.bash>
