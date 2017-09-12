@@ -3,8 +3,12 @@
 
 # Site settings.  These are accessed in the HTML files via {{ site.title }},
 # {{ site.email }}, and so on.  Any custom variable can be created and will be accessible
-# in the templates via {{ site.my_variable }}.
+# in the templates via {{ site.my_variable }}.  Some of these are used by
+# [jekyll-seo-tag][1].
+#
+# [1]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 title: Yak Shaving
+description: Website of Lukas Waymann
 author: Lukas Waymann
 email: meribold@gmail.com
 # description: >
@@ -31,5 +35,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - tags
+
+plugins:
+  - jekyll-seo-tag
 
 # vim: tw=90 sts=-1 sw=2 et
