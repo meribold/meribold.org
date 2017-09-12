@@ -2,7 +2,7 @@
 
 My [GitHub Pages][2] user site's repository.  To [serve the site locally][3]:
 
-    bundle install
+    bundle install # or `bundle install --path vendor/bundle`
     bundle exec jekyll serve
 
 and browse to <http://localhost:4000>.
