@@ -39,5 +39,6 @@ exclude:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # vim: tw=90 sts=-1 sw=2 et
