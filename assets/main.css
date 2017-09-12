@@ -58,6 +58,8 @@ pre > code {
 
 /* Images */
 img {
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
   vertical-align: middle;
 }
