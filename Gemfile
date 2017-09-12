@@ -4,10 +4,9 @@ source "https://rubygems.org"
 # https://github.com/github/pages-gem
 gem "github-pages", group: :jekyll_plugins
 
-gem 'jekyll-seo-tag'
-
+# Jekyll plugins
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-seo-tag'
 end
 
 # vim: tw=90 sts=-1 sw=2 et
