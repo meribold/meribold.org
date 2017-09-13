@@ -4,6 +4,7 @@ title: signal-cli.bash
 description: >
     Bash scripts wrapping [signal-cli](https://github.com/AsamK/signal-cli) for convenient
     interactive use
+last_modified_at: 2017-09-12
 ---
 
 signal-cli.bash is a collection of two Bash scripts that wrap [signal-cli][] to provide
