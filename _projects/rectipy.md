@@ -2,6 +2,7 @@
 layout: page
 title: RectiPy
 description: Python package for reconstructing digital holograms
+last_modified_at: 2017-09-12
 ---
 
 RectiPy is a Python package for reconstructing digital holograms that uses a [method
