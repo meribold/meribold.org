@@ -1,6 +1,9 @@
 ---
 layout: page
 title: About
+description: >
+    I'm a yak shaver that likes Tolkien and FOSS and ricing.  My GPG fingerprint is D14C
+    CBFF 836E 5732 7C25  2FDE 7066 AC79 C459 2C12.
 last_modified_at: 2017-09-12
 permalink: /about/
 ---

@@ -26,8 +26,8 @@ h1, h2, h3 {
   font-variant: small-caps;
 }
 
-/* Only underline links on mouseover. */
 a {
+  /* Only underline links on mouseover. */
   text-decoration: none;
 }
 
@@ -35,25 +35,32 @@ a:hover {
    text-decoration: underline; // changed from text:decoration:none
 }
 
+/*
 pre, code {
-  background-color: #eee;
+  background-color: #f6f6f6;
 }
+*/
 
 pre {
   border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 8px 12px;
+  border-radius: .5em;
+  padding: .5em .75em;
   overflow-x: auto;
-}
-
-code {
-  padding: 2px 4px;
+  /* Only darken the background color of code blocks very slightly. */
+  background-color: #f6f6f6;
 }
 
 pre > code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
+  background-color: #f6f6f6;
+}
+
+/* Inline code */
+code {
+  padding: .1em .2em;
+  background-color: #eee;
 }
 
 /* Images */
@@ -72,6 +79,91 @@ img {
 
 .post-meta {
   color: #666;
+}
+
+/* Originally based on the Minima theme [1].  Heavily modified by drawing on the wisdom of
+ * TeX:
+ *
+ * 1. Don't fuck with the font color.
+ * 2. Probably don't fuck with the tracking (letter-spacing).  Especially not using pixels
+ *    as the unit.  How is the supposed to be portable?
+ * 3. Don't make all of it italic.  That's too much emphasis.
+ * 4. Definitely don't combine all of the above.
+ *
+ * [1]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L117
+ */
+blockquote {
+  border-left: .3em solid #ddd;
+  /* border-left: 4px solid #ddd; */
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 2ch;
+  padding-right: 2ch;
+  /* letter-spacing: -1px; */
+  /* font-style: italic; */
+}
+
+blockquote:last-child {
+  margin-bottom: 0;
+}
+
+/* Tables (TODO)
+ *
+ * Inspired by booktabs [1] and the Minima theme [2].
+ *
+ * [1]: https://ctan.org/pkg/booktabs
+ * [2]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L220
+ */
+table {
+  /* Vertically center tables.  Alternatively, use `width: 100%` to stretch tables to the
+   * same width as text.  I prefer tables having their natural width.  */
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+td:first-child, th:first-child {
+  text-align: left;
+}
+
+td:last-child, th:last-child {
+  text-align: right;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+/* td:last-child { */
+/*   padding: 2em; */
+/* } */
+
+tbody {
+  /* background: black; */
+  /* font-weight: bold; */
+  margin: 2em;
+  padding: 2em;
+  /* padding-top: 2em; */
+}
+
+th, td {
+  padding: .05em 1ch;
+}
+
+th {
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+
+/* Add the same abount of vertical padding below the line that seperates the table heading
+ * and data as above.  Actually looks pretty bad because the first row of the table is
+ * higher than the rest. */
+tbody > tr:first-child > td {
+  /* padding-top: .2em; */
 }
 
 /* vim: set tw=90 sts=-1 sw=2 et: */
