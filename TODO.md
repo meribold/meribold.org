@@ -33,6 +33,10 @@ title: "TODO"
 *   Syntax highlighting for code blocks.
 *   Make this website the first Google result for my name.
 *   Create a kind of personal wiki.
+*   Don't have link labels with the `https?://` in paragraphs.  It makes full
+    justification difficult for browsers.
+*   Maybe use one line per paragraph and wrapping in Vim.  This is better for diffs (TODO:
+    Git has some option to highlight the difference).
 
 [meta]: /jekyll/2017/09/02/meta.html
 [dash]: https://en.wikipedia.org/wiki/Dash

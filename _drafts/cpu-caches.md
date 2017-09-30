@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "A Survey of CPU Caches"
-description: Something.
+title: A Survey of CPU Caches
+description: TODO.
 ---
 <!-- title: "Introduction to CPU Caches" -->
 
@@ -10,11 +10,11 @@ description: Something.
 
 <!-- If you're like me, -->
 
-CPU caches are very fast and small memories and are part of the CPU.  They store a subset
+CPU caches are very fast and small memories.  They are part of the CPU and store a subset
 of the data present in main memory (RAM) that is expected to be used again soon.  Their
 purpose is to reduce the frequency of main memory accesses.
 
-Why can't we just have one uniform type of memory that's both big and fast?  Price is one
+Why can't we just have one uniform type of memory that's both big and fast?  Cost is one
 reason but more fundamentally, since no signal can propagate faster than the speed of
 light, every possible storage technology can only reach a finite amount of data within a
 desired access latency.
@@ -35,10 +35,10 @@ be evicted and replaced.
 ### Types of CPU Caches
 
 Current x86 CPUs generally have three main types of caches: data caches, instruction
-caches, and translation lookaside buffers (TLBs).  Some caches are used for data as well
-as instructions and are called *unified*.  A processor may have multiple caches of each
-type, which are organised into numerical *levels* starting at 1, the smallest and fastest
-level, based on their size and speed.
+caches, and translation lookaside buffers ({::nomarkdown}TLBs{:/}).  Some caches are used
+for data as well as instructions and are called *{::nomarkdown}unified{:/}*.  A processor
+may have multiple caches of each type, which are organised into numerical *levels*
+starting at 1, the smallest and fastest level, based on their size and speed.
 
 In practice, a currently representative x86 cache hierarchy consists of:
 *   Separate level 1 data and instruction caches of 32 to 64 KiB for each core (denoted
@@ -48,7 +48,9 @@ In practice, a currently representative x86 cache hierarchy consists of:
 *   One or more TLBs per core. They cache virtual-to-physical address associations of
     memory pages.
 
-Estimates of typical access latencies are[^paper]
+The following table gives approximate access latencies.[^paper]
+<!-- that are in line with typical estimates. -->
+<!-- The following table gives estimates for the various levels' access latencies.[^paper] -->
 
 |        | L1d  | L2     | L3     | Main Memory |
 |--------|------|--------|--------|-------------|
@@ -117,6 +119,8 @@ int main() {
     some more details and sources.  You can also find the TeX files, full source code of
     all programs shown, and a [makefile][] that automates running them and builds the PDF
     with the results [here][repo].
+
+[^sources]: TODO.
 
 *[RAM]: Random-access memory
 *[TLB]: Translation lookaside buffer
