@@ -3,7 +3,7 @@ layout: post
 title: "TODO"
 ---
 
-*   Only alternate the background color of table rows if there is a minimum amount?
+*   Only alternate the background color of table rows if there's a minimum amount of rows?
 *   Are the lines after the header and before the footer beneficial?  Try what it looks
     like without them.
 *   Not using level one (`#`) headings in my Markdown files is reasonable since they are
@@ -26,6 +26,8 @@ title: "TODO"
     >   Consequences! My old nemesis.  
     --- Master Po Ping
     ^
+    >   Consequences! My old nemesis.---Master Po Ping
+    ^
     >   Consequences! My old nemesis. ---Master Po Ping
 
     I think I like the first option.
@@ -33,7 +35,7 @@ title: "TODO"
 *   Syntax highlighting for code blocks.
 *   Make this website the first Google result for my name.
 *   Create a kind of personal wiki.
-*   Don't have link labels with the `https?://` in paragraphs.  It makes full
+*   Don't have link labels with `https://` (or `http://`) in paragraphs.  It makes full
     justification difficult for browsers.
 *   Maybe use one line per paragraph and wrapping in Vim.  This is better for diffs (TODO:
     Git has some option to highlight the difference).
@@ -42,7 +44,7 @@ title: "TODO"
     >   device pixel (dot) of the display.  For printers and high resolution screens 1px
     >   implies multiple device pixels.
 
-    I guess using `px` is portable then.
+    I thought one `px` is one device pixel.  I guess using `px` is portable then.
 
 [meta]: /jekyll/2017/09/02/meta.html
 [dash]: https://en.wikipedia.org/wiki/Dash
