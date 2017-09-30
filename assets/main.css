@@ -26,8 +26,8 @@ h1, h2, h3 {
   font-variant: small-caps;
 }
 
-/* Only underline links on mouseover. */
 a {
+  /* Only underline links on mouseover. */
   text-decoration: none;
 }
 
@@ -35,25 +35,26 @@ a:hover {
    text-decoration: underline; // changed from text:decoration:none
 }
 
-pre, code {
-  background-color: #eee;
-}
-
 pre {
   border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 8px 12px;
+  border-radius: .5em;
+  padding: .5em .75em;
   overflow-x: auto;
-}
-
-code {
-  padding: 2px 4px;
+  /* Only darken the background color of code blocks very slightly. */
+  background-color: #f6f6f6;
 }
 
 pre > code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
+  background-color: #f6f6f6;
+}
+
+/* Inline code */
+code {
+  padding: .1em .2em;
+  background-color: #eee;
 }
 
 /* Images */
