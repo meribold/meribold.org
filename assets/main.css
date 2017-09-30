@@ -74,6 +74,29 @@ img {
   color: #666;
 }
 
+/* Block quotations.  Originally based on the Minima theme [1].  Heavily modified by
+ * observing how they are usually typeset in TeX documents:
+ *
+ * 1. Don't screw with the font color.
+ * 2. Probably don't screw with the tracking (letter-spacing).  Especially not using
+ *    pixels as the unit.  How is the supposed to be portable?
+ * 3. Don't make all of it italic.  That's too much emphasis.
+ * 4. Definitely don't combine all of the above.
+ *
+ * [1]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L117
+ */
+blockquote {
+  border-left: .3em solid #ddd;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 2ch;
+  padding-right: 2ch;
+}
+
+blockquote:last-child {
+  margin-bottom: 0;
+}
+
 /* Tables
  *
  * Inspired by booktabs [1] and the Minima theme [2].
