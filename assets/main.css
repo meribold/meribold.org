@@ -106,13 +106,31 @@ blockquote:last-child {
  * [2]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L220
  */
 table {
-  /* Vertically center tables.  Alternatively, use `width: 100%` to stretch tables to the
-   * same width as the text.  I prefer tables having their natural width.  */
-  margin: 0 auto;
   text-align: center;
   border-collapse: collapse;
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
+
+  /* Horizontally center tables but don't stretch them to the width of the main text and
+   * add a horizontal scrollbar if the table is too wide.  See [1] and [2].
+   *
+   * [1]: https://stackoverflow.com/a/30423904
+   *      "Add horizontal scrollbar to html table"
+   * [2]: https://stackoverflow.com/a/34071945
+   *      "Is it possible to center an inline-block element and if so, how?"
+   */
+  display: inline-block;
+  overflow-x: auto;
+  max-width: 100%;
+  position: relative; /* This makes `left: 50%` work. */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+tbody {
+  /* This seems to be the default behavior of Firefox but not Chromium: don't wrap text in
+   * table cells. */
+  white-space: nowrap;
 }
 
 td:first-child, th:first-child {
