@@ -36,6 +36,23 @@ a:hover {
    text-decoration: underline; // changed from text:decoration:none
 }
 
+/* Set the size of monospace text relative to the normal font size.  See [1], [2], and
+ * [3].  Make it smaller, but not as excessively as typical browser defaults [4].  Just
+ * using the same size as for proportional fonts unfortunately looks pretty bad with the
+ * default fonts of most browsers I looked at.
+ *
+ * [1]: http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/
+ * [2]: https://stackoverflow.com/q/38781089
+ *      "font-family: monospace, monospace"
+ * [3]: https://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+ * [4]: https://www.brunildo.org/test/monospace_fsize.html
+ *      "monospace default font-size"
+ */
+pre, code, kbd, samp, tt {
+  font-family: monospace, monospace;
+  font-size: .9375em; /* 15/16 */
+}
+
 pre {
   border: 1px solid #ccc;
   border-radius: .5em;
