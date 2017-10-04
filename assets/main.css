@@ -92,11 +92,21 @@ code {
   background-color: #eee;
 }
 
-/* Images */
+/* Images may generally use the whole viewport width and aren't restricted to the line
+ * length.  Exceptions in Markdown files can be made using span IALs [2].  There are no
+ * margins for images.
+ *
+ * [1]: https://cloudfour.com/thinks/breaking-out-with-viewport-units-and-calc/
+ *      "Breaking Out With Viewport Units and Calc"
+ * [2]: https://kramdown.gettalong.org/syntax.html#span-ials
+ */
 img {
   display: block;
-  margin: 0 auto;
-  max-width: 100%;
+  max-width: 100vw;
+  position: relative; /* This makes `left: 50vw` work. */
+  left: 50vw;
+  transform: translateX(-50%);
+  margin-left: calc(-50vw + 50%);
   vertical-align: middle;
 }
 
