@@ -54,6 +54,11 @@ pre, code, kbd, samp, tt {
   font-size: .9375em; /* 15/16 */
 }
 
+/* Don't reduce the font size of code blocks twice. */
+pre > code {
+  font-size: 1em;
+}
+
 div.highlighter-rouge {
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
