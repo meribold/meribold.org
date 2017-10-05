@@ -4,7 +4,7 @@ body {
   /* Make sure the text can't start and stop exactly at the screen edges; leave some
    * space.
    */
-  padding: 0 2mm;
+  padding: 0 .5mm;
   /* Set the maximum width in terms of the width of '0' in whatever font is used.  See
    * <https://developer.mozilla.org/en/docs/Web/CSS/length>.
    */
@@ -65,11 +65,11 @@ div.highlighter-rouge {
   /* Only darken the background color of code blocks very slightly. */
   background-color: #f6f6f6;
   min-width: 100%;
-  max-width: calc(50% + 50vw - 1ch);
+  max-width: calc(50% + 50vw - .5mm);
   width: -moz-min-content;
   width: -webkit-min-content;
-  margin: 1em -1ch;
-  padding: 0 1ch;
+  margin: 1em -.5mm;
+  padding: 0 .5mm;
   overflow-x: hidden;
 }
 
@@ -181,7 +181,7 @@ table {
   display: inline-block; /* TODO: this adds padding at the bottom of the table. */
   overflow-x: auto;
   /* Eventually add a horizontal scrollbar. */
-  max-width: calc(100vw - 4mm);
+  max-width: calc(100vw - 1mm);
   /* This makes `left: 50vw` work. */
   position: relative;
   /* Move the table so it starts at the very left of the viewport.  This is the real magic
