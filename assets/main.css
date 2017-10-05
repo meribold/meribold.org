@@ -181,17 +181,17 @@ table {
   display: inline-block; /* TODO: this adds padding at the bottom of the table. */
   overflow-x: auto;
   /* Eventually add a horizontal scrollbar. */
-  max-width: calc(100vw - 1mm);
+  max-width: calc(100vw);
   /* This makes `left: 50vw` work. */
   position: relative;
   /* Move the table so it starts at the very left of the viewport.  This is the real magic
    * because it increases how big the automatically calculated width of the table can be
    * to the viewport width.  Taken from [5].  */
-  margin-left: calc(-50vw + 50%);
+  margin-left: calc(-50vw + 50% - .5mm);
   /* Move the table to the right by half the viewport width.  This will make it start at
    * the center of the viewport when combined with the above line (without it we would use
    * 50%). */
-  left: 50vw;
+  left: calc(50vw + .5mm);
   /* Finally move the table to the left by half of its width.  This will center it. */
   transform: translateX(-50%);
 }
@@ -204,10 +204,12 @@ tbody {
 
 td:first-child, th:first-child {
   text-align: left;
+  padding-left: .5mm;
 }
 
 td:last-child, th:last-child {
   text-align: right;
+  padding-right: .5mm;
 }
 
 tr:nth-child(even) {
