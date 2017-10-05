@@ -32,7 +32,6 @@ title: "TODO"
 
     I think I like the first option.
 
-*   Syntax highlighting for code blocks.
 *   Make this website the first Google result for my name.
 *   Create a kind of personal wiki.
 *   Don't have link labels with `https://` (or `http://`) in paragraphs.  It makes full
