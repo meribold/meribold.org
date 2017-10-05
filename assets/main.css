@@ -187,7 +187,7 @@ table {
   /* Move the table so it starts at the very left of the viewport.  This is the real magic
    * because it increases how big the automatically calculated width of the table can be
    * to the viewport width.  Taken from [5].  */
-  margin-left: calc(-1 * ((100vw - 100%) / 2));
+  margin-left: calc(-50vw + 50%);
   /* Move the table to the right by half the viewport width.  This will make it start at
    * the center of the viewport when combined with the above line (without it we would use
    * 50%). */
