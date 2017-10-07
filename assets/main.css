@@ -4,7 +4,7 @@ body {
   /* Make sure the text can't start and stop exactly at the screen edges; leave some
    * space.
    */
-  padding: 0 .5mm;
+  padding: 0 1mm;
   /* Set the maximum width in terms of the width of '0' in whatever font is used.  See
    * <https://developer.mozilla.org/en/docs/Web/CSS/length>.
    */
@@ -65,11 +65,11 @@ div.highlighter-rouge {
   /* Only darken the background color of code blocks very slightly. */
   background-color: #f6f6f6;
   min-width: 100%;
-  max-width: calc(50% + 50vw - .5mm);
+  max-width: calc(50% + 50vw - 1mm);
   width: -moz-min-content;
   width: -webkit-min-content;
-  margin: 1em -.5mm;
-  padding: 0 .5mm;
+  margin: 1em -1mm;
+  padding: 0 1mm;
   overflow-x: hidden;
 }
 
@@ -187,11 +187,11 @@ table {
   /* Move the table so it starts at the very left of the viewport.  This is the real magic
    * because it increases how big the automatically calculated width of the table can be
    * to the viewport width.  Taken from [5].  */
-  margin-left: calc(-50vw + 50% - .5mm);
+  margin-left: calc(-50vw + 50% - 1mm);
   /* Move the table to the right by half the viewport width.  This will make it start at
    * the center of the viewport when combined with the above line (without it we would use
    * 50%). */
-  left: calc(50vw + .5mm);
+  left: calc(50vw + 1mm);
   /* Finally move the table to the left by half of its width.  This will center it. */
   transform: translateX(-50%);
 }
@@ -204,12 +204,12 @@ tbody {
 
 td:first-child, th:first-child {
   text-align: left;
-  padding-left: .5mm;
+  padding-left: 1mm;
 }
 
 td:last-child, th:last-child {
   text-align: right;
-  padding-right: .5mm;
+  padding-right: 1mm;
 }
 
 tr:nth-child(even) {
