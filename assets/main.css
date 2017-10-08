@@ -75,7 +75,7 @@ a {
 }
 
 a:hover {
-   text-decoration: underline; // changed from text:decoration:none
+   text-decoration: underline;
 }
 
 /* Set the size of monospace text relative to the normal font size.  See [1], [2], and
