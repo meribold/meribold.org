@@ -9,7 +9,7 @@ permalink: /projects/
 
 {% for project in site.projects %}
 [{{ project.title | escape }}]({{ project.url | relative_url }})
-: {:style="text-align: initial"}{{ project.description }}
+: {{ project.description }}
 {% endfor %}
 
 I also dabbled in [Haskell][haskell-experiments], and wrote some more small [Warcraft

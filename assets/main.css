@@ -19,9 +19,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Fully justify text. */
 article {
-  /* Fully justify text. */
   text-align: justify;
+}
+
+/* Disable full justification for some elements. */
+blockquote, ul, ol, dl, h1, h2, h3, h4, h5, h6 {
+  text-align: initial;
 }
 
 /* Headings.  Only <h1>, <h2>, and <h3> should be used [1].  Their styles are those most
@@ -39,11 +44,6 @@ article {
  * [4]: https://stackoverflow.com/q/22898559 "Why is H2 larger than H1?"
  * [5]: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm
  */
-h1, h2, h3, h4, h5, h6 {
-  /* Don't fully justify headings. */
-  text-align: initial;
-}
-
 h1 {
   font-size: 1.5em;
   margin-top: 0.83em;
