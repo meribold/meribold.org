@@ -157,6 +157,27 @@ img {
   vertical-align: middle;
 }
 
+/* Wrapper to make the following class work. */
+.scrolled-img-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow-x: auto;
+}
+
+/* Class for images that shouldn't be scaled but instead have a horizontal scrollbar.
+ * They are still centered on wide viewports.  The <img> element should be wrapped in a
+ * <div> with the class `scrolled-img-wrapped`. */
+.scrolled-img {
+  display: block;
+  /* Reset some properties set for <img> elements. */
+  max-width: initial;
+  position: initial;
+  left: initial;
+  transform: initial;
+  vertical-align: initial;
+  margin: 0 auto;
+}
+
 /* For images that shouldn't be (significantly) wider than the line length. */
 .confined-img {
   display: initial;
