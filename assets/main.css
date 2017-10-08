@@ -167,12 +167,13 @@ img {
   margin: 0 -1mm;
 }
 
+/* See <https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php>. */
 div.youtube-wrapper {
   position: relative;
   width: calc(100% + 2mm);
   margin: 0 -1mm;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-bottom: calc(56.25% + 1.125mm); /* (9/16 + 9/16 * 2mm) */
 }
 
 iframe.youtube-vid {
