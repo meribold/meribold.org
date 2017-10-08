@@ -16,18 +16,23 @@ body {
    * don't set `font-family` some browsers use a serif font by default, though.
    */
   font-family: sans-serif;
+  /* See <https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering>. */
+  text-rendering: optimizeLegibility;
   /* overflow-y: scroll; */
   overflow-x: hidden;
 }
 
-/* Fully justify text. */
-article {
+/* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
+p {
   text-align: justify;
+  /* See <http://caniuse.com/#search=hyphens>. */
+  hyphens: auto;
 }
 
-/* Disable full justification for some elements. */
-blockquote, ul, ol, dl, h1, h2, h3, h4, h5, h6 {
+/* Make sure full justification is disabled for these elements. */
+blockquote, blockquote > p, ul, ol, dl, h1, h2, h3, h4, h5, h6 {
   text-align: initial;
+  hyphens: initial;
 }
 
 /* Headings.  Only <h1>, <h2>, and <h3> should be used [1].  Their styles are those most
@@ -93,6 +98,7 @@ a:hover {
 pre, code, kbd, samp, tt {
   font-family: monospace, monospace;
   font-size: .9375em; /* 15/16 */
+  hyphens: none;
 }
 
 /* Don't reduce the font size of code blocks twice. */
