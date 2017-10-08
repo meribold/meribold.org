@@ -6,9 +6,10 @@ body {
    */
   padding: 0 1mm;
   /* Set the maximum width in terms of the width of '0' in whatever font is used.  See
-   * <https://developer.mozilla.org/en/docs/Web/CSS/length>.
+   * <https://developer.mozilla.org/en/docs/Web/CSS/length> and
+   * <https://practicaltypography.com/line-length.html>.
    */
-  max-width: 80ch;
+  max-width: 75ch;
   line-height: 1.4;
   /* Use the browser's default sans-serif font.  Don't impose anything more than that.
    * Someone could even set their default sans-serif font to a font with serifs.  When I
