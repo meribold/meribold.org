@@ -24,8 +24,48 @@ article {
   text-align: justify;
 }
 
-h1, h2, h3 {
+/* Headings.  Only <h1>, <h2>, and <h3> should be used [1].  Their styles are those most
+ * browsers use for <h2>, <h3>, and <h4>, respectively [2].  Since I only want to use
+ * three levels of headings, <h4>, <h5>, and <h6> aren't visually distinct from <h3>.
+ *
+ * There's some weirdness going on with <h1> font sizes in most browsers (e.g. Firefox and
+ * Chrome): <h1> headings become gradually smaller the deeper they are nested in
+ * <article>, <aside>, <nav>, and <section> (see [3] in Firefox and [4]).  I think it's
+ * rooted in the HTML5 specification.  See [5].
+ *
+ * [1]: https://practicaltypography.com/headings.html
+ * [2]: https://www.w3schools.com/tags/tag_hn.asp
+ * [3]: view-source:resource://gre-resources/html.css
+ * [4]: https://stackoverflow.com/q/22898559 "Why is H2 larger than H1?"
+ * [5]: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm
+ */
+h1, h2, h3, h4, h5, h6 {
+  /* Don't fully justify headings. */
+  text-align: initial;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+
+h2 {
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h3, h4, h5, h6 {
+  font-size: 1.00em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+}
+
+h1, h2 {
   font-variant: small-caps;
+  /* See <https://practicaltypography.com/letterspacing.html>. */
+  letter-spacing: 0.05em;
 }
 
 a {

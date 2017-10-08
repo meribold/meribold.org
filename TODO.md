@@ -6,9 +6,8 @@ title: "TODO"
 *   Only alternate the background color of table rows if there's a minimum amount of rows?
 *   Are the lines after the header and before the footer beneficial?  Try what it looks
     like without them.
-*   Not using level one (`#`) headings in my Markdown files is reasonable since they are
-    really just subheadings.  Using `###` and skipping `<h2>` is weird, though.  Add some
-    CSS so `<h2>` becomes what I want my second level headers to look like.
+*   Change the CSS or something so that using level one (`#`) headings in Markdown files
+    results in the desired layout?
 *   Figure out how Google constructs SERP snippets, optimize metadata accordingly, and
     record the process in the [meta post][meta].
 *   Figure out a consistent style to attribute quotations in Markdown.  I want to use some
