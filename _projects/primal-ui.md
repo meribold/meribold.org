@@ -19,10 +19,9 @@ as configuration for existing addons[^addons] and includes interface elements th
 missing from Blizzard's default UI[^missing] and are typically added with poor visual
 integration by addons like [Gladius][].
 
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-src="https://www.youtube.com/embed/qVEXJF1SYD4" frameborder="0" allowfullscreen>
-</iframe>
+<div class="youtube-wrapper">
+    <iframe class="youtube-vid" src="https://www.youtube.com/embed/qVEXJF1SYD4"
+    allowfullscreen></iframe>
 </div>
 
 The UI makes one major trade-off: to be optimal for one class and specialization (Feral
