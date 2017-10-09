@@ -1,11 +1,16 @@
 ---
 layout: page
 title: Projects
-last_modified_at: 2017-09-12
+description: A list of programs I wrote and other projects.
+last_modified_at: 2017-10-09
 permalink: /projects/
 ---
 
-<!-- Write something here? -->
+<!-- TODO: write something here? -->
+
+## Software
+
+<!-- TODO: write something here? -->
 
 {% for project in site.projects %}
 [{{ project.title | escape }}]({{ project.url | relative_url }})
@@ -20,6 +25,13 @@ and Bash.
 For a C++ class in university, I wrote a crude, interactive [ecosystem
 simulation][flutterrust] with an infinite, procedurally generated map.
 -->
+
+## Articles
+
+"[Hardware Caches and Optimization][1]" (PDF)
+: Seminar paper about CPU caches with illustrative code samples and profiling results
+
+[1]: {{ site.url }}/assets/cache-paper.pdf
 
 [curse]: https://mods.curse.com/members/meribold/projects
 [curseforge]: https://wow.curseforge.com/members/meribold/projects
