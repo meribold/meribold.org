@@ -241,7 +241,8 @@ blockquote:last-child {
 
 /* Tables
  *
- * Inspired by booktabs [1] and the Minima theme [2].
+ * Inspired by booktabs [1] and the Minima theme [2].  FIXME: the text alignment looks
+ * stupid when the table only has two columns.
  *
  * [1]: https://ctan.org/pkg/booktabs
  * [2]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L220
