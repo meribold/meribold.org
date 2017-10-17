@@ -117,12 +117,32 @@ yields the number of cycles one access takes on average.
 
 Here are my results for different array sizes (set at compile time with the `SIZE` macro):
 
-![access-time-plot]{:style="width: 110%"}
+{::comment}
+"Plot of..." is the images alt text (https://en.wikipedia.org/wiki/Alt_attribute).  It is
+displayed when the image cannot be rendered and may be read aloud by screen readers used
+due to visual impairment.  It is also processed by search engine bots.
+{:/comment}
+![Plot of the average number of CPU cycles one access takes vs. the array size; the
+differences are due to how much of the array fits into which CPU
+cache][access-time-plot]{:style="width: 110%"}
 
+{::comment}
+    The text in quotes is the image's title.  It's optional and shown on mouseover as a
+    tooptip.  It can be used to give additional information.
+{:/comment}
 [access-time-plot]: {{ site.url }}/assets/cache-paper/access-time-plot.png
-    "Access times for random reads"
+    "There is a table with the exact numerical results further down."
 
-This tells us a lot.
+Up to 32 KiB, each access takes almost exactly 3 cycles.  This is the L1d access time.  At
+32 KiB (the size of the L1d) the time increases to about 3.5 cycles.  This is not
+surprising since the cache is shared with other processes and the operating system, so
+some of our data gets evicted.  The first dramatic increase happens at 64 KiB followed by
+smaller increases at 128 and 256 KiB.  I suspect we are seeing a mixture of L2 and L1d
+accesses, with less and less L1d hits and an L2 access time of around 25 cycles.
+
+The values from 512 KiB (the size of the L2) to 128 MiB exhibit a similar pattern.  As
+more and more accesses go to main memory, the average delay for one access approaches 200
+cycles.
 
 Here's a table with the numerical results:
 
@@ -162,6 +182,57 @@ Here's a table with the numerical results:
 
 ## Cache Lines
 
+*Cache lines* or *cache blocks* are the unit of data transfer between main memory and
+cache.  They have a fixed size which is typically 64 bytes on x86/x64 CPUs---this means
+accessing a single, uncached 32-bit integer entails loading another 60 adjacent bytes.
+
+My E-450 CPU is no exception and both of its data caches have 64-byte cache lines:
+
+```bash
+$ getconf LEVEL1_DCACHE_LINESIZE; getconf LEVEL2_CACHE_LINESIZE
+64
+64
+```
+
+We can verify this quite easily.  The following program loops over an array with an
+increment given at compile time as `STEP` and measures the processor time.
+
+```c
+#define SIZE 67108864  // 64 * 1024 * 1024.  The array will be 512 MiB.
+
+int main() {
+   int64_t* array = (int64_t*)calloc(SIZE, sizeof(int64_t));
+   clock_t t0 = clock();
+   for (size_t i = 0; i < SIZE; i += STEP) {
+      array[i] &= 1;  // Do something.  Anything.
+   }
+   clock_t t1 = clock();
+   printf("%d %f\n", STEP, 1000. * (t1 - t0) / CLOCKS_PER_SEC);
+}
+```
+
+These are my results for different values of `STEP`:
+
+![Plot of the CPU time used to run the program vs. the step size; the CPU time stays
+nearly constant for step sizes of 1, 2, 4, and 8][line-size-plot]{:style="width: 110%"}
+
+[line-size-plot]: {{ site.url }}/assets/cache-paper/line-size-plot.png
+    "The CPU time is nearly constant for the first 4 step sizes."
+
+As expected, the time roughly halves whenever the step size is doubled---but only from a
+step size of 16.  For the first 4 step sizes, it is almost constant.
+
+This is because the run times are primarily due to memory accesses.  Up to a step size of
+8, every 64-byte line has to be loaded.  At 16, the values we modify are 128 bytes
+apart,[^128-bytes] so every other cache line is skipped.  At 32, three out of four cache
+lines are skipped, and so on.
+
+[^128-bytes]: 16 `int64_t` values of 8 bytes each
+
+Both cache and main memory can be thought of as being partitioned (in the set-theoretic
+sense) into cache lines. Data is not read or written starting from arbitrary main memory
+addresses, but only from addresses that are multiples of the cache line size.
+
 ## Prefetching
 
 ## Locality of Reference
@@ -174,9 +245,7 @@ Here's a table with the numerical results:
 
 ### "True" OO Style
 
-<!-- ![oo-picture]{:.confined-img style="max-width: 120%; margin: 0 -10%;"} -->
-
-![oo-picture]{:style="max-width: 110%"}
+![TODO][oo-picture]{:style="max-width: 110%"}
 
 [oo-picture]: {{ site.url }}/assets/cache-paper/oo-picture.png
 
