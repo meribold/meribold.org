@@ -48,9 +48,8 @@ In practice, a currently representative x86 cache hierarchy consists of:
 *   One or more TLBs per core. They cache virtual-to-physical address associations of
     memory pages.
 
-The following table gives approximate access latencies.[^paper]
+Here's a table with approximate access latencies:[^paper]
 <!-- that are in line with typical estimates. -->
-<!-- The following table gives estimates for the various levels' access latencies.[^paper] -->
 
 |        | L1d  | L2     | L3     | Main Memory |
 |--------|------|--------|--------|-------------|
@@ -70,11 +69,11 @@ L1d cache:           32K
 L2 cache:            512K
 ```
 
-Let's verify those sizes and measure the access latencies.  The following C program
-repeatedly reads elements from an array in random order.[^prefetching] To minimize the
-overhead of picking a random index, the array is first set up as a circular, singly linked
-list where every element except the last points to a random successor. When compiled with
-`-DBASELINE`, only this initialization is done.
+Let's verify those sizes and measure the access latencies.  The [following C
+program](#listing-1) repeatedly reads elements from an array in random
+order.[^prefetching] To minimize the overhead of picking a random index, the array is
+first set up as a circular, singly linked list where every element except the last points
+to a random successor. When compiled with `-DBASELINE`, only this initialization is done.
 
 [^prefetching]: We use random accesses because the CPU will detect and optimize sequential
     access by a technique called *[prefetching][]*, which would prevent us from
@@ -110,6 +109,7 @@ int main() {
 #endif
 }
 ```
+{:id="listing-1"}
 
 The difference in CPU cycles used by this program when complied with and without
 `-DBASELINE` is the number of cycles that `N` memory accesses take.  Dividing by `N`
@@ -146,6 +146,7 @@ cycles.
 
 Here's a table with the numerical results:
 
+<!-- FIXME: having a <style> tag outside of the page's head section may be a bad idea. -->
 <style>
     .funny-table th, .funny-table td {
         text-align: center;
@@ -219,6 +220,8 @@ nearly constant for step sizes of 1, 2, 4, and 8][line-size-plot]{:style="width:
 [line-size-plot]: {{ site.url }}/assets/cache-paper/line-size-plot.png
     "The CPU time is nearly constant for the first 4 step sizes."
 
+<!-- TODO: table -->
+
 As expected, the time roughly halves whenever the step size is doubled---but only from a
 step size of 16.  For the first 4 step sizes, it is almost constant.
 
@@ -229,21 +232,78 @@ lines are skipped, and so on.
 
 [^128-bytes]: 16 `int64_t` values of 8 bytes each
 
-Both cache and main memory can be thought of as being partitioned (in the set-theoretic
-sense) into cache lines. Data is not read or written starting from arbitrary main memory
-addresses, but only from addresses that are multiples of the cache line size.
+Both cache and main memory can be thought of as being partitioned (in the [set-theoretic
+sense](https://en.wikipedia.org/wiki/Partition_of_a_set)) into cache lines.  Data is not
+read or written starting from arbitrary main memory addresses, but only from addresses
+that are multiples of the cache line size.
 
 ## Prefetching
 
+Consider a simplified version of [the C program accessing elements of an array at
+random](#listing-1) that simply walks over the array sequentially.  It still follows the
+pointers to do this, but the array is no longer shuffled.  These are my results of
+profiling this new program as before:
+
+![Plot of the average number of CPU cycles one access takes vs. the array size when the
+array is not shuffled]({{ site.url }}/assets/cache-paper/seq-access-time-plot.png
+"A table with the numerical results is further down again."){:style="width: 110%"}
+
+Until the working set size matches that of the L1d, the access times are virtually
+unchanged at 3 cycles, but exceeding the L1d and hitting the L2 increases this by no more
+than a single cycle.  More strikingly, exceeding the L2 has similarly limited effect: the
+access time plateaus not much above 6 cycles---about 3% of the maximum we saw for random
+reads.
+
+<!-- Here's a table with the numerical results again: -->
+
+| Array Size (KiB) | Cycles / Iteration | Array Size (KiB) | Cycles / Iteration |
+|------------------|--------------------|------------------|--------------------|
+| 1                | 3.01               | 512              | 5.15               |
+| 2                | 3.01               | 1024             | 6.17               |
+| 4                | 3.01               | 2048             | 6.20               |
+| 8                | 3.01               | 4096             | 6.16               |
+| 16               | 3.01               | 8192             | 6.14               |
+| 32               | 3.05               | 16384            | 6.16               |
+| 64               | 3.99               | 32768            | 6.13               |
+| 128              | 3.98               | 65536            | 6.13               |
+| 256              | 3.94               | 131072           | 6.14               |
+{:.funny-table}
+
+Much of the improved performance can be explained by the more optimal use of cache lines:
+the penalty of loading a cache line is distributed among 8 accesses now.  This could at
+best get us down to 12.5%.  The missing improvements are due to *prefetching*.
+
+Prefetching is a technique by which CPUs predict access patterns and preemptively push
+cache lines up the memory hierarchy before the program needs them.  This can not work
+unless cache line access is predictable, though, which basically means linear.[^TODO]
+
+[^TODO]: For example, the most complicated stride pattern my laptop's CPU can detect is
+    one that skips over at most 3 cache lines (for- or backwards) and may alternate
+    strides (e.g. +1, +2, +1, +2, ...).
+
+WIP.
+
 ## Locality of Reference
+
+Two properties exhibited by computer code to varying degrees distinctly impact cache
+effectiveness.  One is called *spatial locality*, and the other *temporal locality*.  Both
+are measures of how well the code's memory access pattern matches certain principles.
 
 ### Temporal Locality
 
+TODO.
+
 ### Spatial Locality
+
+TODO.
 
 ## Example: `std::vector` vs. `std::list`
 
+TODO.
+
 ### "True" OO Style
+
+TODO.
 
 ![TODO][oo-picture]{:style="max-width: 110%"}
 
