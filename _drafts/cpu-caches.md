@@ -45,8 +45,10 @@ In practice, a currently representative x86 cache hierarchy consists of:
     L1d and L1i).
 *   A unified L2 cache of 256 to 512 KiB for each core.
 *   Often a unified L3 cache of 2 to 16 MiB shared between all cores.
-*   One or more TLBs per core. They cache virtual-to-physical address associations of
-    memory pages.
+*   One or more TLBs per core.  They cache virtual-to-physical address associations of
+    memory pages.[^tangential]
+
+[^tangential]: You don't need to know what that means to understand the rest of this post.
 
 Here's a table with approximate access latencies:
 <!-- that are in line with typical estimates. -->
@@ -320,16 +322,33 @@ by the programmer.[^drepper]
 ## Locality of Reference
 
 Two properties exhibited by computer code to varying degrees distinctly impact cache
-effectiveness.  One is called *spatial locality*, and the other *temporal locality*.  Both
-are measures of how well the code's memory access pattern matches certain principles.
+effectiveness.  One is *temporal locality*.  The other is *spatial locality*.  Both are
+measures of how well the code's memory access pattern matches certain principles.
 
 ### Temporal Locality
 
-TODO.
+One access suggests another.  That is, once referenced memory locations tend to be used
+again within a short time frame.  This is really the intrinsic motivation for having a
+memory hierarchy in the first place.  When a cache line is loaded but not accessed again
+before being evicted, the cache provided no benefit.
 
 ### Spatial Locality
 
-TODO.
+**1.** For each accessed memory location, nearby locations are used as well within a short
+time frame.  **2.** Memory is accessed sequentially.
+
+We have already seen that caches take advantage of both these principles by design:
+1. <span>Data is loaded in blocks; subsequent accesses to locations in an already loaded
+   cache line are basically free.</span>{:style="font-weight: normal"}
+2. <span>Cache lines from sequential access patterns are prefetched ahead of
+   time.</span>{:style="font-weight: normal"}
+{:style="font-weight: bold"}
+
+### Notes
+
+Access to instructions inherently has good spatial locality since they are executed
+sequentially outside of jumps, and good temporal locality because of loops and function
+calls.  Programs with good locality are said to be *cache-friendly*.
 
 ## Example: `std::vector` vs. `std::list`
 
