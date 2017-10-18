@@ -10,9 +10,9 @@ description: TODO.
 
 <!-- If you're like me, -->
 
-CPU caches are very fast and small memories.  They are part of the CPU and store a subset
-of the data present in main memory (RAM) that is expected to be used again soon.  Their
-purpose is to reduce the frequency of main memory accesses.
+CPU caches are very fast and small memories.  They are part of the CPU and store a
+subset of the data present in main memory (RAM) that is expected to be used again soon.
+Their purpose is to reduce the frequency of main memory accesses.[^paper]
 
 Why can't we just have one uniform type of memory that's both big and fast?  Cost is one
 reason, but more fundamentally, since no signal can propagate faster than the speed of
@@ -48,7 +48,7 @@ In practice, a currently representative x86 cache hierarchy consists of:
 *   One or more TLBs per core. They cache virtual-to-physical address associations of
     memory pages.
 
-Here's a table with approximate access latencies:[^paper]
+Here's a table with approximate access latencies:
 <!-- that are in line with typical estimates. -->
 
 |        | L1d  | L2     | L3     | Main Memory |
@@ -56,9 +56,9 @@ Here's a table with approximate access latencies:[^paper]
 | Cycles | 3--4 | 10--12 | 30--70 | 100--150    |
 
 [^paper]: This post summarizes a seminar paper which you can find [here (PDF)][paper] for
-    some more details and sources.  You can also find the TeX files, full source code of
+    some more details and sources for further reading.  The TeX files, full source code of
     all programs shown, and a [makefile][] that automates running them and builds the PDF
-    with the results [here][repo].
+    with the results are all available in [this GitHub repository][repo].
 
 My laptop's AMD E-450 CPU has cores with an L1d cache of 32 KiB and a unified L2 cache of
 512 KiB each:
@@ -144,7 +144,7 @@ The values from 512 KiB (the size of the L2) to 128 MiB exhibit a similar patter
 more and more accesses go to main memory, the average delay for one access approaches 200
 cycles.
 
-Here's a table with the numerical results:
+<!-- Here's a table with the numerical results: -->
 
 <!-- FIXME: having a <style> tag outside of the page's head section may be a bad idea. -->
 <style>
@@ -220,8 +220,6 @@ nearly constant for step sizes of 1, 2, 4, and 8][line-size-plot]{:style="width:
 [line-size-plot]: {{ site.url }}/assets/cache-paper/line-size-plot.png
     "The CPU time is nearly constant for the first 4 step sizes."
 
-<!-- TODO: table -->
-
 As expected, the time roughly halves whenever the step size is doubled---but only from a
 step size of 16.  For the first 4 step sizes, it is almost constant.
 
@@ -240,7 +238,7 @@ that are multiples of the cache line size.
 ## Prefetching
 
 Consider a simplified version of [the C program accessing elements of an array at
-random](#listing-1) that simply walks over the array sequentially.  It still follows the
+random](#listing-1) that just walks over the array sequentially.  It still follows the
 pointers to do this, but the array is no longer shuffled.  These are my results of
 profiling this new program as before:
 
@@ -275,13 +273,49 @@ best get us down to 12.5%.  The missing improvements are due to *prefetching*.
 
 Prefetching is a technique by which CPUs predict access patterns and preemptively push
 cache lines up the memory hierarchy before the program needs them.  This can not work
-unless cache line access is predictable, though, which basically means linear.[^TODO]
+unless cache line access is predictable, though, which basically means
+linear.[^stride-example]
 
-[^TODO]: For example, the most complicated stride pattern my laptop's CPU can detect is
+[^stride-example]: For example, the most complicated stride pattern my laptop's CPU can detect is
     one that skips over at most 3 cache lines (for- or backwards) and may alternate
     strides (e.g. +1, +2, +1, +2, ...).
 
-WIP.
+Prefetching happens asynchronously to normal program execution and can therefore almost
+completely hide the main memory latency.  This is not quite what we observed because the
+CPU performs little enough work for memory bandwidth to become the bottleneck.
+[Adding some expensive operations][github-seq-access-times-source] like integer divisions
+every loop iteration changes that and effectively levels the cycles spent per iteration
+across all working set sizes:
+
+[github-seq-access-times-source]: https://github.com/meribold/cache-seminar-paper/blob/a32597fbb2c37c52d54a9b87194cc17760ffbc11/seq-access-times/access-times.c#L26
+
+![Plot of the average number of CPU cycles one access takes vs. the array size when the
+array is not shuffled and the CPU performs some work for every accessed element](
+{{ site.url }}/assets/cache-paper/cpu-bound-seq-access-time-plot.png){:style="width:
+110%"}
+
+{::comment}
+TODO: add captions to the images?  `kramdown` doesn't support this directly, but something
+like the following may work.
+
+<figure style="width: 110%">
+    <figcaption style="text-align: center">
+        TODO
+    </figcaption>
+    <img src="{{ site.url }}/assets/cache-paper/cpu-bound-seq-access-time-plot.png"
+         style="width: 100%"/>
+</figure>
+{:/comment}
+
+What I described in this section is *hardware prefetching*.  It uses dedicated silicon to
+automatically detect access patterns.  There is also *software prefetching*, which is
+triggered by special machine instructions that may be inserted by the compiler or manually
+by the programmer.[^drepper]
+
+[^drepper]: Software prefetching is discussed by Ulrich Drepper in his paper "What Every
+    Programmer Should Know About Memory" available [here
+    (PDF)](https://www.akkadia.org/drepper/cpumemory.pdf).  He also goes into more detail
+    on practically everything touched on in this post.
 
 ## Locality of Reference
 
