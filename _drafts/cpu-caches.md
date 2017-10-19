@@ -408,9 +408,11 @@ polymorphic container of such pointers allows for dynamic dispatch of virtual fu
 However, this carries the risk of degrading the performance of a sequential data structure
 to that of a list.
 
-![TODO][oo-picture]{:style="max-width: 110%"}
+![Graphic of a contiguous array of pointers with pointees that may be scattered pretty
+randomly throughout memory][oo-picture]{:style="max-width: 110%"}
 
 [oo-picture]: {{ site.url }}/assets/cache-paper/oo-picture.png
+    "The numbered boxes represent pointers that are laid out contiguously in memory.  The unlabeled boxes represent the corresponding pointees, which may be scattered across memory pretty randomly."
 
 <!-- ## Summary -->
 ## Conclusion
