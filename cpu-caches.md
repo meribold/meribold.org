@@ -3,12 +3,6 @@ layout: post
 title: A Survey of CPU Caches
 description: TODO.
 ---
-<!-- title: "Introduction to CPU Caches" -->
-
-<!-- This is an introduction to what CPU Caches are and why you care if you want to write fast -->
-<!-- programs. -->
-
-<!-- If you're like me, -->
 
 **DRAFT**
 
@@ -30,7 +24,6 @@ reason, but more fundamentally, since no signal can propagate faster than the sp
 light, every possible storage technology can only reach a finite amount of data within a
 desired access latency.
 
-<!-- ## How do CPU Caches Work? -->
 ## Cache Operation Overview
 
 Whenever a program requests a memory address the CPU will check its caches.  If the
