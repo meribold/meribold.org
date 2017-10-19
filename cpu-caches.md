@@ -151,23 +151,26 @@ cycles.
 
 <!-- FIXME: having a <style> tag outside of the page's head section may be a bad idea. -->
 <style>
+    .funny-table {
+        border: none;
+    }
+    /* FIXME: these borders are slightly offset compared to where they would normally
+    appear. */
+    .funny-table th {
+        border-top: 2px solid #ccc;
+    }
+    .funny-table > tbody > tr:last-child {
+        border-bottom: 2px solid #ccc;
+    }
     .funny-table th, .funny-table td {
         text-align: center;
     }
-    .funny-table th:nth-child(1), .funny-table td:nth-child(1) {
-        text-align: left;
-    }
     .funny-table th:nth-child(2), .funny-table td:nth-child(2) {
-        text-align: center;
-        border-right: 1px solid #ccc;
-        padding-right: 2ch;
+        border-right: 2ch solid #fff;
+        padding-right: 1mm;
     }
     .funny-table td:nth-child(3), .funny-table th:nth-child(3) {
-        text-align: left;
         padding-left: 1mm;
-    }
-    .funny-table td:nth-child(4), .funny-table th:nth-child(4) {
-        text-align: right;
     }
 </style>
 
