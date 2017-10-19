@@ -1,7 +1,8 @@
 ---
 layout: post
 title: A Survey of CPU Caches
-description: TODO.
+description: Cache-friendliness is key to writing fast code.  This article illuminates how
+    CPU caches work with code samples and profiling results.
 ---
 
 **DRAFT**
