@@ -404,7 +404,7 @@ However, this carries the risk of degrading the performance of a sequential data
 to that of a list.
 
 ![Graphic of a contiguous array of pointers with pointees that may be scattered pretty
-randomly throughout memory][oo-picture]{:style="max-width: 110%"}
+randomly throughout memory][oo-picture]{:style="width: 110%"}
 
 [oo-picture]: {{ site.url }}/assets/cache-paper/oo-picture.png
     "The numbered boxes represent pointers that are laid out contiguously in memory.  The unlabeled boxes represent the corresponding pointees, which may be scattered across memory pretty randomly."
