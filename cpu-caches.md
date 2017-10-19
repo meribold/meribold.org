@@ -163,6 +163,7 @@ cycles.
     .funny-table th, .funny-table td {
         text-align: center;
     }
+    /* TODO: make the width of the border dynamic. */
     .funny-table th:nth-child(2), .funny-table td:nth-child(2) {
         border-right: 4ch solid #fff;
         padding-right: 1mm;
