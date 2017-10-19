@@ -14,6 +14,15 @@ CPU caches are very fast and small memories.  They are part of the CPU and store
 subset of the data present in main memory (RAM) that is expected to be used again soon.
 Their purpose is to reduce the frequency of main memory accesses.[^paper]
 
+[^paper]: This post summarizes a seminar paper which you can find [here (PDF)][paper] for
+    some more details and sources for further reading.  The TeX files, full source code of
+    all programs shown, and a [makefile][] that automates running them and builds the PDF
+    with the results are all available in [this GitHub repository][repo].
+
+[paper]: {{ site.url }}/assets/cache-paper.pdf
+[repo]: https://github.com/meribold/cache-seminar-paper
+[makefile]: https://github.com/meribold/cache-seminar-paper/blob/master/makefile
+
 Why can't we just have one uniform type of memory that's both big and fast?  Cost is one
 reason, but more fundamentally, since no signal can propagate faster than the speed of
 light, every possible storage technology can only reach a finite amount of data within a
@@ -57,10 +66,7 @@ Here's a table with approximate access latencies:
 |--------|------|--------|--------|-------------|
 | Cycles | 3--4 | 10--12 | 30--70 | 100--150    |
 
-[^paper]: This post summarizes a seminar paper which you can find [here (PDF)][paper] for
-    some more details and sources for further reading.  The TeX files, full source code of
-    all programs shown, and a [makefile][] that automates running them and builds the PDF
-    with the results are all available in [this GitHub repository][repo].
+<!-- TODO: note about data cache being the biggest target for optimizations? -->
 
 My laptop's AMD E-450 CPU has cores with an L1d cache of 32 KiB and a unified L2 cache of
 512 KiB each:
@@ -213,6 +219,7 @@ int main() {
    printf("%d %f\n", STEP, 1000. * (t1 - t0) / CLOCKS_PER_SEC);
 }
 ```
+{:id="listing-2"}
 
 These are my results for different values of `STEP`:
 
@@ -352,23 +359,73 @@ calls.  Programs with good locality are said to be *cache-friendly*.
 
 ## Example: `std::vector` vs. `std::list`
 
-TODO.
+The [following C++ program](#listing-3) (adapted from [this article][big-os] by Sergey
+Ignatchenko) initializes a number of STL containers with random numbers and measures the
+processor time needed to sum all of them.  I first ran it with `Container` being a type
+alias for `std::list`, then for `std::vector`.  Either way, the asymptotic
+complexity is Θ(N).
 
-### "True" OO Style
+[big-os]: https://accu.org/var/uploads/journals/Overload134.pdf#page=6
 
-TODO.
+```cpp
+constexpr int N = 5000;
+
+int main() {
+   Container containers[N];
+   std::srand(std::time(nullptr));
+   // Append an average of 5000 random values to each container.
+   for (int i = 0; i < N * 5000; ++i) {
+      containers[std::rand() % N].push_back(std::rand());
+   }
+
+   int sum = 0;
+   std::clock_t t0 = std::clock();
+   for (int m = 0; m < N; ++m) {
+      for (int num : containers[m]) {
+         sum += num;
+      }
+   }
+   std::clock_t t1 = std::clock();
+
+   // Also print the sum so the loop doesn't get optimized out.
+   std::cout << sum << '\n' << (t1 - t0) << '\n';
+}
+```
+{:id="listing-3"}
+
+My result is that computing the sum completes 158 times faster when using
+`std::vector`.[^flags]  Some of this difference can be attributed to space overhead of the
+linked list and the added indirection, but the more cache-friendly memory access pattern
+of `std::vector` is decisive:  using `std::list` as in this example means random memory
+access.
+
+[^flags]: I used GCC 6.3.1 with `-O3` and `-march=native`.
+
+### Note: "True" OO Style
+
+In OOP, variables are typically referred to by pointers to a common base class.  A
+polymorphic container of such pointers allows for dynamic dispatch of virtual functions.
+However, this carries the risk of degrading the performance of a sequential data structure
+to that of a list.
 
 ![TODO][oo-picture]{:style="max-width: 110%"}
 
 [oo-picture]: {{ site.url }}/assets/cache-paper/oo-picture.png
 
-[paper]: {{ site.url }}/assets/cache-paper.pdf
-[repo]: https://github.com/meribold/cache-seminar-paper
-[makefile]: https://github.com/meribold/cache-seminar-paper/blob/master/makefile
+<!-- ## Summary -->
+## Conclusion
 
-*[RAM]: Random-access memory
-*[TLB]: Translation lookaside buffer
-*[TLBs]: Translation lookaside buffers
+TODO.
+
+<!-- ## Further Reading -->
+
+*[RAM]: random-access memory
+*[TLB]: translation lookaside buffer
+*[TLBs]: translation lookaside buffers
 *[unified]: Unified caches are used for data as well as instructions.
+*[STL]: Standard Template Library
+*[GCC]: GNU Compiler Collection
+*[OO]: object-oriented
+*[OOP]: object-oriented programming
 
 <!-- vim: set tw=90 sts=-1 sw=4 et spell: -->
