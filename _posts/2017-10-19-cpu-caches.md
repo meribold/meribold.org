@@ -10,6 +10,8 @@ description: TODO.
 
 <!-- If you're like me, -->
 
+**DRAFT**
+
 CPU caches are very fast and small memories.  They are part of the CPU and store a
 subset of the data present in main memory (RAM) that is expected to be used again soon.
 Their purpose is to reduce the frequency of main memory accesses.[^paper]
