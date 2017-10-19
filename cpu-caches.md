@@ -159,12 +159,12 @@ cycles.
     }
     .funny-table th:nth-child(2), .funny-table td:nth-child(2) {
         text-align: center;
-        border-right: 1px dashed;
+        border-right: 1px solid #ccc;
         padding-right: 2ch;
     }
     .funny-table td:nth-child(3), .funny-table th:nth-child(3) {
         text-align: left;
-        padding-left: 2ch;
+        padding-left: 1mm;
     }
     .funny-table td:nth-child(4), .funny-table th:nth-child(4) {
         text-align: right;
