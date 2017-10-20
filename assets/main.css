@@ -278,7 +278,7 @@ table {
   display: inline-block; /* TODO: this adds padding at the bottom of the table. */
   overflow-x: auto;
   /* Eventually add a horizontal scrollbar. */
-  max-width: calc(100vw);
+  max-width: 100vw;
   /* This makes `left: 50vw` work. */
   position: relative;
   /* Move the table so it starts at the very left of the viewport.  This is the real magic
