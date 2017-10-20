@@ -167,10 +167,10 @@ cycles.
     /* TODO: make the width of the border dynamic. */
     .funny-table th:nth-child(2), .funny-table td:nth-child(2) {
         border-right: 4ch solid #fff;
-        padding-right: 1mm;
+        padding-right: 2mm;
     }
     .funny-table td:nth-child(3), .funny-table th:nth-child(3) {
-        padding-left: 1mm;
+        padding-left: 2mm;
     }
 </style>
 
