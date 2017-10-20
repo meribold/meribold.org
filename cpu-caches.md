@@ -415,9 +415,14 @@ randomly throughout memory][oo-picture]{:style="width: 110%"}
 <!-- ## Summary -->
 ## Conclusion
 
-TODO.
-
-<!-- ## Further Reading -->
+The hidden constant separating the time complexities of two reasonable algorithms under
+asymptotic analysis can get quite big because of cache effects.  Understanding how CPU
+caches work helps make good choices for writing fast programs and I hope this article
+provided some insight.  For a more in-depth discussion, you can read Ulrich Drepper's
+paper "[What Every Programmer Should Know About
+Memory](https://www.akkadia.org/drepper/cpumemory.pdf)", which also covers virtual memory,
+cache associativity, write policies, replacement policies, cache coherence, software
+prefetching, instruction caches, TLBs, etc.
 
 *[RAM]: random-access memory
 *[TLB]: translation lookaside buffer
