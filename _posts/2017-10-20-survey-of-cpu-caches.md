@@ -5,8 +5,6 @@ description: Cache-friendliness is key to writing fast code.  This article illum
     CPU caches work with code samples and profiling results.
 ---
 
-**DRAFT**
-
 CPU caches are very fast and small memories.  They are part of the CPU and store a
 subset of the data present in main memory (RAM) that is expected to be used again soon.
 Their purpose is to reduce the frequency of main memory accesses.[^paper]
