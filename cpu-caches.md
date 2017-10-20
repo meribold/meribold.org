@@ -412,7 +412,6 @@ randomly throughout memory][oo-picture]{:style="width: 110%"}
 [oo-picture]: {{ site.url }}/assets/cache-paper/oo-picture.png
     "The numbered boxes represent pointers that are laid out contiguously in memory.  The unlabeled boxes represent the corresponding pointees, which may be scattered across memory pretty randomly."
 
-<!-- ## Summary -->
 ## Conclusion
 
 The hidden constant separating the time complexities of two reasonable algorithms under
