@@ -56,7 +56,6 @@ In practice, a currently representative x86 cache hierarchy consists of:
 [^tangential]: You don't need to know what that means to understand the rest of this post.
 
 Here's a table with approximate access latencies:
-<!-- that are in line with typical estimates. -->
 
 |        | L1d  | L2     | L3     | Main Memory |
 |--------|------|--------|--------|-------------|
