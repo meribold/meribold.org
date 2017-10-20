@@ -178,7 +178,8 @@ img {
   margin: 0 auto;
 }
 
-/* For images that shouldn't be (significantly) wider than the line length. */
+/* For images that shouldn't be (significantly) wider than the line length.  FIXME: I
+ * think small images aren't centered. */
 .confined-img {
   display: initial;
   max-width: calc(100% + 2mm);
