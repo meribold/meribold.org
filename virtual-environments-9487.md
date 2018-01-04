@@ -20,9 +20,9 @@ environments:
 4.  [pyenv](https://github.com/pyenv/pyenv)
 5.  [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
 6.  [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
-7.  [pyvenv](https://docs.python.org/dev/whatsnew/3.6.html#id8)
+7.  [pyvenv][]
 8.  [rvirtualenv](https://github.com/kvbik/rvirtualenv)
-9.  [venv][library-venv]
+9.  [venv][library/venv]
 10. [vex](https://pypi.python.org/pypi/vex)
 11. [v](https://github.com/borntyping/v)
 12. [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito)
@@ -57,8 +57,9 @@ So it's a directory with a Python interpreter?  <!--I can do that.-->Easy enough
     $ cd virtual_env
     $ cp /bin/python3 .
 
-Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Particular
-version?  Um...
+Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Contains
+a number of additional packages?  ... Zero is a number!  (Check.)  Particular version?
+Um...
 
     $ ./python --version
     Python 3.6.3
@@ -98,10 +99,10 @@ the language itself.)-->
 (Before PEP 405 was accepted, virtual environments were purely the domain of third-party
 tools with no direct support from the language itself.)
 
-1.  A file called `pyvenv.cfg`
+1.  A file called `pyvenv.cfg` containing the line `home = /usr/bin`
 2.  A subdirectory called `site-packages`
 ^
-    $ touch pyvenv.cfg
+    $ echo 'home = /usr/bin' > pyvenv.cfg
     $ mkdir site-packages
 
 So we have a directory that formally qualifies as a virtual environment.  This leads us to
@@ -110,15 +111,20 @@ the next question.
 
 ## What's the point?
 
->   By default, a virtual environment is entirely isolated from the system-level
->   site-packages directories.
+When we execute our copy of the Python executable, the `pyvenv.cfg` file slightly changes
+what happens during startup: the presence of the `home` key tells Python <!--that--> the
+binary belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells Python
+where to find the base installation.
 
 ## venv
 
 One of the <!--many--> tools I listed above isn't like the others<!--:
-[*venv*][library-venv]-->.  While it's predated by <!--many--> most of them, this one
+[*venv*][library/venv]-->.  While it's predated by <!--many--> most of them, this one
 <!--is an official part of and--> ships with Python (3.3 or later)<!--[^new-in-3-3]--> as
-part of the standard library: [*venv*][library-venv].
+part of the standard library: [*venv*][library/venv].[^pyvenv]
+
+[^pyvenv]: Actually, pyvenv also ships with Python, but it was deprecated in version 3.6
+    (only 3 minor versions after its introduction).
 
 [^new-in-3-3]: Since version 3.3
 
@@ -144,36 +150,35 @@ called `pyvenv.cfg` and a directory called `site-packages.`
     740
 -->
 
-TODO: create the most minimal possible virtual environment by hand.
-
-    $ mkdir virtual_env
-    $ cd virtual_env
-    $ cp /bin/python3 .
-    $ touch pyvenv.cfg
-    $ mkdir site-packages
-
 <!-- ## What problem does that solve? -->
 
-## History
+## Summary
+
+A virtual environment is a directory containing a Python executable and a special
+`pyvenv.cfg` file that affects startup of the interpreter.
+
+>   venv is the standard tool for creating virtual environments.  
+>   ---<https://docs.python.org/3/installing/>
+
+## Appendices
+
+### History
 
 TODO: Which program came first?  When and by whom was the term "virtual environment"
 coined?  Why do we need so many different tools to manage them?  (Historical reasons, I
 guess.)
 
-## Timeline
+<!-- ### Timeline -->
+Here's a timeline.
 
-*   Python 3.3: venv was added
+*   Python 3.3: [PEP 405][] is accepted; [venv][library/venv] and [pyvenv][] become part
+    of the standard library
 *   Python 3.4: "[venv] defaults to installing pip into all created virtual environments."
 *   Python 3.5: "The use of venv is now recommended for creating virtual environments."
 *   Python 3.6: "pyvenv was the recommended tool for creating virtual environments for
     Python 3.3 and 3.4, and is deprecated in Python 3.6."
 
-## Summary
-
->   venv is the standard tool for creating virtual environments.  
->   ---<https://docs.python.org/3/installing/>
-
-## Definitions of "virtual environment"
+### More definitions of "virtual environment"
 
 >   A virtual environment is a semi-isolated Python environment that allows packages to be
 >   installed for use by a particular application, rather than being installed system
@@ -195,13 +200,22 @@ guess.)
 
 ## TODO
 
+This doesn't match my experience and appears to be wrong:
+
+>   By default, a virtual environment is entirely isolated from the system-level
+>   site-packages directories.  
+>   ---<https://www.python.org/dev/peps/pep-0405/>
+
 <!--
 Here are some suggestions that are on the `python.org` TLD: "[Creating Virtual
 Environments][2]".  I don't know how long until everything said there will be deprecated,
 though.
 -->
 
-[library-venv]: https://docs.python.org/3/library/venv.html
+[pyvenv]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments
+[pyvenv-deprecated]: https://docs.python.org/dev/whatsnew/3.6.html#id8
+
+[library/venv]: https://docs.python.org/3/library/venv.html
     "The Python Standard Library: venv — Creation of virtual environments"
 [PEP 405]: https://www.python.org/dev/peps/pep-0405/
     "PEP 405 -- Python Virtual Environments"
@@ -209,5 +223,7 @@ though.
     "The Python Tutorial: Virtual Environments and Packages"
 
 [4]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+
+*[PEP]: Python Enhancement Proposal
 
 <!-- vim: set tw=90 sts=-1 sw=4 et spell wrap: -->
