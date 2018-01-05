@@ -26,17 +26,17 @@ environments:
 10. [vex](https://pypi.python.org/pypi/vex)
 11. [v](https://github.com/borntyping/v)
 12. [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito)
-13. [virtualenv](https://github.com/pypa/virtualenv)
+13. [virtualenv][]
 14. [VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager)
 15. [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper)
 16. [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)
-17. [virtual-python](http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-python)
+17. [virtual-python][]
 18. [workingenv](https://pypi.python.org/pypi/workingenv.py)
 
 Wow.  This stuff must be really hard to get right.  I also must be a moron, since, after
 having written <!--several--> <!--a few--> some thousand lines of Python, I don't even
 know what problem we are trying to solve here.  The abundance of relevant programs with
-subtly different names has deterred me from doing any research so far.
+subtly different names has deterred me from reading up on it so far.
 
 ## So what *is* a virtual environment?
 
@@ -100,21 +100,63 @@ the language itself.)-->
 tools with no direct support from the language itself.)
 
 1.  A file called `pyvenv.cfg` containing the line `home = /usr/bin`
-2.  A subdirectory called `site-packages`
+2.  A `lib/python3.6/site-packages` subdirectory[^site-packages]
 ^
     $ echo 'home = /usr/bin' > pyvenv.cfg
-    $ mkdir site-packages
+    $ mkdir -p lib/python3.6/site-packages
 
-So we have a directory that formally qualifies as a virtual environment.  This leads us to
-the next question.
-<!-- Now what? -->
+[^site-packages]: The path is subject to the OS and Python version used.
+<!--
+[^site-packages]: The path would be different when using a different Python version or on
+    Windows.
+-->
 
-## What's the point?
+Because of what I assume to be a bug in CPython, we also need to move the Python binary
+into a `bin` subdirectory.
+
+    $ mkdir bin && mv python3 bin/
+
+<!--
+>   [T]he internal virtual environment layout mimics the layout of the Python installation
+>   itself on each platform.  
+>   ---<https://www.python.org/dev/peps/pep-0405/#creating-virtual-environments>
+-->
+
+Fair.  <!--So we--> We have a directory that formally qualifies as a virtual environment.
+This leads us to the next question.
+
+## What's the point? <!-- WIP -->
 
 When we execute our copy of the Python executable, the `pyvenv.cfg` file slightly changes
 what happens during startup: the presence of the `home` key tells Python <!--that--> the
-binary belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells Python
-where to find the base installation.
+binary belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it
+where to find the system's Python installation.
+
+The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
+directory used to initialize the module search path... TODO
+
+<!--
+Consider `ls -l /usr/lib/python3.6/site-packages/`: `site-packages` contains packages, but
+also standalone modules.
+-->
+
+Here's what we get when starting `./bin/python3`:
+
+```python
+>>> import sys
+>>> sys.prefix
+'/home/meribold/virtual_env'
+>>> sys.path
+['', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/meribold/virtual_env/lib/python3.6/site-packages', '/home/meribold/.local/lib/python3.6/site-packages', '/usr/lib/python3.6/site-packages']
+```
+
+When running my system's Python interpreter, `sys.prefix` has the value `'/usr'` and the
+`sys.path` list doesn't contain `'/home/meribold/virtual_env/lib/python3.6/site-packages'`
+(but is otherwise identical).
+
+All this means is that we can install packages (TODO: modules?) into
+`./lib/python3.6/site-packages` now, and that we can `import` these like any other package
+(TODO: modules?).
 
 ## venv
 
@@ -164,20 +206,60 @@ A virtual environment is a directory containing a Python executable and a specia
 
 ### History
 
-TODO: Which program came first?  When and by whom was the term "virtual environment"
-coined?  Why do we need so many different tools to manage them?  (Historical reasons, I
-guess.)
+<!-- TODO: When and by whom was the term "virtual environment" coined? -->
 
-<!-- ### Timeline -->
-Here's a timeline.
+I think Ian Bicking's [`non_root_python.py`][] qualifies as the first tool for creating
+virtual environments.  Based on that, [`virtual-python.py`][] was
+[added][setuptools-commit-3df2aab] to [EasyInstall][] in version
+[0.6a6][easy-install-release-notes] in October 2005.
 
-*   Python 3.3: [PEP 405][] is accepted; [venv][library/venv] and [pyvenv][] become part
-    of the standard library
-*   Python 3.4: "[venv] defaults to installing pip into all created virtual environments."
-*   Python 3.5: "The use of venv is now recommended for creating virtual environments."
-*   Python 3.6: "pyvenv was the recommended tool for creating virtual environments for
-    Python 3.3 and 3.4, and is deprecated in Python 3.6."
+Here's a timeline summarizing some main events.
 
+*   2005-10-17: [`virtual-python.py`][] is [added][setuptools-commit-3df2aab] to
+    EasyInstall
+*   2006-03-08: Ian Bicking, the author of [`non_root_python.py`][]---on which
+    [`virtual-python.py`][] is is based---publishes a blog post about improving
+    [`virtual-python.py`][] titled "[Working Environment
+    Brainstorm][working-env-brainstorm]"
+*   2006-03-15: Ian Bicking [announces][working-env-post] [`working-env.py`][]
+*   2006-04-26: Ian Bicking [announces][workingenv-revisited-post] an improved version of
+    [`working-env.py`][] called [workingenv][]
+<!-- TODO: did anything important happen here? -->
+*   2007-09-14: [virtualenv][virtualenv-initial-commit]'s first commit
+*   2007-10-10: Ian Bicking announces [virtualenv][]: "[Workingenv is dead, long live
+Virtualenv!][virtualenv-post]"
+*   2009-10-24: [`virtual-python.py`] is [removed][setuptools-commit-43d3473] from
+    EasyInstall
+<!-- TODO: did anything important happen here? -->
+*   2012-05-25: [PEP 405][] is accepted for inclusion in Python 3.3
+*   2012-09-29: [Python 3.3][] is released; [venv][library/venv] and [pyvenv][] become
+    part of the standard library
+*   2014-03-16: [Python 3.4][] is released; "[[venv] defaults to installing pip into all
+created virtual environments.][installing]"
+*   2015-09-13: [Python 3.5][] is released.  "[The use of venv is now recommended for
+creating virtual environments.][installing]"
+*   2016-12-23: [Python 3.6][] is released; "[pyvenv was the recommended tool for creating
+virtual environments for Python 3.3 and 3.4, and is deprecated in Python 3.6][installing]"
+
+[easy-install-release-notes]: http://peak.telecommunity.com/DevCenter/EasyInstall#release-notes-change-history
+[setuptools-commit-3df2aab]: https://github.com/pypa/setuptools/commit/3df2aabcc056e6d001355d4cec780437387ac4fa
+[setuptools-commit-43d3473]: https://github.com/pypa/setuptools/commit/43d34734c801d2d9a72d5fa6e7fc74d80bdc11c1
+[working-env-brainstorm]: http://www.ianbicking.org/working-env-brainstorm.html
+[working-env-post]: http://www.ianbicking.org/working-env.html
+[workingenv-revisited-post]: http://www.ianbicking.org/workingenv-revisited.html
+[`working-env.py`]: https://web.archive.org/web/20060425105635/http://svn.colorstudy.com/home/ianb/working-env.py
+[workingenv]: https://web.archive.org/web/20060516191525/http://svn.colorstudy.com:80/home/ianb/workingenv
+[virtualenv-initial-commit]: https://github.com/pypa/virtualenv/commit/e02aa46f4f0eb5321c31641e89bde2c9b92547bb
+[virtualenv-post]: http://www.ianbicking.org/blog/2007/10/workingenv-is-dead-long-live-virtualenv.html
+<!-- [virtualenv-post]: http://www.ianbicking.org/blog/2007/10/10/workingenv-is-dead-long-live-virtualenv/ -->
+<!-- [Python 3.3]: https://docs.python.org/dev/whatsnew/3.3.html -->
+[Python 3.3]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments
+[Python 3.4]: https://docs.python.org/dev/whatsnew/3.4.html
+[installing]: https://docs.python.org/3/installing/
+[Python 3.5]: https://docs.python.org/dev/whatsnew/3.5.html
+[Python 3.6]: https://docs.python.org/dev/whatsnew/3.6.html#id8
+
+{::comment}
 ### More definitions of "virtual environment"
 
 >   A virtual environment is a semi-isolated Python environment that allows packages to be
@@ -200,21 +282,52 @@ Here's a timeline.
 
 ## TODO
 
-This doesn't match my experience and appears to be wrong:
+This doesn't match my experience and doesn't appear to be the case:
 
 >   By default, a virtual environment is entirely isolated from the system-level
->   site-packages directories.  
->   ---<https://www.python.org/dev/peps/pep-0405/>
+>   site-packages directories.
+>
+>   If the `pyvenv.cfg` file also contains a key `include-system-site-packages` with a
+>   value of `true` (not case sensitive), the site module will also add the system site
+>   directories to `sys.path` after the virtual environment site directories.  
+>   ---<https://www.python.org/dev/peps/pep-0405/#isolation-from-system-site-packages>
+
+What I need to do is explicitly put `include-system-site-packages = false` into
+`pyvenv.cfg`.  Otherwise I can still `import numpy` etc.
+
+The following also doesn't appear to work when the Python executable is in the same
+directory as `pyvenv.cfg`.
+
+>   [If the Python binary belongs to a virtual environment] `sys.prefix` is set to the
+>   directory containing `pyvenv.cfg`.  
+>   ---<https://www.python.org/dev/peps/pep-0405/#specification>
+
+    $ pwd
+    /home/meribold/virtual_env
+    $ ./python3 --version
+    Python 3.6.3
+    $ ./python3
+    >>> import sys; sys.prefix
+    '/home/meribold'
+{:/comment}
+
+## Footnotes
 
 <!--
 Here are some suggestions that are on the `python.org` TLD: "[Creating Virtual
 Environments][2]".  I don't know how long until everything said there will be deprecated,
 though.
 -->
-
+[virtualenv]: https://github.com/pypa/virtualenv
+[`non_root_python.py`]: https://web.archive.org/web/20051203055434/http://svn.colorstudy.com/home/ianb/non_root_python.py
+[virtual-python]: http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-python
+[`virtual-python.py`]: http://peak.telecommunity.com/dist/virtual-python.py
 [pyvenv]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments
 [pyvenv-deprecated]: https://docs.python.org/dev/whatsnew/3.6.html#id8
+[EasyInstall]: https://en.wikipedia.org/wiki/Setuptools#EasyInstall
 
+[prefix]: https://docs.python.org/3/library/sys.html#sys.prefix
+    "Python 3 documentation for sys.prefix"
 [library/venv]: https://docs.python.org/3/library/venv.html
     "The Python Standard Library: venv — Creation of virtual environments"
 [PEP 405]: https://www.python.org/dev/peps/pep-0405/
