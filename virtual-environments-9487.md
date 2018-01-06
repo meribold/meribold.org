@@ -211,31 +211,55 @@ virtual environments.  Based on that, [`virtual-python.py`][] was
 
 Here's a timeline summarizing some main events.
 
-*   2005-10-17: [`virtual-python.py`][] is [added][setuptools-commit-3df2aab] to
-    EasyInstall
-*   2006-03-08: Ian Bicking, the author of [`non_root_python.py`][]---on which
-    [`virtual-python.py`][] is is based---publishes a blog post about improving
-    [`virtual-python.py`][] titled "[Working Environment
-    Brainstorm][working-env-brainstorm]"
-*   2006-03-15: Ian Bicking [announces][working-env-post] [`working-env.py`][]
-*   2006-04-26: Ian Bicking [announces][workingenv-revisited-post] an improved version of
+2005-10-17
+:   [`virtual-python.py`][] is [added][setuptools-commit-3df2aab] to EasyInstall
+
+2006-03-08
+:   Ian Bicking, the author of [`non_root_python.py`][]---on which [`virtual-python.py`][]
+    is is based---publishes a blog post about improving [`virtual-python.py`][] titled
+    "[Working Environment Brainstorm][working-env-brainstorm]"
+
+2006-03-15
+:   Ian Bicking [announces][working-env-post] [`working-env.py`][]
+
+2006-04-26
+:   Ian Bicking [announces][workingenv-revisited-post] an improved version of
     [`working-env.py`][] called [workingenv][]
-<!-- TODO: did anything important happen here? -->
-*   2007-09-14: [virtualenv][virtualenv-initial-commit]'s first commit
-*   2007-10-10: Ian Bicking announces [virtualenv][]: "[Workingenv is dead, long live
+{::comment}
+TODO: did anything important happen here?
+{:/}
+
+2007-09-14
+:   [virtualenv][virtualenv-initial-commit]'s first commit
+
+2007-10-10
+:   Ian Bicking announces [virtualenv][]: "[Workingenv is dead, long live
 Virtualenv!][virtualenv-post]"
-*   2009-10-24: [`virtual-python.py`] is [removed][setuptools-commit-43d3473] from
-    EasyInstall
-<!-- TODO: did anything important happen here? -->
-*   2012-05-25: [PEP 405][] is accepted for inclusion in Python 3.3
-*   2012-09-29: [Python 3.3][] is released; [venv][library/venv] and [pyvenv][] become
-    part of the standard library
-*   2014-03-16: [Python 3.4][] is released; "[[venv] defaults to installing pip into all
-created virtual environments.][installing]"
-*   2015-09-13: [Python 3.5][] is released.  "[The use of venv is now recommended for
-creating virtual environments.][installing]"
-*   2016-12-23: [Python 3.6][] is released; "[pyvenv was the recommended tool for creating
-virtual environments for Python 3.3 and 3.4, and is deprecated in Python 3.6][installing]"
+
+2009-10-24
+:   [`virtual-python.py`] is [removed][setuptools-commit-43d3473] from EasyInstall
+{::comment}
+TODO: did anything important happen here?
+{:/}
+
+2012-05-25
+:   [PEP 405][] is accepted for inclusion in Python 3.3
+
+2012-09-29
+:   [Python 3.3][] is released; [venv][library/venv] and [pyvenv][] become part of the
+    standard library
+
+2014-03-16
+:   [Python 3.4][] is released; "[[venv] defaults to installing pip into all created
+    virtual environments.][installing]"
+
+2015-09-13
+:   [Python 3.5][] is released.  "[The use of venv is now recommended for creating virtual
+environments.][installing]"
+
+2016-12-23
+:   [Python 3.6][] is released; "[pyvenv was the recommended tool for creating virtual
+environments for Python 3.3 and 3.4, and is deprecated in Python 3.6][installing]"
 
 [easy-install-release-notes]: http://peak.telecommunity.com/DevCenter/EasyInstall#release-notes-change-history
 [setuptools-commit-3df2aab]: https://github.com/pypa/setuptools/commit/3df2aabcc056e6d001355d4cec780437387ac4fa
