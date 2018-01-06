@@ -40,9 +40,6 @@ subtly different names has deterred me from reading up on it so far.
 
 ## So what *is* a virtual environment?
 
-<!-- Somewhere in the [official docs][1], a virtual environment is defined as -->
-<!-- Luckily, virtual environments are treated in the in the [official docs][1], which define -->
-<!-- one as -->
 The [official docs' tutorial][tutorial-venv] describes a virtual environment as
 
 >   a self-contained directory tree that contains a Python installation for a particular
@@ -67,25 +64,6 @@ I think that will do.  Is it self-contained, though?  It doesn't contain itself.
 src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Bertrand_Russell_transparent_bg.png"
 alt="Another nerd: Bertrand Russell in 1916"
 title="Consider the directory containing all directories that don't contain themselves.">
-
-<!-- Better check the dictionary:
-
-    $ dict 'self-contained'
-    From The Collaborative International Dictionary of English v.0.48 [gcide]:
-
-    Self-contained \Self`-con*tained"\, a.
-        1. Having self-control; reserved; uncommunicative; wholly
-            engrossed in one's self.
-            [1913 Webster]
-
-        2. (Mach.) Having all the essential working parts connected
-            by a bedplate or framework, or contained in a case, etc.,
-            so that mutual relations of the parts do not depend upon
-            fastening outside of the machine itself.
-            [1913 Webster]
-
-Maybe I should keep reading the documentation.
--->
 
 Jokes aside, there are only two things missing to actually make our directory a virtual
 environment as specified by [PEP 405][], the proposal that integrated a standard mechanism
