@@ -106,31 +106,27 @@ tools with no direct support from the language itself.)
     $ mkdir -p lib/python3.6/site-packages
 
 [^site-packages]: The path is subject to the OS and Python version used.
-<!--
-[^site-packages]: The path would be different when using a different Python version or on
-    Windows.
--->
 
 Because of what I assume to be a bug in CPython, we also need to move the Python binary
 into a `bin` subdirectory.
 
     $ mkdir bin && mv python3 bin/
 
-<!--
+{::comment}
 >   [T]he internal virtual environment layout mimics the layout of the Python installation
 >   itself on each platform.  
 >   ---<https://www.python.org/dev/peps/pep-0405/#creating-virtual-environments>
--->
+{:/comment}
 
-Fair.  <!--So we--> We have a directory that formally qualifies as a virtual environment.
-This leads us to the next question.
+Fair.  We have a directory that formally qualifies as a virtual environment.  This leads
+us to the next question.
 
 ## What's the point? <!-- WIP -->
 
-When we execute our copy of the Python executable, the `pyvenv.cfg` file slightly changes
-what happens during startup: the presence of the `home` key tells Python <!--that--> the
-binary belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it
-where to find the system's Python installation.
+When we execute our copy of the Python binary, the `pyvenv.cfg` file slightly changes what
+happens during startup: the presence of the `home` key tells Python <!--that--> the binary
+belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it where to
+find the system's Python installation.
 
 The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
 directory used to initialize the module search path... TODO
@@ -279,28 +275,16 @@ virtual environments for Python 3.3 and 3.4, and is deprecated in Python 3.6][in
 
 [Creating Virtual Environments]: https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments
 [packaging.python.org]: https://packaging.python.org
+{:/comment}
 
-## TODO
+### Potential bug 1
 
-This doesn't match my experience and doesn't appear to be the case:
-
->   By default, a virtual environment is entirely isolated from the system-level
->   site-packages directories.
->
->   If the `pyvenv.cfg` file also contains a key `include-system-site-packages` with a
->   value of `true` (not case sensitive), the site module will also add the system site
->   directories to `sys.path` after the virtual environment site directories.  
->   ---<https://www.python.org/dev/peps/pep-0405/#isolation-from-system-site-packages>
-
-What I need to do is explicitly put `include-system-site-packages = false` into
-`pyvenv.cfg`.  Otherwise I can still `import numpy` etc.
-
-The following also doesn't appear to work when the Python executable is in the same
-directory as `pyvenv.cfg`.
+The following doesn't appear to work when the Python executable is in the same directory
+as `pyvenv.cfg`.
 
 >   [If the Python binary belongs to a virtual environment] `sys.prefix` is set to the
 >   directory containing `pyvenv.cfg`.  
->   ---<https://www.python.org/dev/peps/pep-0405/#specification>
+>   ---[PEP 405](https://www.python.org/dev/peps/pep-0405/#specification)
 
     $ pwd
     /home/meribold/virtual_env
@@ -309,7 +293,34 @@ directory as `pyvenv.cfg`.
     $ ./python3
     >>> import sys; sys.prefix
     '/home/meribold'
+
+### Potential bug 2
+
+This doesn't appear to be the case:
+
+>   By default, a virtual environment is entirely isolated from the system-level
+>   site-packages directories.  
+>   ---[PEP 405](https://www.python.org/dev/peps/pep-0405/#isolation-from-system-site-packages)
+
+{::comment}
+>   If the `pyvenv.cfg` file also contains a key `include-system-site-packages` with a
+>   value of `true` (not case sensitive), the site module will also add the system site
+>   directories to `sys.path` after the virtual environment site directories.  
+>   ---[PEP 405](https://www.python.org/dev/peps/pep-0405/#isolation-from-system-site-packages)
 {:/comment}
+
+>   If `pyvenv.cfg` [...] contains the key `include-system-site-packages` set to anything
+>   other than `false` [...], the system-level prefixes will still also be searched for
+>   site-packages; *otherwise they won't.*  
+>   ---[Documentation of the `site` module](https://docs.python.org/3/library/site.html) (emphasis added)
+
+Here's what actually happens:
+[`site.py`](https://github.com/python/cpython/blob/3.6/Lib/site.py#L447)  I.e., when the
+file doesn't contain the key `include-system-site-packages` at all, `system_site` will
+still be `"true"`.
+
+What I need to do is explicitly put `include-system-site-packages = false` into
+`pyvenv.cfg`.  Otherwise I can still `import numpy` etc.
 
 ## Footnotes
 
