@@ -130,7 +130,10 @@ find a complete Python installation that includes the standard library.
 
 The end result is that `./lib/python3.6/site-packages` becomes part of the module search
 path.  The point is that we can now install modules to that location, in particular
-specific versions of modules that may conflict with another project's dependencies.
+specific versions of modules that may conflict with the dependencies of another Python
+program on the same system.
+
+<!-- TODO: how can we install something into the virtual environment? -->
 
 {::comment}
 The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
@@ -166,15 +169,14 @@ and that we can `import` these as usual.
 
 ## venv
 
-One of the <!--many--> tools I listed above isn't like the others<!--:
-[*venv*][library/venv]-->.  While it's predated by <!--many--> most of them, this one
-<!--is an official part of and--> ships with Python (3.3 or later)<!--[^new-in-3-3]--> as
-part of the standard library: [*venv*][library/venv].[^pyvenv]
+In practice, one does not create virtual environments by hand, which brings us back to the
+dauntingly long list of tools above.  Fortunately, one of them is not like the others.
+While it's predated by most of them, this one <!--is an official part of and--> ships with
+Python as part of the standard library: [*venv*][library/venv].[^venv-and-pyvenv]
 
-[^pyvenv]: Actually, pyvenv also ships with Python, but it was deprecated in version 3.6
-    (only 3 minor versions after its introduction).
-
-[^new-in-3-3]: Since version 3.3
+[^venv-and-pyvenv]: Actually, pyvenv also ships with Python, but was deprecated in version
+    3.6 (only 3 minor versions after its introduction).  Both venv and pyvenv were added
+    to Python in version 3.3.
 
 In it simplest form, venv is used to create a virtual environment like so:
 
