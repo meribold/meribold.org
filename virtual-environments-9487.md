@@ -324,11 +324,6 @@ What I need to do is explicitly put `include-system-site-packages = false` into
 
 ## Footnotes
 
-<!--
-Here are some suggestions that are on the `python.org` TLD: "[Creating Virtual
-Environments][2]".  I don't know how long until everything said there will be deprecated,
-though.
--->
 [virtualenv]: https://github.com/pypa/virtualenv
 [`non_root_python.py`]: https://web.archive.org/web/20051203055434/http://svn.colorstudy.com/home/ianb/non_root_python.py
 [virtual-python]: http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-python
