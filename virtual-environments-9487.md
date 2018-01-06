@@ -187,10 +187,11 @@ interpreter:
     $ find -name python3
     ./bin/python3
 
-It also copies a bunch of stuff.  I get 650 files in 89 subdirectories using up about 10
-MiB of disk space in total.  It doesn't have to be this way, though.  The directory we
-created manually before almost qualified as a virtual environment as specified by [PEP
-405][], it only needs a file called `pyvenv.cfg` and a directory called `site-packages.`
+It also copies a bunch of other stuff.  I get 650 files in 89 subdirectories using up
+about 10 MiB of disk space in total.  It doesn't have to be this way, though.  The
+directory we created manually before almost qualified as a virtual environment as
+specified by [PEP 405][], it only needs a file called `pyvenv.cfg` and a directory called
+`site-packages.`
 
 <!--
     $ find | wc -l
@@ -201,11 +202,13 @@ created manually before almost qualified as a virtual environment as specified b
 
 ## Summary
 
-A virtual environment is a directory containing a Python executable and a special
-`pyvenv.cfg` file that affects startup of the interpreter.
-
->   venv is the standard tool for creating virtual environments.  
->   ---<https://docs.python.org/3/installing/>
+*   A virtual environment is a directory containing a Python interpreter, a special
+    `pyvenv.cfg` file that affects startup of the interpreter, and some third-party Python
+    modules.
+*   Python modules can be installed into a virtual environment and will not interfere with
+    other Python applications on the same system.
+*   "[venv is the standard tool for creating virtual environments, and has been part of
+Python since Python 3.3.](https://docs.python.org/3/installing/)"
 
 ## Appendices
 
@@ -375,7 +378,8 @@ What I need to do is explicitly put `include-system-site-packages = false` into
 [tutorial-venv]: https://docs.python.org/3/tutorial/venv.html
     "The Python Tutorial: Virtual Environments and Packages"
 
-[4]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+[1]: http://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
+[2]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 *[PEP]: Python Enhancement Proposal
 
