@@ -43,10 +43,7 @@ subtly different names has deterred me from reading up on it so far.
 <!-- Somewhere in the [official docs][1], a virtual environment is defined as -->
 <!-- Luckily, virtual environments are treated in the in the [official docs][1], which define -->
 <!-- one as -->
-The [official docs' tutorial][1] describes a virtual environment as
-
-[1]: https://docs.python.org/3/tutorial/venv.html
-     "When confronted with too much information, refer to the official documentation."
+The [official docs' tutorial][tutorial-venv] describes a virtual environment as
 
 >   a self-contained directory tree that contains a Python installation for a particular
 >   version of Python, plus a number of additional packages.
@@ -121,18 +118,19 @@ the Python binary into a `bin` subdirectory.
 Fair.  We have a directory that formally qualifies as a virtual environment.  This leads
 us to the next question.
 
-## What's the point? <!-- WIP -->
+## What's the point?
 
 When we run our copy of the Python binary, the `pyvenv.cfg` file changes what happens
 during startup a bit: the presence of the `home` key tells Python <!--that--> the binary
 belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it where to
 find a complete Python installation that includes the standard library.
 
-The end result is that `./lib/python3.6/site-packages` becomes part of the module search
-path.  The point is that we can now install modules to that location, in particular
-specific versions of modules that may conflict with the dependencies of another Python
-program on the same system.
+The bottom line is that `./lib/python3.6/site-packages` becomes part of the module search
+path.  The point is that we can now install modules to that location, in particular,
+specific versions that may conflict with the dependencies of another Python program on the
+same system.
 
+<!-- TODO: talk about isolation. -->
 <!-- TODO: how can we install something into the virtual environment? -->
 
 {::comment}
@@ -190,23 +188,21 @@ interpreter:
     $ find -name python3
     ./bin/python3
 
-It also copies a bunch of other stuff.  I get 650 files in 89 subdirectories using up
-about 10 MiB of disk space in total.
+(It also copies a bunch of other stuff.  I get 650 files in 89 subdirectories using up
+about 10 MiB of disk space in total.)
 
 <!--
     $ find | wc -l
     740
 -->
 
-<!-- ## What problem does that solve? -->
-
 ## Summary
 
 *   A virtual environment is a directory containing a Python interpreter, a special
     `pyvenv.cfg` file that affects startup of the interpreter, and some third-party Python
     modules.
-*   Python modules can be installed into a virtual environment and will not interfere with
-    other Python applications on the same system.
+*   Python modules installed into a virtual environment will not interfere with other
+    Python applications on the same system.
 *   "[venv is the standard tool for creating virtual environments, and has been part of
 Python since Python 3.3.](https://docs.python.org/3/installing/)"
 
@@ -223,19 +219,19 @@ virtual environments.  Based on that, [`virtual-python.py`][] was
 main events.
 
 2005-10-17
-:   [`virtual-python.py`][] is [added][setuptools-commit-3df2aab] to EasyInstall
+:   [`virtual-python.py`][] is [added][setuptools-commit-3df2aab] to EasyInstall.
 
 2006-03-08
 :   Ian Bicking, the author of [`non_root_python.py`][]---on which [`virtual-python.py`][]
     is is based---publishes a blog post about improving [`virtual-python.py`][] titled
-    "[Working Environment Brainstorm][working-env-brainstorm]"
+    "[Working Environment Brainstorm][working-env-brainstorm]".
 
 2006-03-15
-:   Ian Bicking [announces][working-env-post] [`working-env.py`][]
+:   Ian Bicking [announces][working-env-post] [`working-env.py`][].
 
 2006-04-26
 :   Ian Bicking [announces][workingenv-revisited-post] an improved version of
-    [`working-env.py`][] called [workingenv][]
+    [`working-env.py`][] called [workingenv][].
 {::comment}
 TODO: did anything important happen here?
 {:/}
@@ -248,24 +244,24 @@ TODO: did anything important happen here?
 Virtualenv!][virtualenv-post]"
 
 2009-10-24
-:   [`virtual-python.py`] is [removed][setuptools-commit-43d3473] from EasyInstall
+:   [`virtual-python.py`] is [removed][setuptools-commit-43d3473] from EasyInstall.
 {::comment}
 TODO: did anything important happen here?
 {:/}
 
 2011-06-13
-:   [PEP 405][] is created
+:   [PEP 405][] is created.
 
 2012-05-25
-:   [PEP 405][] is accepted for inclusion in Python 3.3
+:   [PEP 405][] is accepted for inclusion in Python 3.3.
 
 2012-09-29
-:   [Python 3.3][] is released; [venv][library/venv] and [pyvenv][] become part of the
-    standard library
+:   [Python 3.3][] is released.  [venv][library/venv] and [pyvenv][] become part of the
+    standard library.
 
 2014-03-16
-:   [Python 3.4][] is released; "[[venv] defaults to installing pip into all created
-    virtual environments.][installing]"
+:   [Python 3.4][] is released.  "[[venv] defaults to installing pip into all created
+    virtual environments.][installing]".
 
 2015-09-13
 :   [Python 3.5][] is released.  "[The use of venv is now recommended for creating virtual
@@ -273,7 +269,7 @@ environments.][installing]"
 
 2016-12-23
 :   [Python 3.6][] is released; "[pyvenv was the recommended tool for creating virtual
-environments for Python 3.3 and 3.4, and is deprecated in Python 3.6][installing]"
+environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installing]"
 
 [easy-install-release-notes]: http://peak.telecommunity.com/DevCenter/EasyInstall#release-notes-change-history
 [setuptools-commit-3df2aab]: https://github.com/pypa/setuptools/commit/3df2aabcc056e6d001355d4cec780437387ac4fa
@@ -368,6 +364,8 @@ What I need to do is explicitly put `include-system-site-packages = false` into
 [pyvenv]: https://github.com/python/cpython/blob/3.6/Tools/scripts/pyvenv
 [pyvenv-deprecated]: https://docs.python.org/dev/whatsnew/3.6.html#id8
 [EasyInstall]: https://en.wikipedia.org/wiki/Setuptools#EasyInstall
+[1]: http://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
+[2]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 [prefix]: https://docs.python.org/3/library/sys.html#sys.prefix
     "Python 3 documentation for sys.prefix"
@@ -377,9 +375,6 @@ What I need to do is explicitly put `include-system-site-packages = false` into
     "PEP 405 -- Python Virtual Environments"
 [tutorial-venv]: https://docs.python.org/3/tutorial/venv.html
     "The Python Tutorial: Virtual Environments and Packages"
-
-[1]: http://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
-[2]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 *[PEP]: Python Enhancement Proposal
 
