@@ -187,11 +187,10 @@ interpreter:
     $ find -name python3
     ./bin/python3
 
-It also copies the whole standard library (TODO: does it) and a bunch of other stuff.  I
-get 650 files in 89 subdirectories using up about 10 MiB of disk space in total.  It
-doesn't have to be this way, though.  The directory we created manually before almost
-qualified as a virtual environment as specified by [PEP 405][], it only needs a file
-called `pyvenv.cfg` and a directory called `site-packages.`
+It also copies a bunch of stuff.  I get 650 files in 89 subdirectories using up about 10
+MiB of disk space in total.  It doesn't have to be this way, though.  The directory we
+created manually before almost qualified as a virtual environment as specified by [PEP
+405][], it only needs a file called `pyvenv.cfg` and a directory called `site-packages.`
 
 <!--
     $ find | wc -l
