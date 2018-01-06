@@ -100,15 +100,15 @@ the language itself.)-->
 tools with no direct support from the language itself.)
 
 1.  A file called `pyvenv.cfg` containing the line `home = /usr/bin`
-2.  A `lib/python3.6/site-packages` subdirectory[^site-packages]
-^
+2.  A `lib/python3.6/site-packages` subdirectory
+
+(Both paths are subject to the OS and the second one also to the Python version used.)
+
     $ echo 'home = /usr/bin' > pyvenv.cfg
     $ mkdir -p lib/python3.6/site-packages
 
-[^site-packages]: The path is subject to the OS and Python version used.
-
-Because of what I assume to be a bug in CPython, we also need to move the Python binary
-into a `bin` subdirectory.
+Because of what I [assume to be a bug in CPython](#potential-bug-1), we also need to move
+the Python binary into a `bin` subdirectory.
 
     $ mkdir bin && mv python3 bin/
 
@@ -123,20 +123,27 @@ us to the next question.
 
 ## What's the point? <!-- WIP -->
 
-When we execute our copy of the Python binary, the `pyvenv.cfg` file slightly changes what
-happens during startup: the presence of the `home` key tells Python <!--that--> the binary
+When we run our copy of the Python binary, the `pyvenv.cfg` file changes what happens
+during startup a bit: the presence of the `home` key tells Python <!--that--> the binary
 belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it where to
-find the system's Python installation.
+find a complete Python installation that includes the standard library.
 
+The end result is that `./lib/python3.6/site-packages` becomes part of the module search
+path.  The point is that we can now install modules to that location, in particular
+specific versions of modules that may conflict with another project's dependencies.
+
+{::comment}
 The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
-directory used to initialize the module search path... TODO
+directory used to initialize the module search path.
+{:/comment}
 
 <!--
 Consider `ls -l /usr/lib/python3.6/site-packages/`: `site-packages` contains packages, but
 also standalone modules.
 -->
 
-Here's what we get when starting `./bin/python3`:
+{::comment}
+These are the prefix and module search path I get when using `./bin/python3`:
 
 ```python
 >>> import sys
@@ -146,13 +153,16 @@ Here's what we get when starting `./bin/python3`:
 ['', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/meribold/virtual_env/lib/python3.6/site-packages', '/home/meribold/.local/lib/python3.6/site-packages', '/usr/lib/python3.6/site-packages']
 ```
 
-When running my system's Python interpreter, `sys.prefix` has the value `'/usr'` and the
-`sys.path` list doesn't contain `'/home/meribold/virtual_env/lib/python3.6/site-packages'`
-(but is otherwise identical).
+When running Python normally, `sys.prefix` has the value `'/usr'` and the `sys.path` list
+doesn't contain `'/home/meribold/virtual_env/lib/python3.6/site-packages'` (but is
+otherwise identical).
 
-All this means is that we can install packages (TODO: modules?) into
-`./lib/python3.6/site-packages` now, and that we can `import` these like any other package
-(TODO: modules?).
+>   "[A]ll packages are modules".  
+>   ---https://docs.python.org/3/reference/import.html)
+
+All this means is that we can install modules  into `./lib/python3.6/site-packages` now,
+and that we can `import` these as usual.
+{:/comment}
 
 ## venv
 
@@ -207,9 +217,8 @@ A virtual environment is a directory containing a Python executable and a specia
 I think Ian Bicking's [`non_root_python.py`][] qualifies as the first tool for creating
 virtual environments.  Based on that, [`virtual-python.py`][] was
 [added][setuptools-commit-3df2aab] to [EasyInstall][] in version
-[0.6a6][easy-install-release-notes] in October 2005.
-
-Here's a timeline summarizing some main events.
+[0.6a6][easy-install-release-notes] in October 2005.  Here's a timeline summarizing some
+main events.
 
 2005-10-17
 :   [`virtual-python.py`][] is [added][setuptools-commit-3df2aab] to EasyInstall
@@ -241,6 +250,9 @@ Virtualenv!][virtualenv-post]"
 {::comment}
 TODO: did anything important happen here?
 {:/}
+
+2011-06-13
+:   [PEP 405][] is created
 
 2012-05-25
 :   [PEP 405][] is accepted for inclusion in Python 3.3
@@ -279,7 +291,6 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6][installing
 [Python 3.5]: https://docs.python.org/dev/whatsnew/3.5.html
 [Python 3.6]: https://docs.python.org/dev/whatsnew/3.6.html#id8
 
-{::comment}
 ### More definitions of "virtual environment"
 
 >   A virtual environment is a semi-isolated Python environment that allows packages to be
@@ -299,7 +310,6 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6][installing
 
 [Creating Virtual Environments]: https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments
 [packaging.python.org]: https://packaging.python.org
-{:/comment}
 
 ### Potential bug 1
 
@@ -352,7 +362,8 @@ What I need to do is explicitly put `include-system-site-packages = false` into
 [`non_root_python.py`]: https://web.archive.org/web/20051203055434/http://svn.colorstudy.com/home/ianb/non_root_python.py
 [virtual-python]: http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-python
 [`virtual-python.py`]: http://peak.telecommunity.com/dist/virtual-python.py
-[pyvenv]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments
+<!-- [pyvenv]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments -->
+[pyvenv]: https://github.com/python/cpython/blob/3.6/Tools/scripts/pyvenv
 [pyvenv-deprecated]: https://docs.python.org/dev/whatsnew/3.6.html#id8
 [EasyInstall]: https://en.wikipedia.org/wiki/Setuptools#EasyInstall
 
