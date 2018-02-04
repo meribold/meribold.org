@@ -15,23 +15,24 @@ Here's a (presumably non-exhaustive) list of programs that do something with vir
 environments:
 
 1.  [autoenv](https://github.com/kennethreitz/autoenv)
-2.  [pew](https://github.com/berdario/pew)
-3.  [pipenv](https://github.com/kennethreitz/pipenv)
-4.  [pyenv](https://github.com/pyenv/pyenv)
-5.  [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
-6.  [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
-7.  [pyvenv][]
-8.  [rvirtualenv](https://github.com/kvbik/rvirtualenv)
-9.  [venv][library/venv]
-10. [vex](https://pypi.python.org/pypi/vex)
-11. [v](https://github.com/borntyping/v)
-12. [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito)
+2.  [Hatch](https://github.com/ofek/hatch)
+3.  [pew](https://github.com/berdario/pew)
+4.  [pipenv](https://github.com/kennethreitz/pipenv)
+5.  [pyenv](https://github.com/pyenv/pyenv)
+6.  [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
+7.  [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
+8.  [pyvenv][]
+9.  [rvirtualenv](https://github.com/kvbik/rvirtualenv)
+10. [venv][library/venv]
+11. [vex](https://pypi.python.org/pypi/vex)
+12. [v](https://github.com/borntyping/v)
 13. [virtualenv][]
-14. [VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager)
-15. [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper)
-16. [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)
-17. [virtual-python][]
-18. [workingenv](https://pypi.python.org/pypi/workingenv.py)
+14. [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito)
+15. [VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager)
+16. [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper)
+17. [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)
+18. [virtual-python][]
+19. [workingenv](https://pypi.python.org/pypi/workingenv.py)
 
 Wow.  This stuff must be really hard to get right.  I also must be a moron, since, after
 having written <!--several--> <!--a few--> some thousand lines of Python, I don't even
@@ -82,10 +83,13 @@ tools with no direct support from the language itself.)
     $ echo 'home = /usr/bin' > pyvenv.cfg
     $ mkdir -p lib/python3.6/site-packages
 
-Because of what I [assume to be a bug in CPython](#potential-bug-1), we also need to move
-the Python binary into a `bin` subdirectory.
+I will also move the Python binary into a `bin` subdirectory.[^why-tho]
 
     $ mkdir bin && mv python3 bin/
+
+[^why-tho]: I think this *should not* be necessary.  But, because of what I assume to be a
+    [bug](TODO) in CPython, it is.  A `bin/` subdirectory certainly is the conventional
+    location for the binary, though.
 
 {::comment}
 >   [T]he internal virtual environment layout mimics the layout of the Python installation
@@ -110,6 +114,14 @@ same system.
 
 <!-- TODO: talk about isolation. -->
 <!-- TODO: how can we install something into the virtual environment? -->
+
+This worked for me:
+
+    pip install -t lib/python3.6/site-packages/ cowsay
+
+This did not:
+
+    pip install --prefix . cowsay
 
 {::comment}
 The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
@@ -176,13 +188,20 @@ about 10 MiB of disk space in total.)
 
 ## Summary
 
-*   A virtual environment is a directory containing a Python interpreter, a special
-    `pyvenv.cfg` file that affects startup of the interpreter, and some third-party Python
-    modules.
-*   Python modules installed into a virtual environment will not interfere with other
-    Python applications on the same system.
-*   "[venv is the standard tool for creating virtual environments, and has been part of
+**A** virtual environment is a directory containing a Python interpreter, a special
+`pyvenv.cfg` file that affects startup of the interpreter, and some third-party Python
+modules.
+
+**P**ython modules installed into a virtual environment will not interfere with other
+Python applications on the same system.
+
+**v**env is the "[standard tool for creating virtual
+environments](https://docs.python.org/3/installing/)".
+
+<!--
+**v**env is the "[standard tool for creating virtual environments, and has been part of
 Python since Python 3.3.](https://docs.python.org/3/installing/)"
+-->
 
 ## Appendices
 
@@ -266,71 +285,6 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 [installing]: https://docs.python.org/3/installing/
 [Python 3.5]: https://docs.python.org/dev/whatsnew/3.5.html
 [Python 3.6]: https://docs.python.org/dev/whatsnew/3.6.html#id8
-
-### More definitions of "virtual environment"
-
->   A virtual environment is a semi-isolated Python environment that allows packages to be
->   installed for use by a particular application, rather than being installed system
->   wide.  
->   ---<https://docs.python.org/3/installing/>
-
->   A [virtual environment is a] cooperatively isolated runtime environment that allows
->   Python users and applications to install and upgrade Python distribution packages
->   without interfering with the behaviour of other Python applications running on the
->   same system.  
->   ---<https://docs.python.org/3/glossary.html#term-virtual-environment>
-
->   Python "Virtual Environments" allow Python packages to be installed in an isolated
->   location for a particular application, rather than being installed globally.  
->   ---"[Creating Virtual Environments][]" subsection of the "Installing Packages" tutorial at [packaging.python.org][]
-
-[Creating Virtual Environments]: https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments
-[packaging.python.org]: https://packaging.python.org
-
-### Potential bug 1
-
-The following doesn't appear to work when the Python executable is in the same directory
-as `pyvenv.cfg`.
-
->   [If the Python binary belongs to a virtual environment] `sys.prefix` is set to the
->   directory containing `pyvenv.cfg`.  
->   ---[PEP 405](https://www.python.org/dev/peps/pep-0405/#specification)
-
-    $ pwd
-    /home/meribold/virtual_env
-    $ ./python3 --version
-    Python 3.6.3
-    $ ./python3
-    >>> import sys; sys.prefix
-    '/home/meribold'
-
-### Potential bug 2
-
-This doesn't appear to be the case:
-
->   By default, a virtual environment is entirely isolated from the system-level
->   site-packages directories.  
->   ---[PEP 405](https://www.python.org/dev/peps/pep-0405/#isolation-from-system-site-packages)
-
-{::comment}
->   If the `pyvenv.cfg` file also contains a key `include-system-site-packages` with a
->   value of `true` (not case sensitive), the site module will also add the system site
->   directories to `sys.path` after the virtual environment site directories.  
->   ---[PEP 405](https://www.python.org/dev/peps/pep-0405/#isolation-from-system-site-packages)
-{:/comment}
-
->   If `pyvenv.cfg` [...] contains the key `include-system-site-packages` set to anything
->   other than `false` [...], the system-level prefixes will still also be searched for
->   site-packages; *otherwise they won't.*  
->   ---[Documentation of the `site` module](https://docs.python.org/3/library/site.html) (emphasis added)
-
-Here's what actually happens:
-[`site.py`](https://github.com/python/cpython/blob/3.6/Lib/site.py#L447)  I.e., when the
-file doesn't contain the key `include-system-site-packages` at all, `system_site` will
-still be `"true"`.
-
-What I need to do is explicitly put `include-system-site-packages = false` into
-`pyvenv.cfg`.  Otherwise I can still `import numpy` etc.
 
 ## Footnotes
 
