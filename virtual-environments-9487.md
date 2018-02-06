@@ -5,39 +5,39 @@ description: TODO
 categories: python
 ---
 
+<!-- <http://cinemassacre.com/wp-content/uploads/2008/02/VirtualBoy.jpg> -->
 <img class="confined-img"
-src="http://cinemassacre.com/wp-content/uploads/2008/02/VirtualBoy.jpg"
+src="{{ site.url }}/assets/virtual-boy-avgn.jpg"
 alt="The fucking nerd with his Virtual Boy"
 title="What were they thinking?!">
-<!-- title="Wikipedia redirects to the page about &quot;virtual reality&quot; when searching for &quot;virtual environment&quot;."> -->
 
-Here's a (presumably non-exhaustive) list of programs that do something with virtual
-environments:
+**H**ere's a non-exhaustive list of programs that are all meant to help create or manage
+virtual environments in some way:
 
-1.  [autoenv](https://github.com/kennethreitz/autoenv)
-2.  [Hatch](https://github.com/ofek/hatch)
-3.  [pew](https://github.com/berdario/pew)
-4.  [pipenv](https://github.com/kennethreitz/pipenv)
-5.  [pyenv](https://github.com/pyenv/pyenv)
-6.  [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
-7.  [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
-8.  [pyvenv][]
-9.  [rvirtualenv](https://github.com/kvbik/rvirtualenv)
-10. [venv][library/venv]
-11. [vex](https://pypi.python.org/pypi/vex)
-12. [v](https://github.com/borntyping/v)
-13. [virtualenv][]
-14. [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito)
-15. [VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager)
-16. [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper)
-17. [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win)
-18. [virtual-python][]
-19. [workingenv](https://pypi.python.org/pypi/workingenv.py)
+>   [autoenv](https://github.com/kennethreitz/autoenv),
+>   [Hatch](https://github.com/ofek/hatch),
+>   [pew](https://github.com/berdario/pew),
+>   [pipenv](https://github.com/kennethreitz/pipenv),
+>   [pyenv](https://github.com/pyenv/pyenv),
+>   [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv),
+>   [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper),
+>   [pyvenv][],
+>   [rvirtualenv](https://github.com/kvbik/rvirtualenv),
+>   [venv][library/venv],
+>   [vex](https://pypi.python.org/pypi/vex),
+>   [v](https://github.com/borntyping/v),
+>   [virtualenv][],
+>   [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito),
+>   [VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager),
+>   [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper),
+>   [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win),
+>   [virtual-python][],
+>   [workingenv](https://pypi.python.org/pypi/workingenv.py).
 
-Wow.  This stuff must be really hard to get right.  I also must be a moron, since, after
-having written <!--several--> <!--a few--> some thousand lines of Python, I don't even
-know what problem we are trying to solve here.  The abundance of relevant programs with
-subtly different names has deterred me from reading up on it so far.
+Clearly, this stuff must be really hard to get right.  I also must be a moron, since,
+after having written <!--several--> <!--a few--> some thousand lines of Python, I don't
+even know what problem we are trying to solve here, and the abundance of relevant programs
+with subtly different names has deterred me from reading up on it so far.
 
 ## So what *is* a virtual environment?
 
@@ -48,32 +48,39 @@ The [official docs' tutorial][tutorial-venv] describes a virtual environment as
 
 So it's a directory with a Python interpreter?  <!--I can do that.-->Easy enough.
 
-    $ mkdir virtual_env
-    $ cd virtual_env
-    $ cp /bin/python3 .
+```bash
+$ mkdir virtual_env
+$ cd virtual_env
+$ cp /bin/python3 .
+```
 
-Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Contains
-a number of additional packages?  ... Zero is a number!  (Check.)  Particular version?
-Um...
+Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Contains a number
+of additional packages?  ...Zero is a number!  (Check.)  Particular version?  Um...
 
-    $ ./python --version
-    Python 3.6.3
+```bash
+$ ./python3 --version
+Python 3.6.3
+```
 
 I think that will do.  Is it self-contained, though?  It doesn't contain itself...
 
+<!--
+<https://upload.wikimedia.org/wikipedia/commons/a/a6/Bertrand_Russell_transparent_bg.png>
+-->
 <img style="width: 33%"
-src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Bertrand_Russell_transparent_bg.png"
+src="{{ site.url }}/assets/russell.png"
 alt="Another nerd: Bertrand Russell in 1916"
 title="Consider the directory containing all directories that don't contain themselves.">
 
 Jokes aside, there are only two things missing to actually make our directory a virtual
 environment as specified by [PEP 405][], the proposal that integrated a standard mechanism
 for virtual environments with Python<!--elevated virtual environments from a purely
-third-party hack-->.
+third-party hack-->.[^before-405]
 <!--(Everything prior to PEP 405 were purely third-party tools without any support from
 the language itself.)-->
-(Before PEP 405 was accepted, virtual environments were purely the domain of third-party
-tools with no direct support from the language itself.)
+
+[^before-405]: Before PEP 405 was accepted, virtual environments were purely the domain of
+    third-party tools with no direct support from the language itself.
 
 1.  A file called `pyvenv.cfg` containing the line `home = /usr/bin`
 2.  A `lib/python3.6/site-packages` subdirectory
@@ -87,9 +94,10 @@ I will also move the Python binary into a `bin` subdirectory.[^why-tho]
 
     $ mkdir bin && mv python3 bin/
 
-[^why-tho]: I think this *should not* be necessary.  But, because of what I assume to be a
-    [bug](TODO) in CPython, it is.  A `bin/` subdirectory certainly is the conventional
-    location for the binary, though.
+<!-- TODO: add some link for the bug. -->
+[^why-tho]: I think this *should* not be necessary.  But, because of what I assume to be a
+    bug in CPython, it is.  A `bin/` subdirectory certainly is the conventional location
+    for the binary, though.
 
 {::comment}
 >   [T]he internal virtual environment layout mimics the layout of the Python installation
@@ -97,31 +105,57 @@ I will also move the Python binary into a `bin` subdirectory.[^why-tho]
 >   ---<https://www.python.org/dev/peps/pep-0405/#creating-virtual-environments>
 {:/comment}
 
-Fair.  We have a directory that formally qualifies as a virtual environment.  This leads
-us to the next question.
+Fair.  We have a directory that formally qualifies as a virtual environment:
+
+```bash
+$ tree --noreport
+.
+├── bin
+│   └── python3
+├── lib
+│   └── python3.6
+│       └── site-packages
+└── pyvenv.cfg
+```
+
+This leads us to the next question.
 
 ## What's the point?
 
 When we run our copy of the Python binary, the `pyvenv.cfg` file changes what happens
-during startup a bit: the presence of the `home` key tells Python <!--that--> the binary
-belongs to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it where to
-find a complete Python installation that includes the standard library.
+during startup: the presence of the `home` key tells Python <!--that--> the binary belongs
+to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it where to find a
+complete Python installation that includes the standard library.
 
-The bottom line is that `./lib/python3.6/site-packages` becomes part of the module search
-path.  The point is that we can now install modules to that location, in particular,
+The bottom line is that `./lib/python3.6/site-packages` becomes part of the [module search
+path][].  The point is that we can now install modules to that location, in particular,
 specific versions that may conflict with the dependencies of another Python program on the
 same system.
+
+[module search path]: https://docs.python.org/3/library/site.html
 
 <!-- TODO: talk about isolation. -->
 <!-- TODO: how can we install something into the virtual environment? -->
 
-This worked for me:
+Modules could be installed into this handmade virtual environment with `pip`.  For
+example, your project may depend on a specific version of
+[left-pad](https://pypi.python.org/pypi/left-pad):
 
-    pip install -t lib/python3.6/site-packages/ cowsay
+```bash
+$ pip install -t lib/python3.6/site-packages/ left-pad==0.0.3
+$ python3 -c 'import left_pad'      # Module not found
+$ bin/python3 -c 'import left_pad'  # Works
+```
 
-This did not:
+{::comment}
+This did not work for me:
 
-    pip install --prefix . cowsay
+```bash
+$ pip install --prefix . cowsay
+```
+
+TODO: investigate.
+{:/comment}
 
 {::comment}
 The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
@@ -155,7 +189,8 @@ All this means is that we can install modules  into `./lib/python3.6/site-packag
 and that we can `import` these as usual.
 {:/comment}
 
-## venv
+<!-- ## venv -->
+## The standard tool for creating virtual environments
 
 In practice, one does not simply create virtual environments by hand, which brings us back
 to the dauntingly long list of tools above.  Fortunately, one of them is not like the
@@ -174,17 +209,31 @@ In it simplest form, venv is used to create a virtual environment like so:
 This creates the `virtual_env` directory and also copies or symlinks the Python
 interpreter:
 
-    $ cd virtual_env
-    $ find -name python3
-    ./bin/python3
+```bash
+$ cd virtual_env
+$ find -name python3
+./bin/python3
+```
 
-(It also copies a bunch of other stuff.  I get 650 files in 89 subdirectories using up
-about 10 MiB of disk space in total.)
+It also copies a bunch of other stuff.  I get 650 files in 89 subdirectories using up
+about 10 MiB of disk space in total.  One of those files is the `pip` binary, and we can
+use it to install modules into the virtual environment without extra flags:
+
+```bash
+$ bin/pip install left-pad
+```
 
 <!--
     $ find | wc -l
     740
 -->
+
+<!-- ## Activate -->
+## Magic
+
+```bash
+source bin/activate
+```
 
 ## Summary
 
@@ -195,8 +244,8 @@ modules.
 **P**ython modules installed into a virtual environment will not interfere with other
 Python applications on the same system.
 
-**v**env is the "[standard tool for creating virtual
-environments](https://docs.python.org/3/installing/)".
+**T**he "[standard tool for creating virtual
+environments](https://docs.python.org/3/installing/)" is *venv*.
 
 <!--
 **v**env is the "[standard tool for creating virtual environments, and has been part of
@@ -309,5 +358,6 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
     "The Python Tutorial: Virtual Environments and Packages"
 
 *[PEP]: Python Enhancement Proposal
+*[OS]: Operating system
 
 <!-- vim: set tw=90 sts=-1 sw=4 et spell wrap: -->
