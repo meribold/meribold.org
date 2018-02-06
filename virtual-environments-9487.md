@@ -13,26 +13,25 @@ title="What were they thinking?!">
 
 **H**ere's a non-exhaustive list of programs that are all meant to help create or manage
 virtual environments in some way:
-
->   [autoenv](https://github.com/kennethreitz/autoenv),
->   [Hatch](https://github.com/ofek/hatch),
->   [pew](https://github.com/berdario/pew),
->   [pipenv](https://github.com/kennethreitz/pipenv),
->   [pyenv](https://github.com/pyenv/pyenv),
->   [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv),
->   [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper),
->   [pyvenv][],
->   [rvirtualenv](https://github.com/kvbik/rvirtualenv),
->   [venv][library/venv],
->   [vex](https://pypi.python.org/pypi/vex),
->   [v](https://github.com/borntyping/v),
->   [virtualenv][],
->   [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito),
->   [VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager),
->   [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper),
->   [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win),
->   [virtual-python][],
->   [workingenv](https://pypi.python.org/pypi/workingenv.py).
+[autoenv](https://github.com/kennethreitz/autoenv),
+[Hatch](https://github.com/ofek/hatch),
+[pew](https://github.com/berdario/pew),
+[pipenv](https://github.com/kennethreitz/pipenv),
+[pyenv](https://github.com/pyenv/pyenv),
+[pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv),
+[pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper),
+[pyvenv][],
+[rvirtualenv](https://github.com/kvbik/rvirtualenv),
+[venv][library/venv],
+[vex](https://pypi.python.org/pypi/vex),
+[v](https://github.com/borntyping/v),
+[virtualenv][],
+[virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito),
+[VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager),
+[virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper),
+[virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win),
+[virtual-python][],
+[workingenv](https://pypi.python.org/pypi/workingenv.py).
 
 Clearly, this stuff must be really hard to get right.  I also must be a moron, since,
 after having written <!--several--> <!--a few--> some thousand lines of Python, I don't
@@ -87,12 +86,16 @@ the language itself.)-->
 
 (Both paths are subject to the OS and the second one also to the Python version used.)
 
-    $ echo 'home = /usr/bin' > pyvenv.cfg
-    $ mkdir -p lib/python3.6/site-packages
+```bash
+$ echo 'home = /usr/bin' > pyvenv.cfg
+$ mkdir -p lib/python3.6/site-packages
+```
 
 I will also move the Python binary into a `bin` subdirectory.[^why-tho]
 
-    $ mkdir bin && mv python3 bin/
+```bash
+$ mkdir bin && mv python3 bin/
+```
 
 <!-- TODO: add some link for the bug. -->
 [^why-tho]: I think this *should* not be necessary.  But, because of what I assume to be a
@@ -128,7 +131,7 @@ to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it where to 
 complete Python installation that includes the standard library.
 
 The bottom line is that `./lib/python3.6/site-packages` becomes part of the [module search
-path][].  The point is that we can now install modules to that location, in particular,
+path][].  The point is that we can now install packages to that location, in particular,
 specific versions that may conflict with the dependencies of another Python program on the
 same system.
 
@@ -137,7 +140,7 @@ same system.
 <!-- TODO: talk about isolation. -->
 <!-- TODO: how can we install something into the virtual environment? -->
 
-Modules could be installed into this handmade virtual environment with `pip`.  For
+Packages could be installed into this handmade virtual environment with `pip`.  For
 example, your project may depend on a specific version of
 [left-pad](https://pypi.python.org/pypi/left-pad):
 
@@ -204,7 +207,9 @@ ships with Python as part of the standard library:
 
 In it simplest form, venv is used to create a virtual environment like so:
 
-    $ python3 -m venv virtual_env
+```bash
+$ python3 -m venv virtual_env
+```
 
 This creates the `virtual_env` directory and also copies or symlinks the Python
 interpreter:
