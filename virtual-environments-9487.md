@@ -220,9 +220,10 @@ $ find -name python3
 ./bin/python3
 ```
 
-It also copies a bunch of other stuff.  I get 650 files in 89 subdirectories using up
-about 10 MiB of disk space in total.  One of those files is the `pip` binary, and we can
-use it to install modules into the virtual environment without extra flags:
+It also copies a bunch of other stuff: I get 650 files in 89 subdirectories amounting to
+about 10 MiB in total.  One of those files is the `pip` binary, and we can use it to
+install packages into the virtual environment without passing extra command-line
+arguments:
 
 ```bash
 $ bin/pip install left-pad
@@ -232,13 +233,6 @@ $ bin/pip install left-pad
     $ find | wc -l
     740
 -->
-
-<!-- ## Activate -->
-## Magic
-
-```bash
-source bin/activate
-```
 
 ## Summary
 
@@ -258,6 +252,13 @@ Python since Python 3.3.](https://docs.python.org/3/installing/)"
 -->
 
 ## Appendices
+
+<!-- ### Activate -->
+### Magic
+
+```bash
+source bin/activate
+```
 
 ### History
 
