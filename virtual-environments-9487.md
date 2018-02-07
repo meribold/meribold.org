@@ -31,6 +31,7 @@ virtual environments in some way:
 [virtualenv][],
 [virtualenv-burrito](https://github.com/brainsik/virtualenv-burrito),
 [VirtualEnvManager](https://pypi.python.org/pypi/VirtualEnvManager),
+[virtualenv-mv](https://github.com/brbsix/virtualenv-mv),
 [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper),
 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win),
 [virtual-python][],
@@ -56,7 +57,7 @@ $ cp /bin/python3 virtual_env
 ```
 
 Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Contains a number
-of additional packages?  ...Zero is a number!  (Check.)  Particular version?  Um...
+of additional packages?  Zero is a number!  (Check.)  Particular version?  Um...
 
 ```bash
 $ cd virtual_env
@@ -81,7 +82,7 @@ for virtual environments with Python.[^before-405]
 [^before-405]: Before PEP 405 was accepted, virtual environments were purely the domain of
     third-party tools with no direct support from the language itself.
 
-1.  A file called `pyvenv.cfg` containing the line `home = /usr/bin`
+1.  A file named `pyvenv.cfg` containing the line `home = /usr/bin`
 2.  A `lib/python3.6/site-packages` subdirectory
 
 (Both paths are subject to the OS and the second one also to the Python version used.)
@@ -132,16 +133,20 @@ installation that includes the standard library.
 The bottom line is that `./lib/python3.6/site-packages` becomes part of the [module search
 path][].  The point is that we can now install packages to that location, in particular,
 specific versions that may conflict with the dependencies of another Python program on the
-same system.
+same system.[^python-level-isolation]
+
+[^python-level-isolation]: Be aware that we only get [python-level isolation][].
+
+[python-level isolation]: https://pythonrants.wordpress.com/2013/12/06/why-i-hate-virtualenv-and-pip/
 
 [module search path]: https://docs.python.org/3/library/site.html
 
-Packages could be installed into this handmade virtual environment with `pip`.  For
-example, if your project needs exactly version 0.0.3 of
+Packages could be installed into this handmade virtual environment with pip.  For example,
+if your project needs exactly version 0.0.3 of
 [left-pad](https://pypi.python.org/pypi/left-pad):
 
 ```bash
-$ pip install -t lib/python3.6/site-packages/ left-pad==0.0.3
+$ pip3 install -t lib/python3.6/site-packages/ left-pad==0.0.3
 ```
 
 Now this will work:
@@ -192,8 +197,13 @@ install packages into the virtual environment without passing extra command-line
 arguments:
 
 ```bash
-$ bin/pip install left-pad
+$ ./bin/pip install left-pad
 ```
+
+You can read more about using venv and *optional* magic like the "activate" scripts in the
+[Python tutorial](https://docs.python.org/3/tutorial/venv.html) or the venv's
+[documentation](https://docs.python.org/3/library/venv.html)---this post is only meant to
+boil down what a virtual environment actually is.
 
 ## Summary
 
@@ -205,15 +215,17 @@ modules.
 Python applications on the same system.
 
 **T**he "[standard tool for creating virtual
-environments](https://docs.python.org/3/installing/)" is *venv*.
+environments](https://docs.python.org/3/installing/)" is venv.
 
 ## Appendices
 
+<!--
 ### Magic
 
 ```bash
 source bin/activate
 ```
+-->
 
 ### History
 
@@ -319,5 +331,6 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 
 *[PEP]: Python Enhancement Proposal
 *[OS]: Operating system
+*[pip]: pip installs packages
 
 <!-- vim: set tw=90 sts=-1 sw=4 et spell wrap: -->
