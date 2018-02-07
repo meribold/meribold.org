@@ -49,14 +49,14 @@ So it's a directory with a Python interpreter?  <!--I can do that.-->Easy enough
 
 ```bash
 $ mkdir virtual_env
-$ cd virtual_env
-$ cp /bin/python3 .
+$ cp /bin/python3 virtual_env
 ```
 
 Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Contains a number
 of additional packages?  ...Zero is a number!  (Check.)  Particular version?  Um...
 
 ```bash
+$ cd virtual_env
 $ ./python3 --version
 Python 3.6.3
 ```
@@ -146,8 +146,8 @@ example, your project may depend on a specific version of
 
 ```bash
 $ pip install -t lib/python3.6/site-packages/ left-pad==0.0.3
-$ python3 -c 'import left_pad'      # Module not found
-$ bin/python3 -c 'import left_pad'  # Works
+$ python3 -c 'import left_pad'        # Module not found
+$ ./bin/python3 -c 'import left_pad'  # Works
 ```
 
 {::comment}
