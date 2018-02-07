@@ -37,9 +37,9 @@ virtual environments in some way:
 [workingenv](https://pypi.python.org/pypi/workingenv.py).
 
 Clearly, this stuff must be really hard to get right.  I also must be a moron, since,
-after having written <!--several--> <!--a few--> some thousand lines of Python, I don't
-even know what problem we are trying to solve here, and the abundance of relevant programs
-with subtly different names has deterred me from reading up on it so far.
+after having written some thousand lines of Python, I don't even know what problem we are
+trying to solve here, and the abundance of relevant programs with subtly different names
+has deterred me from reading up on it so far.
 
 ## So what *is* a virtual environment?
 
@@ -48,7 +48,7 @@ The [official docs' tutorial][tutorial-venv] describes a virtual environment as
 >   a self-contained directory tree that contains a Python installation for a particular
 >   version of Python, plus a number of additional packages.
 
-So it's a directory with a Python interpreter?  <!--I can do that.-->Easy enough.
+So it's a directory with a Python interpreter?  Easy enough.
 
 ```bash
 $ mkdir virtual_env
@@ -76,10 +76,7 @@ title="Consider the directory containing all directories that don't contain them
 
 Jokes aside, there are only two things missing to actually make our directory a virtual
 environment as specified by [PEP 405][], the proposal that integrated a standard mechanism
-for virtual environments with Python<!--elevated virtual environments from a purely
-third-party hack-->.[^before-405]
-<!--(Everything prior to PEP 405 were purely third-party tools without any support from
-the language itself.)-->
+for virtual environments with Python.[^before-405]
 
 [^before-405]: Before PEP 405 was accepted, virtual environments were purely the domain of
     third-party tools with no direct support from the language itself.
@@ -100,7 +97,6 @@ I will also move the Python binary into a `bin` subdirectory.[^why-tho]
 $ mkdir bin && mv python3 bin/
 ```
 
-<!-- TODO: add some link for the bug. -->
 [^why-tho]: I think this *should* not be necessary.  But, because of what I assume to be a
     bug in CPython, it is.  A `bin/` subdirectory certainly is the conventional location
     for the binary, though.
@@ -129,9 +125,9 @@ This leads us to the next question.
 ## What's the point?
 
 When we run our copy of the Python binary, the `pyvenv.cfg` file changes what happens
-during startup: the presence of the `home` key tells Python <!--that--> the binary belongs
-to a virtual environment, the <!--key's--> value (`/usr/bin`) tells it where to find a
-complete Python installation that includes the standard library.
+during startup: the presence of the `home` key tells Python the binary belongs to a
+virtual environment, the key's value (`/usr/bin`) tells it where to find a complete Python
+installation that includes the standard library.
 
 The bottom line is that `./lib/python3.6/site-packages` becomes part of the [module search
 path][].  The point is that we can now install packages to that location, in particular,
@@ -139,10 +135,6 @@ specific versions that may conflict with the dependencies of another Python prog
 same system.
 
 [module search path]: https://docs.python.org/3/library/site.html
-
-{::comment}
-How can we install something into the virtual environment?
-{:/}
 
 Packages could be installed into this handmade virtual environment with `pip`.  For
 example, if your project needs exactly version 0.0.3 of
@@ -164,60 +156,16 @@ And this will not:
 $ python3 -c 'import left_pad'  # module not found
 ```
 
-{::comment}
-This did not work for me:
-
-```bash
-$ pip install --prefix . cowsay
-```
-
-TODO: investigate.
-{:/comment}
-
-{::comment}
-TODO: talk about isolation from the system-level and user-level site-packages directories?
-{:/}
-
-{::comment}
-The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
-directory used to initialize the module search path.
-{:/comment}
-
 <!--
-Consider `ls -l /usr/lib/python3.6/site-packages/`: `site-packages` contains packages, but
-also standalone modules.
+TODO: talk about isolation from the system-level and user-level site-packages directories?
 -->
 
-{::comment}
-These are the prefix and module search path I get when using `./bin/python3`:
-
-```python
->>> import sys
->>> sys.prefix
-'/home/meribold/virtual_env'
->>> sys.path
-['', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/meribold/virtual_env/lib/python3.6/site-packages', '/home/meribold/.local/lib/python3.6/site-packages', '/usr/lib/python3.6/site-packages']
-```
-
-When running Python normally, `sys.prefix` has the value `'/usr'` and the `sys.path` list
-doesn't contain `'/home/meribold/virtual_env/lib/python3.6/site-packages'` (but is
-otherwise identical).
-
->   "[A]ll packages are modules".  
->   ---https://docs.python.org/3/reference/import.html)
-
-All this means is that we can install modules  into `./lib/python3.6/site-packages` now,
-and that we can `import` these as usual.
-{:/comment}
-
-<!-- ## venv -->
 ## The standard tool for creating virtual environments
 
 In practice, one does not simply create virtual environments by hand, which brings us back
 to the dauntingly long list of tools above.  Fortunately, one of them is not like the
-others.  While it's predated by most of them, this one <!--is an official part of and-->
-ships with Python as part of the standard library:
-[*venv*][library/venv].[^venv-and-pyvenv]
+others.  While it's predated by most of them, this one ships with Python as part of the
+standard library: [*venv*][library/venv].[^venv-and-pyvenv]
 
 [^venv-and-pyvenv]: Actually, pyvenv also ships with Python, but was deprecated in version
     3.6 (only 3 minor versions after its introduction).  Both venv and pyvenv were added
@@ -247,11 +195,6 @@ arguments:
 $ bin/pip install left-pad
 ```
 
-{::comment}
-    $ find | wc -l
-    740
-{:/}
-
 ## Summary
 
 **A** virtual environment is a directory containing a Python interpreter, a special
@@ -264,14 +207,8 @@ Python applications on the same system.
 **T**he "[standard tool for creating virtual
 environments](https://docs.python.org/3/installing/)" is *venv*.
 
-<!--
-**v**env is the "[standard tool for creating virtual environments, and has been part of
-Python since Python 3.3.](https://docs.python.org/3/installing/)"
--->
-
 ## Appendices
 
-<!-- ### Activate -->
 ### Magic
 
 ```bash
@@ -352,7 +289,6 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 [virtualenv-initial-commit]: https://github.com/pypa/virtualenv/commit/e02aa46f4f0eb5321c31641e89bde2c9b92547bb
 [virtualenv-post]: http://www.ianbicking.org/blog/2007/10/workingenv-is-dead-long-live-virtualenv.html
 <!-- [virtualenv-post]: http://www.ianbicking.org/blog/2007/10/10/workingenv-is-dead-long-live-virtualenv/ -->
-<!-- [Python 3.3]: https://docs.python.org/dev/whatsnew/3.3.html -->
 [Python 3.3]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments
 [Python 3.4]: https://docs.python.org/dev/whatsnew/3.4.html
 [installing]: https://docs.python.org/3/installing/
