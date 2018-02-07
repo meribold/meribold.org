@@ -14,7 +14,9 @@ title="What were they thinking?!">
 **H**ere's a non-exhaustive list of programs that are all meant to help create or manage
 virtual environments in some way:
 [autoenv](https://github.com/kennethreitz/autoenv),
+[fades](https://github.com/PyAr/fades),
 [Hatch](https://github.com/ofek/hatch),
+[inve](https://gist.github.com/datagrok/2199506#a-better-activate-inve),
 [pew](https://github.com/berdario/pew),
 [pipenv](https://github.com/kennethreitz/pipenv),
 [pyenv](https://github.com/pyenv/pyenv),
@@ -22,6 +24,7 @@ virtual environments in some way:
 [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper),
 [pyvenv][],
 [rvirtualenv](https://github.com/kvbik/rvirtualenv),
+[tox](https://github.com/tox-dev/tox),
 [venv][library/venv],
 [vex](https://pypi.python.org/pypi/vex),
 [v](https://github.com/borntyping/v),
@@ -137,17 +140,28 @@ same system.
 
 [module search path]: https://docs.python.org/3/library/site.html
 
-<!-- TODO: talk about isolation. -->
-<!-- TODO: how can we install something into the virtual environment? -->
+{::comment}
+How can we install something into the virtual environment?
+{:/}
 
 Packages could be installed into this handmade virtual environment with `pip`.  For
-example, your project may depend on a specific version of
+example, if your project needs exactly version 0.0.3 of
 [left-pad](https://pypi.python.org/pypi/left-pad):
 
 ```bash
 $ pip install -t lib/python3.6/site-packages/ left-pad==0.0.3
-$ python3 -c 'import left_pad'        # Module not found
-$ ./bin/python3 -c 'import left_pad'  # Works
+```
+
+Now this will work:
+
+```bash
+$ ./bin/python3 -c 'import left_pad'  # OK
+```
+
+And this will not:
+
+```bash
+$ python3 -c 'import left_pad'  # module not found
 ```
 
 {::comment}
@@ -159,6 +173,10 @@ $ pip install --prefix . cowsay
 
 TODO: investigate.
 {:/comment}
+
+{::comment}
+TODO: talk about isolation from the system-level and user-level site-packages directories?
+{:/}
 
 {::comment}
 The location of the `pyvenv.cfg` file becomes the Python processes' [prefix][]: a
@@ -229,10 +247,10 @@ arguments:
 $ bin/pip install left-pad
 ```
 
-<!--
+{::comment}
     $ find | wc -l
     740
--->
+{:/}
 
 ## Summary
 
