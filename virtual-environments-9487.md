@@ -141,8 +141,7 @@ same system.[^python-level-isolation]
 
 [module search path]: https://docs.python.org/3/library/site.html
 
-Packages could be installed into this handmade virtual environment with pip.  For example,
-if your project needs exactly version 0.0.3 of
+For example, if your project needs exactly version 0.0.3 of
 [left-pad](https://pypi.python.org/pypi/left-pad):
 
 ```bash
@@ -201,7 +200,7 @@ $ ./bin/pip install left-pad
 ```
 
 You can read more about using venv and *optional* magic like the "activate" scripts in the
-[Python tutorial](https://docs.python.org/3/tutorial/venv.html) or the venv's
+[Python tutorial](https://docs.python.org/3/tutorial/venv.html) or venv's
 [documentation](https://docs.python.org/3/library/venv.html)---this post is only meant to
 boil down what a virtual environment actually is.
 
