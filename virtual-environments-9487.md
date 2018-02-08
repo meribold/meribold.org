@@ -273,7 +273,7 @@ TODO: did anything important happen here?
 
 2014-03-16
 :   [Python 3.4][] is released.  "[[venv] defaults to installing pip into all created
-    virtual environments.][installing]".
+    virtual environments.][installing]"
 
 2015-09-13
 :   [Python 3.5][] is released.  "[The use of venv is now recommended for creating virtual
