@@ -45,7 +45,7 @@ has deterred me from reading up on it so far.
 
 ## So what *is* a virtual environment?
 
-The [official docs' tutorial][tutorial-venv] describes a virtual environment as
+The [official docs' tutorial][tutorial/venv] describes a virtual environment as
 
 >   a self-contained directory tree that contains a Python installation for a particular
 >   version of Python, plus a number of additional packages.
@@ -218,14 +218,6 @@ environments](https://docs.python.org/3/installing/)" is venv.
 
 ## Appendices
 
-<!--
-### Magic
-
-```bash
-source bin/activate
-```
--->
-
 ### History
 
 <!-- TODO: When and by whom was the term "virtual environment" coined? -->
@@ -289,22 +281,21 @@ environments.][installing]"
 :   [Python 3.6][] is released; "[pyvenv was the recommended tool for creating virtual
 environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installing]"
 
+[Python 3.3]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments
+[Python 3.4]: https://docs.python.org/dev/whatsnew/3.4.html
+[Python 3.5]: https://docs.python.org/dev/whatsnew/3.5.html
+[Python 3.6]: https://docs.python.org/dev/whatsnew/3.6.html#id8
+[`working-env.py`]: https://web.archive.org/web/20060425105635/http://svn.colorstudy.com/home/ianb/working-env.py
 [easy-install-release-notes]: http://peak.telecommunity.com/DevCenter/EasyInstall#release-notes-change-history
+[installing]: https://docs.python.org/3/installing/
 [setuptools-commit-3df2aab]: https://github.com/pypa/setuptools/commit/3df2aabcc056e6d001355d4cec780437387ac4fa
 [setuptools-commit-43d3473]: https://github.com/pypa/setuptools/commit/43d34734c801d2d9a72d5fa6e7fc74d80bdc11c1
+[virtualenv-initial-commit]: https://github.com/pypa/virtualenv/commit/e02aa46f4f0eb5321c31641e89bde2c9b92547bb
+[virtualenv-post]: http://www.ianbicking.org/blog/2007/10/workingenv-is-dead-long-live-virtualenv.html
 [working-env-brainstorm]: http://www.ianbicking.org/working-env-brainstorm.html
 [working-env-post]: http://www.ianbicking.org/working-env.html
 [workingenv-revisited-post]: http://www.ianbicking.org/workingenv-revisited.html
-[`working-env.py`]: https://web.archive.org/web/20060425105635/http://svn.colorstudy.com/home/ianb/working-env.py
 [workingenv]: https://web.archive.org/web/20060516191525/http://svn.colorstudy.com:80/home/ianb/workingenv
-[virtualenv-initial-commit]: https://github.com/pypa/virtualenv/commit/e02aa46f4f0eb5321c31641e89bde2c9b92547bb
-[virtualenv-post]: http://www.ianbicking.org/blog/2007/10/workingenv-is-dead-long-live-virtualenv.html
-<!-- [virtualenv-post]: http://www.ianbicking.org/blog/2007/10/10/workingenv-is-dead-long-live-virtualenv/ -->
-[Python 3.3]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments
-[Python 3.4]: https://docs.python.org/dev/whatsnew/3.4.html
-[installing]: https://docs.python.org/3/installing/
-[Python 3.5]: https://docs.python.org/dev/whatsnew/3.5.html
-[Python 3.6]: https://docs.python.org/dev/whatsnew/3.6.html#id8
 
 ### Image sources
 
@@ -316,28 +307,23 @@ the public domain.
 
 ## Footnotes
 
-[virtualenv]: https://github.com/pypa/virtualenv
-[`non_root_python.py`]: https://web.archive.org/web/20051203055434/http://svn.colorstudy.com/home/ianb/non_root_python.py
-[virtual-python]: http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-python
-[`virtual-python.py`]: http://peak.telecommunity.com/dist/virtual-python.py
-<!-- [pyvenv]: https://docs.python.org/dev/whatsnew/3.3.html#pep-405-virtual-environments -->
-[pyvenv]: https://github.com/python/cpython/blob/3.6/Tools/scripts/pyvenv
-[pyvenv-deprecated]: https://docs.python.org/dev/whatsnew/3.6.html#id8
-[EasyInstall]: https://en.wikipedia.org/wiki/Setuptools#EasyInstall
-[1]: http://pyvideo.org/pycon-us-2011/pycon-2011--reverse-engineering-ian-bicking--39-s.html
-[2]: http://docs.python-guide.org/en/latest/dev/virtualenvs/
-
-[prefix]: https://docs.python.org/3/library/sys.html#sys.prefix
-    "Python 3 documentation for sys.prefix"
 [library/venv]: https://docs.python.org/3/library/venv.html
     "The Python Standard Library: venv — Creation of virtual environments"
 [PEP 405]: https://www.python.org/dev/peps/pep-0405/
     "PEP 405 -- Python Virtual Environments"
-[tutorial-venv]: https://docs.python.org/3/tutorial/venv.html
+[tutorial/venv]: https://docs.python.org/3/tutorial/venv.html
     "The Python Tutorial: Virtual Environments and Packages"
 
-*[PEP]: Python Enhancement Proposal
+[EasyInstall]: https://en.wikipedia.org/wiki/Setuptools#EasyInstall
+[`non_root_python.py`]: https://web.archive.org/web/20051203055434/http://svn.colorstudy.com/home/ianb/non_root_python.py
+[pyvenv-deprecated]: https://docs.python.org/dev/whatsnew/3.6.html#id8
+[pyvenv]: https://github.com/python/cpython/blob/3.6/Tools/scripts/pyvenv
+[virtualenv]: https://github.com/pypa/virtualenv
+[virtual-python]: http://peak.telecommunity.com/DevCenter/EasyInstall#creating-a-virtual-python
+[`virtual-python.py`]: http://peak.telecommunity.com/dist/virtual-python.py
+
 *[OS]: Operating system
+*[PEP]: Python Enhancement Proposal
 *[pip]: pip installs packages
 
 <!-- vim: set tw=90 sts=-1 sw=4 et spell wrap: -->
