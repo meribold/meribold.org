@@ -3,6 +3,7 @@ layout: post
 title: Virtual Environments Demystified
 description: TODO
 categories: python
+sitemap: false
 ---
 
 <a href="#image-sources">
