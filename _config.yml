@@ -19,6 +19,8 @@ github_username:  meribold
 # See <http://shopify.github.io/liquid/filters/date/>.
 date_format: "%Y-%m-%d"
 permalink: pretty
+# See <https://github.com/jekyll/jekyll-feed/issues/94#issuecomment-182026305>.
+show_drafts: true
 # The pages generated from these files will have links in the header.
 header_pages:
   - projects.md
@@ -41,5 +43,6 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 
 # vim: tw=90 sts=-1 sw=2 et

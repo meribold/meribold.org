@@ -1,19 +1,18 @@
 ---
 layout: default
+sitemap: false
 ---
 
 <div>
-  {{ content }}
-
-  <h1>Posts</h1>
+  <h1>Drafts</h1>
   <ul class="post-list">
     {% for post in site.posts %}
-      {% unless post.draft %}
+      {% if post.draft %}
         <li>
           <span class="post-meta">{{ post.date | date: site.date_format }} | </span>
           <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </li>
-      {% endunless %}
+      {% endif %}
     {% endfor %}
   </ul>
 </div>

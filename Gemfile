@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem "github-pages"
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
+  gem 'jekyll-feed'
 end
 
 # vim: tw=90 sts=-1 sw=2 et
