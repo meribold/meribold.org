@@ -175,7 +175,7 @@ standard library: [*venv*][library/venv].[^venv-and-pyvenv]
     3.6 (only 3 minor versions after its introduction).  Both venv and pyvenv were added
     to Python in version 3.3.
 
-In it simplest form, venv is used to create a virtual environment like so:
+In its simplest form, venv is used to create a virtual environment like so:
 
 ```bash
 $ python3 -m venv virtual_env
