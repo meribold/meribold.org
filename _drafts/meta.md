@@ -6,6 +6,7 @@ description: >
 date: 2017-09-02
 last_modified_at: 2017-09-12
 categories: jekyll
+sitemap: false
 ---
 
 <div class="scrolled-img-wrapper">
