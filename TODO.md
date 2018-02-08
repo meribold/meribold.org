@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "TODO"
+sitemap: false
 ---
 
 *   Only alternate the background color of table rows if there's a minimum amount of rows?
