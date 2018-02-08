@@ -199,7 +199,7 @@ arguments:
 $ ./bin/pip install left-pad
 ```
 
-You can read more about using venv and *optional* magic like the "activate" scripts in the
+You can read more about using venv and *optional* magic like "activate" scripts in the
 [Python tutorial](https://docs.python.org/3/tutorial/venv.html) or venv's
 [documentation](https://docs.python.org/3/library/venv.html)---this post is only meant to
 boil down what a virtual environment actually is.
