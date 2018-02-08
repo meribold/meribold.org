@@ -268,11 +268,11 @@ TODO: did anything important happen here?
 :   [PEP 405][] is accepted for inclusion in Python 3.3.
 
 2012-09-29
-:   [Python 3.3][] is released.  [venv][library/venv] and [pyvenv][] become part of the
+:   [Python 3.3][] is released; [venv][library/venv] and [pyvenv][] become part of the
     standard library.
 
 2014-03-16
-:   [Python 3.4][] is released.  "[[venv] defaults to installing pip into all created
+:   [Python 3.4][] is released; "[[venv] defaults to installing pip into all created
     virtual environments.][installing]"
 
 2015-09-13
