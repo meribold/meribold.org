@@ -55,14 +55,14 @@ So it's a directory with a Python interpreter?  Easy enough.
 
 ```bash
 $ mkdir virtual_env
-$ cp /bin/python3 virtual_env
+$ cp /bin/python3 virtual_env/
 ```
 
 Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Contains a number
 of additional packages?  Zero is a number!  (Check.)  Particular version?  Um...
 
 ```bash
-$ cd virtual_env
+$ cd virtual_env/
 $ ./python3 --version
 Python 3.6.3
 ```
