@@ -5,11 +5,12 @@ description: TODO
 categories: python
 ---
 
-<!-- <http://cinemassacre.com/wp-content/uploads/2008/02/VirtualBoy.jpg> -->
+<a href="#image-sources">
 <img class="confined-img"
 src="{{ site.url }}/assets/virtual-boy-avgn.jpg"
 alt="The fucking nerd with his Virtual Boy"
 title="What were they thinking?!">
+</a>
 
 **H**ere's a non-exhaustive list of programs that are all meant to help create or manage
 virtual environments in some way:
@@ -67,13 +68,12 @@ Python 3.6.3
 
 I think that will do.  Is it self-contained, though?  It doesn't contain itself...
 
-<!--
-<https://upload.wikimedia.org/wikipedia/commons/a/a6/Bertrand_Russell_transparent_bg.png>
--->
+<a href="#image-sources">
 <img style="width: 33%"
 src="{{ site.url }}/assets/russell.png"
 alt="Another nerd: Bertrand Russell in 1916"
 title="Consider the directory containing all directories that don't contain themselves.">
+</a>
 
 Jokes aside, there are only two things missing to actually make our directory a virtual
 environment as specified by [PEP 405][], the proposal that integrated a standard mechanism
@@ -305,6 +305,14 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 [installing]: https://docs.python.org/3/installing/
 [Python 3.5]: https://docs.python.org/dev/whatsnew/3.5.html
 [Python 3.6]: https://docs.python.org/dev/whatsnew/3.6.html#id8
+
+### Image sources
+
+The "Virtual Boy" image is a slightly edited version of [this
+picture](http://cinemassacre.com/wp-content/uploads/2008/02/VirtualBoy.jpg) by [James
+Rolfe](http://cinemassacre.com).  The photograph of Bertrand Russell is from
+[Wikipedia](https://en.wikipedia.org/wiki/File:Bertrand_Russell_transparent_bg.png) and in
+the public domain.
 
 ## Footnotes
 
