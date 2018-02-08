@@ -157,6 +157,16 @@ img {
   vertical-align: middle;
 }
 
+/* Class for images that disables most weird hacks. */
+.normal-img {
+  max-width: initial;
+  position: initial;
+  left: initial;
+  transform: initial;
+  margin-left: initial;
+  vertical-align: initial;
+}
+
 /* Wrapper to make the following class work. */
 .scrolled-img-wrapper {
   width: 100vw;

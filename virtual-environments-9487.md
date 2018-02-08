@@ -69,8 +69,8 @@ Python 3.6.3
 
 I think that will do.  Is it self-contained, though?  It doesn't contain itself...
 
-<a href="#image-sources">
-<img style="width: 33%"
+<a href="#image-sources" style="display: block; width: 33%; margin: auto">
+<img class="normal-img" style="width: 100%"
 src="{{ site.url }}/assets/russell.png"
 alt="Another nerd: Bertrand Russell in 1916"
 title="Consider the directory containing all directories that don't contain themselves.">
