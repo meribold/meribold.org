@@ -235,7 +235,7 @@ main events.
 
 2006-03-08
 :   Ian Bicking, the author of [`non_root_python.py`][]---on which [`virtual-python.py`][]
-    is is based---publishes a blog post about improving [`virtual-python.py`][] titled
+    is based---publishes a blog post about improving [`virtual-python.py`][] titled
     "[Working Environment Brainstorm][working-env-brainstorm]".
 
 2006-03-15
