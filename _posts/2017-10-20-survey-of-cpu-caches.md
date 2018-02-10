@@ -424,6 +424,8 @@ You can find discussions of this article on [Hacker
 News](https://news.ycombinator.com/item?id=15520390) and
 [Reddit](https://www.reddit.com/77mx8i).
 
+## Footnotes
+
 *[RAM]: random-access memory
 *[TLB]: translation lookaside buffer
 *[TLBs]: translation lookaside buffers
