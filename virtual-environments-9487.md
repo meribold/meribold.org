@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Virtual Environments Demystified
-description: TODO
+description: The number of available programs for managing virtual environments is
+    bafflingly large.  This post boils down what exactly a Python virtual environments is
+    by creating one manually.
 categories: python
 sitemap: false
 ---
@@ -9,11 +11,10 @@ sitemap: false
 <a href="#image-sources">
 <img class="confined-img"
 src="{{ site.url }}/assets/virtual-boy-avgn.jpg"
-alt="The fucking nerd with his Virtual Boy"
-title="What were they thinking?!">
+alt="The nerd with his Virtual Boy">
 </a>
 
-**H**ere's a non-exhaustive list of programs that are all meant to help create or manage
+Here's a non-exhaustive list of programs that are all meant to help create or manage
 virtual environments in some way:
 
 >   [Hatch](https://github.com/ofek/hatch),
@@ -153,14 +154,19 @@ $ pip3 install -t lib/python3.6/site-packages/ left-pad==0.0.3
 Now this will work:
 
 ```bash
-$ ./bin/python3 -c 'import left_pad'  # OK
+$ ./bin/python3 -c 'import left_pad'
 ```
 
-And this will not:
+While this should raise [`ModuleNotFoundError`], as desired:
 
 ```bash
-$ python3 -c 'import left_pad'  # module not found
+$ python3 -c 'import left_pad'
 ```
+
+[`ModuleNotFoundError`]: https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError
+
+Another project on the same system could have a different version of left-pad in its own
+virtual environment, without interfering with this one.
 
 <!--
 TODO: talk about isolation from the system-level and user-level site-packages directories?
@@ -210,9 +216,9 @@ boil down what a virtual environment actually is.
 
 **A** virtual environment is a directory containing a Python interpreter, a special
 `pyvenv.cfg` file that affects startup of the interpreter, and some third-party Python
-modules.
+packages.
 
-**P**ython modules installed into a virtual environment will not interfere with other
+**P**ython packages installed into a virtual environment will not interfere with other
 Python applications on the same system.
 
 **T**he "[standard tool for creating virtual
