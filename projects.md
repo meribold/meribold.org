@@ -28,10 +28,16 @@ simulation][flutterrust] with an infinite, procedurally generated map.
 
 ## Articles
 
-"[Hardware Caches and Optimization][1]" (PDF)
+"[Scoring Board Games with Computer Vision][1]" (2018)
+: Thesis about automating end-of-game scoring of board games based on photos taken with
+  camera phones
+
+"[Hardware Caches and Optimization][2]" (2017)
 : Seminar paper about CPU caches with illustrative code samples and profiling results
 
-[1]: {{ site.url }}/assets/cache-paper.pdf
+<!-- This file is rejected by GitHub because it's too big: use the Dropbox link. -->
+[1]: https://www.dropbox.com/s/xmyr6rmcwqalj75/thesis.pdf
+[2]: {{ site.url }}/assets/cache-paper.pdf
 
 [curse]: https://mods.curse.com/members/meribold/projects
 [curseforge]: https://wow.curseforge.com/members/meribold/projects
