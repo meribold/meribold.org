@@ -15,7 +15,8 @@ email: meribold@gmail.com
 #   My personal website.  There is nothing interesting here yet.
 url: "https://meribold.github.io"
 github_username:  meribold
-# twitter_username: mribld
+twitter:
+  username: mribld
 # See <http://shopify.github.io/liquid/filters/date/>.
 date_format: "%Y-%m-%d"
 permalink: pretty
