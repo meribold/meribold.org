@@ -41,7 +41,7 @@ cache entry to be evicted and replaced.
 Current x86 CPUs generally have three main types of caches: data caches, instruction
 caches, and translation lookaside buffers ({::nomarkdown}TLBs{:/}).  Some caches are used
 for data as well as instructions and are called *{::nomarkdown}unified{:/}*.  A processor
-may have multiple caches of each type, which are organised into numerical *levels*
+may have multiple caches of each type, which are organized into numerical *levels*
 starting at 1, the smallest and fastest level, based on their size and speed.
 
 In practice, a currently representative x86 cache hierarchy consists of:
