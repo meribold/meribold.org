@@ -1,4 +1,12 @@
 body {
+  /* This, along with `flex-grow: 1` for the <main> element below, results in the footer
+   * being flushed to the bottom of the page---even if the page's content has a very small
+   * height.  I didn't figure out how to do this by myself, but by inspecting this page:
+   * <https://jekyll.github.io/minima/misc/2016/05/19/super-short-article.html>.
+   */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   /* Horizontally center everything. */
   margin: auto;
   /* Make sure the text can't start and stop exactly at the screen edges; leave some
@@ -20,6 +28,11 @@ body {
   text-rendering: optimizeLegibility;
   /* overflow-y: scroll; */
   overflow-x: hidden;
+}
+
+main {
+  /* See the comment above `display: flex` in the CSS for the <body> element. */
+  flex-grow: 1;
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
