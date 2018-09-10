@@ -1,17 +1,4 @@
-html {
-  /* Using `min-height` here doesn't work. */
-  height: 100%;
-}
-
 body {
-  /* This, along with `flex-grow: 1` for the <main> element below, results in the footer
-   * being flushed to the bottom of the page---even if the page's content has a very small
-   * height.  I didn't figure out how to do this by myself, but by inspecting this page:
-   * <https://jekyll.github.io/minima/misc/2016/05/19/super-short-article.html>.
-   */
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   /* Horizontally center everything. */
   margin: auto;
   /* Make sure the text can't start and stop exactly at the screen edges; leave some
@@ -33,11 +20,6 @@ body {
   text-rendering: optimizeLegibility;
   /* overflow-y: scroll; */
   overflow-x: hidden;
-}
-
-main {
-  /* See the comment above `display: flex` in the CSS for the <body> element. */
-  flex-grow: 1;
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
@@ -359,6 +341,32 @@ th {
 tbody > tr:first-child > td {
   /* padding-top: .2em; */
 }
+
+/* All the pages on my website have a footer and I want that footer to be flushed to the
+ * page bottom.  This naturally happens when there is at least enough content for
+ * scrolling to become necessary to see the footer, but not otherwise.  I inspected
+ * <https://jekyll.github.io/minima/misc/2016/05/19/super-short-article.html> to figure
+ * out how to flush the footer to the bottom of the page when the page's content has a
+ * very small height.  The commit adding this initial solution is db31f09.
+ *
+ * I had to make some tweaks for Chrome on Android.   (They probably apply to Safari on
+ * iOS equally).  My initial solution included setting the minimum height of the <body>
+ * element to `100vh` instead of `100%` and didn't do anything to the <html> element.
+ * Things got more complicated because of [1].  I hope these tweaks don't break other
+ * stuff...
+ *
+ * [1]: https://developers.google.com/web/updates/2016/12/url-bar-resizing
+ */
+html {
+  /* Using `min-height` here doesn't work. */
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+main { flex-grow: 1; }
 
 /* Rules for syntax highlighting copied from [1].  Only the color in the first line is
  * modified.  Also see [2].
