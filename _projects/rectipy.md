@@ -2,8 +2,15 @@
 layout: page
 title: RectiPy
 description: Python package for reconstructing digital holograms
-last_modified_at: 2017-09-12
+last_modified_at: 2018-10-24
 ---
+
+<a href="{{ site.url }}/assets/holodeck-screenshot-linux.png">
+<img class="confined-img"
+     src="{{ site.url }}/assets/holodeck-screenshot-linux.png"
+     alt="Screenshot of the Holodeck GUI for RectiPy on Linux"
+     title="The Holodeck GUI for RectiPy on Linux (it looks better on Windows)">
+</a>
 
 RectiPy is a Python package for reconstructing digital holograms that uses a [method
 suggested by Junwei Min et al.][paper] to correct (rectify) phase aberrations.
