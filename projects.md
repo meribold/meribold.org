@@ -39,8 +39,7 @@ simulation][flutterrust] with an infinite, procedurally generated map.
 [1]: https://www.dropbox.com/s/xmyr6rmcwqalj75/thesis.pdf?raw=1
 [2]: {{ site.url }}/assets/cache-paper.pdf
 
-<!-- We could also use <https://www.curseforge.com/members/meribold/projects>. -->
-[curseforge]: https://wow.curseforge.com/members/meribold/projects
+[curseforge]: https://www.curseforge.com/members/meribold/projects
 [haskell-experiments]: https://github.com/meribold/haskell-experiments
 [flutterrust]: https://github.com/meribold/flutterrust
 
