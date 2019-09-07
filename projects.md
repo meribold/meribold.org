@@ -18,8 +18,8 @@ permalink: /projects/
 {% endfor %}
 
 I also dabbled in [Haskell][haskell-experiments], and wrote some more small [Warcraft
-addons][curseforge] which are mostly dead now.  Most of my experience is with C++, Lua,
-Python, and Bash.
+addons][curseforge] which are mostly dead now.  You can find some more stuff on
+[GitHub][].
 
 <!--
 For a C++ class in university, I wrote a crude, interactive [ecosystem
@@ -39,6 +39,7 @@ simulation][flutterrust] with an infinite, procedurally generated map.
 [1]: https://www.dropbox.com/s/xmyr6rmcwqalj75/thesis.pdf?raw=1
 [2]: {{ site.url }}/assets/cache-paper.pdf
 
+[GitHub]: https://github.com/meribold
 [curseforge]: https://www.curseforge.com/members/meribold/projects
 [haskell-experiments]: https://github.com/meribold/haskell-experiments
 [flutterrust]: https://github.com/meribold/flutterrust
