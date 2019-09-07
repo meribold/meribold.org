@@ -35,8 +35,8 @@ simulation][flutterrust] with an infinite, procedurally generated map.
 "[Hardware Caches and Optimization][2]" (2017)
 : Seminar paper about CPU caches with illustrative code samples and profiling results
 
-<!-- This file is rejected by GitHub because it's too big: use the Dropbox link. -->
-[1]: https://www.dropbox.com/s/xmyr6rmcwqalj75/thesis.pdf?raw=1
+<!-- This file is rejected by GitHub because it's too big: use Amazon S3. -->
+[1]: https://s3.eu-central-1.amazonaws.com/meribold.org/thesis.pdf
 [2]: {{ site.url }}/assets/cache-paper.pdf
 
 [GitHub]: https://github.com/meribold
