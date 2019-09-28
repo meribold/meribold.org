@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/meribold
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://meribold.org
+  * I am meribold (https://keybase.io/meribold) on keybase.
+  * I have a public key with fingerprint D14C CBFF 836E 5732 7C25  2FDE 7066 AC79 C459 2C12
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01018569862ca6855d50bf75b91c6791e89d3f8eb7948919406f5ba7b48fc81f0bd10a",
+      "fingerprint": "d14ccbff836e57327c252fde7066ac79c4592c12",
+      "host": "keybase.io",
+      "key_id": "7066ac79c4592c12",
+      "kid": "01018569862ca6855d50bf75b91c6791e89d3f8eb7948919406f5ba7b48fc81f0bd10a",
+      "uid": "7229ab10d5b96f66b048aba2250cc519",
+      "username": "meribold"
+    },
+    "service": {
+      "hostname": "meribold.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1569667431,
+  "expire_in": 157680000,
+  "prev": "7ead91e193a1d6729181ae014a5cecec62ebcbceba14f94b49e2f5fced985cc5",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUltsTEEY3q1KqUiEEiQlPV1aabM9cy5zzuyDCgniEpcKKmrNzJmzjm7P2Z7d
+llXiljYIWkIk9YK6JLoICRJxqaiEtHWLINQ9JULjHpImmOPyIh7NPEzmn+/7/u/7
+Mw39e/n6+GNmKtlaWjjQ3/aK+MrqUVWNQBwjKYRqhHL282BRg8UT4XLLEEKCCESg
+qxDpUKIY6qpqqCIxNZUgQKGGANORIZs6IxpSdASQIkJTJVgjim5SHZgiMYCIhULB
+tOwIc2OuZSe4rAEUSolp6jJkqiZLGpVUyTSYJkKIqYaooiKJAokTlzhxj8HNERxn
+QcvhNX4J/7T3D/x/9l31q48kIUyAaHABaEJIREXHBEuSKlKqAuQB48y1cQXj6Arm
+WsSJGsKqQoFXqy3KvMF6Sf5CBB03wrkx10k41InylyWJRCwe8piJZMyDLmMk/Fsk
+TCzb4HPkjGrmxi3HFkKAI2nC8lQBzwuhpsigUGDLY5bLwpaHUDWoi3x5fVi1l4Zh
+g49gPkAyBgbUJAR0gJkIFKxSxjeUGKGEMoKBYiKFKIhJpmpSZiBd5YEFL1el7Qgh
+xH3iCNeMWxEbJ6pcJqzK3OiX033+Pr7sITnpN6e1fV9vz5NWjip69Ofv9U7zPp4v
+s++AP5V1ozO+QdJ+f8Stun4d28/UDe/ft+VLy/GzV/NKexav/jpqaGTmk2D+0aso
+n2xbmzt55MmyyWvuLczecSQ3+eH+ntKcU+q11bdSa1YM2jI19eFReEPTwODb1Mgd
+V97N+nR3aw0JKreLOwOHK/X6g58vXQfJelMes7R0/+umc8fmtAfaGre9rDnQWOS7
+0IVmluPKnhIx+sB/+uPlQ+MHZ+WkAq3Dpk8YG36WCTety2sp27X++cPzK2r3CkVP
+x9053lDS0yDnpnXNnZ0WKH68b6dW0jmj+P2Cix2baxcVh/ID3W+Ilt3c2l17Y8pi
+X13Bjeikey8m2sKbghO98l5tztjVibKmNe/2H5W1Cz8A
+=HhZV
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/meribold
+
+==================================================================
