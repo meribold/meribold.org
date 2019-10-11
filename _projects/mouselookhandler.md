@@ -77,6 +77,10 @@ The addon is available on [Curse][] and the repository can be found on [GitHub][
 >   STILL WORKING IN BFA!  Thanks So Much!  WAAOO heewee go Xbox One Controller! xD  
 ---[ARCORIAN1](https://www.curseforge.com/wow/addons/mouselookhandler?comment=110)
 
+>    I'd have to quit playing WoW without this addon because it saves my hand from
+>    cramping up.  
+---[Parsley\_us](https://www.curseforge.com/wow/addons/mouselookhandler?comment=119)
+
 [mouselook]: https://en.wikipedia.org/wiki/Free_look
 <!-- [mouselook]: https://en.wiktionary.org/wiki/mouselook -->
 [RSI]: https://en.wikipedia.org/wiki/Repetitive_strain_injury
