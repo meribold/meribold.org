@@ -20,7 +20,7 @@ missing from Blizzard's default UI[^missing] and are typically added with poor v
 integration by addons like [Gladius][].
 
 <div class="youtube-wrapper">
-    <iframe class="youtube-vid" src="https://www.youtube.com/embed/qVEXJF1SYD4"
+    <iframe class="youtube-vid" src="https://www.youtube.com/embed/qVEXJF1SYD4?rel=0"
     allowfullscreen></iframe>
 </div>
 
