@@ -14,6 +14,8 @@ The addon is available on [Curse][] and the repository can be found on [GitHub][
 
 ## Testimonials
 
+All emphasis is copied from the originals.
+
 >   Registered just to thank you for making this addon.  No more hand pain due to holding
 >   that right mouse button down all the time.  I really like the override bindings
 >   feature.  
