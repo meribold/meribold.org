@@ -8,12 +8,21 @@ layout: default
   <h1>Posts</h1>
   <ul class="post-list">
     {% for post in site.posts %}
-      {% unless post.draft %}
+      {% unless post.draft or post.categories contains "video" %}
         <li>
           <span class="post-meta">{{ post.date | date: site.date_format }} | </span>
           <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </li>
       {% endunless %}
+    {% endfor %}
+  </ul>
+  <h1>Videos</h1>
+  <ul class="post-list">
+    {% for post in site.categories["video"] %}
+      <li>
+        <span class="post-meta">{{ post.date | date: site.date_format }} | </span>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </li>
     {% endfor %}
   </ul>
 </div>
