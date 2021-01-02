@@ -8,11 +8,9 @@ categories: python
 image: /assets/virtual-boy-avgn.jpg
 ---
 
-<a href="#image-sources">
 <img class="confined-img"
 src="{{ site.url }}/assets/virtual-boy-avgn.jpg"
 alt="The nerd with his Virtual Boy">
-</a>
 
 Here's a non-exhaustive list of programs that are all meant to help create or manage
 virtual environments in some way:
@@ -71,12 +69,12 @@ Python 3.6.3
 
 I think that will do.  Is it self-contained, though?  It doesn't contain itself...
 
-<a href="#image-sources" style="display: block; width: 33%; margin: auto">
+<span style="display: block; width: 33%; margin: auto">
 <img class="normal-img" style="width: 100%"
 src="{{ site.url }}/assets/russell.png"
 alt="Another nerd: Bertrand Russell in 1916"
 title="Consider the directory containing all directories that don't contain themselves.">
-</a>
+</span>
 
 Jokes aside, there are only two things missing to actually make our directory a virtual
 environment as specified by [PEP 405][], the proposal that integrated a standard mechanism
@@ -220,9 +218,7 @@ packages.  Python packages installed into a virtual environment will not interfe
 other Python applications on the same system.  The "[standard tool for creating virtual
 environments](https://docs.python.org/3/installing/)" is venv.
 
-## Appendices
-
-### History
+## Appendix: History
 
 <!-- TODO: When and by whom was the term "virtual environment" coined? -->
 
@@ -301,13 +297,10 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 [workingenv-revisited-post]: http://www.ianbicking.org/workingenv-revisited.html
 [workingenv]: https://web.archive.org/web/20060516191525/http://svn.colorstudy.com:80/home/ianb/workingenv
 
-### Image sources
+## Image sources
 
-The "Virtual Boy" image is a slightly edited version of [this
-picture](http://cinemassacre.com/wp-content/uploads/2008/02/VirtualBoy.jpg) by [James
-Rolfe](http://cinemassacre.com).  The photograph of Bertrand Russell is from
-[Wikipedia](https://en.wikipedia.org/wiki/File:Bertrand_Russell_transparent_bg.png) and in
-the public domain.
+The "Virtual Boy" image is used with permission from [James
+Rolfe](https://en.wikipedia.org/wiki/James_Rolfe).
 
 ## Footnotes
 
