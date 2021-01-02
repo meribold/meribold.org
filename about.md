@@ -11,7 +11,10 @@ permalink: /about/
 I'm a yak shaver that likes Tolkien and FOSS and [ricing][dotfiles].  My GPG fingerprint
 is `D14C CBFF 836E 5732 7C25  2FDE 7066 AC79 C459 2C12`.
 
-[Here's my résumé.]({{ site.url }}/resume.pdf)
+Here's my [résumé.]({{ site.url }}/resume.pdf)
+You can also find me on [GitHub](https://github.com/meribold),
+[YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ), and
+[LinkedIn](https://www.linkedin.com/in/meribold/).
 
 ![me]{:.confined-img}
 
