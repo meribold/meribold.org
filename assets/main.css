@@ -221,6 +221,7 @@ iframe.youtube-vid {
   color: #666;
   display: table-cell;
   padding-right: .33ch;
+  white-space: nowrap;
 }
 
 .post-list-link {
