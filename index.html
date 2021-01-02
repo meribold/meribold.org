@@ -4,23 +4,27 @@ layout: default
 
 <div>
   <h1>Posts</h1>
-  <ul class="post-list">
+  <div style="display: table;">
     {% for post in site.posts %}
       {% unless post.draft or post.categories contains "video" %}
-        <li>
-          <span class="post-meta">{{ post.date | date: site.date_format }} | </span>
-          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </li>
+        <div>
+          <span class="post-list-meta">{{ post.date | date: site.date_format }}</span>
+          <span class="post-list-link">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </span>
+        </div>
       {% endunless %}
     {% endfor %}
-  </ul>
+  </div>
   <h1>Videos</h1>
-  <ul class="post-list">
+  <div style="display: table;">
     {% for post in site.categories["video"] %}
-      <li>
-        <span class="post-meta">{{ post.date | date: site.date_format }} | </span>
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </li>
+      <div>
+        <span class="post-list-meta">{{ post.date | date: site.date_format }}</span>
+        <span class="post-list-link">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </span>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>

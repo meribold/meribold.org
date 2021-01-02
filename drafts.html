@@ -5,14 +5,16 @@ sitemap: false
 
 <div>
   <h1>Drafts</h1>
-  <ul class="post-list">
+  <div style="display: table;">
     {% for post in site.posts %}
       {% if post.draft %}
-        <li>
-          <span class="post-meta">{{ post.date | date: site.date_format }} | </span>
-          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </li>
+        <div>
+          <span class="post-list-meta">{{ post.date | date: site.date_format }}</span>
+          <span class="post-list-link">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </span>
+        </div>
       {% endif %}
     {% endfor %}
-  </ul>
+  </div>
 </div>
