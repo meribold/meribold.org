@@ -214,14 +214,10 @@ boil down what a virtual environment actually is.
 
 ## Summary
 
-**A** virtual environment is a directory containing a Python interpreter, a special
+A virtual environment is a directory containing a Python interpreter, a special
 `pyvenv.cfg` file that affects startup of the interpreter, and some third-party Python
-packages.
-
-**P**ython packages installed into a virtual environment will not interfere with other
-Python applications on the same system.
-
-**T**he "[standard tool for creating virtual
+packages.  Python packages installed into a virtual environment will not interfere with
+other Python applications on the same system.  The "[standard tool for creating virtual
 environments](https://docs.python.org/3/installing/)" is venv.
 
 ## Appendices
