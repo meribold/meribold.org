@@ -5,12 +5,7 @@ layout: default
 <article>
   <header>
     <h1>{{ page.title | escape }}</h1>
-    <p>
-      <time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: site.date_format }}
-      </time>
+    <time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
   </header>
-  <div>
-    {{ content }}
-  </div>
+  {{ content }}
 </article>
