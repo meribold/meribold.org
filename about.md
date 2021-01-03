@@ -8,13 +8,15 @@ last_modified_at: 2017-09-12
 permalink: /about/
 ---
 
-I'm a yak shaver that likes Tolkien and FOSS and [ricing][dotfiles].  My GPG fingerprint
-is `D14C CBFF 836E 5732 7C25  2FDE 7066 AC79 C459 2C12`.
+I'm a yak shaver that likes Tolkien and FOSS and tweaking my [dotfiles][].  My GPG
+fingerprint is `D14C CBFF 836E 5732 7C25  2FDE 7066 AC79 C459 2C12`.  You can find me on
+[GitHub](https://github.com/meribold),
+[YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ),
+[Mastodon](https://mastodon.social/@meribold),
+[LinkedIn](https://www.linkedin.com/in/meribold/), and
+[Twitter](https://twitter.com/mribld).
 
-Here's my [résumé.]({{ site.url }}/resume.pdf)
-You can also find me on [GitHub](https://github.com/meribold),
-[YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ), and
-[LinkedIn](https://www.linkedin.com/in/meribold/).
+Here's my [résumé]({{ site.url }}/resume.pdf).
 
 ![me]{:.confined-img}
 
