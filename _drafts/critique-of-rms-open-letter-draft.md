@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Critique of the Open Letter Calling for the Deplatforming of RMS
+title: A Critique of the Open Letter Calling for the Removal of RMS
 sitemap: false
 ---
 
@@ -62,22 +62,20 @@ idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remem
 I only looked into two paragraph's of the open letter's appendix in depth and can't
 comment on the rest.  Maybe the rest is completely fair.
 
-Generally I doubt that many people looked into the accusations much before signing the
-letter.  One of the original signatories told me that, "from a practical perspective,
-transphobe or no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist
-he is, he can't be a leader of an organization".[^luis-2]  Perhaps that's true, but it
-isn't fair.  Accusations like ableism and transphobia are front and center in the open
-letter.  Presumably at least some signatories took these accusations at face value and
-added their signature because of them.
+I wonder how many people looked into the accusations much before signing the letter.  One
+of the original signatories told me that, "from a practical perspective, transphobe or no,
+[RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist he is, he can't be
+a leader of an organization".[^luis-2]  Perhaps that's true, but it isn't fair.
+Accusations of ableism and transphobia are front and center in the open letter and likely
+convinced more than a handful of people to add their signature.
 
 I'll leave you with three more bits of evidence that things are more complex than the open
 letter would have you believe:
 
 1.  A [competing letter in support of RMS][] exists and has accumulated considerably more
     signatures than the letter condemning RMS.
-2.  In response someone created a Chrome extension that displays "RMS Letter Signator" in
-    red letters when a repository that belongs to a signatory of the support letter is
-    viewed on GitHub.
+2.  In response someone created a Chrome extension that marks repositories owned by a
+    signatory of this support letter with red text on GitHub.
 3.  The [announcement][extension-announcement] of this extension was welcomed with 392
     likes on Twitter.
 
