@@ -37,7 +37,7 @@ be found in the source we're given.  The appendix continues with a parenthetical
 that "several news reports misrepresented Stallman's position while discussing allegations
 against Minsky", but then asserts that "Stallman has previously expressed opinions that
 were consistent with the inaccurate portrayal."  No source is given this
-time.[^open-letter-appendix]
+time.
 
 Let's consider the evidence for RMS being transphobic.  This is thin ice.  The primary
 author of the open letter, Molly de Blanc, writes on her personal blog:
@@ -85,7 +85,6 @@ letter would have you believe:
 [^genderless-pronouns]: <https://www.stallman.org/articles/genderless-pronouns.html>
 [^leah-rowe]: <https://libreboot.org/news/rms.html#rms-is-not-transphobic>
 [^fucking-transphobic]: <https://twitter.com/mjg59/status/1377406466504544258>
-[^open-letter-appendix]: <https://rms-open-letter.github.io/appendix>
 [^luis-1]: <https://twitter.com/luis_in_brief/status/1377268090258354176>
 [^luis-2]: <https://twitter.com/luis_in_brief/status/1377268518052241413>
 
