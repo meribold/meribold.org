@@ -11,11 +11,10 @@ transphobic, intolerant, bigoted, and hateful was published.  The letter demands
 Stallman's removal from all leadership positions as well as the removal of the entire
 board of the FSF for enabling such a person.
 
-I will not make an argument either for or against RMS.
-I will only argue that the open letter is misleading, divisive, and meant to whip up a
-mob.
-I think a good argument against RMS *can* be made, but the authors of the letter instead
-chose to incite as much outrage as possible at the cost of honesty and nuance.
+I will not make an argument either for or against RMS.  I will only argue that the open
+letter is misleading, divisive, and meant to whip up a mob.  I think a good argument
+against RMS *can* be made, but the authors of the letter instead chose to incite as much
+outrage as possible at the cost of honesty and nuance.
 
 Many of the letter's signatories tell personal stories of RMS being arrogant, insensitive,
 presumptuous, or inappropriate, and have concluded that RMS is unsuitable as a leader or
@@ -25,19 +24,17 @@ said rather than done, and makes accusations that are much more grave.
 
 This hardly seems like an accident.  The goal is to have as many people as
 possible---including those that never interacted with RMS---be outraged and sign the
-letter, a
-strategy that seems to have worked rather well.  It surely also animated some people that
-dislike this dynamic to come out in support of RMS.
+letter, a strategy that seems to have worked rather well.  It surely also animated some
+people that dislike this dynamic to come out in support of RMS.
 
-The [letter' appendix][open-letter-appendix] correctly quotes RMS saying "the most
+The [letter's appendix][open-letter-appendix] correctly quotes RMS saying "the most
 plausible scenario is that [Virginia Giuffre] presented herself to [Marvin Minsky] as
 entirely willing", but then changes "presented" to "being" when referencing this quote
 three sentences later.  That same sentence contains a direct quotation  that is nowhere to
 be found in the source we're given.  The appendix continues with a parenthetical granting
 that "several news reports misrepresented Stallman's position while discussing allegations
 against Minsky", but then asserts that "Stallman has previously expressed opinions that
-were consistent with the inaccurate portrayal."  No source is given this
-time.
+were consistent with the inaccurate portrayal."  No source is given this time.
 
 Let's consider the evidence for RMS being transphobic.  This is thin ice.  The primary
 author of the open letter, Molly de Blanc, writes on her personal blog:
