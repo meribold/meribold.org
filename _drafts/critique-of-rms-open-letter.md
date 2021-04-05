@@ -47,9 +47,8 @@ author of the open letter, Molly de Blanc, writes on her personal blog:
 As an aside, I highly recommend reading that blog post in full.  Echoes of its world view
 are present throughout the open letter.
 
-So what makes RMS transphobic?
-He proposes and uses a set of singular, gender-neutral pronouns other than "they",
-"their", and "theirs".[^genderless-pronouns]
+So what makes RMS transphobic?  He proposes and uses a set of singular, gender-neutral
+pronouns other than "they", "their", and "theirs".[^genderless-pronouns]
 
 One transgender person called the proposal "idiotic", but considers "[c]alling RMS a
 transphobe […] an insult to people who suffer from real transphobia."[^leah-rowe] I am
