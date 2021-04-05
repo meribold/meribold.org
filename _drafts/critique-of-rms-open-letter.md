@@ -29,6 +29,16 @@ letter, a
 strategy that seems to have worked rather well.  It surely also animated some people that
 dislike this dynamic to come out in support of RMS.
 
+The [letter' appendix][open-letter-appendix] correctly quotes RMS saying "the most
+plausible scenario is that [Virginia Giuffre] presented herself to [Marvin Minsky] as
+entirely willing", but then changes "presented" to "being" when referencing this quote
+three sentences later.  That same sentence contains a direct quotation  that is nowhere to
+be found in the source we're given.  The appendix continues with a parenthetical granting
+that "several news reports misrepresented Stallman's position while discussing allegations
+against Minsky", but then asserts that "Stallman has previously expressed opinions that
+were consistent with the inaccurate portrayal."  No source is given this
+time.[^open-letter-appendix]
+
 Let's consider the evidence for RMS being transphobic.  This is thin ice.  The primary
 author of the open letter, Molly de Blanc, writes on her personal blog:
 
@@ -51,16 +61,6 @@ transphobia".[^fucking-transphobic] I'm tempted to err on the side of assuming g
 intentions here.  To me this looks like Stallman's typical willingness to die on strange,
 idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remember, there
 "is no space to argue over whether a comment was transphobic".
-
-The [letter' appendix][open-letter-appendix] correctly quotes RMS saying "the most
-plausible scenario is that [Virginia Giuffre] presented herself to [Marvin Minsky] as
-entirely willing", but then changes "presented" to "being" when referencing this quote
-three sentences later.  That same sentence contains a direct quotation  that is nowhere to
-be found in the source we're given.  The appendix continues with a parenthetical granting
-that "several news reports misrepresented Stallman's position while discussing allegations
-against Minsky", but then asserts that "Stallman has previously expressed opinions that
-were consistent with the inaccurate portrayal."  No source is given this
-time.[^open-letter-appendix]
 
 I doubt that many people looked into most of the accusations before signing the letter.
 One of the original signatories told me that, "from a practical perspective, transphobe or
