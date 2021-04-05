@@ -52,7 +52,7 @@ pronouns other than "they", "their", and "theirs".[^genderless-pronouns]
 
 One transgender person called the proposal "idiotic", but considers "[c]alling RMS a
 transphobe […] an insult to people who suffer from real transphobia."[^leah-rowe] I am
-also told of at least one (non-binary) transgender person that does agree with the open
+also told of at least one non-binary transgender person that does agree with the open
 letter's assertion that Stallman's proposal is, in fact, "poorly disguised
 transphobia".[^fucking-transphobic] I'm tempted to err on the side of assuming good
 intentions here.  To me this looks like Stallman's typical willingness to die on strange,
