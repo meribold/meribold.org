@@ -12,7 +12,8 @@ Stallman's removal from all leadership positions as well as the removal of the e
 board of the FSF for enabling such a person.
 
 I will not make an argument either for or against RMS.
-I will only argue that the open letter is unhelpful, divisive, and meant to whip up a mob.
+I will only argue that the open letter is misleading, divisive, and meant to whip up a
+mob.
 I think a good argument against RMS *can* be made, but the authors of the letter instead
 chose to incite as much outrage as possible at the cost of honesty and nuance.
 <!--This unnecessarily increases division among supporters of free and open-source
@@ -50,7 +51,7 @@ transphobe […] an insult to people who suffer from real transphobia."[^leah-ro
 also told of at least one (non-binary) transgender person that does agree with the open
 letter's assertion that Stallman's proposal is, in fact, "poorly disguised
 transphobia".[^fucking-transphobic] I'm tempted to err on the side of assuming good
-intentions.  To me this looks like Stallman's typical willingness to die on strange,
+intentions here.  To me this looks like Stallman's typical willingness to die on strange,
 idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remember, there
 "is no space to argue over whether a comment was transphobic".
 
@@ -60,8 +61,8 @@ Giuffre] presented herself to [Marvin Minsky] as entirely willing", but then cha
 sentence contains a direct quotation  that is nowhere to be found in the source we're
 given.  The letter continues with a parenthetical granting that "several news reports
 misrepresented Stallman's position while discussing allegations against Minsky", but then
-asserts that all these inaccurate portrayals are actually consistent with opinions
-"Stallman has previously expressed".  No source is given this time.[^open-letter-appendix]
+asserts that "Stallman has previously expressed opinions that were consistent" with these
+misrepresentations.  No source is given this time.[^open-letter-appendix]
 
 <!-- TODO: talk about ableism as well? -->
 
