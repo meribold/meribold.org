@@ -11,10 +11,11 @@ transphobic, intolerant, bigoted, and hateful was published.  The letter demands
 Stallman's removal from all leadership positions as well as the removal of the entire
 board of the FSF for enabling such a person.
 
-I will not make an argument either for or against RMS.  I will only argue that the open
-letter is misleading, divisive, and meant to whip up a mob.  I think a good argument
-against RMS *can* be made, but the authors of the letter instead chose to incite as much
-outrage as possible at the cost of honesty and nuance.
+I will not make an argument either for or against RMS.  Those who know RMS personally are
+in a better position to do that.  I will only argue that the open letter is misleading,
+divisive, and meant to whip up a mob.  I think a good argument against RMS *can* be made,
+but the authors of the letter instead chose to incite as much outrage as possible at the
+cost of honesty and nuance.
 
 Many of the letter's signatories tell personal stories of RMS being arrogant, insensitive,
 presumptuous, or inappropriate, and have concluded that RMS is unsuitable as a leader or
@@ -24,8 +25,8 @@ said rather than done, and makes accusations that are much more grave.
 
 This hardly seems like an accident.  The goal is to have as many people as
 possible---including those that never interacted with RMS---be outraged and sign the
-letter, a strategy that seems to have worked rather well.  It surely also animated some
-people that dislike this dynamic to come out in support of RMS.
+letter, a strategy that seems to have worked rather well.  But it surely also animated
+some people that dislike this dynamic to come out in support of RMS.
 
 The [letter's appendix][open-letter-appendix] correctly quotes RMS saying "the most
 plausible scenario is that [Virginia Giuffre] presented herself to [Marvin Minsky] as
@@ -59,21 +60,26 @@ intentions here.  To me this looks like Stallman's typical willingness to die on
 idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remember, there
 "is no space to argue over whether a comment was transphobic".
 
-I doubt that many people looked into most of the accusations before signing the letter.
-One of the original signatories told me that, "from a practical perspective, transphobe or
-no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist he is, he
-can't be a leader of an organization".[^luis-2]  Perhaps that's true, but it isn't fair.
-Accusations like ableism and transphobia are front and center in the open letter.
-The end shouldn't justify the means.
+I only looked into two paragraph's of the open letter's appendix in depth and can't
+comment on the rest.  Maybe the rest is completely fair.  To reiterate, this blog post is
+not a defense of RMS but only a critique of the open letter.
+
+Generally I doubt that many people looked into many of the accusations before signing the
+letter.  One of the original signatories told me that, "from a practical perspective,
+transphobe or no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist
+he is, he can't be a leader of an organization".[^luis-2]  Perhaps that's true, but it
+isn't fair.  Accusations like ableism and transphobia are front and center in the open
+letter.  Presumably at least some signatories took these accusations at face value and
+added their signature because of them.
 
 I'll leave you with three more bits of evidence that things are more complex than the open
 letter would have you believe:
 
-1.  A [competing open letter in support of RMS][] exists and has accumulated considerably
-    more signatures than the letter condemning RMS.
-2.  In response, a Chrome extension was created that displays "RMS Letter Signator" in red
-    letters when a repository that belongs to a signatory of the support letter is viewed
-    on GitHub.
+1.  A [competing letter in support of RMS][] exists and has accumulated considerably more
+    signatures than the letter condemning RMS.
+2.  In response someone created a Chrome extension that displays "RMS Letter Signator" in
+    red letters when a repository that belongs to a signatory of the support letter is
+    viewed on GitHub.
 3.  The [announcement][extension-announcement] of this extension was welcomed with 392
     likes on Twitter.
 
@@ -87,5 +93,5 @@ letter would have you believe:
 
 [open letter]: https://rms-open-letter.github.io
 [open-letter-appendix]: https://rms-open-letter.github.io/appendix
-[competing open letter in support of RMS]: https://rms-support-letter.github.io
+[competing letter in support of RMS]: https://rms-support-letter.github.io
 [extension-announcement]: https://twitter.com/aaronbassett/status/1376601712379764737
