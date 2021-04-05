@@ -60,10 +60,9 @@ idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remem
 "is no space to argue over whether a comment was transphobic".
 
 I only looked into two paragraph's of the open letter's appendix in depth and can't
-comment on the rest.  Maybe the rest is completely fair.  And to reiterate, this blog post
-is not a defense of RMS but only a critique of the open letter.
+comment on the rest.  Maybe the rest is completely fair.
 
-Generally I doubt that many people looked into many of the accusations before signing the
+Generally I doubt that many people looked into the accusations much before signing the
 letter.  One of the original signatories told me that, "from a practical perspective,
 transphobe or no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist
 he is, he can't be a leader of an organization".[^luis-2]  Perhaps that's true, but it
