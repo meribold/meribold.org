@@ -18,7 +18,7 @@ I think a good argument against RMS *can* be made, but the authors of the letter
 chose to incite as much outrage as possible at the cost of honesty and nuance.
 
 Many of the letter's signatories tell personal stories of RMS being arrogant, insensitive,
-presumptuous, or inappropriate and have concluded that RMS is unsuitable as a leader or
+presumptuous, or inappropriate, and have concluded that RMS is unsuitable as a leader or
 spokesperson.  This is a perfectly justifiable stance to take---especially for those that
 experienced or observed misbehavior themselves.  Yet, the letter focuses on what RMS has
 said rather than done, and makes accusations that are much more grave.
@@ -52,16 +52,17 @@ intentions here.  To me this looks like Stallman's typical willingness to die on
 idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remember, there
 "is no space to argue over whether a comment was transphobic".
 
-The letter correctly quotes RMS saying "the most plausible scenario is that [Virginia
-Giuffre] presented herself to [Marvin Minsky] as entirely willing", but then changes
-"presented" to "being" when referencing this quote three sentences later.  That same
-sentence contains a direct quotation  that is nowhere to be found in the source we're
-given.  The letter continues with a parenthetical granting that "several news reports
-misrepresented Stallman's position while discussing allegations against Minsky", but then
-asserts that "Stallman has previously expressed opinions that were consistent" with these
-misrepresentations.  No source is given this time.[^open-letter-appendix]
+The [letter' appendix][open-letter-appendix] correctly quotes RMS saying "the most
+plausible scenario is that [Virginia Giuffre] presented herself to [Marvin Minsky] as
+entirely willing", but then changes "presented" to "being" when referencing this quote
+three sentences later.  That same sentence contains a direct quotation  that is nowhere to
+be found in the source we're given.  The appendix continues with a parenthetical granting
+that "several news reports misrepresented Stallman's position while discussing allegations
+against Minsky", but then asserts that "Stallman has previously expressed opinions that
+were consistent with the inaccurate portrayal."  No source is given this
+time.[^open-letter-appendix]
 
-I doubt that many people looked into all of the accusations before signing the letter.
+I doubt that many people looked into most of the accusations before signing the letter.
 One of the original signatories told me that, "from a practical perspective, transphobe or
 no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist he is, he
 can't be a leader of an organization".[^luis-2]  Perhaps that's true, but it isn't fair.
@@ -89,5 +90,6 @@ letter would have you believe:
 [^luis-2]: <https://twitter.com/luis_in_brief/status/1377268518052241413>
 
 [open letter]: https://rms-open-letter.github.io
+[open-letter-appendix]: https://rms-open-letter.github.io/appendix
 [competing open letter in support of RMS]: https://rms-support-letter.github.io
 [extension-announcement]: https://twitter.com/aaronbassett/status/1376601712379764737
