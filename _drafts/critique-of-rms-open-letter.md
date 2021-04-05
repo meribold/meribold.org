@@ -16,8 +16,6 @@ I will only argue that the open letter is misleading, divisive, and meant to whi
 mob.
 I think a good argument against RMS *can* be made, but the authors of the letter instead
 chose to incite as much outrage as possible at the cost of honesty and nuance.
-<!--This unnecessarily increases division among supporters of free and open-source
-software.-->
 
 Many of the letter's signatories tell personal stories of RMS being arrogant, insensitive,
 presumptuous, or inappropriate and have concluded that RMS is unsuitable as a leader or
@@ -27,7 +25,7 @@ said rather than done, and makes accusations that are much more grave.
 
 This hardly seems like an accident.  The goal is to have as many people as
 possible---including those that never interacted with RMS---be outraged and sign the
-letter<!-- and give themselves a pat on the back--><!-- for their righteousness-->, a
+letter, a
 strategy that seems to have worked rather well.  It surely also animated some people that
 dislike this dynamic to come out in support of RMS.
 
@@ -44,7 +42,6 @@ are present throughout the open letter.
 So what makes RMS transphobic?
 He proposes and uses a set of singular, gender-neutral pronouns other than "they",
 "their", and "theirs".[^genderless-pronouns]
-<!--Period.-->
 
 One transgender person called the proposal "idiotic", but considers "[c]alling RMS a
 transphobe […] an insult to people who suffer from real transphobia."[^leah-rowe] I am
@@ -64,21 +61,13 @@ misrepresented Stallman's position while discussing allegations against Minsky",
 asserts that "Stallman has previously expressed opinions that were consistent" with these
 misrepresentations.  No source is given this time.[^open-letter-appendix]
 
-<!-- TODO: talk about ableism as well? -->
-
 I doubt that many people looked into all of the accusations before signing the letter.
 One of the original signatories told me that, "from a practical perspective, transphobe or
 no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist he is, he
 can't be a leader of an organization".[^luis-2]  Perhaps that's true, but it isn't fair.
 Accusations like ableism and transphobia are front and center in the open letter.
-<!--For people like myself that never personally interacted with RMS, these claims provide
-the impetus for signing.-->
 The end shouldn't justify the means.
-<!--Another signatory I argued with told me he "at least hope[s] we can all agree [RMS is]
-a creep, dudes weird af".-->
 
-<!--Here's another bit of evidence that "the FOSS community finally stands up to
-misogynist, ableist, transphobic, hateful bigot" isn't the full story.-->
 I'll leave you with three more bits of evidence that things are more complex than the open
 letter would have you believe:
 
