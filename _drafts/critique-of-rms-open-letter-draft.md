@@ -7,9 +7,9 @@ sitemap: false
 On March 21, Richard M. Stallman (RMS) announced that he is on the Free Software
 Foundation (FSF) board of directors again after having resigned in September 2019\.  Two
 days later, an [open letter][] condemning RMS as misogynist, ableist, transphobic,
-intolerant, bigoted, and hateful was published.  The letter demands Stallman's removal
-from all leadership positions as well as the removal of the entire board of the FSF for
-enabling such a person.
+intolerant, bigoted, hateful, and dangerous was published.  The letter demands Stallman's
+removal from all leadership positions as well as the removal of the entire board of the
+FSF for enabling such a person.
 
 I will not make an argument either for or against RMS.  Those who know RMS personally are
 in a better position to do that.  I will only argue that the open letter is misleading,
@@ -35,8 +35,8 @@ three sentences later.  That same sentence contains a direct quotation  that is 
 be found in the source we're given.  The appendix continues with a parenthetical granting
 that "several news reports misrepresented Stallman's position while discussing allegations
 against Minsky", but then asserts that "Stallman has previously expressed opinions that
-were consistent with the inaccurate portrayal."  No source is given for this claim, but
-the appendix continues to link one of the misrepresentative news reports.
+were consistent with the inaccurate portrayal."  No source is given for this claim.  On
+the other hand, the appendix continues to link one of the misrepresentative news reports.
 
 Let's consider the evidence for RMS being transphobic.  This is thin ice.  The primary
 author of the open letter, Molly de Blanc, writes on her personal blog:
@@ -60,14 +60,42 @@ intentions here.  To me this looks like Stallman's typical willingness to die on
 idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remember, there
 "is no space to argue over whether a comment was transphobic".
 
-I only looked into two paragraph's of the open letter's appendix in depth and can't
-comment on the rest.  Maybe the rest is completely fair.  I do wonder how many people
-looked into the accusations before signing the letter, though.  One of the original
-signatories told me that, "from a practical perspective, transphobe or no, [RMS] needs to
-go"[^luis-1] and that "regardless of exactly how ableist he is, he can't be a leader of an
-organization".[^luis-2]  Perhaps that's true, but it isn't fair.  Accusations of ableism
-and transphobia are front and center in the open letter and likely convinced more than a
-handful of people to add their signature.
+The accusation of ableism primarily hinges on a highly insensitive note RMS added to his
+website in October 2016, but completely rewrote a few months later.  Presumably someone
+told RMS about the problems with his original note.  The open letter's appendix uses
+recent web.archive.org links throughout and gives no indication that this particular link
+is a capture from 2016.  Here's the [rewritten note][]:
+
+>   A noninvasive test for Down's syndrome eliminates the small risk of the old test. This
+>   might lead more women to get tested, and abort fetuses that have Down's syndrome.
+>
+>   According to Wikipedia, Down's syndrome is a combination of many kinds of medical
+>   misfortune. Thus, when carrying a fetus that is likely to have Down's syndrome, I
+>   think the right course of action for the woman is to terminate the pregnancy.
+>
+>   That choice does right by the potential children that would otherwise likely be born
+>   with grave medical problems and disabilities. As humans, they are entitled to the
+>   capacity that is normal for human beings. I don't advocate making rules about the
+>   matter, but I think that doing right by your children includes not intentionally
+>   starting them out with less than that.
+>
+>   When children with Down's syndrome are born, that's a different situation. They are
+>   human beings and I think they deserve the best possible care.
+
+RMS has (for some reason) tens of thousands of notes on his website ready to be
+cherry-picked, and yet that wasn't enough for the authors of the open letter and they
+turned to a web.archive.org capture from 2016.  And then they didn't bother to inform the
+readers of this in any way.  These are the self-appointed judges of RMS.
+
+I only looked into some paragraphs of the open letter's appendix in depth and can't
+comment on the rest.  Maybe the rest is completely fair.  Martin Tournoij gives a [better
+and more thorough treatise][Stallman isn't great, but not the devil] of the open letter
+than I can.  I do wonder how many people looked into the accusations before signing the
+letter, though.  One of the original signatories told me that, "from a practical
+perspective, transphobe or no, [RMS] needs to go"[^luis-1] and that "regardless of exactly
+how ableist he is, he can't be a leader of an organization".[^luis-2]  Perhaps that's
+true, but it isn't fair.  Accusations of ableism and transphobia are front and center in
+the open letter and likely convinced more than a handful of people to add their signature.
 
 I'll leave you with three more bits of evidence that things are more complex than the open
 letter would have you believe:
@@ -89,5 +117,7 @@ letter would have you believe:
 
 [open letter]: https://rms-open-letter.github.io
 [open-letter-appendix]: https://rms-open-letter.github.io/appendix
+[rewritten note]: https://stallman.org/archives/2016-sep-dec.html#31_October_2016_(Down's_syndrome)
+[Stallman isn't great, but not the devil]: https://www.arp242.net/rms.html
 [competing letter in support of RMS]: https://rms-support-letter.github.io
 [extension-announcement]: https://twitter.com/aaronbassett/status/1376601712379764737
