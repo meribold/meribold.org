@@ -60,11 +60,11 @@ intentions here.  To me this looks like Stallman's typical willingness to die on
 idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remember, there
 "is no space to argue over whether a comment was transphobic".
 
-The accusation of ableism primarily hinges on a highly insensitive note RMS added to his
-website in October 2016, but completely rewrote a few months later.  Presumably someone
-told RMS about the problems with his original note.  The open letter's appendix uses
-recent web.archive.org links throughout and gives no indication that this particular link
-is a capture from 2016.  Here's the [rewritten note][]:
+The accusation of ableism seems to primarily hinge on a highly insensitive note RMS added
+to his website in October 2016, but completely rewrote a few months later.  Presumably
+someone told RMS about the problems with his original note.  The open letter's appendix
+uses recent web.archive.org links throughout and gives no indication that this particular
+link is a capture from 2016.  Here's the [rewritten note][]:
 
 >   A noninvasive test for Down's syndrome eliminates the small risk of the old test. This
 >   might lead more women to get tested, and abort fetuses that have Down's syndrome.
@@ -85,7 +85,7 @@ is a capture from 2016.  Here's the [rewritten note][]:
 RMS has (for some reason) tens of thousands of notes on his website ready to be
 cherry-picked, and yet that wasn't enough for the authors of the open letter and they
 turned to a web.archive.org capture from 2016.  And then they didn't bother to inform the
-readers of this in any way.  These are the self-appointed judges of RMS.
+readers of this in any way.
 
 I only looked into some paragraphs of the open letter's appendix in depth and can't
 comment on the rest.  Maybe the rest is completely fair.  Martin Tournoij gives a [better
