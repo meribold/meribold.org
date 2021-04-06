@@ -37,8 +37,8 @@ three sentences later.  That same sentence contains a direct quotation  that is 
 be found in the source we're given.  The appendix continues with a parenthetical granting
 that "several news reports misrepresented Stallman's position while discussing allegations
 against Minsky", but then asserts that "Stallman has previously expressed opinions that
-were consistent with the inaccurate portrayal."  No source is given for this claim.  On
-the other hand, the appendix continues to link one of the misrepresentative news reports.
+were consistent with the inaccurate portrayal."  No source is given this time.  On the
+other hand, the appendix continues to link one of the misrepresentative news reports.
 
 Let's consider the evidence for RMS being transphobic.  This is thin ice.  The primary
 author of the open letter, Molly de Blanc, writes on her personal blog:
