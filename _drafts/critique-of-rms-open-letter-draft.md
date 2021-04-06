@@ -84,7 +84,7 @@ link is an outdated capture from 2016.  Here's the [rewritten note][]:
 >   When children with Down's syndrome are born, that's a different situation. They are
 >   human beings and I think they deserve the best possible care.
 
-RMS has (for some reason) tens of thousands of notes on his website ready to be
+RMS has (for some reason) tens of thousands of political notes on his website ready to be
 cherry-picked, and yet that wasn't enough for the authors of the open letter and they
 turned to an outdated web.archive.org capture from 2016.  And then they didn't bother to
 inform the readers of this in any way.
