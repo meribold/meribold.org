@@ -84,17 +84,17 @@ link is a capture from 2016.  Here's the [rewritten note][]:
 
 RMS has (for some reason) tens of thousands of notes on his website ready to be
 cherry-picked, and yet that wasn't enough for the authors of the open letter and they
-turned to a web.archive.org capture from 2016.  And then they didn't bother to inform the
-readers of this in any way.
+turned to an outdated web.archive.org capture from 2016.  And then they didn't bother to
+inform the readers of this in any way.
 
-I only looked into some paragraphs of the open letter's appendix in depth and can't
+I only looked into some of the open letter's contents in depth and can't
 comment on the rest.  Maybe the rest is completely fair.  Martin Tournoij gives a [better
 and more thorough treatise][Stallman isn't great, but not the devil] of the open letter
 than I can.  I do wonder how many people looked into the accusations before signing the
 letter, though.  One of the original signatories told me that, "from a practical
 perspective, transphobe or no, [RMS] needs to go"[^luis-1] and that "regardless of exactly
 how ableist he is, he can't be a leader of an organization".[^luis-2]  Perhaps that's
-true, but it isn't fair.  Accusations of ableism and transphobia are front and center in
+true, but it isn't fair.  Accusations like ableism and transphobia are front and center in
 the open letter and likely convinced more than a handful of people to add their signature.
 
 I'll leave you with three more bits of evidence that things are more complex than the open
@@ -104,7 +104,7 @@ letter would have you believe:
     signatures than the letter condemning RMS.
 2.  In response someone created a Chrome extension that marks repositories owned by a
     signatory of this support letter with red text on GitHub.
-3.  The [announcement][extension-announcement] of this extension was welcomed with 392
+3.  The [announcement][extension-announcement] of this extension was welcomed with 394
     likes on Twitter.
 
 ## Footnotes
