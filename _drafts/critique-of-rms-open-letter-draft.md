@@ -64,7 +64,7 @@ The accusation of ableism seems to primarily hinge on a highly insensitive note 
 to his website in October 2016, but completely rewrote a few months later.  Presumably
 someone told RMS about the problems with his original note.  The open letter's appendix
 uses recent web.archive.org links throughout and gives no indication that this particular
-link is a capture from 2016.  Here's the [rewritten note][]:
+link is an outdated capture from 2016.  Here's the [rewritten note][]:
 
 >   A noninvasive test for Down's syndrome eliminates the small risk of the old test. This
 >   might lead more women to get tested, and abort fetuses that have Down's syndrome.
@@ -87,7 +87,7 @@ cherry-picked, and yet that wasn't enough for the authors of the open letter and
 turned to an outdated web.archive.org capture from 2016.  And then they didn't bother to
 inform the readers of this in any way.
 
-Suggesting RMS to be intolerant is strange.  If anything, he seems to be *too* tolerant.
+Suggesting that RMS is intolerant is strange.  If anything, he seems to be *too* tolerant.
 Implying that RMS is hateful is just ridiculous.
 
 I only looked into some of the open letter's contents in depth and can't comment on the
@@ -106,7 +106,7 @@ letter would have you believe:
 1.  A [competing letter in support of RMS][] exists and has accumulated considerably more
     signatures than the letter condemning RMS.
 2.  In response someone created a Chrome extension that marks repositories owned by a
-    signatory of this *support letter* with red text on GitHub.
+    signatory of this support letter with red text on GitHub.
 3.  The [announcement][extension-announcement] of this extension was welcomed with 394
     likes on Twitter.
 
