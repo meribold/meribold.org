@@ -35,7 +35,8 @@ three sentences later.  That same sentence contains a direct quotation  that is 
 be found in the source we're given.  The appendix continues with a parenthetical granting
 that "several news reports misrepresented Stallman's position while discussing allegations
 against Minsky", but then asserts that "Stallman has previously expressed opinions that
-were consistent with the inaccurate portrayal."  No source is given this time.
+were consistent with the inaccurate portrayal."  No source is given for this claim, but
+the appendix continues to link one of the misrepresentative news reports.
 
 Let's consider the evidence for RMS being transphobic.  This is thin ice.  The primary
 author of the open letter, Molly de Blanc, writes on her personal blog:
@@ -60,14 +61,13 @@ idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remem
 "is no space to argue over whether a comment was transphobic".
 
 I only looked into two paragraph's of the open letter's appendix in depth and can't
-comment on the rest.  Maybe the rest is completely fair.
-
-I wonder how many people looked into the accusations much before signing the letter.  One
-of the original signatories told me that, "from a practical perspective, transphobe or no,
-[RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist he is, he can't be
-a leader of an organization".[^luis-2]  Perhaps that's true, but it isn't fair.
-Accusations of ableism and transphobia are front and center in the open letter and likely
-convinced more than a handful of people to add their signature.
+comment on the rest.  Maybe the rest is completely fair.  I do wonder how many people
+looked into the accusations before signing the letter, though.  One of the original
+signatories told me that, "from a practical perspective, transphobe or no, [RMS] needs to
+go"[^luis-1] and that "regardless of exactly how ableist he is, he can't be a leader of an
+organization".[^luis-2]  Perhaps that's true, but it isn't fair.  Accusations of ableism
+and transphobia are front and center in the open letter and likely convinced more than a
+handful of people to add their signature.
 
 I'll leave you with three more bits of evidence that things are more complex than the open
 letter would have you believe:
