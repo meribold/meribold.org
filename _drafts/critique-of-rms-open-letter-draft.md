@@ -4,6 +4,8 @@ title: A Critique of the Open Letter Calling for the Removal of RMS
 sitemap: false
 ---
 
+**DRAFT**
+
 On March 21, Richard M. Stallman (RMS) announced that he is on the Free Software
 Foundation (FSF) board of directors again after having resigned in September 2019\.  Two
 days later, an [open letter][] condemning RMS as misogynist, ableist, transphobic,
@@ -25,8 +27,8 @@ said rather than done, and makes accusations that are much more grave.
 
 This hardly seems like an accident.  The goal is to have as many people as
 possible---including those that never interacted with RMS---be outraged and sign the
-letter, a strategy that seems to have worked rather well.  But it surely also animated
-some people that dislike this dynamic to come out in support of RMS.
+letter, a strategy that seems to have worked rather well.  It surely also animated some
+people that dislike this dynamic to come out in support of RMS.
 
 The [letter's appendix][open-letter-appendix] correctly quotes RMS saying "the most
 plausible scenario is that [Virginia Giuffre] presented herself to [Marvin Minsky] as

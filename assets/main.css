@@ -77,6 +77,7 @@ h1, h2 {
 a {
   /* Only underline links on mouseover. */
   text-decoration: none;
+  word-wrap: break-word;
 }
 
 a:hover {
