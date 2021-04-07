@@ -1,13 +1,10 @@
 ---
 layout: post
 title: A Critique of the Open Letter Calling for the Removal of RMS
-sitemap: false
 ---
 
-**DRAFT**
-
 On March 21, Richard M. Stallman (RMS) announced that he is on the Free Software
-Foundation (FSF) board of directors again after having resigned in September 2019\.  Two
+Foundation (FSF) board of directors again after having resigned in September 2019.  Two
 days later, an [open letter][] condemning RMS as misogynist, ableist, transphobic,
 intolerant, bigoted, hateful, and dangerous was published.  The letter demands Stallman's
 removal from all leadership positions as well as the removal of the entire board of the
