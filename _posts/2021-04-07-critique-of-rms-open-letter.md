@@ -65,20 +65,20 @@ someone told RMS about the problems with his original note.  The open letter's a
 uses recent web.archive.org links throughout and gives no indication that this particular
 link is an outdated capture from 2016.  Here's the [rewritten note][]:
 
->   A noninvasive test for Down's syndrome eliminates the small risk of the old test. This
->   might lead more women to get tested, and abort fetuses that have Down's syndrome.
+>   A noninvasive test for Down's syndrome eliminates the small risk of the old test.
+>   This might lead more women to get tested, and abort fetuses that have Down's syndrome.
 >
 >   According to Wikipedia, Down's syndrome is a combination of many kinds of medical
->   misfortune. Thus, when carrying a fetus that is likely to have Down's syndrome, I
+>   misfortune.  Thus, when carrying a fetus that is likely to have Down's syndrome, I
 >   think the right course of action for the woman is to terminate the pregnancy.
 >
 >   That choice does right by the potential children that would otherwise likely be born
->   with grave medical problems and disabilities. As humans, they are entitled to the
->   capacity that is normal for human beings. I don't advocate making rules about the
+>   with grave medical problems and disabilities.  As humans, they are entitled to the
+>   capacity that is normal for human beings.  I don't advocate making rules about the
 >   matter, but I think that doing right by your children includes not intentionally
 >   starting them out with less than that.
 >
->   When children with Down's syndrome are born, that's a different situation. They are
+>   When children with Down's syndrome are born, that's a different situation.  They are
 >   human beings and I think they deserve the best possible care.
 
 RMS has (for some reason) tens of thousands of political notes on his website ready to be
