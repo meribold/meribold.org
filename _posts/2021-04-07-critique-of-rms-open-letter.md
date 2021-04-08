@@ -107,7 +107,7 @@ letter would have you believe:
 2.  In response someone created a Chrome extension that marks repositories owned by a
     signatory of this support letter with red text on GitHub.
 3.  The [announcement][extension-announcement] of this extension was welcomed with 394
-    likes on Twitter.
+    likes on Twitter.[^twitter-response-clarification]
 
 ## Footnotes
 
@@ -116,6 +116,8 @@ letter would have you believe:
 [^fucking-transphobic]: <https://twitter.com/mjg59/status/1377406466504544258>
 [^luis-1]: <https://twitter.com/luis_in_brief/status/1377268090258354176>
 [^luis-2]: <https://twitter.com/luis_in_brief/status/1377268518052241413>
+[^twitter-response-clarification]: I am not suggesting that these 394 people are
+    representative of the ~3000 open letter signatories.
 
 [open letter]: https://rms-open-letter.github.io
 [open-letter-appendix]: https://rms-open-letter.github.io/appendix
