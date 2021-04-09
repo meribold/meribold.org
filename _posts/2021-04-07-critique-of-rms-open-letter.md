@@ -91,7 +91,7 @@ Implying that RMS is hateful is just ridiculous.
 
 I only looked into some of the open letter's contents in depth and can't comment on the
 rest.  Maybe the rest is completely fair.  Martin Tournoij wrote a [better and more
-thorough commentary][Stallman isn't great, but not the devil] of the open letter than I
+thorough commentary][Stallman isn't great, but not the devil] on the open letter than I
 can.  I do wonder how many people looked into the accusations before signing the letter,
 though.  One of the original signatories told me that, "from a practical perspective,
 transphobe or no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist
