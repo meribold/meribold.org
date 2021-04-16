@@ -31,7 +31,8 @@ The [letter's appendix][open-letter-appendix] correctly quotes RMS saying "the m
 plausible scenario is that [Virginia Giuffre] presented herself to [Marvin Minsky] as
 entirely willing", but then changes "presented" to "being" when referencing this quote
 three sentences later.  That same sentence contains a direct quotation  that is nowhere to
-be found in the source we're given.  The appendix continues with a parenthetical granting
+be found in the source we're given.[^2021-04-16-update]
+The appendix continues with a parenthetical granting
 that "several news reports misrepresented Stallman's position while discussing allegations
 against Minsky", but then asserts that "Stallman has previously expressed opinions that
 were consistent with the inaccurate portrayal."  No source is given this time.  On the
@@ -111,6 +112,15 @@ letter would have you believe:
 
 ## Footnotes
 
+[^2021-04-16-update]: This is still the case as of April 16, but a reader informed me that
+    the appendix *used to* provide a different link here.  Instead of a 2021
+    web.archive.org capture of a note from Stallman's website it previously linked an old
+    version of the same note via a 2018 capture.  The old, since-rewritten note *does*
+    contain the phrase "entirely willing".  Presumably the link was [changed][f7d04be] by
+    accident.  I'd rather have the appendix rely on outdated notes as little as possible,
+    but I've notified two of the people that worked on the appendix in case they want to
+    revert the link back to the 2018 capture.
+
 [^genderless-pronouns]: <https://www.stallman.org/articles/genderless-pronouns.html>
 [^leah-rowe]: <https://libreboot.org/news/rms.html#rms-is-not-transphobic>
 [^fucking-transphobic]: <https://twitter.com/mjg59/status/1377406466504544258>
@@ -125,3 +135,4 @@ letter would have you believe:
 [Stallman isn't great, but not the devil]: https://www.arp242.net/rms.html
 [competing letter in support of RMS]: https://rms-support-letter.github.io
 [extension-announcement]: https://twitter.com/aaronbassett/status/1376601712379764737
+[f7d04be]: https://github.com/rms-open-letter/rms-open-letter.github.io/commit/f7d04be13369ec1f6933e8de8261d1dcfda4d430
