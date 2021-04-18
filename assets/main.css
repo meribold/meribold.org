@@ -20,6 +20,8 @@ body {
   text-rendering: optimizeLegibility;
   /* overflow-y: scroll; */
   overflow-x: hidden;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
