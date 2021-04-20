@@ -41,7 +41,7 @@ other hand, the appendix continues to link one of the misrepresentative news rep
 Let's consider the evidence for RMS being transphobic.  This is thin ice.  The primary
 author of the open letter, Molly de Blanc, writes on her personal blog:
 
-> There is no space to argue over whether a comment was transphobic – if it hurt a trans
+> There is no space to argue over whether a comment was transphobic—if it hurt a trans
 > person then it is transphobic and it is unacceptable.  
 ---[1028 Words on Free Software](http://deblanc.net/blog/2021/01/12/1028-words-on-free-software/)
 
