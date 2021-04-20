@@ -36,7 +36,7 @@ sup {
 }
 
 /* Make sure full justification is disabled for these elements. */
-blockquote, blockquote > p, ul, ol, dl, h1, h2, h3, h4, h5, h6 {
+blockquote, blockquote > p, ul, ul p, ol, ol p, dl, dl p, h1, h2, h3, h4, h5, h6 {
   text-align: initial;
   hyphens: initial;
 }
