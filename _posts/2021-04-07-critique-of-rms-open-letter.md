@@ -43,10 +43,9 @@ author of the open letter, Molly de Blanc, writes on her personal blog:
 
 > There is no space to argue over whether a comment was transphobic—if it hurt a trans
 > person then it is transphobic and it is unacceptable.  
----[1028 Words on Free Software](http://deblanc.net/blog/2021/01/12/1028-words-on-free-software/)
 
-As an aside, I highly recommend reading that blog post in full.  Echoes of its world view
-are present throughout the open letter.
+As an aside, I highly recommend reading [that blog post][] in full.  Echoes of its world
+view are present throughout the open letter.
 
 So what makes RMS transphobic?  He proposes and uses a set of singular, gender-neutral
 pronouns other than "they", "their", and "theirs".[^genderless-pronouns]
@@ -131,6 +130,7 @@ letter would have you believe:
 
 [open letter]: https://rms-open-letter.github.io
 [open-letter-appendix]: https://rms-open-letter.github.io/appendix
+[that blog post]: http://deblanc.net/blog/2021/01/12/1028-words-on-free-software/
 [rewritten note]: https://stallman.org/archives/2016-sep-dec.html#31_October_2016_(Down's_syndrome)
 [Stallman isn't great, but not the devil]: https://www.arp242.net/rms.html
 [competing letter in support of RMS]: https://rms-support-letter.github.io
