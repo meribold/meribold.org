@@ -37,6 +37,8 @@ exclude:
   - vendor/bundle/
   - README.md
   - tags
+include:
+  - .well-known
 
 plugins:
   - jekyll-seo-tag

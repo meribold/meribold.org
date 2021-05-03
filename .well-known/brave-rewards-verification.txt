@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: meribold.org
+Token: 929ff983729c201deb7bdfddd18e2b3f474194b0e240018ca842c70dc8b4e580
