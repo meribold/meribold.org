@@ -47,8 +47,9 @@ author of the open letter, Molly de Blanc, writes on her personal blog:
 As an aside, I highly recommend reading [that blog post][] in full.  Echoes of its world
 view are present throughout the open letter.
 
-So what makes RMS transphobic?  He proposes and uses a set of singular, gender-neutral
-pronouns other than "they", "their", and "theirs".[^genderless-pronouns]
+So what makes RMS transphobic?  He [proposes][genderless-pronouns] and uses a set of
+singular, gender-neutral pronouns other than "they", "their", and
+"theirs".[^2021-05-03-update]
 
 One transgender person called the proposal "idiotic", but considers "[c]alling RMS a
 transphobe […] an insult to people who suffer from real transphobia."[^leah-rowe] I am
@@ -120,7 +121,10 @@ letter would have you believe:
     but I've notified two of the people that worked on the appendix in case they want to
     revert the link back to the 2018 capture.
 
-[^genderless-pronouns]: <https://www.stallman.org/articles/genderless-pronouns.html>
+[^2021-05-03-update]: RMS uses "she" and "he" for transgender persons as preferred.  He
+    refuses to use singular "they".  I added this footnote on 2021-05-03 because I noticed
+    there's some confusion about this.
+
 [^leah-rowe]: <https://libreboot.org/news/rms.html#rms-is-not-transphobic>
 [^fucking-transphobic]: <https://twitter.com/mjg59/status/1377406466504544258>
 [^luis-1]: <https://twitter.com/luis_in_brief/status/1377268090258354176>
@@ -131,6 +135,7 @@ letter would have you believe:
 [open letter]: https://rms-open-letter.github.io
 [open-letter-appendix]: https://rms-open-letter.github.io/appendix
 [that blog post]: http://deblanc.net/blog/2021/01/12/1028-words-on-free-software/
+[genderless-pronouns]: https://www.stallman.org/articles/genderless-pronouns.html
 [rewritten note]: https://stallman.org/archives/2016-sep-dec.html#31_October_2016_(Down's_syndrome)
 [Stallman isn't great, but not the devil]: https://www.arp242.net/rms.html
 [competing letter in support of RMS]: https://rms-support-letter.github.io
