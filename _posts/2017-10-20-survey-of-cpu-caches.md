@@ -421,10 +421,6 @@ Memory](https://www.akkadia.org/drepper/cpumemory.pdf)", which also covers virtu
 cache associativity, write policies, replacement policies, cache coherence, software
 prefetching, instruction caches, TLBs, etc.
 
-You can find discussions of this article on [Hacker
-News](https://news.ycombinator.com/item?id=15520390) and
-[Reddit](https://www.reddit.com/77mx8i).
-
 ## Footnotes
 
 *[RAM]: random-access memory
