@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "TODO"
+categories: drafts
 sitemap: false
 ---
 
