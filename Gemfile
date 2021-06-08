@@ -1,13 +1,9 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-# Jekyll plugins
-group :jekyll_plugins do
-  # https://jekyllrb.com/docs/github-pages/#use-the-github-pages-gem
-  # https://github.com/github/pages-gem
-  gem "github-pages"
-  gem 'jekyll-seo-tag'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-feed'
-end
+gem 'jekyll'
+gem 'jekyll-seo-tag'
+gem 'jekyll-sitemap'
+gem 'jekyll-feed'
 
-# vim: tw=90 sts=-1 sw=2 et
+# Temporary workaround for <https://github.com/jekyll/jekyll/issues/8523>
+gem "webrick"
