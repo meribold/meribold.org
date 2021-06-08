@@ -19,7 +19,7 @@ You can also find me on
 If you really like an article or program I wrote, you can [buy me a
 coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a C++ or Python
 developer with Linux, UI design, or computer vision experience, you can find my résumé
-[here](resume.pdf).
+[here](/resume.pdf).
 
 ![me]{:.confined-img}
 
