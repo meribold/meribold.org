@@ -8,16 +8,7 @@ image: /assets/cache-paper/access-time-plot.png
 
 CPU caches are very fast and small memories.  They are part of the CPU and store a
 subset of the data present in main memory (RAM) that is expected to be used again soon.
-Their purpose is to reduce the frequency of main memory accesses.[^paper]
-
-[^paper]: This post summarizes a seminar paper which you can find [here (PDF)][paper] for
-    some more details and sources for further reading.  The TeX files, full source code of
-    all programs shown, and a [makefile][] that automates running them and builds the PDF
-    with the results are all available in [this GitHub repository][repo].
-
-[paper]: {{ site.url }}/assets/cache-paper.pdf
-[repo]: https://github.com/meribold/cache-seminar-paper
-[makefile]: https://github.com/meribold/cache-seminar-paper/blob/master/makefile
+Their purpose is to reduce the frequency of main memory accesses.
 
 Why can't we just have one uniform type of memory that's both big and fast?  Cost is one
 reason, but more fundamentally, since no signal can propagate faster than the speed of
@@ -422,6 +413,15 @@ cache associativity, write policies, replacement policies, cache coherence, soft
 prefetching, instruction caches, TLBs, etc.
 
 ## Footnotes
+
+*   This post is based on a seminar paper which you can find [here][paper] for some more
+    details and sources for further reading.  The TeX files, full source code of all
+    programs shown, and a [makefile][] that automates running them and builds the PDF with
+    the results are all available in [this repository on GitHub][repo].
+
+[paper]: /assets/cache-paper.pdf
+[repo]: https://github.com/meribold/cache-seminar-paper
+[makefile]: https://github.com/meribold/cache-seminar-paper/blob/master/makefile
 
 *[RAM]: random-access memory
 *[TLB]: translation lookaside buffer
