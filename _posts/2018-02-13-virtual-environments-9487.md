@@ -322,5 +322,3 @@ Rolfe](https://en.wikipedia.org/wiki/James_Rolfe).
 *[OS]: Operating system
 *[PEP]: Python Enhancement Proposal
 *[pip]: pip installs packages
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell wrap: -->

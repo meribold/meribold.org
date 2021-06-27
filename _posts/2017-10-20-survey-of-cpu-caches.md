@@ -431,5 +431,3 @@ prefetching, instruction caches, TLBs, etc.
 *[GCC]: GNU Compiler Collection
 *[OO]: object-oriented
 *[OOP]: object-oriented programming
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell: -->
