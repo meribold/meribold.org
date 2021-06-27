@@ -138,7 +138,7 @@ same system.[^python-level-isolation]
 
 [^python-level-isolation]: Be aware that we only get [python-level isolation][].
 
-[python-level isolation]: https://pythonrants.wordpress.com/2013/12/06/why-i-hate-virtualenv-and-pip/
+[python-level isolation]: https://web.archive.org/web/20191129151330/https://pythonrants.wordpress.com/2013/12/06/why-i-hate-virtualenv-and-pip/
 
 [module search path]: https://docs.python.org/3/library/site.html
 
