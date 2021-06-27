@@ -9,7 +9,7 @@ image: /assets/virtual-boy-avgn.jpg
 ---
 
 <img class="confined-img"
-src="{{ site.url }}/assets/virtual-boy-avgn.jpg"
+src="/assets/virtual-boy-avgn.jpg"
 alt="The nerd with his Virtual Boy">
 
 Here's a non-exhaustive list of programs that are all meant to help create or manage
@@ -71,7 +71,7 @@ I think that will do.  Is it self-contained, though?  It doesn't contain itself.
 
 <span style="display: block; width: 33%; margin: auto">
 <img class="normal-img" style="width: 100%"
-src="{{ site.url }}/assets/russell.png"
+src="/assets/russell.png"
 alt="Another nerd: Bertrand Russell in 1916"
 title="Consider the directory containing all directories that don't contain themselves.">
 </span>
@@ -297,12 +297,10 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 [workingenv-revisited-post]: http://www.ianbicking.org/workingenv-revisited.html
 [workingenv]: https://web.archive.org/web/20060516191525/http://svn.colorstudy.com:80/home/ianb/workingenv
 
-## Image sources
-
-The "Virtual Boy" image is used with permission from [James
-Rolfe](https://en.wikipedia.org/wiki/James_Rolfe).
-
 ## Footnotes
+
+*   The "Virtual Boy" image is used with permission from
+    [James Rolfe](https://en.wikipedia.org/wiki/James_Rolfe).
 
 [library/venv]: https://docs.python.org/3/library/venv.html
     "The Python Standard Library: venv — Creation of virtual environments"
