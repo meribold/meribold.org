@@ -19,11 +19,11 @@ Warcraft addons][curseforge] which are mostly dead now.  You can find some more 
 
 ## Articles
 
-"[Scoring Board Games with Computer Vision][1]" (2018)
+[Scoring Board Games with Computer Vision][1] (2018)
 : Thesis about automating end-of-game scoring of board games based on photos taken with
   camera phones
 
-"[Hardware Caches and Optimization][2]" (2017)
+[Hardware Caches and Optimization][2] (2017)
 : Seminar paper about CPU caches with illustrative code samples and profiling results
 
 [1]: https://s3.eu-central-1.amazonaws.com/meribold.org/thesis.pdf
