@@ -4,7 +4,7 @@ body {
   /* Make sure the text can't start and stop exactly at the screen edges; leave some
    * space.
    */
-  padding: 0 2mm;
+  padding: 0 7.5px;
   /* Set the maximum width in terms of the width of '0' in whatever font is used.  See
    * <https://developer.mozilla.org/en/docs/Web/CSS/length> and
    * <https://practicaltypography.com/line-length.html>.
@@ -119,11 +119,11 @@ div.highlighter-rouge {
   /* Only darken the background color of code blocks very slightly. */
   background-color: #f6f6f6;
   min-width: 100%;
-  max-width: calc(50% + 50vw - 2mm);
+  max-width: calc(50% + 50vw - 7.5px);
   width: -moz-min-content;
   width: -webkit-min-content;
-  margin: 1em -2mm;
-  padding: 0 2mm;
+  margin: 1em -7.5px;
+  padding: 0 7.5px;
   overflow-x: hidden;
 }
 
@@ -199,20 +199,20 @@ img {
  * think small images aren't centered. */
 .confined-img {
   display: initial;
-  max-width: calc(100% + 4mm);
+  max-width: calc(100% + 15px);
   position: initial;
   left: initial;
   transform: initial;
-  margin: 0 -2mm;
+  margin: 0 -7.5px;
 }
 
 /* See <https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php>. */
 div.youtube-wrapper {
   position: relative;
-  width: calc(100% + 4mm);
-  margin: 0 -2mm;
+  width: calc(100% + 15px);
+  margin: 0 -7.5px;
   height: 0;
-  padding-bottom: calc(56.25% + 2.25mm); /* (9/16 + 9/16 * 4mm) */
+  padding-bottom: calc(56.25% + 8.4375px); /* (9/16 + 9/16 * 15px) */
 }
 
 iframe.youtube-vid {
@@ -302,17 +302,17 @@ table {
   display: inline-block; /* TODO: this adds padding at the bottom of the table. */
   overflow-x: auto;
   /* Eventually add a horizontal scrollbar. */
-  max-width: calc(100vw - 2mm);
+  max-width: calc(100vw - 7.5px);
   /* This makes `left: 50vw` work. */
   position: relative;
   /* Move the table so it starts at the very left of the viewport.  This is the real magic
    * because it increases how big the automatically calculated width of the table can be
    * to the viewport width.  Taken from [5].  */
-  margin-left: calc(-50vw + 50% - 2mm);
+  margin-left: calc(-50vw + 50% - 7.5px);
   /* Move the table to the right by half the viewport width.  This will make it start at
    * the center of the viewport when combined with the above line (without it we would use
    * 50%). */
-  left: calc(50vw + 2mm);
+  left: calc(50vw + 7.5px);
   /* Finally move the table to the left by half of its width.  This will center it. */
   transform: translateX(-50%);
 }
@@ -325,12 +325,12 @@ tbody {
 
 td:first-child, th:first-child {
   text-align: left;
-  padding-left: 1mm;
+  padding-left: 3.75px;
 }
 
 td:last-child, th:last-child {
   text-align: right;
-  padding-right: 1mm;
+  padding-right: 3.75px;
 }
 
 tr:nth-child(even) {
