@@ -8,7 +8,7 @@ permalink: /about/
 
 I'm a yak shaver that likes Tolkien and FOSS and tweaking my [dotfiles][].
 You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
-My GPG fingerprint is `D14C CBFF 836E 5732 7C25  2FDE 7066 AC79 C459 2C12`.
+My GPG fingerprint is [`D14C CBFF 836E 5732 7C25 2FDE 7066 AC79 C459 2C12`][].
 You can also find me on
 [GitHub](https://github.com/meribold),
 [YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ),
@@ -24,6 +24,7 @@ developer with Linux, UI design, or computer vision experience, you can find my 
 ![me]{:.confined-img}
 
 [dotfiles]: https://github.com/meribold/dotfiles
+[`D14C CBFF 836E 5732 7C25 2FDE 7066 AC79 C459 2C12`]: /pgp-key-meribold-7066ac79c4592c12.txt
 [me]: {{ site.url }}/assets/me.jpg
 
 <!-- vim: set spell: -->
