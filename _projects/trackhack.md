@@ -11,7 +11,7 @@ through sequences of phase shift images obtained using [digital holographic
 microscopy][dhm].
 
 The program is written in C++ using some [Boost][] libraries (Filesystem, Regex, Thread)
-and [wxWidgets][] for the GUI.  The repository is hosted on [GitHub][].
+and [wxWidgets][] for the GUI.  The repository is available on [GitHub][].
 
 ![screenshot]
 

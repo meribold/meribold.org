@@ -11,7 +11,7 @@ signal-cli.bash is a collection of two Bash scripts that wrap [signal-cli][] to 
 [desktop notifications][] and a more convenient command-line interface for the [Signal
 Private Messenger][Signal].
 
-The repository is hosted on [GitHub][].
+The repository is available on [GitHub][].
 
 [signal-cli]: https://github.com/AsamK/signal-cli
 [desktop notifications]: https://wiki.archlinux.org/index.php/Desktop_notifications

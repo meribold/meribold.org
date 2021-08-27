@@ -6,7 +6,7 @@ last_modified_at: 2020-01-07
 permalink: /about/
 ---
 
-I'm a yak shaver that likes Tolkien and FOSS and tweaking my [dotfiles][].  You can reach
+I'm a yak shaver that likes Tolkien and FOSS and tweaking [my dotfiles][].  You can reach
 me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.  Get [my PGP key
 here](/pgp-key-meribold-7066ac79c4592c12.txt) if you want to use encryption.  You can also
 find me on [GitHub](https://github.com/meribold),
@@ -17,10 +17,10 @@ find me on [GitHub](https://github.com/meribold),
 
 If you really like an article or program I wrote, you can [buy me a
 coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a C++ or Python
-developer with Linux, UI design, or computer vision experience, you can find my résumé
-[here](/resume.pdf).
+developer with Linux, UI design, or computer vision experience, you can [find my résumé
+here](/resume.pdf).
 
 ![me]{:.confined-img}
 
-[dotfiles]: https://github.com/meribold/dotfiles
+[my dotfiles]: https://github.com/meribold/dotfiles
 [me]: /assets/me.jpg
