@@ -19,10 +19,6 @@ date_format: "%Y-%m-%d"
 permalink: pretty
 # See <https://github.com/jekyll/jekyll-feed/issues/94#issuecomment-182026305>.
 show_drafts: true
-# The pages generated from these files will have links in the header.
-header_pages:
-  - projects.md
-  - about.md
 # See <http://jekyllrb.com/docs/collections/>.
 collections:
   projects:
