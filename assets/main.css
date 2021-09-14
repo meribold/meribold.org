@@ -381,6 +381,60 @@ body {
 }
 main { flex-grow: 1; }
 
+.site-header {
+  padding: .2em 0;
+  border-bottom: 1px solid #ccc;
+  /* Makes sure the line is below all links when the viewport is really narrow and the
+   * links get stacked vertically.  See <https://www.w3schools.com/css/css_float.asp>.
+   */
+  overflow: auto;
+}
+
+.header-link {
+  color: #888;
+}
+
+.site-nav {
+  float: right;
+}
+
+/* Add gaps between links.  Don't add space after the last child.  */
+.header-link:not(:last-child) {
+  margin-right: 2ch;
+}
+
+.site-footer {
+  padding: .2em 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: .2em;
+}
+
+/* See <https://stackoverflow.com/a/32140682>. */
+.footer-list {
+  list-style: none; /* no bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* Compensate for the margins of list items. */
+  width: calc(100% + 2ch);
+  position: relative;
+  left: -1ch;
+}
+
+.footer-list li {
+  margin: 0 1ch;
+}
+
+.footer-list li > a {
+  color: #888;
+}
+
+.footer-link {
+  color: #888;
+}
+
 /* Rules for syntax highlighting copied from [1].  Only the color in the first line is
  * modified.  Also see [2].
  *
