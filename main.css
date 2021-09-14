@@ -236,6 +236,10 @@ iframe.youtube-vid {
   padding-left: .33ch;
 }
 
+.post-list-link > a {
+  color: #000;
+}
+
 .post-meta {
   color: #888;
 }
