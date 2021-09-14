@@ -225,7 +225,7 @@ iframe.youtube-vid {
 }
 
 .post-list-meta {
-  color: #666;
+  color: #888;
   display: table-cell;
   padding-right: .33ch;
   white-space: nowrap;
@@ -237,7 +237,7 @@ iframe.youtube-vid {
 }
 
 .post-meta {
-  color: #666;
+  color: #888;
 }
 
 /* Block quotations.  Originally based on the Minima theme [1].  Heavily modified by
