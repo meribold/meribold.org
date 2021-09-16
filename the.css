@@ -58,7 +58,9 @@ body.dark main *|*:visited {
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
 p {
   text-align: justify;
-  /* See <http://caniuse.com/#search=hyphens>. */
+  /* See <https://caniuse.com/css-hyphens>. */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
   hyphens: auto;
 }
 
