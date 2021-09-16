@@ -52,12 +52,14 @@ body.dark main a {
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
-p {
-  text-align: justify;
-  /* See <https://caniuse.com/css-hyphens>. */
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+@media screen and (min-width: 65ch) {
+  p {
+    text-align: justify;
+    /* See <https://caniuse.com/css-hyphens>. */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
 }
 
 sup {
