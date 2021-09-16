@@ -43,16 +43,12 @@ body.dark .site-footer {
   display: none;
 }
 
-body.dark main *|*:link {
-  /* The hue and saturation values are the default (at least of Firefox), but the default
-   * lightness is only 47%. */
-  color: hsl(240, 100%, 72%);
+main a {
+  color: #000080;
 }
 
-body.dark main *|*:visited {
-  /* The hue and saturation values are the default (at least of Firefox), but the default
-   * lightness is only 32%. */
-  color: hsl(271, 68%, 64%)
+body.dark main a {
+  color: #e6db74;
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
