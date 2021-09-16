@@ -355,7 +355,7 @@ calls.  Programs with good locality are said to be *cache-friendly*.
 
 ## Example: `std::vector` vs. `std::list`
 
-The [following C++ program](#listing-3) (adapted from [this article][big-os] by Sergey
+The following C++ program (adapted from [this article][big-os] by Sergey
 Ignatchenko) initializes a number of STL containers with random numbers and measures the
 processor time needed to sum all of them.  I first ran it with `Container` being a type
 alias for `std::list`, then for `std::vector`.  Either way, the asymptotic
