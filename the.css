@@ -475,7 +475,7 @@ main { flex-grow: 1; }
 
 /* Add gaps between links.  Don't add space after the last child.  */
 .header-link:not(:last-child) {
-  margin-right: 2ch;
+  margin-right: 1ch;
 }
 
 .site-footer {
@@ -493,13 +493,13 @@ main { flex-grow: 1; }
   flex-flow: row wrap;
   justify-content: space-between;
   /* Compensate for the margins of list items. */
-  width: calc(100% + 2ch);
+  width: calc(100% + 1ch);
   position: relative;
-  left: -1ch;
+  left: -0.5ch;
 }
 
 .footer-list li {
-  margin: 0 1ch;
+  margin: 0 0.5ch;
 }
 
 /* Rules for syntax highlighting copied from [1].  Only the color in the first line is
