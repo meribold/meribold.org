@@ -139,7 +139,7 @@ cycles.
 
 <!-- FIXME: having a <style> tag outside of the page's head section may be a bad idea. -->
 <style>
-    .funny-table {
+    .funny-table, body.dark .funny-table {
         border: none;
     }
     /* FIXME: these borders are slightly offset compared to where they would normally
@@ -147,8 +147,14 @@ cycles.
     .funny-table th {
         border-top: 2px solid #ccc;
     }
+    body.dark .funny-table th {
+        border-top: 2px solid #444;
+    }
     .funny-table > tbody > tr:last-child {
         border-bottom: 2px solid #ccc;
+    }
+    body.dark .funny-table > tbody > tr:last-child {
+        border-bottom: 2px solid #444;
     }
     .funny-table th, .funny-table td {
         text-align: center;
@@ -157,6 +163,9 @@ cycles.
     .funny-table th:nth-child(2), .funny-table td:nth-child(2) {
         border-right: 2ch solid #fff;
         padding-right: 3.75px;
+    }
+    body.dark .funny-table th:nth-child(2), body.dark .funny-table td:nth-child(2) {
+        border-right: 2ch solid #181818;
     }
     .funny-table td:nth-child(3), .funny-table th:nth-child(3) {
         padding-left: 3.75px;

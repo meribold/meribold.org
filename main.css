@@ -24,6 +24,37 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+body.dark {
+  background-color: #181818;
+  color: #fff;
+}
+
+body.dark .site-header {
+  border-bottom: 1px solid #333;
+}
+
+body.dark .site-footer {
+  border-top: 1px solid #333;
+}
+
+#theme-toggle {
+  cursor: pointer;
+  user-select: none;
+  display: none;
+}
+
+body.dark main *|*:link {
+  /* The hue and saturation values are the default (at least of Firefox), but the default
+   * lightness is only 47%. */
+  color: hsl(240, 100%, 72%);
+}
+
+body.dark main *|*:visited {
+  /* The hue and saturation values are the default (at least of Firefox), but the default
+   * lightness is only 32%. */
+  color: hsl(271, 68%, 64%)
+}
+
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
 p {
   text-align: justify;
@@ -127,6 +158,12 @@ div.highlighter-rouge {
   overflow-x: hidden;
 }
 
+body.dark div.highlighter-rouge,
+body.dark table {
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+}
+
 pre {
   padding: .3em 0;
   margin: 0;
@@ -140,10 +177,19 @@ pre > code {
   background-color: #f6f6f6;
 }
 
+body.dark div.highlighter-rouge,
+body.dark pre > code {
+  background-color: #1e1e1e;
+}
+
 /* Inline code */
 code {
   padding: .1em .2em;
   background-color: #eee;
+}
+
+body.dark code {
+  background-color: #2e2e2e;
 }
 
 /* Images may generally use the whole viewport width and aren't restricted to the line
@@ -225,7 +271,6 @@ iframe.youtube-vid {
 }
 
 .post-list-meta {
-  color: #888;
   display: table-cell;
   padding-right: .33ch;
   white-space: nowrap;
@@ -240,8 +285,24 @@ iframe.youtube-vid {
   color: #000;
 }
 
-.post-meta {
+body.dark .post-list-link > a {
+  color: #fff;
+}
+
+.post-list-meta,
+.post-meta,
+.header-link,
+.footer-list li > a,
+.footer-link {
   color: #888;
+}
+
+body.dark .post-list-meta,
+body.dark .post-meta,
+body.dark .header-link,
+body.dark .footer-list li > a,
+.footer-link {
+  color: #bbb;
 }
 
 /* Block quotations.  Originally based on the Minima theme [1].  Heavily modified by
@@ -261,6 +322,10 @@ blockquote {
   margin-right: 0;
   padding-left: 2ch;
   padding-right: 2ch;
+}
+
+body.dark blockquote {
+  border-left: .3em solid #444;
 }
 
 blockquote:last-child {
@@ -341,6 +406,10 @@ tr:nth-child(even) {
   background-color: #eee;
 }
 
+body.dark tr:nth-child(even) {
+  background-color: #2e2e2e;
+}
+
 th, td {
   padding: .05em 1ch;
 }
@@ -350,6 +419,10 @@ th {
   border-bottom: 1px solid #000;
   padding-top: .2em;
   padding-bottom: .2em;
+}
+
+body.dark th {
+  border-bottom: 1px solid #bbb;
 }
 
 /* Add the same abount of vertical padding below the line that seperates the table heading
@@ -387,15 +460,11 @@ main { flex-grow: 1; }
 
 .site-header {
   padding: .2em 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
   /* Makes sure the line is below all links when the viewport is really narrow and the
    * links get stacked vertically.  See <https://www.w3schools.com/css/css_float.asp>.
    */
   overflow: auto;
-}
-
-.header-link {
-  color: #888;
 }
 
 .site-nav {
@@ -409,7 +478,7 @@ main { flex-grow: 1; }
 
 .site-footer {
   padding: .2em 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #ddd;
   margin-bottom: .2em;
 }
 
@@ -431,21 +500,13 @@ main { flex-grow: 1; }
   margin: 0 1ch;
 }
 
-.footer-list li > a {
-  color: #888;
-}
-
-.footer-link {
-  color: #888;
-}
-
 /* Rules for syntax highlighting copied from [1].  Only the color in the first line is
  * modified.  Also see [2].
  *
  * [1]: https://github.com/mojombo/tpw/blob/master/css/syntax.css
- * [2]: https://jekyllrb.com/docs/templates/#code-snippet-highlighting
+ * [2]: https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
  */
-.highlight  { background: #f6f6f6; }
+.highlight { background: #f6f6f6; }
 .highlight .c { color: #999988; font-style: italic }
 .highlight .err { color: #a61717; background-color: #e3d2d2 }
 .highlight .k { font-weight: bold }
@@ -505,3 +566,72 @@ main { flex-grow: 1; }
 .highlight .vg { color: #008080 }
 .highlight .vi { color: #008080 }
 .highlight .il { color: #009999 }
+
+/* This is the Monokai scheme from [1].  Only the background color is modified (the first
+ * two lines).  I changed it from #272822.
+ *
+ * [1]: https://jwarby.github.io/jekyll-pygments-themes/languages/python.html
+ */
+body.dark .highlight pre { background-color: #1e1e1e }
+body.dark .highlight .hll { background-color: #1e1e1e }
+body.dark .highlight .c { color: #75715e }
+body.dark .highlight .err { color: #960050; background-color: #1e0010 }
+body.dark .highlight .k { color: #66d9ef }
+body.dark .highlight .l { color: #ae81ff }
+body.dark .highlight .n { color: #f8f8f2 }
+body.dark .highlight .o { color: #f92672 }
+body.dark .highlight .p { color: #f8f8f2 }
+body.dark .highlight .cm { color: #75715e }
+body.dark .highlight .cp { color: #75715e }
+body.dark .highlight .c1 { color: #75715e }
+body.dark .highlight .cs { color: #75715e }
+body.dark .highlight .ge { font-style: italic }
+body.dark .highlight .gs { font-weight: bold }
+body.dark .highlight .kc { color: #66d9ef }
+body.dark .highlight .kd { color: #66d9ef }
+body.dark .highlight .kn { color: #f92672 }
+body.dark .highlight .kp { color: #66d9ef }
+body.dark .highlight .kr { color: #66d9ef }
+body.dark .highlight .kt { color: #66d9ef }
+body.dark .highlight .ld { color: #e6db74 }
+body.dark .highlight .m { color: #ae81ff }
+body.dark .highlight .s { color: #e6db74 }
+body.dark .highlight .na { color: #a6e22e }
+body.dark .highlight .nb { color: #f8f8f2 }
+body.dark .highlight .nc { color: #a6e22e }
+body.dark .highlight .no { color: #66d9ef }
+body.dark .highlight .nd { color: #a6e22e }
+body.dark .highlight .ni { color: #f8f8f2 }
+body.dark .highlight .ne { color: #a6e22e }
+body.dark .highlight .nf { color: #a6e22e }
+body.dark .highlight .nl { color: #f8f8f2 }
+body.dark .highlight .nn { color: #f8f8f2 }
+body.dark .highlight .nx { color: #a6e22e }
+body.dark .highlight .py { color: #f8f8f2 }
+body.dark .highlight .nt { color: #f92672 }
+body.dark .highlight .nv { color: #f8f8f2 }
+body.dark .highlight .ow { color: #f92672 }
+body.dark .highlight .w { color: #f8f8f2 }
+body.dark .highlight .mf { color: #ae81ff }
+body.dark .highlight .mh { color: #ae81ff }
+body.dark .highlight .mi { color: #ae81ff }
+body.dark .highlight .mo { color: #ae81ff }
+body.dark .highlight .sb { color: #e6db74 }
+body.dark .highlight .sc { color: #e6db74 }
+body.dark .highlight .sd { color: #e6db74 }
+body.dark .highlight .s2 { color: #e6db74 }
+body.dark .highlight .se { color: #ae81ff }
+body.dark .highlight .sh { color: #e6db74 }
+body.dark .highlight .si { color: #e6db74 }
+body.dark .highlight .sx { color: #e6db74 }
+body.dark .highlight .sr { color: #e6db74 }
+body.dark .highlight .s1 { color: #e6db74 }
+body.dark .highlight .ss { color: #e6db74 }
+body.dark .highlight .bp { color: #f8f8f2 }
+body.dark .highlight .vc { color: #f8f8f2 }
+body.dark .highlight .vg { color: #f8f8f2 }
+body.dark .highlight .vi { color: #f8f8f2 }
+body.dark .highlight .il { color: #ae81ff }
+body.dark .highlight .gu { color: #75715e }
+body.dark .highlight .gd { color: #f92672 }
+body.dark .highlight .gi { color: #a6e22e }
