@@ -289,6 +289,10 @@ body.dark .post-list-link > a {
   color: #fff;
 }
 
+article header time.post-meta::before {
+  content: " · ";
+}
+
 .post-list-meta,
 .post-meta,
 .header-link,

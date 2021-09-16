@@ -14,6 +14,7 @@ find me on [GitHub](https://github.com/meribold),
 [Mastodon](https://mastodon.social/@meribold),
 [Twitter](https://twitter.com/mribld), and
 [LinkedIn](https://www.linkedin.com/in/meribold/).
+My name is Lukas Waymann.
 
 If you really like an article or program I wrote, you can [buy me a
 coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a C++ or Python

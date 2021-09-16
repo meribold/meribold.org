@@ -5,7 +5,8 @@ layout: default
 <article>
   <header>
     <h1>{{ page.title | escape }}</h1>
-    <time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
+    <a class="post-meta" rel="author" href="{{ "/about" | relative_url }}">{{ page.author | default: site.author }}</a><!--
+ --><time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
   </header>
   {{ content }}
 </article>
