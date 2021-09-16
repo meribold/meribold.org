@@ -1,5 +1,5 @@
-const lightsOffLabel = "🔅";
-const lightsOnLabel = "🔆";
+const lightsOffLabel = "月";
+const lightsOnLabel = "日";
 const lightsOffTitle = "Enable dark mode";
 const lightsOnTitle = "Enable light mode";
 
