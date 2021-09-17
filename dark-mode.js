@@ -5,12 +5,12 @@ const lightsOnTitle = "Enable light mode";
 
 function toggleDarkMode() {
    if (themeToggle.innerHTML === lightsOffLabel) {
-      document.cookie = "theme=dark; SameSite=Lax; path=/; Max-Age=2147483647";
+      localStorage.setItem("theme", "dark");
       themeToggle.innerHTML = lightsOnLabel;
       themeToggle.title = lightsOnTitle;
       document.body.classList.add("dark");
    } else {
-      document.cookie = "theme=light; SameSite=Lax; path=/; Max-Age=2147483647;";
+      localStorage.setItem("theme", "light");
       themeToggle.innerHTML = lightsOffLabel;
       themeToggle.title = lightsOffTitle;
       document.body.classList.remove("dark");
@@ -19,11 +19,7 @@ function toggleDarkMode() {
 
 document.addEventListener("DOMContentLoaded", () => {
    window.themeToggle = document.querySelector("#theme-toggle");
-   const theme =
-      document.cookie
-         .split("; ")
-         .find((row) => row.startsWith("theme="))
-         ?.split("=")[1] ?? "light";
+   const theme = localStorage.getItem("theme") ?? "light";
    if (theme === "light") {
       themeToggle.innerHTML = lightsOffLabel;
       themeToggle.title = lightsOffTitle;
