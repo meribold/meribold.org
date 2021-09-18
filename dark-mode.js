@@ -48,3 +48,18 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e)
       document.body.classList.remove("dark");
    }
 });
+
+window.addEventListener("storage", (e) => {
+   if (e.key !== "theme") {
+      return;
+   }
+   if (e.newValue === "dark") {
+      themeToggle.innerHTML = lightsOnLabel;
+      themeToggle.title = lightsOnTitle;
+      document.body.classList.add("dark");
+   } else if (e.newValue === "light") {
+      themeToggle.innerHTML = lightsOffLabel;
+      themeToggle.title = lightsOffTitle;
+      document.body.classList.remove("dark");
+   }
+});
