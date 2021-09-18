@@ -32,6 +32,7 @@ exclude:
   - Gemfile.lock
   - vendor/bundle/
   - README.md
+  - makefile
   - tags
 include:
   - .well-known
