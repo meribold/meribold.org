@@ -3,17 +3,25 @@ const lightsOnLabel = "日";
 const lightsOffTitle = "Enable dark mode";
 const lightsOnTitle = "Enable light mode";
 
+function enableDarkMode() {
+   themeToggle.innerHTML = lightsOnLabel;
+   themeToggle.title = lightsOnTitle;
+   document.body.classList.add("dark");
+}
+
+function enableLightMode() {
+   themeToggle.innerHTML = lightsOffLabel;
+   themeToggle.title = lightsOffTitle;
+   document.body.classList.remove("dark");
+}
+
 function toggleDarkMode() {
    if (themeToggle.innerHTML === lightsOffLabel) {
       localStorage.setItem("theme", "dark");
-      themeToggle.innerHTML = lightsOnLabel;
-      themeToggle.title = lightsOnTitle;
-      document.body.classList.add("dark");
+      enableDarkMode();
    } else {
       localStorage.setItem("theme", "light");
-      themeToggle.innerHTML = lightsOffLabel;
-      themeToggle.title = lightsOffTitle;
-      document.body.classList.remove("dark");
+      enableLightMode();
    }
 }
 
@@ -23,13 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.getItem("theme") ||
       (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
       "light";
-   if (theme === "light") {
-      themeToggle.innerHTML = lightsOffLabel;
-      themeToggle.title = lightsOffTitle;
-   } else {
-      themeToggle.innerHTML = lightsOnLabel;
-      themeToggle.title = lightsOnTitle;
-      document.body.classList.add("dark");
+   if (theme === "dark") {
+      enableDarkMode();
    }
    themeToggle.style.display = "revert";
 });
@@ -39,13 +42,9 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e)
       return;
    }
    if (e.matches) {
-      themeToggle.innerHTML = lightsOnLabel;
-      themeToggle.title = lightsOnTitle;
-      document.body.classList.add("dark");
+      enableDarkMode();
    } else {
-      themeToggle.innerHTML = lightsOffLabel;
-      themeToggle.title = lightsOffTitle;
-      document.body.classList.remove("dark");
+      enableLightMode();
    }
 });
 
@@ -54,12 +53,8 @@ window.addEventListener("storage", (e) => {
       return;
    }
    if (e.newValue === "dark") {
-      themeToggle.innerHTML = lightsOnLabel;
-      themeToggle.title = lightsOnTitle;
-      document.body.classList.add("dark");
+      enableDarkMode();
    } else if (e.newValue === "light") {
-      themeToggle.innerHTML = lightsOffLabel;
-      themeToggle.title = lightsOffTitle;
-      document.body.classList.remove("dark");
+      enableLightMode();
    }
 });
