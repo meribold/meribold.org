@@ -19,7 +19,10 @@ function toggleDarkMode() {
 
 document.addEventListener("DOMContentLoaded", () => {
    window.themeToggle = document.querySelector("#theme-toggle");
-   const theme = localStorage.getItem("theme") ?? "light";
+   const theme =
+      localStorage.getItem("theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
+      "light";
    if (theme === "light") {
       themeToggle.innerHTML = lightsOffLabel;
       themeToggle.title = lightsOffTitle;
@@ -29,4 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("dark");
    }
    themeToggle.style.display = "revert";
+});
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+   if (localStorage.getItem("theme")) {
+      return;
+   }
+   if (e.matches) {
+      themeToggle.innerHTML = lightsOnLabel;
+      themeToggle.title = lightsOnTitle;
+      document.body.classList.add("dark");
+   } else {
+      themeToggle.innerHTML = lightsOffLabel;
+      themeToggle.title = lightsOffTitle;
+      document.body.classList.remove("dark");
+   }
 });
