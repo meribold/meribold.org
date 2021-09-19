@@ -43,6 +43,14 @@ body.dark .site-footer {
   display: none;
 }
 
+#theme-toggle.override {
+  color: #000;
+}
+
+body.dark #theme-toggle.override {
+  color: #fff;
+}
+
 main a {
   color: #000080;
 }

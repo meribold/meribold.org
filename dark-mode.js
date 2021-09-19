@@ -1,27 +1,56 @@
-const lightsOffLabel = "月";
-const lightsOnLabel = "日";
-const lightsOffTitle = "Enable dark mode";
-const lightsOnTitle = "Enable light mode";
+const lightThemeLabel = "日";
+const darkThemeLabel = "月";
 
-function enableDarkMode() {
-   themeToggle.innerHTML = lightsOnLabel;
-   themeToggle.title = lightsOnTitle;
-   document.body.classList.add("dark");
-}
+let uaThemePreference = window.matchMedia("(prefers-color-scheme: dark)").matches
+   ? "dark"
+   : "light";
 
-function enableLightMode() {
-   themeToggle.innerHTML = lightsOffLabel;
-   themeToggle.title = lightsOffTitle;
-   document.body.classList.remove("dark");
-}
+let followingUaThemePreference = localStorage.getItem("theme") === null;
 
-function toggleDarkMode() {
-   if (themeToggle.innerHTML === lightsOffLabel) {
-      localStorage.setItem("theme", "dark");
-      enableDarkMode();
+function updateThemeToggle(currentTheme) {
+   if (followingUaThemePreference) {
+      themeToggle.classList.remove("override");
    } else {
-      localStorage.setItem("theme", "light");
-      enableLightMode();
+      themeToggle.classList.add("override");
+   }
+   if (followingUaThemePreference || currentTheme !== uaThemePreference) {
+      const otherTheme = currentTheme === "light" ? "dark" : "light";
+      themeToggle.title = `Click to use the ${otherTheme} theme`;
+   } else {
+      themeToggle.title = "Click to follow your system color scheme preference";
+   }
+}
+
+function enableTheme(theme) {
+   if (theme === "light") {
+      themeToggle.innerHTML = lightThemeLabel;
+      document.body.classList.remove("dark");
+   } else if (theme === "dark") {
+      themeToggle.innerHTML = darkThemeLabel;
+      document.body.classList.add("dark");
+   }
+   updateThemeToggle(theme);
+}
+
+function changeTheme() {
+   const currentTheme = themeToggle.innerHTML === lightThemeLabel ? "light" : "dark";
+   if (currentTheme === uaThemePreference) {
+      const otherTheme = currentTheme === "light" ? "dark" : "light";
+      if (followingUaThemePreference) {
+         // Stop following the user agent theme preference and change the theme.
+         localStorage.setItem("theme", otherTheme);
+         followingUaThemePreference = false;
+         enableTheme(otherTheme);
+      } else {
+         // Start following the user agent theme preference but don't change the theme.
+         localStorage.removeItem("theme");
+         followingUaThemePreference = true;
+         updateThemeToggle(currentTheme);
+      }
+   } else {
+      // Keep not following the user agent theme preference and change the theme.
+      localStorage.setItem("theme", uaThemePreference);
+      enableTheme(uaThemePreference);
    }
 }
 
@@ -32,19 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
       (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
       "light";
    if (theme === "dark") {
-      enableDarkMode();
+      enableTheme("dark");
+   } else if (!followingUaThemePreference) {
+      updateThemeToggle(theme);
    }
    themeToggle.style.display = "revert";
 });
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-   if (localStorage.getItem("theme")) {
-      return;
-   }
-   if (e.matches) {
-      enableDarkMode();
-   } else {
-      enableLightMode();
+   uaThemePreference = e.matches ? "dark" : "light";
+   if (followingUaThemePreference) {
+      enableTheme(uaThemePreference);
    }
 });
 
@@ -52,9 +79,11 @@ window.addEventListener("storage", (e) => {
    if (e.key !== "theme") {
       return;
    }
-   if (e.newValue === "dark") {
-      enableDarkMode();
-   } else if (e.newValue === "light") {
-      enableLightMode();
+   if (e.newValue === null) {
+      followingUaThemePreference = true;
+      updateThemeToggle(uaThemePreference);
+   } else {
+      followingUaThemePreference = false;
+      enableTheme(e.newValue);
    }
 });
