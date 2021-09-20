@@ -1,3 +1,4 @@
+const followUaThemeLabel = "明";
 const lightThemeLabel = "日";
 const darkThemeLabel = "月";
 
@@ -19,21 +20,28 @@ function updateThemeToggle(currentTheme) {
    } else {
       themeToggle.title = "Click to follow your system color scheme preference";
    }
+   themeToggle.innerHTML = followingUaThemePreference
+      ? followUaThemeLabel
+      : currentTheme === "light"
+      ? lightThemeLabel
+      : darkThemeLabel;
 }
 
 function enableTheme(theme) {
    if (theme === "light") {
-      themeToggle.innerHTML = lightThemeLabel;
       document.body.classList.remove("dark");
    } else if (theme === "dark") {
-      themeToggle.innerHTML = darkThemeLabel;
       document.body.classList.add("dark");
    }
    updateThemeToggle(theme);
 }
 
 function changeTheme() {
-   const currentTheme = themeToggle.innerHTML === lightThemeLabel ? "light" : "dark";
+   const currentTheme = followingUaThemePreference
+      ? uaThemePreference
+      : themeToggle.innerHTML === lightThemeLabel
+      ? "light"
+      : "dark";
    if (currentTheme === uaThemePreference) {
       const otherTheme = currentTheme === "light" ? "dark" : "light";
       if (followingUaThemePreference) {
