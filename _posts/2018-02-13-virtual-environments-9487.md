@@ -53,7 +53,7 @@ The [official docs' tutorial][tutorial/venv] describes a virtual environment as
 
 So it's a directory with a Python interpreter?  Easy enough.
 
-```bash
+```
 $ mkdir virtual_env
 $ cp /bin/python3 virtual_env/
 ```
@@ -61,7 +61,7 @@ $ cp /bin/python3 virtual_env/
 Let's see.  Directory?  Check.  Contains a Python installation?  Check.  Contains a number
 of additional packages?  Zero is a number!  (Check.)  Particular version?  Um...
 
-```bash
+```
 $ cd virtual_env/
 $ ./python3 --version
 Python 3.6.3
@@ -88,14 +88,14 @@ for virtual environments with Python.[^before-405]
 
 (Both paths are subject to the OS and the second one also to the Python version used.)
 
-```bash
+```
 $ echo 'home = /usr/bin' > pyvenv.cfg
 $ mkdir -p lib/python3.6/site-packages
 ```
 
 I will also move the Python binary into a `bin` subdirectory.[^why-tho]
 
-```bash
+```
 $ mkdir bin && mv python3 bin/
 ```
 
@@ -111,7 +111,7 @@ $ mkdir bin && mv python3 bin/
 
 Fair.  We have a directory that formally qualifies as a virtual environment:
 
-```bash
+```
 $ tree --noreport
 .
 ├── bin
@@ -145,19 +145,19 @@ same system.[^python-level-isolation]
 For example, if your project needs exactly version 0.0.3 of
 [left-pad](https://pypi.python.org/pypi/left-pad):
 
-```bash
+```
 $ pip3 install -t lib/python3.6/site-packages/ left-pad==0.0.3
 ```
 
 Now this will work:
 
-```bash
+```
 $ ./bin/python3 -c 'import left_pad'
 ```
 
 While this should raise [`ModuleNotFoundError`], as desired:
 
-```bash
+```
 $ python3 -c 'import left_pad'
 ```
 
@@ -183,14 +183,14 @@ standard library: [*venv*][library/venv].[^venv-and-pyvenv]
 
 In its simplest form, venv is used to create a virtual environment like so:
 
-```bash
+```
 $ python3 -m venv virtual_env
 ```
 
 This creates the `virtual_env` directory and also copies or symlinks the Python
 interpreter:
 
-```bash
+```
 $ cd virtual_env
 $ find -name python3
 ./bin/python3
@@ -201,7 +201,7 @@ about 10 MiB in total.  One of those files is the `pip` binary, and we can use i
 install packages into the virtual environment without passing extra command-line
 arguments:
 
-```bash
+```
 $ ./bin/pip install left-pad
 ```
 
