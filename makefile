@@ -1,6 +1,7 @@
 .PHONY: _site clean deploy
 
 _site:
+	rm -rf _site
 	bundle exec jekyll build
 
 clean:
