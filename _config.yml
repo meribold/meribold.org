@@ -36,8 +36,3 @@ exclude:
   - tags
 include:
   - .well-known
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
