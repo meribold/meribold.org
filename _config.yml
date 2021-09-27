@@ -41,5 +41,3 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-
-# vim: tw=90 sts=-1 sw=2 et
