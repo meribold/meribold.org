@@ -2,29 +2,31 @@
 layout: default
 ---
 
-<div style="margin: 1em 0;">
-  <h1>Articles</h1>
-  <div style="display: table;">
-    {% for post in site.posts %}
-      {% unless post.draft or post.categories contains "video" %}
-        <div>
-          <span class="post-list-meta">{{ post.date | date: site.date_format }}</span>
-          <span class="post-list-link">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </span>
-        </div>
-      {% endunless %}
-    {% endfor %}
-  </div>
-  <h1>Videos</h1>
-  <div style="display: table;">
-    {% for post in site.categories["video"] %}
+<h1>Articles</h1>
+<p>
+<div style="display: table;">
+  {% for post in site.posts %}
+    {% unless post.draft or post.categories contains "video" %}
       <div>
         <span class="post-list-meta">{{ post.date | date: site.date_format }}</span>
         <span class="post-list-link">
           <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </span>
       </div>
-    {% endfor %}
-  </div>
+    {% endunless %}
+  {% endfor %}
 </div>
+</p>
+<h1>Videos</h1>
+<p>
+<div style="display: table;">
+  {% for post in site.categories["video"] %}
+    <div>
+      <span class="post-list-meta">{{ post.date | date: site.date_format }}</span>
+      <span class="post-list-link">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </span>
+    </div>
+  {% endfor %}
+</div>
+</p>

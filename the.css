@@ -97,20 +97,22 @@ blockquote, blockquote > p, ul, ul p, ol, ol p, dl, dl p, h1, h2, h3, h4, h5, h6
  */
 h1 {
   font-size: 1.5em;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
+  line-height: 1.25;
+  margin-top: 0.6em;
+  margin-bottom: 0.15em;
 }
 
 h2 {
   font-size: 1.17em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  line-height: 1.375;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
 }
 
 h3, h4, h5, h6 {
   font-size: 1.00em;
-  margin-top: 1.33em;
-  margin-bottom: 1.33em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
 }
 
 h1, h2 {
