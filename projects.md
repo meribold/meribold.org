@@ -26,7 +26,7 @@ these are probably defunct now.  You can find some more of my work on [GitHub][]
 : Seminar paper about CPU caches with illustrative code samples and profiling results
 
 [1]: https://s3.eu-central-1.amazonaws.com/meribold.org/thesis.pdf
-[2]: {{ site.url }}/assets/cache-paper.pdf
+[2]: {{ "/assets/cache-paper.pdf" | relative_url }}
 
 [GitHub]: https://github.com/meribold
 [curseforge]: https://www.curseforge.com/members/meribold/projects
