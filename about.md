@@ -24,7 +24,6 @@ coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a C++ or 
 developer with Linux, UI design, or computer vision experience, you can [find my résumé
 here](/resume.pdf).
 
-![me]{:.confined-img}
+![me]({{ "/assets/me.jpg" | relative_url }}){:.confined-img}
 
 [my dotfiles]: https://github.com/meribold/dotfiles
-[me]: /assets/me.jpg
