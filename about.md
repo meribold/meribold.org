@@ -12,8 +12,8 @@ My name is Lukas Waymann.
 You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
 If you want to use encryption you can get [my PGP key
 here](/pgp-key-meribold-7066ac79c4592c12.txt).
-You can also find me on
-[Matrix](https://matrix.to/#/@meribold:matrix.org),
+You can also contact me via [Matrix](https://matrix.to/#/@meribold:matrix.org) or find me
+on
 [GitHub](https://github.com/meribold),
 [YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ),
 [Mastodon](https://mastodon.social/@meribold),
