@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<script>
+  if (document.referrer !== "http://localhost:4000/") {
+    document.body.classList.add("declutter");
+  }
+</script>
 <article>
   <header>
     <h1>{{ page.title | escape }}</h1>
