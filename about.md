@@ -2,12 +2,13 @@
 layout: page
 title: About
 description: I'm a yak shaver that likes Tolkien and FOSS and tweaking my dotfiles.
-last_modified_at: 2021-10-28T15:05+08:00
+last_modified_at: 2021-10-29T22:28+08:00
 permalink: /about/
 ---
 
-I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, and tweaking [my
-dotfiles][].  My name is Lukas Waymann.
+I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking [my dotfiles][],
+and writing [software]({{ "/projects/" | relative_url }}).
+My name is Lukas Waymann.
 You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
 If you want to use encryption you can get [my PGP key
 here](/pgp-key-meribold-7066ac79c4592c12.txt).
