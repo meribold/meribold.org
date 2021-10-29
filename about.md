@@ -9,8 +9,8 @@ permalink: /about/
 I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, and tweaking [my
 dotfiles][].  My name is Lukas Waymann.
 You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
-Get [my PGP key here](/pgp-key-meribold-7066ac79c4592c12.txt) if you want to use
-encryption.
+If you want to use encryption you can get [my PGP key
+here](/pgp-key-meribold-7066ac79c4592c12.txt).
 You can also find me on
 [Matrix](https://matrix.to/#/@meribold:matrix.org),
 [GitHub](https://github.com/meribold),
