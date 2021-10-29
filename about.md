@@ -12,6 +12,7 @@ You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
 Get [my PGP key here](/pgp-key-meribold-7066ac79c4592c12.txt) if you want to use
 encryption.
 You can also find me on
+[Matrix](https://matrix.to/#/@meribold:matrix.org),
 [GitHub](https://github.com/meribold),
 [YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ),
 [Mastodon](https://mastodon.social/@meribold),
