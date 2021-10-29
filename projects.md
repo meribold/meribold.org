@@ -13,9 +13,8 @@ permalink: /projects/
 : {{ project.description }}
 {% endfor %}
 
-I also dabbled in [Haskell][haskell-experiments], and wrote some more small [World of
-Warcraft addons][curseforge] which are mostly dead now.  You can find some more stuff on
-[GitHub][].
+I've also written a couple more small [World of Warcraft addons][curseforge], but most of
+these are probably defunct now.  You can find some more of my work on [GitHub][].
 
 ## Articles
 
@@ -31,5 +30,4 @@ Warcraft addons][curseforge] which are mostly dead now.  You can find some more 
 
 [GitHub]: https://github.com/meribold
 [curseforge]: https://www.curseforge.com/members/meribold/projects
-[haskell-experiments]: https://github.com/meribold/haskell-experiments
 [flutterrust]: https://github.com/meribold/flutterrust
