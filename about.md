@@ -19,7 +19,8 @@ You can also find me on
 [Twitter](https://twitter.com/mribld), and
 [LinkedIn](https://www.linkedin.com/in/meribold/).
 
-If you really like an article or program I wrote, you can [buy me a
+If you really like an [article]({{ "/" | relative_url }}) or [program]({{ "/projects/" |
+relative_url }}) I wrote, you can [buy me a
 coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a C++ or Python
 developer with Linux, UI design, or computer vision experience, you can [find my résumé
 here](/resume.pdf).
