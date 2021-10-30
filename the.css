@@ -291,11 +291,11 @@ iframe.youtube-vid {
   padding-left: .33ch;
 }
 
-.post-list-link > a {
+main a.stealth-link, .post-list-link > a {
   color: #000;
 }
 
-body.dark .post-list-link > a {
+body.dark main a.stealth-link, body.dark .post-list-link > a {
   color: #fff;
 }
 
