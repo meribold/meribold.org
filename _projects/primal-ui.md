@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Primal UI
-description: User interface for World of Warcraft
+description: World of Warcraft user interface for Feral Druids
 last_modified_at: 2017-09-12
 ---
 
