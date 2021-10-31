@@ -189,7 +189,7 @@ cycles.
 
 *Cache lines* or *cache blocks* are the unit of data transfer between main memory and
 cache.  They have a fixed size which is typically 64 bytes on x86/x64 CPUs---this means
-accessing a single, uncached 32-bit integer entails loading another 60 adjacent bytes.
+accessing a single, uncached 4-byte integer entails loading another 60 adjacent bytes.
 
 My E-450 CPU is no exception and both of its data caches have 64-byte cache lines:
 
