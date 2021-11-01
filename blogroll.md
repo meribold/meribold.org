@@ -11,7 +11,7 @@ permalink: /blogroll/
 [www.arp242.net](https://www.arp242.net)
 : Martin Tournoij's website.  As far as what I've read goes, topics and themes include
   programming, empathy, FOSS, command-line tools, and society.  Liberal usage of fleurons
-  make having ended up on a post from this blog easy to notice.
+  makes having ended up on a post from this blog easy to notice.
 
 [blog.debiania.in.ua](https://blog.debiania.in.ua)
 : Alexander Batischev's website.  Themes include Linux, programming, and life lessons.
