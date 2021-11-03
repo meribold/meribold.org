@@ -10,6 +10,7 @@ image: /assets/virtual-boy-avgn.jpg
 
 <img class="confined-img"
 src="/assets/virtual-boy-avgn.jpg"
+width="1464" height="640"
 alt="The nerd with his Virtual Boy">
 
 Here's a non-exhaustive list of programs that are all meant to help create or manage
