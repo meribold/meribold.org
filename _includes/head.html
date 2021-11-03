@@ -2,8 +2,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
-  <link rel="stylesheet" href="{{ "/the.css" | relative_url }}">
-  <script src="{{ "/dark-mode.js" | relative_url }}"></script>
+  <style>
+    {% include the.css %}
+  </style>
+  <script>
+    {% include dark-mode.js %}
+  </script>
   <script data-goatcounter="https://meribold.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </head>
