@@ -2,6 +2,11 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    <script>
+      // Once `document.body` exists, immediately add the `dark` class if necessary to
+      // prevent a white flash while the document loads.
+      {% include dark-mode.js %}
+    </script>
     {% include header.html %}
     <main>
       {{ content }}

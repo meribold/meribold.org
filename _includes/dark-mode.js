@@ -53,19 +53,23 @@ function changeTheme() {
    }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-   window.themeToggle = document.querySelector("#theme-toggle");
-   const theme =
+{
+   const initialTheme =
       localStorage.getItem("theme") ||
       (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
       "light";
-   if (theme === "dark") {
-      enableTheme("dark");
-   } else if (!followingUaThemePreference) {
-      updateThemeToggle(theme);
+   if (initialTheme === "dark") {
+      document.body.classList.add("dark");
    }
-   themeToggle.style.display = "revert";
-});
+
+   function initThemeToggle() {
+      window.themeToggle = document.querySelector("#theme-toggle");
+      if (initialTheme === "dark" || !followingUaThemePreference) {
+         updateThemeToggle(initialTheme);
+      }
+      themeToggle.style.display = "revert";
+   }
+}
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
    uaThemePreference = e.matches ? "dark" : "light";
