@@ -53,22 +53,20 @@ function changeTheme() {
    }
 }
 
-{
-   const initialTheme =
-      localStorage.getItem("theme") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
-      "light";
-   if (initialTheme === "dark") {
-      document.body.classList.add("dark");
-   }
+const initialTheme =
+   localStorage.getItem("theme") ||
+   (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
+   "light";
+if (initialTheme === "dark") {
+   document.body.classList.add("dark");
+}
 
-   function initThemeToggle() {
-      window.themeToggle = document.querySelector("#theme-toggle");
-      if (initialTheme === "dark" || !followingUaThemePreference) {
-         updateThemeToggle(initialTheme);
-      }
-      themeToggle.style.display = "revert";
+function initThemeToggle() {
+   window.themeToggle = document.querySelector("#theme-toggle");
+   if (initialTheme === "dark" || !followingUaThemePreference) {
+      updateThemeToggle(initialTheme);
    }
+   themeToggle.style.display = "revert";
 }
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
