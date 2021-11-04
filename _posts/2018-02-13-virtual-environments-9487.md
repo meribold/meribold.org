@@ -73,12 +73,20 @@ Python 3.6.3
 
 I think that will do.  Is it self-contained, though?  It doesn't contain itself...
 
-<span style="display: block; width: 33%; margin: auto">
+<div style="width: 33%; margin: auto">
+<picture>
+<source type="image/webp"
+srcset="/assets/russell-200w.webp 200w,
+        /assets/russell-300w.webp 300w,
+        /assets/russell-450w.webp 450w,
+        /assets/russell-675w.webp 675w"
+sizes="(max-width: 75ch) 33vw, 25ch">
 <img class="normal-img" style="width: 100%"
 src="/assets/russell.png"
 alt="Another nerd: Bertrand Russell in 1916"
 title="Consider the directory containing all directories that don't contain themselves.">
-</span>
+</picture>
+</div>
 
 Jokes aside, there are only two things missing to actually make our directory a virtual
 environment as specified by [PEP 405][], the proposal that integrated a standard mechanism
