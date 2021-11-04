@@ -262,6 +262,22 @@ img {
   margin: 0 -7.5px;
 }
 
+div.confined-img-aspect-ratio-box {
+  position: relative;
+  margin: 0 -7.5px;
+  background: #ddd;
+}
+
+.aspect-ratio-box-inside {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+body.dark div.confined-img-aspect-ratio-box {
+  background: #333;
+}
+
 /* See <https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php>. */
 div.youtube-wrapper {
   position: relative;
