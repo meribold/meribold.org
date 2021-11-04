@@ -11,8 +11,15 @@ image: /assets/virtual-boy-avgn.jpg
 <p>
 <div class="confined-img-aspect-ratio-box"
      style="padding-top: calc(640 / 1464 * 100% + 640 / 1464 * 15px)">
+<picture>
+<source type="image/webp"
+srcset="/assets/virtual-boy-avgn-651w.webp 651w,
+        /assets/virtual-boy-avgn-976w.webp 976w,
+        /assets/virtual-boy-avgn-1464w.webp 1464w"
+sizes="(max-width: 75ch) 100vw, 75ch">
 <img class="aspect-ratio-box-inside" src="/assets/virtual-boy-avgn.jpg"
      alt="The nerd with his Virtual Boy">
+</picture>
 </div>
 </p>
 
