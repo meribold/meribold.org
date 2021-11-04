@@ -8,13 +8,10 @@ categories: python
 image: /assets/virtual-boy-avgn.jpg
 ---
 
-<p>
-<div class="confined-img-aspect-ratio-box"
-     style="padding-top: calc(640 / 1464 * 100% + 640 / 1464 * 15px)">
-<img class="aspect-ratio-box-inside" src="/assets/virtual-boy-avgn.jpg"
-     alt="The nerd with his Virtual Boy">
-</div>
-</p>
+<img class="confined-img"
+src="/assets/virtual-boy-avgn.jpg"
+style="aspect-ratio: 1464 / 640"
+alt="The nerd with his Virtual Boy">
 
 Here's a non-exhaustive list of programs that are all meant to help create or manage
 virtual environments in some way:
