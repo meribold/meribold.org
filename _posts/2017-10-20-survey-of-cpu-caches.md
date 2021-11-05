@@ -6,7 +6,7 @@ description: Cache-friendliness is key to writing fast code.  This article illum
 image: /assets/cache-paper/access-time-plot.png
 ---
 
-CPU caches are very fast and small memories.  They are part of the CPU and store a
+CPU caches are very fast and small memory.  They are part of the CPU and store a
 subset of the data present in main memory (RAM) that is expected to be used again soon.
 Their purpose is to reduce the frequency of main memory accesses.
 
