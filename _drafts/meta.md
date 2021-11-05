@@ -107,15 +107,15 @@ install`.
 Looks promising but <http://localhost:4000> only shows my `index.html` from my initial
 commit ([28919f5][]).  Delete it (`rm index.html`).
 
-[28919f5]: https://github.com/meribold/meribold.github.io/commit/28919f52eb31ca263df3caadc6f4d4ca4ff4e7f3
+[28919f5]: https://github.com/meribold/meribold.org/commit/28919f52eb31ca263df3caadc6f4d4ca4ff4e7f3
 
 That's better: some kind of demo page ([1327f24][]).  Let's add this Markdown file as
 described in [`_posts/2017-09-02-welcome-to-jekyll.markdown`][welcome-to-jekyll.markdown]
 ([4f8937c][]):
 
-[1327f24]: https://github.com/meribold/meribold.github.io/commit/1327f24fdf3227093340df3565e61a2e7da0725a
+[1327f24]: https://github.com/meribold/meribold.org/commit/1327f24fdf3227093340df3565e61a2e7da0725a
 [welcome-to-jekyll.markdown]: https://github.com/meribold/meribold.github.io/blob/1327f24fdf3227093340df3565e61a2e7da0725a/_posts/2017-09-02-welcome-to-jekyll.markdown
-[4f8937c]: https://github.com/meribold/meribold.github.io/commit/4f8937cdcf510f7e1b494d410c175581de638428
+[4f8937c]: https://github.com/meribold/meribold.org/commit/4f8937cdcf510f7e1b494d410c175581de638428
 
     $ mv meta.md _posts/$(date -I)/meta.md
 
@@ -123,7 +123,7 @@ When I serve the site locally, the new post shows up but isn't themed.  On GitHu
 somehow is themed.  Anyway, it probably needs some front matter: [34c1623][].  That does
 it.
 
-[34c1623]: https://github.com/meribold/meribold.github.io/commit/34c1623b3ca4d21b09b74e203d4925dee66d4d60
+[34c1623]: https://github.com/meribold/meribold.org/commit/34c1623b3ca4d21b09b74e203d4925dee66d4d60
 
 At this point I looked at and edited all those other files `jekyll new` created.
 
@@ -155,7 +155,7 @@ process.)
 
 See commit [f978760][].
 
-[f978760]: https://github.com/meribold/meribold.github.io/commit/f978760a2d7953671c57d3a3f6be7776c8e6435a
+[f978760]: https://github.com/meribold/meribold.org/commit/f978760a2d7953671c57d3a3f6be7776c8e6435a
 
 ## Destroy
 
@@ -164,13 +164,13 @@ out from the ground up.  By the time you read this I hopefully created custom st
 doesn't suck.
 
 [minima]: https://github.com/jekyll/minima
-[de12477]: https://github.com/meribold/meribold.github.io/commit/de124779eeeb7d4e83ad84dd2812cce9d902d791
+[de12477]: https://github.com/meribold/meribold.org/commit/de124779eeeb7d4e83ad84dd2812cce9d902d791
 
-## SEO
+## Google
 
-Or rather, "being noticed by search engines at all": Google only has two results for
-"[site:meribold.github.io][9]" (the site currently has 10 pages).  Following the advice of
-whatever ranks highly when searching for "[jekyll seo][10]" seems logical.
+Google only has two results for "[site:meribold.github.io][9]" (the site currently has 10
+pages).  Following the advice of whatever ranks highly when searching for "[jekyll
+seo][10]" seems logical.
 
 [9]: https://encrypted.google.com/search?q=site%3Ameribold.github.io
 [10]: https://encrypted.google.com/search?q=jekyll+seo
@@ -184,9 +184,9 @@ crawling][Sitemaps]".
 [^robots]: It [also generates][11] [`robots.txt`][robots.txt].
 
 [jekyll-seo-tag]: https://github.com/jekyll/jekyll-seo-tag
-[a6d1930]: https://github.com/meribold/meribold.github.io/commit/a6d193008adb270710e9a370433ab6acefc369e5
+[a6d1930]: https://github.com/meribold/meribold.org/commit/a6d193008adb270710e9a370433ab6acefc369e5
 [jekyll-sitemap]: https://github.com/jekyll/jekyll-sitemap
-[435a157]: https://github.com/meribold/meribold.github.io/commit/435a1578492f93e0af8c1380399ecf314cf25b2a
+[435a157]: https://github.com/meribold/meribold.org/commit/435a1578492f93e0af8c1380399ecf314cf25b2a
 [sitemap.xml]: /sitemap.xml
 [gsc]: https://en.wikipedia.org/wiki/Google_Search_Console
 [Sitemaps]: https://en.wikipedia.org/wiki/Sitemaps
@@ -200,7 +200,7 @@ most pages ([d1404b2][]) that jekyll-sitemap will [use for `<lastmod>` tags][09-
 locally).  Then I submitted the Sitemap to Google again (this is probably unnecessary?)
 and also [requested recrawling of my site][09-13.2].
 
-[d1404b2]: https://github.com/meribold/meribold.github.io/commit/d1404b247678201d811917662b17bbef74b61997
+[d1404b2]: https://github.com/meribold/meribold.org/commit/d1404b247678201d811917662b17bbef74b61997
 [09-13.1]: https://github.com/jekyll/jekyll-sitemap#lastmod-tag
 [09-13.2]: https://support.google.com/webmasters/answer/6065812
 
@@ -317,9 +317,6 @@ int sometimes_people_use_variable_names_which_are_much_too_long = of_course_this
 
 *[gem]: A RubyGem is a packaged Ruby program that can be installed with the RubyGems package manager.
 *[pip]: pip installs packages
-*[SEO]: Search engine optimization
 *[TLD]: Top-level domain
 *[TLDs]: Top-level domains
 *[CSS]: Cascading Style Sheets
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell: -->

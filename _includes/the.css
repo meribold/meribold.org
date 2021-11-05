@@ -234,10 +234,10 @@ img.aspect-ratio-box-inside {
   vertical-align: initial;
 }
 
-/* Wrapper to make the following class work. */
+/* This wrapper must be used to make the subsequent class work. */
 .scrolled-img-wrapper {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: calc(100vw - 15px);
+  margin-left: calc(-50vw + 50% + 7.5px);
   overflow-x: auto;
 }
 
