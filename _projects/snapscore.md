@@ -8,7 +8,7 @@ last_modified_at: 2018-10-23
 ---
 
 <img class="normal-img" style="float: left; margin-right: 1em; width: 45%"
-src="{{ site.url }}/assets/snapscore-screenshot.png"
+src="{{ "/assets/snapscore-screenshot.png" | relative_url }}"
 alt="A screenshot of the SnapScore Android app">
 
 SnapScore is an Android app that automates scoring of the board game [*Take It Easy*][]

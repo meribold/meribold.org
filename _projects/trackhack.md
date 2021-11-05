@@ -18,7 +18,7 @@ and [wxWidgets][] for the GUI.  The repository is available on [GitHub][].
 [dhm]: https://en.wikipedia.org/wiki/Digital_holographic_microscopy
 [Boost]: https://en.wikipedia.org/wiki/Boost_(C%2B%2B_libraries)
 [wxWidgets]: https://en.wikipedia.org/wiki/WxWidgets
-[screenshot]: {{ site.url }}/assets/trackhack-screenshot.png
+[screenshot]: {{ "/assets/trackhack-screenshot.png" | relative_url }}
 [GitHub]: https://github.com/meribold/TrackHack
 
 *[GUI]: Graphical user interface

@@ -5,9 +5,9 @@ description: Python package for reconstructing digital holograms
 last_modified_at: 2018-10-24
 ---
 
-<a href="{{ site.url }}/assets/holodeck-screenshot-linux.png">
+<a href="{{ "/assets/holodeck-screenshot-linux.png" | relative_url }}">
 <img class="confined-img"
-     src="{{ site.url }}/assets/holodeck-screenshot-linux.png"
+     src="{{ "/assets/holodeck-screenshot-linux.png" | relative_url }}"
      alt="Screenshot of the Holodeck GUI for RectiPy on Linux"
      title="The Holodeck GUI for RectiPy on Linux (it looks better on Windows)">
 </a>
