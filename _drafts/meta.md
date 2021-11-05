@@ -9,6 +9,7 @@ categories: drafts jekyll
 sitemap: false
 ---
 
+<p>
 <div class="scrolled-img-wrapper">
 <a href="https://xkcd.com/688/">
 <img class="scrolled-img" src="{{ "/assets/xkcd-688.png" | relative_url }}"
@@ -16,7 +17,7 @@ sitemap: false
      alt="xkcd 688: Self-Description"/>
 </a>
 </div>
-
+</p>
 
 This is a journal of my thoughts---for my own reference and to have something to play
 with---while figuring out how to create this static website on [GitHub Pages][].  Step one
