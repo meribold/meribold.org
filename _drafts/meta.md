@@ -12,6 +12,7 @@ sitemap: false
 <p>
 <div class="scrolled-img-wrapper">
 <img class="scrolled-img" src="{{ "/assets/xkcd-688.png" | relative_url }}"
+     style="padding: 0 5px"
      title="The contents of any one panel are dependent on the contents of every panel including itself. The graph of panel dependencies is complete and bidirectional, and each node has a loop. The mouseover text has two hundred and forty-two characters."
      alt="xkcd 688: Self-Description"/>
 </div>
