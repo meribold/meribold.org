@@ -221,9 +221,13 @@ img {
 }
 
 /* Class for images that disables most weird hacks. */
-.normal-img {
-  max-width: initial;
+img.normal-img {
   position: initial;
+}
+
+img.normal-img,
+img.aspect-ratio-box-inside {
+  max-width: initial;
   left: initial;
   transform: initial;
   margin-left: initial;
