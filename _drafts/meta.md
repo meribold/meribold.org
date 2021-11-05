@@ -11,11 +11,9 @@ sitemap: false
 
 <p>
 <div class="scrolled-img-wrapper">
-<a href="https://xkcd.com/688/">
 <img class="scrolled-img" src="{{ "/assets/xkcd-688.png" | relative_url }}"
      title="The contents of any one panel are dependent on the contents of every panel including itself. The graph of panel dependencies is complete and bidirectional, and each node has a loop. The mouseover text has two hundred and forty-two characters."
      alt="xkcd 688: Self-Description"/>
-</a>
 </div>
 </p>
 
@@ -311,6 +309,11 @@ scrollbar.
 
 int sometimes_people_use_variable_names_which_are_much_too_long = of_course_this_can_be_somewhat_annoying() + especially_when_all_names_follow_the_same_pattern();
 ```
+
+## Footnotes
+
+*   The comic strip at the top is [*xkcd* number 688](https://xkcd.com/688/) by [Randall
+    Munroe](https://en.wikipedia.org/wiki/Randall_Munroe).
 
 *[gem]: A RubyGem is a packaged Ruby program that can be installed with the RubyGems package manager.
 *[pip]: pip installs packages
