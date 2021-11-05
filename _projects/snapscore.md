@@ -7,7 +7,7 @@ description: >
 last_modified_at: 2018-10-23
 ---
 
-<img class="normal-img" style="float: left; margin-right: 1em; width: 45%"
+<img class="normal-img" style="float: left; margin-right: 1em; margin-bottom: 1em; width: 45%"
 src="{{ "/assets/snapscore-screenshot.png" | relative_url }}"
 alt="A screenshot of the SnapScore Android app">
 
