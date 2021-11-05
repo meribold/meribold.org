@@ -8,7 +8,7 @@ image: /assets/cache-paper/access-time-plot.png
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
 subset of the data present in main memory (RAM) that is expected to be used again soon.
-Their purpose is to reduce the frequency of main memory accesses.
+Their purpose is to reduce the frequency of main memory access.
 
 Why can't we just have one uniform type of memory that's both big and fast?  Cost is one
 reason, but more fundamentally, since no signal can propagate faster than the speed of
