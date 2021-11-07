@@ -12,7 +12,7 @@ _min:
 	rsync -a --ignore-existing _site/ _min/
 
 clean:
-	rm -rf _site
+	rm -rf _site _min
 
 deploy: _min
 	rclone sync -I --checkers 16 --transfers 16 --progress _min fastmail:meribold.org
