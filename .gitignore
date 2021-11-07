@@ -1,4 +1,6 @@
 /_site
+/_min
 /vendor/bundle
+/node_modules
 /.bundle
 /.jekyll-cache

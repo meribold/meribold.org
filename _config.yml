@@ -33,6 +33,9 @@ exclude:
   - vendor/bundle/
   - README.md
   - makefile
+  - node_modules/
+  - package.json
+  - package-lock.json
   - tags
 include:
   - .well-known
