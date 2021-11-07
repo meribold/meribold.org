@@ -5,10 +5,11 @@ _site:
 	bundle exec jekyll build
 
 _min:
-	rsync -a --delete _site/ _min/
-	./node_modules/.bin/html-minifier --file-ext html --input-dir _min --output-dir _min \
+	rm -rf _min
+	./node_modules/.bin/html-minifier --file-ext html --input-dir _site --output-dir _min \
 	   --minify-css --minify-js --collapse-whitespace --remove-comments \
 	   --remove-redundant-attributes
+	rsync -a --ignore-existing _site/ _min/
 
 clean:
 	rm -rf _site
