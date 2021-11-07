@@ -507,7 +507,7 @@ main { flex-grow: 1; }
 
 /* Add gaps between links.  Don't add space after the last child.  */
 .header-link:not(:last-child) {
-  margin-right: 1ch;
+  margin-right: 1.4ch;
 }
 
 .site-footer {
