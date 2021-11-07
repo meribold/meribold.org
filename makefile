@@ -16,4 +16,4 @@ clean:
 
 deploy: _min
 	rclone sync -I --checkers 16 --transfers 16 --progress _min fastmail:meribold.org
-	rclone sync -I --checkers 16 --transfers 16 --progress _site fastmail:meribold.org-"$$(date -u +%Y%m%dT%H%M)Z"
+	rclone sync -I --checkers 16 --transfers 16 --progress _min fastmail:meribold.org-"$$(date -u +%Y%m%dT%H%M)Z"
