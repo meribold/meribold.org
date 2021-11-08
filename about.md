@@ -1,5 +1,6 @@
 ---
 layout: page
+extra_css: [images.css]
 title: About
 description: I'm a yak shaver that likes Tolkien and FOSS and tweaking my dotfiles.
 last_modified_at: 2021-10-29T22:28+08:00

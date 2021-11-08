@@ -4,6 +4,9 @@
   {% seo %}
   <style>
     {% include the.css %}
+    {% for path in page.extra_css %}
+      {% include {{ path }} %}
+    {% endfor %}
   </style>
   <script data-goatcounter="https://meribold.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>

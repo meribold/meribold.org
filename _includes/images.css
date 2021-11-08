@@ -1,0 +1,79 @@
+/* Images may generally use the whole viewport width and aren't restricted to the line
+ * length.  Exceptions in Markdown files can be made using span IALs [2].  There are no
+ * margins for images.
+ *
+ * [1]: https://cloudfour.com/thinks/breaking-out-with-viewport-units-and-calc/
+ *      "Breaking Out With Viewport Units and Calc"
+ * [2]: https://kramdown.gettalong.org/syntax.html#span-ials
+ */
+img {
+  display: block;
+  max-width: 100vw;
+  position: relative; /* This makes `left: 50vw` work. */
+  left: 50vw;
+  transform: translateX(-50%);
+  margin-left: calc(-50vw + 50%);
+  vertical-align: middle;
+}
+
+/* Class for images that disables most weird hacks. */
+img.normal-img {
+  position: initial;
+}
+
+img.normal-img,
+img.aspect-ratio-box-inside {
+  max-width: initial;
+  left: initial;
+  transform: initial;
+  margin-left: initial;
+  vertical-align: initial;
+}
+
+/* This wrapper must be used to make the subsequent class work. */
+.scrolled-img-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow-x: auto;
+}
+
+/* Class for images that shouldn't be scaled but instead have a horizontal scrollbar.
+ * They are still centered on wide viewports.  The <img> element should be wrapped in a
+ * <div> with the class `scrolled-img-wrapped`. */
+.scrolled-img {
+  display: block;
+  /* Reset some properties set for <img> elements. */
+  max-width: initial;
+  position: initial;
+  left: initial;
+  transform: initial;
+  vertical-align: initial;
+  margin: 0 auto;
+}
+
+/* For images that shouldn't be (significantly) wider than the line length.  FIXME: I
+ * think small images aren't centered. */
+.confined-img {
+  display: initial;
+  max-width: calc(100% + 15px);
+  position: initial;
+  left: initial;
+  transform: initial;
+  margin: 0 -7.5px;
+}
+
+div.confined-img-aspect-ratio-box {
+  position: relative;
+  margin: 0 -7.5px;
+  background: #ddd;
+}
+
+.aspect-ratio-box-inside {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+body.dark div.confined-img-aspect-ratio-box {
+  background: #333;
+}

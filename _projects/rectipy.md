@@ -1,5 +1,6 @@
 ---
 layout: page
+extra_css: [images.css]
 title: RectiPy
 description: Python package for reconstructing digital holograms
 last_modified_at: 2018-10-24

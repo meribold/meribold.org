@@ -1,0 +1,99 @@
+/* Tables
+ *
+ * Inspired by booktabs [1] and the Minima theme [2].  FIXME: the text alignment looks
+ * stupid when the table only has two columns.
+ *
+ * [1]: https://ctan.org/pkg/booktabs
+ * [2]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L220
+ */
+table {
+  text-align: center;
+  border-collapse: collapse;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  /* Horizontally center tables but don't stretch them to the width of the main text and
+   * add a horizontal scrollbar if the table is too wide.  See [1] and [2].
+   *
+   * [1]: https://stackoverflow.com/a/30423904
+   *      "Add horizontal scrollbar to html table"
+   * [2]: https://stackoverflow.com/a/34071945
+   *      "Is it possible to center an inline-block element and if so, how?"
+   *
+   * Additionally, allow tables to be wider than the main text.  See [3], [4], and
+   * especially [5].  FIXME: this breaks when there is a non-overlay vertical scrollbar
+   * (one that reduces the width of the viewport): the `vw` (viewport width) unit ignores
+   * any reduction of the available space by scrollbars.  A workaround (which I'm
+   * currently not using) is `body { overflow-y: scroll; }` [3].  It makes the `vw` unit
+   * behave sensibly at the cost of always displaying a scrollbar (and it apparently
+   * doesn't work in Chrome and Safari [3]).
+   *
+   * [3]: https://cloudfour.com/thinks/breaking-out-with-viewport-units-and-calc/
+   *      "Breaking Out With Viewport Units and Calc"
+   * [4]: https://stackoverflow.com/a/24895631
+   *      "Is there a way to make a child DIV wider than the parent DIV using CSS?"
+   * [5]: https://stackoverflow.com/a/20214782
+   *      "Can you make a child div larger than parent without position absolute?"
+   */
+  display: inline-block; /* TODO: this adds padding at the bottom of the table. */
+  overflow-x: auto;
+  /* Eventually add a horizontal scrollbar. */
+  max-width: calc(100vw - 7.5px);
+  /* This makes `left: 50vw` work. */
+  position: relative;
+  /* Move the table so it starts at the very left of the viewport.  This is the real magic
+   * because it increases how big the automatically calculated width of the table can be
+   * to the viewport width.  Taken from [5].  */
+  margin-left: calc(-50vw + 50% - 7.5px);
+  /* Move the table to the right by half the viewport width.  This will make it start at
+   * the center of the viewport when combined with the above line (without it we would use
+   * 50%). */
+  left: calc(50vw + 7.5px);
+  /* Finally move the table to the left by half of its width.  This will center it. */
+  transform: translateX(-50%);
+}
+
+tbody {
+  /* This seems to be the default behavior of Firefox but not Chromium: don't wrap text in
+   * table cells. */
+  white-space: nowrap;
+}
+
+td:first-child, th:first-child {
+  text-align: left;
+  padding-left: 3.75px;
+}
+
+td:last-child, th:last-child {
+  text-align: right;
+  padding-right: 3.75px;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+body.dark tr:nth-child(even) {
+  background-color: #2e2e2e;
+}
+
+th, td {
+  padding: .05em 1ch;
+}
+
+th {
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+
+body.dark th {
+  border-bottom: 1px solid #bbb;
+}
+
+/* Add the same abount of vertical padding below the line that seperates the table heading
+ * and data as above.  Actually looks pretty bad because the first row of the table is
+ * higher than the rest. */
+tbody > tr:first-child > td {
+  /* padding-top: .2em; */
+}

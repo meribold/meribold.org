@@ -1,5 +1,6 @@
 ---
 layout: page
+extra_css: [images.css]
 title: SnapScore
 description: >
     Android app that automates scoring of the *Take It Easy* board game using computer

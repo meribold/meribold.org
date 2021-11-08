@@ -1,5 +1,6 @@
 ---
 layout: post
+extra_css: [images.css]
 title: Virtual Environments Demystified
 description: The number of available programs for managing virtual environments is
     bafflingly large.  This post boils down what exactly a Python virtual environments is
