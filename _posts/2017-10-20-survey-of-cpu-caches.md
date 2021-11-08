@@ -420,7 +420,7 @@ provided some insight.  For a more in-depth discussion, you can read Ulrich Drep
 paper "[What Every Programmer Should Know About
 Memory](https://www.akkadia.org/drepper/cpumemory.pdf)", which also covers virtual memory,
 cache associativity, write policies, replacement policies, cache coherence, software
-prefetching, instruction caches, TLBs, etc.
+prefetching, instruction caches, TLBs, and more.
 
 ## Footnotes
 
