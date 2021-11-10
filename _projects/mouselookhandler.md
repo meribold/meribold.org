@@ -91,5 +91,3 @@ All emphasis is copied from the originals.
 
 *[MMOG]: Massively multiplayer online game
 *[RSI]: Repetitive strain injury
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell: -->

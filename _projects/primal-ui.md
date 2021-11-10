@@ -57,5 +57,3 @@ Druid), I largely ignored usability for playing other classes.
 *[PvP]: Player versus player
 *[DRs]: Diminishing returns
 *[CC]: Crowd control
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell: -->

@@ -17,5 +17,3 @@ The repository is available on [GitHub][].
 [desktop notifications]: https://wiki.archlinux.org/index.php/Desktop_notifications
 [Signal]: https://en.wikipedia.org/wiki/Signal_(software)
 [GitHub]: https://github.com/meribold/signal-cli.bash
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell: -->

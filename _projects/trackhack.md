@@ -23,5 +23,3 @@ and [wxWidgets][] for the GUI.  The repository is available on [GitHub][].
 [GitHub]: https://github.com/meribold/TrackHack
 
 *[GUI]: Graphical user interface
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell: -->

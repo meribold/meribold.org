@@ -25,5 +25,3 @@ You can find the app on [Google Play][].  The source code is available on [GitHu
 [*Take It Easy*]: http://www.burleygames.com/board-games/take-it-easy/
 [Google Play]: https://play.google.com/store/apps/details?id=xyz.meribold.snapscore
 [GitHub]: https://github.com/meribold/snapscore-android
-
-<!-- vim: set tw=90 sts=-1 sw=4 et spell: -->
