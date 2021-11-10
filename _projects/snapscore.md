@@ -8,9 +8,13 @@ description: >
 last_modified_at: 2018-10-23
 ---
 
-<img class="normal-img" style="float: left; margin-right: 1em; margin-bottom: 1em; width: 45%"
-src="{{ "/assets/snapscore-screenshot.png" | relative_url }}"
-alt="A screenshot of the SnapScore Android app">
+<div class="confined-img-aspect-ratio-box"
+     style="float: left; margin: 0 1em 1em 0; width: 45%;
+            padding-top: calc(1280 / 720 * 45%)">
+<img class="aspect-ratio-box-inside"
+     src="{{ "/assets/snapscore-screenshot.png" | relative_url }}"
+     alt="A screenshot of the SnapScore Android app">
+</div>
 
 SnapScore is an Android app that automates scoring of the board game [*Take It Easy*][]
 using computer vision.  The user takes a photo of their game board and the app will
