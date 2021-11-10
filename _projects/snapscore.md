@@ -16,9 +16,15 @@ main { margin-bottom: 0.75em }
 <div class="confined-img-aspect-ratio-box"
      style="float: left; margin: 0 1em 0.25em 0; width: 45%;
             padding-top: calc(1280 / 720 * 45%)">
+<picture>
+<source type="image/webp"
+srcset="/assets/snapscore-screenshot-480w.webp 480w,
+        /assets/snapscore-screenshot-720w.webp 720w"
+sizes="(max-width: 75ch) 45vw, 33.75ch">
 <img class="aspect-ratio-box-inside"
      src="{{ "/assets/snapscore-screenshot.png" | relative_url }}"
      alt="A screenshot of the SnapScore Android app">
+</picture>
 </div>
 
 SnapScore is an Android app that automates scoring of the board game [*Take It Easy*][]
