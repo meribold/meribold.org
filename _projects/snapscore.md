@@ -8,8 +8,13 @@ description: >
 last_modified_at: 2018-10-23
 ---
 
+<style>
+main p:last-child { margin-bottom: 0.25em }
+main { margin-bottom: 0.75em }
+</style>
+
 <div class="confined-img-aspect-ratio-box"
-     style="float: left; margin: 0 1em 1em 0; width: 45%;
+     style="float: left; margin: 0 1em 0.25em 0; width: 45%;
             padding-top: calc(1280 / 720 * 45%)">
 <img class="aspect-ratio-box-inside"
      src="{{ "/assets/snapscore-screenshot.png" | relative_url }}"
