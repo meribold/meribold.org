@@ -224,7 +224,6 @@ article header time.post-meta::before {
   content: " · ";
 }
 
-.de-emph,
 .post-meta,
 .header-link,
 .footer-list li > a,
@@ -232,7 +231,6 @@ article header time.post-meta::before {
   color: #888;
 }
 
-body.dark .de-emph,
 body.dark .post-meta,
 body.dark .header-link,
 body.dark .footer-list li > a,
