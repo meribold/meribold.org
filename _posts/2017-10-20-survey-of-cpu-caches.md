@@ -12,7 +12,7 @@ img.chart {
   max-width: calc(100vw - 8px);
   width: 110%;
 }
-body.dark img.chart { filter: invert(100%) }
+body.dark img.chart { filter: invert(100%) brightness(88%) }
 </style>
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
@@ -170,11 +170,11 @@ cycles.
     }
     /* TODO: make the width of the border dynamic. */
     .funny-table th:nth-child(2), .funny-table td:nth-child(2) {
-        border-right: 2ch solid #fff;
+        border-right: 2ch solid #f8f1e3;
         padding-right: 3.75px;
     }
     body.dark .funny-table th:nth-child(2), body.dark .funny-table td:nth-child(2) {
-        border-right: 2ch solid #181818;
+        border-right: 2ch solid #121212;
     }
     .funny-table td:nth-child(3), .funny-table th:nth-child(3) {
         padding-left: 3.75px;

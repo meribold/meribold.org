@@ -69,11 +69,11 @@ td:last-child, th:last-child {
 }
 
 tr:nth-child(even) {
-  background-color: #eee;
+  background-color: #ebe4d7;
 }
 
 body.dark tr:nth-child(even) {
-  background-color: #2e2e2e;
+  background-color: #1e1e1e;
 }
 
 th, td {

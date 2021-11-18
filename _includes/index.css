@@ -11,18 +11,18 @@
 
 .stealth-link,
 .post-list-link > a {
-  color: #000;
+  color: #4f321c;
 }
 
 body.dark .stealth-link,
 body.dark .post-list-link > a {
-  color: #fff;
+  color: #b0b0b0;
 }
 
 .post-list-meta {
-  color: #888;
+  color: #6e6e6e;
 }
 
 body.dark .post-list-meta {
-  color: #bbb;
+  color: #888;
 }
