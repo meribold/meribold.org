@@ -4,8 +4,16 @@ extra_css: [images.css, syntax-highlighting.css, tables.css]
 title: A Survey of CPU Caches
 description: Cache-friendliness is key to writing fast code.  This article illuminates how
     CPU caches work with code samples and profiling results.
-image: /assets/cache-paper/access-time-plot.png
+image: /assets/cache-paper/access-time-plot.svg
 ---
+
+<style>
+img.chart {
+  max-width: calc(100vw - 8px);
+  width: 110%;
+}
+body.dark img.chart { filter: invert(100%) }
+</style>
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
 subset of the data present in main memory (RAM) that is expected to be used again soon.
@@ -118,13 +126,13 @@ due to visual impairment.  It is also processed by search engine bots.
 {:/comment}
 ![Plot of the average number of CPU cycles one access takes vs. the array size; the
 differences are due to how much of the array fits into which CPU
-cache][access-time-plot]{:style="width: 110%"}
+cache][access-time-plot]{:.chart}
 
 {::comment}
     The text in quotes is the image's title.  It's optional and shown on mouseover as a
     tooptip.  It can be used to give additional information.
 {:/comment}
-[access-time-plot]: {{ "/assets/cache-paper/access-time-plot.png" | relative_url }}
+[access-time-plot]: {{ "/assets/cache-paper/access-time-plot.svg" | relative_url }}
     "There is a table with the exact numerical results further down."
 
 Up to 32 KiB, each access takes almost exactly 3 cycles.  This is the L1d access time.  At
@@ -221,9 +229,9 @@ int main() {
 These are my results for different values of `STEP`:
 
 ![Plot of the CPU time used to run the program vs. the step size; the CPU time stays
-nearly constant for step sizes of 1, 2, 4, and 8][line-size-plot]{:style="width: 110%"}
+nearly constant for step sizes of 1, 2, 4, and 8][line-size-plot]{:.chart}
 
-[line-size-plot]: {{ "/assets/cache-paper/line-size-plot.png" | relative_url }}
+[line-size-plot]: {{ "/assets/cache-paper/line-size-plot.svg" | relative_url }}
     "The CPU time is nearly constant for the first 4 step sizes."
 
 As expected, the time roughly halves whenever the step size is doubled---but only from a
@@ -249,8 +257,8 @@ pointers to do this, but the array is no longer shuffled.  These are my results 
 profiling this new program as before:
 
 ![Plot of the average number of CPU cycles one access takes vs. the array size when the
-array is not shuffled]({{ "/assets/cache-paper/seq-access-time-plot.png" | relative_url }}
-"A table with the numerical results is further down again."){:style="width: 110%"}
+array is not shuffled]({{ "/assets/cache-paper/seq-access-time-plot.svg" | relative_url }}
+"A table with the numerical results is further down again."){:.chart}
 
 Until the working set size matches that of the L1d, the access times are virtually
 unchanged at 3 cycles, but exceeding the L1d and hitting the L2 increases this by no more
@@ -297,8 +305,7 @@ across all working set sizes:
 
 ![Plot of the average number of CPU cycles one access takes vs. the array size when the
 array is not shuffled and the CPU performs some work for every accessed element](
-{{ "/assets/cache-paper/cpu-bound-seq-access-time-plot.png" | relative_url }}){:style="width:
-110%"}
+{{ "/assets/cache-paper/cpu-bound-seq-access-time-plot.svg" | relative_url }}){:.chart}
 
 {::comment}
 TODO: add captions to the images?  `kramdown` doesn't support this directly, but something
@@ -308,7 +315,7 @@ like the following may work.
     <figcaption style="text-align: center">
         TODO
     </figcaption>
-    <img src="{{ "/assets/cache-paper/cpu-bound-seq-access-time-plot.png" | relative_url }}"
+    <img src="{{ "/assets/cache-paper/cpu-bound-seq-access-time-plot.svg" | relative_url }}"
          style="width: 100%"/>
 </figure>
 {:/comment}
@@ -406,7 +413,7 @@ However, this carries the risk of degrading the performance of a sequential data
 to that of a list.
 
 ![Graphic of a contiguous array of pointers with pointees that may be scattered pretty
-randomly throughout memory][oo-picture]{:style="width: 110%"}
+randomly throughout memory][oo-picture]{:.chart}
 
 [oo-picture]: {{ "/assets/cache-paper/oo-picture.png" | relative_url }}
     "The numbered boxes represent pointers that are laid out contiguously in memory.  The unlabeled boxes represent the corresponding pointees, which may be scattered across memory pretty randomly."
