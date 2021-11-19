@@ -1,1 +1,2 @@
+1378b4ce-d8b6-449c-ba26-6ac252e72e14 bucket=meribold-annex datacenter=us-west-2 embedcreds=no encryption=none fileprefix=meribold.org/ host=s3.amazonaws.com name=s3 port=80 storageclass=ONEZONE_IA type=S3 timestamp=1637299055.807176915s
 b94878bb-6977-4ea5-8de6-e3de4cfbf71e encryption=none name=esgaroth rsyncurl=esgaroth:meribold.org type=rsync timestamp=1636448289.065307138s
