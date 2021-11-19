@@ -65,11 +65,12 @@
 .highlight .vi { color: #008080 }
 .highlight .il { color: #009999 }
 
-/* This is the Monokai scheme from [1].  Only the background color is modified (the first
- * two lines).  I changed it from #272822.
+/* This is the Monokai scheme from [1].  Only the background color is modified.  I changed
+ * it from #272822.
  *
  * [1]: https://jwarby.github.io/jekyll-pygments-themes/languages/python.html
  */
+body.dark .highlight { background: #1e1e1e; }
 body.dark .highlight pre { background-color: #1e1e1e }
 body.dark .highlight .hll { background-color: #1e1e1e }
 body.dark .highlight .c { color: #75715e }
