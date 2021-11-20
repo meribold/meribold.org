@@ -174,7 +174,7 @@ cycles.
         padding-right: 3.75px;
     }
     body.dark .funny-table th:nth-child(2), body.dark .funny-table td:nth-child(2) {
-        border-right: 2ch solid #121212;
+        border-right: 2ch solid #000;
     }
     .funny-table td:nth-child(3), .funny-table th:nth-child(3) {
         padding-left: 3.75px;

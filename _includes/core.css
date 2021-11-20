@@ -33,11 +33,11 @@ body, .post-meta {
 }
 
 body.dark {
-  background-color: #121212;
+  background-color: #000;
 }
 
 body.dark, body.dark .post-meta {
-  color: #b0b0b0;
+  color: #ccc;
 }
 
 body.dark .site-header {
@@ -56,12 +56,14 @@ body.dark .site-footer {
 
 #theme-toggle.override {
   /* color: #4f321c; */
-  color: #d19600;
+  /* color: #d19600; */
+  color: #000;
 }
 
 body.dark #theme-toggle.override {
-  /* color: #b0b0b0; */
-  color: #5ac8fa;
+  /* color: #ccc267; */
+  /* color: #fff; */
+  color: #ccc;
 }
 
 main a {
@@ -69,7 +71,9 @@ main a {
 }
 
 body.dark main a {
-  color: #5ac8fa;
+  /* color: #d19600; */
+  /* color: #e6db74; */
+  color: #ccc267;
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
@@ -202,7 +206,7 @@ pre > code {
 
 body.dark div.highlighter-rouge,
 body.dark pre > code {
-  background-color: #161616;
+  background-color: #101010;
 }
 
 /* Inline code */

@@ -70,9 +70,9 @@
  *
  * [1]: https://jwarby.github.io/jekyll-pygments-themes/languages/python.html
  */
-body.dark .highlight { background: #161616; }
-body.dark .highlight pre { background-color: #161616 }
-body.dark .highlight .hll { background-color: #161616 }
+body.dark .highlight { background: #101010; }
+body.dark .highlight pre { background-color: #101010 }
+body.dark .highlight .hll { background-color: #101010 }
 body.dark .highlight .c { color: #75715e }
 body.dark .highlight .err { color: #960050; background-color: #1e0010 }
 body.dark .highlight .k { color: #66d9ef }
