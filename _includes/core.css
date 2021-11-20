@@ -55,9 +55,12 @@ body.dark .site-footer {
 }
 
 #theme-toggle.override {
-  /* color: #4f321c; */
   /* color: #d19600; */
-  color: #000;
+  /* color: #000; */
+  /* color: #4f321c; */
+  /* color: #4f4f4f; */
+  /* 4f321c to grayscale based on luminosity: 0.2126*0x4f+0.7152*0x32+0.0722*0x1c */
+  color: #373737;
 }
 
 body.dark #theme-toggle.override {
