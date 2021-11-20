@@ -154,13 +154,13 @@ cycles.
     /* FIXME: these borders are slightly offset compared to where they would normally
     appear. */
     .funny-table th {
-        border-top: 2px solid #ccc;
+        border-top: 2px solid #ccc6bb;
     }
     body.dark .funny-table th {
         border-top: 2px solid #444;
     }
     .funny-table > tbody > tr:last-child {
-        border-bottom: 2px solid #ccc;
+        border-bottom: 2px solid #ccc6bb;
     }
     body.dark .funny-table > tbody > tr:last-child {
         border-bottom: 2px solid #444;

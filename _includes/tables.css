@@ -9,8 +9,8 @@
 table {
   text-align: center;
   border-collapse: collapse;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc6bb;
+  border-bottom: 2px solid #ccc6bb;
   /* Horizontally center tables but don't stretch them to the width of the main text and
    * add a horizontal scrollbar if the table is too wide.  See [1] and [2].
    *

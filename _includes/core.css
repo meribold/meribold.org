@@ -175,8 +175,8 @@ pre > code {
 }
 
 div.highlighter-rouge {
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc6bb;
+  border-bottom: 2px solid #ccc6bb;
   /* Only darken the background color of code blocks very slightly. */
   background-color: #f8f8f8;
   min-width: 100%;
@@ -272,7 +272,7 @@ body.dark .footer-list li > a,
  * [1]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L117
  */
 blockquote {
-  border-left: .3em solid #ddd;
+  border-left: .3em solid #e6dfd2;
   margin-left: 0;
   margin-right: 0;
   padding-left: 2ch;
@@ -315,7 +315,7 @@ main { flex-grow: 1; }
 
 .site-header {
   padding: .2em 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e6dfd2;
   /* Makes sure the line is below all links when the viewport is really narrow and the
    * links get stacked vertically.  See <https://www.w3schools.com/css/css_float.asp>.
    */
@@ -333,7 +333,7 @@ main { flex-grow: 1; }
 
 .site-footer {
   padding: .2em 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e6dfd2;
   margin-bottom: .2em;
 }
 
