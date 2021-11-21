@@ -63,13 +63,76 @@ body.dark #theme-toggle.override {
   color: #ccc;
 }
 
+a {
+  /* Only underline links on mouseover. */
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+a:hover {
+  text-decoration-line: revert;
+}
+
 main a {
-  color: #d19600;
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: #ecd49c;
+  text-decoration-style: solid;
+  text-decoration-thickness: .2em;
+  text-decoration-skip-ink: none;
 }
 
 body.dark main a {
-  /* #e6db74 with value reduced from 90 to 80 in HSV */
-  color: #ccc267;
+  text-decoration-color: #603030;
+}
+
+main a:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #d19600;
+}
+
+body.dark main a:hover {
+  text-decoration-color: #b05858;
+}
+
+a.footnote {
+  color: inherit;
+  background: #d1960028;
+  text-decoration: none;
+  padding: 0 2px;
+}
+
+body.dark a.footnote {
+  background: #402020;
+}
+
+a.footnote:hover {
+  color: inherit;
+  background: #d1960080;
+  text-decoration: none;
+}
+
+body.dark a.footnote:hover {
+  background: #804040;
+}
+
+a.reversefootnote, a.reversefootnote:hover {
+  text-decoration: none;
+}
+
+a.post-meta {
+  text-decoration: none;
+}
+
+a.post-meta:hover {
+  text-decoration: revert;
+  text-decoration-thickness: revert;
+  text-decoration-skip-ink: initial;
+}
+
+/* Don't add another underline to abbeviations or acronyms that are part of a link. */
+a abbr[title], a acronym[title] {
+  text-decoration: none;
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
@@ -132,16 +195,6 @@ h1, h2 {
   font-variant: small-caps;
   /* See <https://practicaltypography.com/letterspacing.html>. */
   letter-spacing: 0.05em;
-}
-
-a {
-  /* Only underline links on mouseover. */
-  text-decoration: none;
-  word-wrap: break-word;
-}
-
-a:hover {
-   text-decoration: underline;
 }
 
 /* Set the size of monospace text relative to the normal font size.  See [1], [2], and
