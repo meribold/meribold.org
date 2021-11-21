@@ -4,7 +4,7 @@
  * [1]: https://github.com/mojombo/tpw/blob/master/css/syntax.css
  * [2]: https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
  */
-.highlight { background: #f8f8f8; }
+.highlight { background: #fff; }
 .highlight .c { color: #999988; font-style: italic }
 .highlight .err { color: #a61717; background-color: #e3d2d2 }
 .highlight .k { font-weight: bold }

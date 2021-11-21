@@ -178,7 +178,7 @@ div.highlighter-rouge {
   border-top: 2px solid #ccc6bb;
   border-bottom: 2px solid #ccc6bb;
   /* Only darken the background color of code blocks very slightly. */
-  background-color: #f8f8f8;
+  background-color: #fff;
   min-width: 100%;
   max-width: calc(50% + 50vw - 7.5px);
   width: -moz-min-content;
@@ -204,7 +204,7 @@ pre > code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  background-color: #f8f8f8;
+  background-color: #fff;
 }
 
 body.dark div.highlighter-rouge,
@@ -218,7 +218,7 @@ code {
   /* background-color: #ebe4d7; */
   /* background-color: #fff8e9; */
   /* background-color: #fff; */
-  background-color: #f8f8f8;
+  background-color: #fff;
   /* background-color: #f8f5ee; */
 }
 
