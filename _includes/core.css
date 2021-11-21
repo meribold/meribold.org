@@ -24,9 +24,20 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+body {
+  background-color: #f8f1e3;
+}
+
+body, .post-meta {
+  color: #4f321c;
+}
+
 body.dark {
-  background-color: #181818;
-  color: #fff;
+  background-color: #000;
+}
+
+body.dark, body.dark .post-meta {
+  color: #ccc;
 }
 
 body.dark .site-header {
@@ -44,19 +55,21 @@ body.dark .site-footer {
 }
 
 #theme-toggle.override {
-  color: #000;
+  /* #4f321c converted to grayscale using `0.2126 * 79 + 0.7152 * 50 + 0.0722 * 28` */
+  color: #373737;
 }
 
 body.dark #theme-toggle.override {
-  color: #fff;
+  color: #ccc;
 }
 
 main a {
-  color: #000080;
+  color: #d19600;
 }
 
 body.dark main a {
-  color: #e6db74;
+  /* #e6db74 with value reduced from 90 to 80 in HSV */
+  color: #ccc267;
 }
 
 /* Fully justify text.  Also see <https://practicaltypography.com/hyphenation.html>. */
@@ -155,10 +168,10 @@ pre > code {
 }
 
 div.highlighter-rouge {
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc6bb;
+  border-bottom: 2px solid #ccc6bb;
   /* Only darken the background color of code blocks very slightly. */
-  background-color: #f6f6f6;
+  background-color: #f8f8f8;
   min-width: 100%;
   max-width: calc(50% + 50vw - 7.5px);
   width: -moz-min-content;
@@ -184,22 +197,22 @@ pre > code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  background-color: #f6f6f6;
+  background-color: #f8f8f8;
 }
 
 body.dark div.highlighter-rouge,
 body.dark pre > code {
-  background-color: #1e1e1e;
+  background-color: #101010;
 }
 
 /* Inline code */
 code {
   padding: .1em .2em;
-  background-color: #eee;
+  background-color: #f8f8f8;
 }
 
 body.dark code {
-  background-color: #2e2e2e;
+  background-color: #2b2b2b;
 }
 
 /* See <https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php>. */
@@ -224,18 +237,16 @@ article header time.post-meta::before {
   content: " · ";
 }
 
-.post-meta,
 .header-link,
 .footer-list li > a,
 .footer-link {
-  color: #888;
+  color: #6e6e6e;
 }
 
-body.dark .post-meta,
 body.dark .header-link,
 body.dark .footer-list li > a,
 .footer-link {
-  color: #bbb;
+  color: #888;
 }
 
 /* Block quotations.  Originally based on the Minima theme [1].  Heavily modified by
@@ -250,7 +261,7 @@ body.dark .footer-list li > a,
  * [1]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L117
  */
 blockquote {
-  border-left: .3em solid #ddd;
+  border-left: .3em solid #e6dfd2;
   margin-left: 0;
   margin-right: 0;
   padding-left: 2ch;
@@ -293,7 +304,7 @@ main { flex-grow: 1; }
 
 .site-header {
   padding: .2em 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e6dfd2;
   /* Makes sure the line is below all links when the viewport is really narrow and the
    * links get stacked vertically.  See <https://www.w3schools.com/css/css_float.asp>.
    */
@@ -311,7 +322,7 @@ main { flex-grow: 1; }
 
 .site-footer {
   padding: .2em 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e6dfd2;
   margin-bottom: .2em;
 }
 

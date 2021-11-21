@@ -4,7 +4,7 @@
  * [1]: https://github.com/mojombo/tpw/blob/master/css/syntax.css
  * [2]: https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
  */
-.highlight { background: #f6f6f6; }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #999988; font-style: italic }
 .highlight .err { color: #a61717; background-color: #e3d2d2 }
 .highlight .k { font-weight: bold }
@@ -65,21 +65,21 @@
 .highlight .vi { color: #008080 }
 .highlight .il { color: #009999 }
 
-/* This is the Monokai scheme from [1].  Only the background color is modified.  I changed
- * it from #272822.
+/* This is the Monokai scheme from [1], but I changed the background color from #272822 to
+ * #101010 and all occurences of #f8f8f2 to #ccc.
  *
  * [1]: https://jwarby.github.io/jekyll-pygments-themes/languages/python.html
  */
-body.dark .highlight { background: #1e1e1e; }
-body.dark .highlight pre { background-color: #1e1e1e }
-body.dark .highlight .hll { background-color: #1e1e1e }
+body.dark .highlight { background: #101010; }
+body.dark .highlight pre { background-color: #101010 }
+body.dark .highlight .hll { background-color: #101010 }
 body.dark .highlight .c { color: #75715e }
 body.dark .highlight .err { color: #960050; background-color: #1e0010 }
 body.dark .highlight .k { color: #66d9ef }
 body.dark .highlight .l { color: #ae81ff }
-body.dark .highlight .n { color: #f8f8f2 }
+body.dark .highlight .n { color: #ccc }
 body.dark .highlight .o { color: #f92672 }
-body.dark .highlight .p { color: #f8f8f2 }
+body.dark .highlight .p { color: #ccc }
 body.dark .highlight .cm { color: #75715e }
 body.dark .highlight .cp { color: #75715e }
 body.dark .highlight .c1 { color: #75715e }
@@ -96,21 +96,21 @@ body.dark .highlight .ld { color: #e6db74 }
 body.dark .highlight .m { color: #ae81ff }
 body.dark .highlight .s { color: #e6db74 }
 body.dark .highlight .na { color: #a6e22e }
-body.dark .highlight .nb { color: #f8f8f2 }
+body.dark .highlight .nb { color: #ccc }
 body.dark .highlight .nc { color: #a6e22e }
 body.dark .highlight .no { color: #66d9ef }
 body.dark .highlight .nd { color: #a6e22e }
-body.dark .highlight .ni { color: #f8f8f2 }
+body.dark .highlight .ni { color: #ccc }
 body.dark .highlight .ne { color: #a6e22e }
 body.dark .highlight .nf { color: #a6e22e }
-body.dark .highlight .nl { color: #f8f8f2 }
-body.dark .highlight .nn { color: #f8f8f2 }
+body.dark .highlight .nl { color: #ccc }
+body.dark .highlight .nn { color: #ccc }
 body.dark .highlight .nx { color: #a6e22e }
-body.dark .highlight .py { color: #f8f8f2 }
+body.dark .highlight .py { color: #ccc }
 body.dark .highlight .nt { color: #f92672 }
-body.dark .highlight .nv { color: #f8f8f2 }
+body.dark .highlight .nv { color: #ccc }
 body.dark .highlight .ow { color: #f92672 }
-body.dark .highlight .w { color: #f8f8f2 }
+body.dark .highlight .w { color: #ccc }
 body.dark .highlight .mf { color: #ae81ff }
 body.dark .highlight .mh { color: #ae81ff }
 body.dark .highlight .mi { color: #ae81ff }
@@ -126,10 +126,10 @@ body.dark .highlight .sx { color: #e6db74 }
 body.dark .highlight .sr { color: #e6db74 }
 body.dark .highlight .s1 { color: #e6db74 }
 body.dark .highlight .ss { color: #e6db74 }
-body.dark .highlight .bp { color: #f8f8f2 }
-body.dark .highlight .vc { color: #f8f8f2 }
-body.dark .highlight .vg { color: #f8f8f2 }
-body.dark .highlight .vi { color: #f8f8f2 }
+body.dark .highlight .bp { color: #ccc }
+body.dark .highlight .vc { color: #ccc }
+body.dark .highlight .vg { color: #ccc }
+body.dark .highlight .vi { color: #ccc }
 body.dark .highlight .il { color: #ae81ff }
 body.dark .highlight .gu { color: #75715e }
 body.dark .highlight .gd { color: #f92672 }
