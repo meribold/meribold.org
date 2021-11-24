@@ -13,6 +13,8 @@ img.chart {
   width: 110%;
 }
 body.dark img.chart { filter: invert(100%) brightness(88%) }
+img.chart[src*="oo-picture"] { filter: sepia(15%) }
+body.dark img[src*="oo-picture"] { filter: invert(100%) brightness(80%) }
 </style>
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
