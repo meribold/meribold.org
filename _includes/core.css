@@ -83,7 +83,8 @@ main a {
 }
 
 body.dark main a {
-  text-decoration-color: #603030;
+  color: #b8f;
+  text-decoration: none;
 }
 
 main a:hover {
@@ -92,7 +93,9 @@ main a:hover {
 }
 
 body.dark main a:hover {
-  text-decoration-color: #b05858;
+  text-decoration: revert;
+  text-decoration-thickness: revert;
+  text-decoration-skip-ink: initial;
 }
 
 a.footnote {
@@ -103,7 +106,7 @@ a.footnote {
 }
 
 body.dark a.footnote {
-  background: #402020;
+  background: #2b2b2b;
 }
 
 a.footnote:hover {
@@ -113,7 +116,8 @@ a.footnote:hover {
 }
 
 body.dark a.footnote:hover {
-  background: #804040;
+  color: #000;
+  background: #b8f;
 }
 
 a.reversefootnote, a.reversefootnote:hover {
