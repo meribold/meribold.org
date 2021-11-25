@@ -354,14 +354,15 @@ calls.  Programs with good locality are called *cache-friendly*.
 
 ## Example: `std::vector` vs. `std::list`
 
-The following C++ program (adapted from an article by Sergey Ignatchenko published in
-[issue 134 of the *Overload* magazine][big-os]) initializes a number of STL containers
-with random numbers and measures the
+The following C++ program[^big-os] initializes a number of STL containers with random
+numbers and measures the
 processor time needed to sum all of them.  I first ran it with `Container` being a type
 alias for `std::list`, then for `std::vector`.  Either way, the asymptotic
 complexity is Θ(N).
 
-[big-os]: https://accu.org/journals/overload/24/134/overload134.pdf#page=6
+[^big-os]: This program is adapted from code that appears in an article by Sergey
+    Ignatchenko that was published in [issue 134 of the *Overload*
+    magazine](https://accu.org/journals/overload/24/134/overload134.pdf#page=6).
 
 ```cpp
 constexpr int N = 5000;
