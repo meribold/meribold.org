@@ -121,19 +121,10 @@ yields the number of cycles one access takes on average.
 
 Here are my results for different array sizes (set at compile time with the `SIZE` macro):
 
-{::comment}
-"Plot of..." is the images alt text (https://en.wikipedia.org/wiki/Alt_attribute).  It is
-displayed when the image cannot be rendered and may be read aloud by screen readers used
-due to visual impairment.  It is also processed by search engine bots.
-{:/comment}
 ![Plot of the average number of CPU cycles one access takes vs. the array size; the
 differences are due to how much of the array fits into which CPU
 cache][access-time-plot]{:.chart}
 
-{::comment}
-    The text in quotes is the image's title.  It's optional and shown on mouseover as a
-    tooptip.  It can be used to give additional information.
-{:/comment}
 [access-time-plot]: {{ "/assets/cache-paper/access-time-plot.svg" | relative_url }}
     "There is a table with the exact numerical results further down."
 
@@ -148,7 +139,6 @@ The values from 512 KiB (the size of the L2) to 128 MiB exhibit a similar patter
 more and more accesses go to main memory, the average delay for one access approaches 200
 cycles.
 
-<!-- FIXME: having a <style> tag outside of the page's head section may be a bad idea. -->
 <style>
     .funny-table, body.dark .funny-table {
         border: none;
