@@ -360,7 +360,7 @@ processor time needed to sum all of them.  I first ran it with `Container` being
 alias for `std::list`, then for `std::vector`.  Either way, the asymptotic
 complexity is Θ(N).
 
-[big-os]: https://accu.org/var/uploads/journals/Overload134.pdf#page=6
+[big-os]: https://accu.org/journals/overload/24/134/overload134.pdf#page=6
 
 ```cpp
 constexpr int N = 5000;
