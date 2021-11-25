@@ -317,10 +317,9 @@ automatically detect access patterns.  There is also *software prefetching*, whi
 triggered by special machine instructions that may be inserted by the compiler or manually
 by the programmer.[^drepper]
 
-[^drepper]: Software prefetching is discussed by Ulrich Drepper in his paper "What Every
-    Programmer Should Know About Memory" available [here
-    (PDF)](https://www.akkadia.org/drepper/cpumemory.pdf).  He also goes into more detail
-    on practically everything touched on in this post.
+[^drepper]: Software prefetching is discussed by Ulrich Drepper in his paper
+    [*What Every Programmer Should Know About Memory*](https://www.akkadia.org/drepper/cpumemory.pdf).
+    He also goes into more detail on practically everything touched on in this post.
 
 ## Locality of Reference
 
@@ -416,8 +415,8 @@ The hidden constant separating the time complexities of two reasonable algorithm
 asymptotic analysis can get quite big because of cache effects.  Understanding how CPU
 caches work helps make good choices for writing fast programs and I hope this article
 provided some insight.  For a more in-depth discussion, you can read Ulrich Drepper's
-paper "[What Every Programmer Should Know About
-Memory](https://www.akkadia.org/drepper/cpumemory.pdf)", which also covers virtual memory,
+paper [*What Every Programmer Should Know About
+Memory*](https://www.akkadia.org/drepper/cpumemory.pdf), which also covers virtual memory,
 cache associativity, write policies, replacement policies, cache coherence, software
 prefetching, instruction caches, TLBs, and more.
 
