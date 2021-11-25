@@ -38,6 +38,37 @@ img[src*="oo-picture"] {
 body.dark img[src*="oo-picture"] {
   filter: invert(100%) brightness(80%);
 }
+.funny-table, body.dark .funny-table {
+  border: none;
+}
+/* FIXME: these borders are slightly offset compared to where they would normally
+appear. */
+.funny-table th {
+  border-top: 2px solid #ccc6bb;
+}
+body.dark .funny-table th {
+  border-top: 2px solid #444;
+}
+.funny-table > tbody > tr:last-child {
+  border-bottom: 2px solid #ccc6bb;
+}
+body.dark .funny-table > tbody > tr:last-child {
+  border-bottom: 2px solid #444;
+}
+.funny-table th, .funny-table td {
+    text-align: center;
+}
+/* TODO: make the width of the border dynamic. */
+.funny-table th:nth-child(2), .funny-table td:nth-child(2) {
+  border-right: 2ch solid #f8f1e3;
+  padding-right: 3.75px;
+}
+body.dark .funny-table th:nth-child(2), body.dark .funny-table td:nth-child(2) {
+  border-right: 2ch solid #000;
+}
+.funny-table td:nth-child(3), .funny-table th:nth-child(3) {
+  padding-left: 3.75px;
+}
 </style>
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
@@ -161,41 +192,6 @@ accesses, with less and less L1d hits and an L2 access time of around 25 cycles.
 The values from 512 KiB (the size of the L2) to 128 MiB exhibit a similar pattern.  As
 more and more accesses go to main memory, the average delay for one access approaches 200
 cycles.
-
-<!-- TODO: merge this with the style element at the start. -->
-<style>
-    .funny-table, body.dark .funny-table {
-        border: none;
-    }
-    /* FIXME: these borders are slightly offset compared to where they would normally
-    appear. */
-    .funny-table th {
-        border-top: 2px solid #ccc6bb;
-    }
-    body.dark .funny-table th {
-        border-top: 2px solid #444;
-    }
-    .funny-table > tbody > tr:last-child {
-        border-bottom: 2px solid #ccc6bb;
-    }
-    body.dark .funny-table > tbody > tr:last-child {
-        border-bottom: 2px solid #444;
-    }
-    .funny-table th, .funny-table td {
-        text-align: center;
-    }
-    /* TODO: make the width of the border dynamic. */
-    .funny-table th:nth-child(2), .funny-table td:nth-child(2) {
-        border-right: 2ch solid #f8f1e3;
-        padding-right: 3.75px;
-    }
-    body.dark .funny-table th:nth-child(2), body.dark .funny-table td:nth-child(2) {
-        border-right: 2ch solid #000;
-    }
-    .funny-table td:nth-child(3), .funny-table th:nth-child(3) {
-        padding-left: 3.75px;
-    }
-</style>
 
 | Array Size (KiB) | Cycles / Iteration | Array Size (KiB) | Cycles / Iteration |
 |------------------|--------------------|------------------|--------------------|
