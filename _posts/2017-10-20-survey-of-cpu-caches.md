@@ -30,7 +30,7 @@ desired access latency.
 
 Whenever a program requests a memory address the CPU will check its caches.  If the
 location is present, a *cache hit* occurs.  Otherwise, the result is a *cache miss* and
-the next level of the memory hierarchy, which could be another CPU cache, is tried.
+the next level of the memory hierarchy, which could be another CPU cache, is accessed.
 
 CPU caches are managed by the CPU directly.  They are generally opaque to the operating
 system and other software.  That is, programmers have no direct control over the contents
@@ -51,7 +51,7 @@ In practice, a currently representative x86 cache hierarchy consists of:
     L1d and L1i).
 *   A unified L2 cache of 256 to 512 KiB for each core.
 *   Often a unified L3 cache of 2 to 16 MiB shared between all cores.
-*   One or more TLBs per core.  They cache virtual-to-physical address associations of
+*   One or more TLBs per core.  These cache virtual-to-physical address associations of
     memory pages.[^tangential]
 
 [^tangential]: You don't need to know what that means to understand the rest of this post.
