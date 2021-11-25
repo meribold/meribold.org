@@ -422,10 +422,10 @@ prefetching, instruction caches, TLBs, and more.
 
 ## Footnotes
 
-*   This post is based on a seminar paper which you can find [here][paper] for some more
-    details and sources for further reading.  The TeX files, full source code of all
-    programs shown, and a [makefile][] that automates running them and builds the PDF with
-    the results are all available in [this repository on GitHub][repo].
+*   This post is based on [a seminar paper][paper] in which you can find some more details
+    and a list of sources.  The TeX files, full source code of all utilized
+    microbenchmarks, and a [makefile that automates running them and builds the
+    PDF][makefile] are all [available on GitHub][repo].
 
 [paper]: /assets/cache-paper.pdf
 [repo]: https://github.com/meribold/cache-seminar-paper
