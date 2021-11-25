@@ -8,13 +8,36 @@ image: /assets/cache-paper/access-time-plot.svg
 ---
 
 <style>
-img.chart {
-  max-width: calc(100vw - 8px);
-  width: 110%;
+.chart-wrapper {
+  position: relative;
+  left: 50vw;
+  transform: translateX(-50%);
+  margin-left: calc(-50vw + 50%);
+  width: min(100vw, 110%);
+  background: #f8f8f8;
+  padding: 3% min(2em, (100vw - 110%) / 2);
 }
-body.dark img.chart { filter: invert(100%) brightness(88%) }
-img.chart[src*="oo-picture"] { filter: sepia(15%) }
-body.dark img[src*="oo-picture"] { filter: invert(100%) brightness(80%) }
+body.dark .chart-wrapper {
+  background: #181818;
+}
+img.chart {
+  width: calc(100% - 8px);
+  margin: auto;
+}
+body.dark img.chart {
+  background: #e4e4e4;
+  filter: invert(100%) brightness(88%);
+}
+img[src*="oo-picture"] {
+  width: min(110%, 100vw - 8px);
+  max-width: calc(100vw - 8px);
+  filter: sepia(15%);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+body.dark img[src*="oo-picture"] {
+  filter: invert(100%) brightness(80%);
+}
 </style>
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
@@ -121,12 +144,12 @@ yields the number of cycles one access takes on average.
 
 Here are my results for different array sizes (set at compile time with the `SIZE` macro):
 
-![Plot of the average number of CPU cycles one access takes vs. the array size; the
-differences are due to how much of the array fits into which CPU
-cache][access-time-plot]{:.chart}
-
-[access-time-plot]: {{ "/assets/cache-paper/access-time-plot.svg" | relative_url }}
-    "There is a table with the exact numerical results further down."
+<div class="chart-wrapper">
+<img class="normal-img chart"
+     src="{{ "/assets/cache-paper/access-time-plot.svg" | relative_url }}"
+     alt="Plot of the average number of CPU cycles one access takes vs. the array size; the differences are due to how much of the array fits into which CPU cache"
+     title="There is a table with the exact numerical results further down.">
+</div>
 
 Up to 32 KiB, each access takes almost exactly 3 cycles.  This is the L1d access time.  At
 32 KiB (the size of the L1d) the time increases to about 3.5 cycles.  This is not
@@ -221,11 +244,12 @@ int main() {
 
 These are my results for different values of `STEP`:
 
-![Plot of the CPU time used to run the program vs. the step size; the CPU time stays
-nearly constant for step sizes of 1, 2, 4, and 8][line-size-plot]{:.chart}
-
-[line-size-plot]: {{ "/assets/cache-paper/line-size-plot.svg" | relative_url }}
-    "The CPU time is nearly constant for the first 4 step sizes."
+<div class="chart-wrapper">
+<img class="normal-img chart"
+     src="{{ "/assets/cache-paper/line-size-plot.svg" | relative_url }}"
+     alt="Plot of the CPU time used to run the program vs. the step size; the CPU time stays nearly constant for step sizes of 1, 2, 4, and 8"
+     title="The CPU time is nearly constant for the first 4 step sizes.">
+</div>
 
 As expected, the time roughly halves whenever the step size is doubled---but only from a
 step size of 16.  For the first 4 step sizes, it is almost constant.
@@ -249,9 +273,12 @@ random](#listing-1) that just walks over the array sequentially.  It still follo
 pointers to do this, but the array is no longer shuffled.  These are my results of
 profiling this new program as before:
 
-![Plot of the average number of CPU cycles one access takes vs. the array size when the
-array is not shuffled]({{ "/assets/cache-paper/seq-access-time-plot.svg" | relative_url }}
-"A table with the numerical results is further down again."){:.chart}
+<div class="chart-wrapper">
+<img class="normal-img chart"
+     src="{{ "/assets/cache-paper/seq-access-time-plot.svg" | relative_url }}"
+     alt="Plot of the average number of CPU cycles one access takes vs. the array size when the array is not shuffled"
+     title="A table with the numerical results is further down again.">
+</div>
 
 Until the working set size matches that of the L1d, the access times are virtually
 unchanged at 3 cycles, but exceeding the L1d and hitting the L2 increases this by no more
@@ -296,9 +323,12 @@ across all working set sizes:
 
 [github-seq-access-times-source]: https://github.com/meribold/cache-seminar-paper/blob/a32597fbb2c37c52d54a9b87194cc17760ffbc11/seq-access-times/access-times.c#L26
 
-![Plot of the average number of CPU cycles one access takes vs. the array size when the
-array is not shuffled and the CPU performs some work for every accessed element](
-{{ "/assets/cache-paper/cpu-bound-seq-access-time-plot.svg" | relative_url }}){:.chart}
+<div class="chart-wrapper">
+<img class="normal-img chart"
+     src="{{ "/assets/cache-paper/cpu-bound-seq-access-time-plot.svg" | relative_url }}"
+     alt="Plot of the average number of CPU cycles one access takes vs. the array size when the array is not shuffled and the CPU performs some work for every accessed element"
+     title="A table with the numerical results is further down again.">
+</div>
 
 {::comment}
 TODO: add captions to the images?  `kramdown` doesn't support this directly, but something
@@ -407,7 +437,7 @@ However, this carries the risk of degrading the performance of a sequential data
 to that of a list.
 
 ![Graphic of a contiguous array of pointers with pointees that may be scattered pretty
-randomly throughout memory][oo-picture]{:.chart}
+randomly throughout memory][oo-picture]
 
 [oo-picture]: {{ "/assets/cache-paper/oo-picture.png" | relative_url }}
     "The numbered boxes represent pointers that are laid out contiguously in memory.  The unlabeled boxes represent the corresponding pointees, which may be scattered across memory pretty randomly."
