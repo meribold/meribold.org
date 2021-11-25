@@ -139,6 +139,7 @@ The values from 512 KiB (the size of the L2) to 128 MiB exhibit a similar patter
 more and more accesses go to main memory, the average delay for one access approaches 200
 cycles.
 
+<!-- TODO: merge this with the style element at the start. -->
 <style>
     .funny-table, body.dark .funny-table {
         border: none;
