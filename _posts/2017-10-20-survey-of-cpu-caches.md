@@ -350,7 +350,7 @@ We have already seen that caches take advantage of both these principles by desi
 
 Access to instructions inherently has good spatial locality since they are executed
 sequentially outside of jumps, and good temporal locality because of loops and function
-calls.  Programs with good locality are said to be *cache-friendly*.
+calls.  Programs with good locality are called *cache-friendly*.
 
 ## Example: `std::vector` vs. `std::list`
 
