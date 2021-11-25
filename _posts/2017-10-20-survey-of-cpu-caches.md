@@ -73,8 +73,8 @@ L1d cache:           32K
 L2 cache:            512K
 ```
 
-Let's verify those sizes and measure the access latencies.  The [following C
-program](#listing-1) repeatedly reads elements from an array in random
+Let's verify those sizes and measure the access latencies.  The following C
+program repeatedly reads elements from an array in random
 order.[^prefetching] To minimize the overhead of picking a random index, the array is
 first set up as a circular, singly linked list where every element except the last points
 to a random successor. When compiled with `-DBASELINE`, only this initialization is done.
