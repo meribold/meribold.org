@@ -1,4 +1,4 @@
-.PHONY: _site _min clean push-to-production push-to-testing
+.PHONY: _site _min clean push-to-production push-to-staging push-to-testing
 
 _site:
 	rm -rf _site
