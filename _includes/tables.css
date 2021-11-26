@@ -82,13 +82,13 @@ th, td {
 
 th {
   font-weight: normal;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #807c75;
   padding-top: .2em;
   padding-bottom: .2em;
 }
 
 body.dark th {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #999;
 }
 
 /* Add the same abount of vertical padding below the line that seperates the table heading
