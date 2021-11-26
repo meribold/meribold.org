@@ -20,12 +20,14 @@ img.chart {
 body.dark img.chart {
   background: #e4e4e4;
   filter: invert(100%) brightness(88%);
+  transform: translate3d(0, 0, 0);
 }
 
 img[src*="oo-picture"] {
   width: min(110%, 100vw - 8px);
   max-width: calc(100vw - 8px);
   filter: sepia(15%);
+  transform: translate3d(-50%, 0, 0);
   margin-top: 2em;
   margin-bottom: 2em;
 }
