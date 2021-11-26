@@ -1,75 +1,11 @@
 ---
 layout: post
-extra_css: [images.css, syntax-highlighting.css, tables.css]
+extra_css: [images.css, syntax-highlighting.css, tables.css, survey-of-cpu-caches.css]
 title: A Survey of CPU Caches
 description: Cache-friendliness is key to writing fast code.  This article illuminates how
     CPU caches work with code samples and profiling results.
 image: /assets/cache-paper/access-time-plot.svg
 ---
-
-<style>
-.chart-wrapper {
-  position: relative;
-  left: 50vw;
-  transform: translateX(-50%);
-  margin-left: calc(-50vw + 50%);
-  width: min(100vw, 110%);
-  background: #f8f8f8;
-  padding: 3% min(2em, (100vw - 110%) / 2);
-}
-body.dark .chart-wrapper {
-  background: #181818;
-}
-img.chart {
-  width: calc(100% - 8px);
-  margin: auto;
-}
-body.dark img.chart {
-  background: #e4e4e4;
-  filter: invert(100%) brightness(88%);
-}
-img[src*="oo-picture"] {
-  width: min(110%, 100vw - 8px);
-  max-width: calc(100vw - 8px);
-  filter: sepia(15%);
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-body.dark img[src*="oo-picture"] {
-  filter: invert(100%) brightness(80%);
-}
-.funny-table, body.dark .funny-table {
-  border: none;
-}
-/* FIXME: these borders are slightly offset compared to where they would normally
-appear. */
-.funny-table th {
-  border-top: 2px solid #ccc6bb;
-}
-body.dark .funny-table th {
-  border-top: 2px solid #444;
-}
-.funny-table > tbody > tr:last-child {
-  border-bottom: 2px solid #ccc6bb;
-}
-body.dark .funny-table > tbody > tr:last-child {
-  border-bottom: 2px solid #444;
-}
-.funny-table th, .funny-table td {
-    text-align: center;
-}
-/* TODO: make the width of the border dynamic. */
-.funny-table th:nth-child(2), .funny-table td:nth-child(2) {
-  border-right: 2ch solid #f8f1e3;
-  padding-right: 3.75px;
-}
-body.dark .funny-table th:nth-child(2), body.dark .funny-table td:nth-child(2) {
-  border-right: 2ch solid #000;
-}
-.funny-table td:nth-child(3), .funny-table th:nth-child(3) {
-  padding-left: 3.75px;
-}
-</style>
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
 subset of the data present in main memory (RAM) that is expected to be used again soon.
