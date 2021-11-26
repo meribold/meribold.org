@@ -1,4 +1,4 @@
-.PHONY: _site _min clean deploy push-to-testing
+.PHONY: _site _min clean push-to-production push-to-testing
 
 _site:
 	rm -rf _site
@@ -17,8 +17,8 @@ clean:
 push-to-testing: _min
 	rclone sync -I --checkers 16 --transfers 16 --progress _min fastmail:testing.meribold.org
 
-stage: _min
+push-to-staging: _min
 	s3cmd sync --acl-public --delete-removed _min/ s3://staging.meribold.org
 
-deploy: _min
+push-to-production: _min
 	s3cmd sync --acl-public --delete-removed _min/ s3://meribold.org
