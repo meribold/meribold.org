@@ -26,7 +26,7 @@ is to create a repository with the right name.  For me, that's
 
 [GitHub Pages]: https://pages.github.com
 
-## Rambling about Frameworks
+## Rambling about frameworks
 
 I think I should use [Jekyll][].  It's suggested at [pages.github.com][].  I'm confused
 whether this is the only option with GitHub Pages or if there are other frameworks that
@@ -63,7 +63,7 @@ install it too.
     $ gem install bundler
     $ gem install github-pages
 
-## Creating a Jekyll Site
+## Creating a Jekyll site
 
 Back to the [quick-start guide][7].  The next step is to create the basic scaffolding of a
 Jekyll site using `jekyll new`.
@@ -129,7 +129,7 @@ it.
 
 At this point I looked at and edited all those other files `jekyll new` created.
 
-## Fork the Theme
+## Fork the theme
 
 I want to include my theme in my repository so I can make major changes easily.  This is
 covered [here][8].  It's also possible to use a [gem-based theme][] and selectively
@@ -278,7 +278,7 @@ This was an `h3` heading.
 
 This was an `h4` heading.  It looks like `h3` and I'm trying not to use it on this site.
 
-##### The Way
+##### The way
 
 This was an `h5` heading.  It looks like `h4` and I'm trying not to use it on this site.
 
@@ -286,7 +286,7 @@ This was an `h5` heading.  It looks like `h4` and I'm trying not to use it on th
 
 This was an `h6` heading.  It looks like `h5` and I'm trying not to use it on this site.
 
-#### Code Snippets
+#### Code snippets
 
 The following code block has quite long lines.  It may extend to the right of where the
 main text is wrapped if it needs the space and the viewport is wide enough.  If you're

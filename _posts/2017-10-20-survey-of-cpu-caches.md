@@ -16,7 +16,7 @@ reason, but more fundamentally, since no signal can propagate faster than the sp
 light, every possible storage technology can only reach a finite amount of data within a
 desired access latency.
 
-## Cache Operation Overview
+## Cache operation overview
 
 Whenever a program requests a memory address the CPU will check its caches.  If the
 location is present, a *cache hit* occurs.  Otherwise, the result is a *cache miss* and
@@ -28,7 +28,7 @@ of CPU caches.  Unless explicitly prevented, the CPU brings all accessed data in
 This happens in response to cache misses and will, much more often than not, cause another
 cache entry to be evicted and replaced.
 
-## Types of CPU Caches
+## Types of CPU caches
 
 Current x86 CPUs generally have three main types of caches: data caches, instruction
 caches, and translation lookaside buffers ({::nomarkdown}TLBs{:/}).  Some caches are used
@@ -142,7 +142,7 @@ cycles.
 | 256              | 24.73              | 131072           | 194.83             |
 {:.funny-table}
 
-## Cache Lines
+## Cache lines
 
 *Cache lines* or *cache blocks* are the unit of data transfer between main memory and
 cache.  They have a fixed size which is typically 64 bytes on x86/x64 CPUs---this means
@@ -285,20 +285,20 @@ by the programmer.[^drepper]
     [*What Every Programmer Should Know About Memory*](https://www.akkadia.org/drepper/cpumemory.pdf).
     He also goes into more detail on practically everything touched on in this post.
 
-## Locality of Reference
+## Locality of reference
 
 Two properties exhibited by computer code to varying degrees distinctly impact cache
 effectiveness.  One is *temporal locality*.  The other is *spatial locality*.  Both are
 measures of how well the code's memory access pattern matches certain principles.
 
-### Temporal Locality
+### Temporal locality
 
 One access suggests another.  That is, once referenced memory locations tend to be used
 again within a short time frame.  This is really the intrinsic motivation for having a
 memory hierarchy in the first place.  When a cache line is loaded but not accessed again
 before being evicted, the cache provided no benefit.
 
-### Spatial Locality
+### Spatial locality
 
 **1.** For each accessed memory location, nearby locations are used as well within a short
 time frame.  **2.** Memory is accessed sequentially.
@@ -362,7 +362,7 @@ access.
 
 [^flags]: I used GCC 6.3.1 with `-O3` and `-march=native`.
 
-### Note: "True" OO Style
+### Note: "true" OO style
 
 In OOP, variables are typically referred to by pointers to a common base class.  A
 polymorphic container of such pointers allows for dynamic dispatch of virtual functions.
