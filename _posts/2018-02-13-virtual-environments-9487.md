@@ -197,9 +197,8 @@ to the dauntingly long list of tools above.  Fortunately, one of them is not lik
 others.  While it's predated by most of them, this one ships with Python as part of the
 standard library: [*venv*][library/venv].[^venv-and-pyvenv]
 
-[^venv-and-pyvenv]: Actually, pyvenv also ships with Python, but was deprecated in version
-    3.6 (only 3 minor versions after its introduction).  Both venv and pyvenv were added
-    to Python in version 3.3.
+[^venv-and-pyvenv]: pyvenv also ships with Python, but was deprecated in version 3.6.
+    Both venv and pyvenv were added to Python in version 3.3.
 
 In its simplest form, venv is used to create a virtual environment like so:
 
