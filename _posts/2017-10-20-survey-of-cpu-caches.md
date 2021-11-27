@@ -304,7 +304,7 @@ before being evicted, the cache provided no benefit.
 time frame.  **2.** Memory is accessed sequentially.
 
 We have already seen that caches take advantage of both these principles by design:
-1. <span>Data is loaded in blocks; subsequent accesses to locations in an already loaded
+1. <span>Data is loaded in blocks; subsequent accesses to locations in an already-loaded
    cache line are basically free.</span>{:style="font-weight: normal"}
 2. <span>Cache lines from sequential access patterns are prefetched ahead of
    time.</span>{:style="font-weight: normal"}
