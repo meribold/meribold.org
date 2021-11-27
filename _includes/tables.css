@@ -58,12 +58,14 @@ tbody {
   white-space: nowrap;
 }
 
-td:first-child, th:first-child {
+td:first-child,
+th:first-child {
   text-align: left;
   padding-left: 3.75px;
 }
 
-td:last-child, th:last-child {
+td:last-child,
+th:last-child {
   text-align: right;
   padding-right: 3.75px;
 }
@@ -76,15 +78,16 @@ body.dark tr:nth-child(even) {
   background-color: #181818;
 }
 
-th, td {
-  padding: .05em 1ch;
+th,
+td {
+  padding: 0.05em 1ch;
 }
 
 th {
   font-weight: normal;
   border-bottom: 1px solid #807c75;
-  padding-top: .2em;
-  padding-bottom: .2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 
 body.dark th {

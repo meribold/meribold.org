@@ -1,12 +1,12 @@
 .post-list-meta {
   display: table-cell;
-  padding-right: .33ch;
+  padding-right: 0.33ch;
   white-space: nowrap;
 }
 
 .post-list-link {
   display: table-cell;
-  padding-left: .33ch;
+  padding-left: 0.33ch;
 }
 
 .stealth-link,

@@ -28,7 +28,8 @@ body {
   background-color: #f8f1e3;
 }
 
-body, .post-meta {
+body,
+.post-meta {
   color: #4f321c;
 }
 
@@ -36,7 +37,8 @@ body.dark {
   background-color: #000;
 }
 
-body.dark, body.dark .post-meta {
+body.dark,
+body.dark .post-meta {
   color: #ccc;
 }
 
@@ -78,7 +80,7 @@ main a {
   text-decoration-line: underline;
   text-decoration-color: #ecd49c;
   text-decoration-style: solid;
-  text-decoration-thickness: .2em;
+  text-decoration-thickness: 0.2em;
   text-decoration-skip-ink: none;
 }
 
@@ -120,7 +122,8 @@ body.dark a.footnote:hover {
   background: #b8f;
 }
 
-a.reversefootnote, a.reversefootnote:hover {
+a.reversefootnote,
+a.reversefootnote:hover {
   text-decoration: none;
 }
 
@@ -135,7 +138,8 @@ a.post-meta:hover {
 }
 
 /* Don't add another underline to abbeviations or acronyms that are part of a link. */
-a abbr[title], a acronym[title] {
+a abbr[title],
+a acronym[title] {
   text-decoration: none;
 }
 
@@ -155,7 +159,20 @@ sup {
 }
 
 /* Make sure full justification is disabled for these elements. */
-blockquote, blockquote > p, ul, ul p, ol, ol p, dl, dl p, h1, h2, h3, h4, h5, h6 {
+blockquote,
+blockquote > p,
+ul,
+ul p,
+ol,
+ol p,
+dl,
+dl p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: initial;
   hyphens: initial;
 }
@@ -189,13 +206,17 @@ h2 {
   margin-bottom: 0.45em;
 }
 
-h3, h4, h5, h6 {
-  font-size: 1.00em;
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
   margin-top: 0.45em;
   margin-bottom: 0.45em;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-variant: small-caps;
   /* See <https://practicaltypography.com/letterspacing.html>. */
   letter-spacing: 0.05em;
@@ -213,9 +234,13 @@ h1, h2 {
  * [4]: https://www.brunildo.org/test/monospace_fsize.html
  *      "monospace default font-size"
  */
-pre, code, kbd, samp, tt {
+pre,
+code,
+kbd,
+samp,
+tt {
   font-family: monospace, monospace;
-  font-size: .9375em; /* 15/16 */
+  font-size: 0.9375em; /* 15/16 */
   hyphens: none;
 }
 
@@ -245,7 +270,7 @@ body.dark table {
 }
 
 pre {
-  padding: .3em 0;
+  padding: 0.3em 0;
   margin: 0;
   overflow-x: auto;
 }
@@ -264,7 +289,7 @@ body.dark pre > code {
 
 /* Inline code */
 code {
-  padding: .1em .2em;
+  padding: 0.1em 0.2em;
   background-color: #f8f8f8;
 }
 
@@ -318,7 +343,7 @@ body.dark .footer-list li > a,
  * [1]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L117
  */
 blockquote {
-  border-left: .3em solid #e6dfd2;
+  border-left: 0.3em solid #e6dfd2;
   margin-left: 0;
   margin-right: 0;
   padding-left: 2ch;
@@ -326,7 +351,7 @@ blockquote {
 }
 
 body.dark blockquote {
-  border-left: .3em solid #444;
+  border-left: 0.3em solid #444;
 }
 
 blockquote:last-child {
@@ -357,10 +382,12 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
-main { flex-grow: 1; }
+main {
+  flex-grow: 1;
+}
 
 .site-header {
-  padding: .2em 0;
+  padding: 0.2em 0;
   border-bottom: 1px solid #e6dfd2;
   /* Makes sure the line is below all links when the viewport is really narrow and the
    * links get stacked vertically.  See <https://www.w3schools.com/css/css_float.asp>.
@@ -378,9 +405,9 @@ main { flex-grow: 1; }
 }
 
 .site-footer {
-  padding: .2em 0;
+  padding: 0.2em 0;
   border-top: 1px solid #e6dfd2;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 /* See <https://stackoverflow.com/a/32140682>. */
