@@ -1,4 +1,5 @@
-.PHONY: _site _min clean push-to-testing push-to-staging push-to-production
+.PHONY: _site _min clean push-to-testing push-to-staging push-to-production \
+	invalidate-staging invalidate-production
 
 _site:
 	rm -rf _site
@@ -22,3 +23,9 @@ push-to-staging: _min
 
 push-to-production: _min
 	s3cmd sync --acl-public --delete-removed _min/ s3://meribold.org
+
+invalidate-staging:
+	aws cloudfront create-invalidation --distribution-id E1S556ZWKNESFX --paths '/*'
+
+invalidate-production:
+	aws cloudfront create-invalidation --distribution-id EL6CN1MAOO4HX --paths '/*'
