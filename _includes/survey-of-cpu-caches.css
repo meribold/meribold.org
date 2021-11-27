@@ -41,8 +41,6 @@ body.dark .funny-table {
   border: none;
 }
 
-/* FIXME: these borders are slightly offset compared to where they would normally
-appear. */
 .funny-table th {
   border-top: 2px solid #ccc6bb;
 }
