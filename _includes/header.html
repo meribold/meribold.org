@@ -2,13 +2,13 @@
   <nav>
     <a class="header-link" href="{{ "/" | relative_url }}">Home</a>
     <nav class="site-nav">
-      <span id="theme-toggle" class="header-link" tabindex="0" title="Click to use the dark theme" onclick="changeTheme()">日</span><!--
+      <a class="header-link" href="/contact/">Contact</a><!--
+   --><a class="header-link" href="/about/">About</a><!--
+   --><button type="button" id="theme-toggle" title="Click to use the dark theme" onclick="changeTheme()">日</button><!--
    --><script>
         // Immediately show the theme toggle, but only if JavaScript is enabled.
         initThemeToggle();
-      </script><!--
-   --><a class="header-link" href="/contact/">Contact</a><!--
-   --><a class="header-link" href="/about/">About</a>
+      </script>
     </nav>
   </nav>
 </header>

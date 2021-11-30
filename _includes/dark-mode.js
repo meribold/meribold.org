@@ -66,9 +66,6 @@ function initThemeToggle() {
    if (initialTheme === "dark" || !followingUaThemePreference) {
       updateThemeToggle(initialTheme);
    }
-   themeToggle.onkeydown = (e) => {
-      if (e.key === "Enter") changeTheme();
-   };
    themeToggle.style.display = "revert";
 }
 

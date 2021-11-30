@@ -51,9 +51,42 @@ body.dark .site-footer {
 }
 
 #theme-toggle {
-  cursor: pointer;
+  all: unset;
+  color: #6e6e6e;
+  border: 1px solid #b3ada3;
+  border-radius: 4px;
+  padding: 0 3px;
+  line-height: 1.375;
   user-select: none;
   display: none;
+}
+
+body.dark #theme-toggle {
+  border-color: #555;
+}
+
+@media (hover: hover) {
+  #theme-toggle:hover {
+    border-color: #373737;
+  }
+  body.dark #theme-toggle:hover {
+    border-color: #ccc;
+  }
+}
+
+#theme-toggle:active {
+  background: #e6dfd2;
+}
+
+body.dark #theme-toggle:active {
+  background: #222;
+}
+
+#theme-toggle:focus-visible {
+  outline: revert;
+  border: none;
+  margin: 1px;
+  overflow: hidden;
 }
 
 #theme-toggle.override {
@@ -325,7 +358,8 @@ article header time.post-meta::before {
 }
 
 body.dark .header-link,
-body.dark .footer-list li > a {
+body.dark .footer-list li > a,
+body.dark #theme-toggle {
   color: #888;
 }
 
@@ -387,10 +421,6 @@ main {
 .site-header {
   padding: 0.2em 0;
   border-bottom: 1px solid #e6dfd2;
-  /* Makes sure the line is below all links when the viewport is really narrow and the
-   * links get stacked vertically.  See <https://www.w3schools.com/css/css_float.asp>.
-   */
-  overflow: auto;
 }
 
 .site-nav {
