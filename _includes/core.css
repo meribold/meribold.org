@@ -89,15 +89,6 @@ body.dark #theme-toggle:active {
   overflow: hidden;
 }
 
-#theme-toggle.override {
-  /* #4f321c converted to grayscale using `0.2126 * 79 + 0.7152 * 50 + 0.0722 * 28` */
-  color: #373737;
-}
-
-body.dark #theme-toggle.override {
-  color: #ccc;
-}
-
 a {
   /* Only underline links on mouseover. */
   text-decoration: none;

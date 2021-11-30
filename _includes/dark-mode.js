@@ -1,3 +1,4 @@
+const followUaThemeLabel = "明";
 const lightThemeLabel = "日";
 const darkThemeLabel = "月";
 
@@ -8,18 +9,17 @@ let uaThemePreference = window.matchMedia("(prefers-color-scheme: dark)").matche
 let followingUaThemePreference = localStorage.getItem("theme") === null;
 
 function updateThemeToggle(currentTheme) {
-   if (followingUaThemePreference) {
-      themeToggle.classList.remove("override");
-   } else {
-      themeToggle.classList.add("override");
-   }
    if (followingUaThemePreference || currentTheme !== uaThemePreference) {
       const otherTheme = currentTheme === "light" ? "dark" : "light";
       themeToggle.title = `Click to use the ${otherTheme} theme`;
    } else {
       themeToggle.title = "Click to follow your system color scheme preference";
    }
-   themeToggle.innerHTML = currentTheme === "light" ? lightThemeLabel : darkThemeLabel;
+   themeToggle.innerHTML = followingUaThemePreference
+      ? followUaThemeLabel
+      : currentTheme === "light"
+      ? lightThemeLabel
+      : darkThemeLabel;
 }
 
 function enableTheme(theme) {
@@ -32,7 +32,11 @@ function enableTheme(theme) {
 }
 
 function changeTheme() {
-   const currentTheme = themeToggle.innerHTML === lightThemeLabel ? "light" : "dark";
+   const currentTheme = followingUaThemePreference
+      ? uaThemePreference
+      : themeToggle.innerHTML === lightThemeLabel
+      ? "light"
+      : "dark";
    if (currentTheme === uaThemePreference) {
       const otherTheme = currentTheme === "light" ? "dark" : "light";
       if (followingUaThemePreference) {
