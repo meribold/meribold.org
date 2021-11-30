@@ -320,14 +320,12 @@ article header time.post-meta::before {
 }
 
 .header-link,
-.footer-list li > a,
-.footer-link {
+.footer-list li > a {
   color: #6e6e6e;
 }
 
 body.dark .header-link,
-body.dark .footer-list li > a,
-.footer-link {
+body.dark .footer-list li > a {
   color: #888;
 }
 
