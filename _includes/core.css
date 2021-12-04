@@ -59,6 +59,7 @@ body.dark .site-footer {
   line-height: 1.375;
   user-select: none;
   display: none;
+  margin-left: 1.4ch;
 }
 
 body.dark #theme-toggle {
@@ -418,8 +419,8 @@ main {
   float: right;
 }
 
-/* Add gaps between links.  Don't add space after the last child.  */
-.header-link:not(:last-child) {
+/* Add gaps between links, but not after the last one. */
+.header-link:not([href="/about/"]) {
   margin-right: 1.4ch;
 }
 
