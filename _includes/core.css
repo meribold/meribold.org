@@ -133,7 +133,7 @@ a.footnote {
 }
 
 body.dark a.footnote {
-  background: #2b2b2b;
+  background: #251b33;
 }
 
 a.footnote:hover {
@@ -290,8 +290,8 @@ div.highlighter-rouge {
 
 body.dark div.highlighter-rouge,
 body.dark table {
-  border-top: 2px solid #444;
-  border-bottom: 2px solid #444;
+  border-top: 2px solid #38294d;
+  border-bottom: 2px solid #38294d;
 }
 
 pre {
@@ -309,7 +309,7 @@ pre > code {
 
 body.dark div.highlighter-rouge,
 body.dark pre > code {
-  background-color: #181818;
+  background-color: #150f1c;
 }
 
 /* Inline code */
@@ -319,7 +319,7 @@ code {
 }
 
 body.dark code {
-  background-color: #2b2b2b;
+  background-color: #251b33;
 }
 
 /* See <https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php>. */
@@ -375,7 +375,7 @@ blockquote {
 }
 
 body.dark blockquote {
-  border-left: 0.3em solid #444;
+  border-left: 0.3em solid #38294d;
 }
 
 blockquote:last-child {

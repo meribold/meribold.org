@@ -66,13 +66,13 @@
 .highlight .il { color: #009999 }
 
 /* This is the Monokai scheme from [1], but I changed the background color from #272822 to
- * #181818 and all occurences of #f8f8f2 to #ccc.
+ * #150f1c and all occurences of #f8f8f2 to #ccc.
  *
  * [1]: https://jwarby.github.io/jekyll-pygments-themes/languages/python.html
  */
-body.dark .highlight { background: #181818; }
-body.dark .highlight pre { background-color: #181818 }
-body.dark .highlight .hll { background-color: #181818 }
+body.dark .highlight { background: #150f1c; }
+body.dark .highlight pre { background-color: #150f1c }
+body.dark .highlight .hll { background-color: #150f1c }
 body.dark .highlight .c { color: #75715e }
 body.dark .highlight .err { color: #960050; background-color: #1e0010 }
 body.dark .highlight .k { color: #66d9ef }

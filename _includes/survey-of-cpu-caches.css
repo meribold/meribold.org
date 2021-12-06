@@ -9,7 +9,7 @@
 }
 
 body.dark .chart-wrapper {
-  background: #181818;
+  background: #150f1c;
 }
 
 img.chart {
@@ -18,7 +18,7 @@ img.chart {
 }
 
 body.dark img.chart {
-  background: #e4e4e4;
+  background: none;
   filter: invert(100%) brightness(88%);
   transform: translate3d(0, 0, 0);
 }
@@ -46,7 +46,7 @@ body.dark .funny-table {
 }
 
 body.dark .funny-table th {
-  border-top: 2px solid #444;
+  border-top: 2px solid #38294d;
 }
 
 .funny-table > tbody > tr:last-child {
@@ -54,7 +54,7 @@ body.dark .funny-table th {
 }
 
 body.dark .funny-table > tbody > tr:last-child {
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #38294d;
 }
 
 .funny-table th,
