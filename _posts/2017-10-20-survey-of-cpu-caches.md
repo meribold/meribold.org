@@ -4,7 +4,7 @@ extra_css: [images.css, syntax-highlighting.css, tables.css, survey-of-cpu-cache
 title: A Survey of CPU Caches
 description: Cache-friendliness is key to writing fast code.  This article illuminates how
     CPU caches work with code samples and profiling results.
-image: /assets/cache-paper/access-time-plot.svg
+image: /assets/cache-paper/access-time-plot.png
 ---
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
