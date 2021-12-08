@@ -87,6 +87,7 @@ body.dark #theme-toggle:active {
   outline: revert;
   border: none;
   margin: 1px;
+  margin-left: calc(1.4ch + 1px);
   overflow: hidden;
 }
 
