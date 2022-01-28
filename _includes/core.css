@@ -448,3 +448,30 @@ main {
 .footer-list li {
   margin: 0 0.5ch;
 }
+
+li[role="doc-endnote"] {
+  /* position: sticky; */
+  position: fixed;
+  top: 50%;
+  left: 50vw;
+  /* width: 100%; */
+  max-width: 75ch;
+  /* margin-left: -100px; */
+  /* margin-top: -25px; */
+  transform: translateX(-50%);
+  padding: 1em;
+  background: white;
+  display: none;
+}
+
+li[role="doc-endnote"]:target {
+  display: block;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 10px;
+}
+
+li[role="doc-endnote"]:target > p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}

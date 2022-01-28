@@ -110,8 +110,6 @@ letter would have you believe:
 3.  The [announcement][extension-announcement] of this extension was welcomed with 394
     likes on Twitter.[^twitter-response-clarification]
 
-## Footnotes
-
 [^2021-04-16-update]: This is still the case as of April 16, but a reader informed me that
     the appendix *used to* provide a different link here.  Instead of a 2021
     web.archive.org capture of a note from Stallman's website it previously linked an old
