@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Critique of the Open Letter Calling for the Removal of RMS
+changelog: true
 ---
 
 On March 21, Richard M. Stallman (RMS) announced that he is on the Free Software
@@ -51,14 +52,14 @@ So what makes RMS transphobic?  He [proposes][genderless-pronouns] and uses a se
 singular, gender-neutral pronouns other than "they", "their", and
 "theirs".[^2021-05-03-update]
 
-One transgender person called the proposal "idiotic", but considers "[c]alling RMS a
-transphobe […] an insult to people who suffer from real transphobia."[^leah-rowe] I am
-also told of at least one non-binary transgender person that does agree with the open
-letter's assertion that Stallman's proposal is, in fact, "poorly disguised
-transphobia".[^fucking-transphobic] I'm tempted to err on the side of assuming good
-intentions here.  To me this looks like Stallman's typical willingness to die on strange,
-idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.  Remember, there
-"is no space to argue over whether a comment was transphobic".
+One transgender person [called][leah-rowe] the proposal "idiotic", but
+[considers][leah-rowe] "[c]alling RMS a transphobe […] an insult to people who suffer from
+real transphobia."  I am also [told of][fucking-transphobic] at least one non-binary
+transgender person that does agree with the open letter's assertion that Stallman's
+proposal is, in fact, "poorly disguised transphobia".  I'm tempted to err on the side of
+assuming good intentions here.  To me this looks like Stallman's typical willingness to
+die on strange, idiosyncratic hills.  You can have your own opinion.  Or maybe you can't.
+Remember, there "is no space to argue over whether a comment was transphobic".
 
 The accusation of ableism seems to primarily hinge on a highly insensitive note RMS added
 to his website in October 2016, but completely rewrote a few months later.  Presumably
@@ -94,11 +95,11 @@ I only looked into some of the open letter's contents in depth and can't comment
 rest.  Maybe the rest is completely fair.  Martin Tournoij wrote a [better and more
 thorough commentary][Stallman isn't great, but not the devil] on the open letter than I
 can.  I do wonder how many people looked into the accusations before signing the letter,
-though.  One of the original signatories told me that, "from a practical perspective,
-transphobe or no, [RMS] needs to go"[^luis-1] and that "regardless of exactly how ableist
-he is, he can't be a leader of an organization".[^luis-2]  Perhaps that's true, but it
-isn't fair.  Accusations like ableism and transphobia are front and center in the open
-letter and likely convinced more than a handful of people to add their signature.
+though.  One of the original signatories [told me that][luis-1], "from a practical
+perspective, transphobe or no, [RMS] needs to go" [and that][luis-2] "regardless of
+exactly how ableist he is, he can't be a leader of an organization".  Perhaps that's true,
+but it isn't fair.  Accusations like ableism and transphobia are front and center in the
+open letter and likely convinced more than a handful of people to add their signature.
 
 I'll leave you with three more bits of evidence that things are more complex than the open
 letter would have you believe:
@@ -110,7 +111,7 @@ letter would have you believe:
 3.  The [announcement][extension-announcement] of this extension was welcomed with 394
     likes on Twitter.[^twitter-response-clarification]
 
-## Footnotes
+## Notes
 
 [^2021-04-16-update]: This is still the case as of April 16, but a reader informed me that
     the appendix *used to* provide a different link here.  Instead of a 2021
@@ -122,13 +123,14 @@ letter would have you believe:
     revert the link back to the 2018 capture.
 
 [^2021-05-03-update]: RMS uses "she" and "he" for transgender persons as preferred.  He
-    refuses to use singular "they".  I added this footnote on 2021-05-03 because I noticed
+    refuses to use singular "they".  I added this note on 2021-05-03 because I noticed
     there's some confusion about this.
 
-[^leah-rowe]: <https://libreboot.org/news/rms.html#rms-is-not-transphobic>
-[^fucking-transphobic]: <https://twitter.com/mjg59/status/1377406466504544258>
-[^luis-1]: <https://twitter.com/luis_in_brief/status/1377268090258354176>
-[^luis-2]: <https://twitter.com/luis_in_brief/status/1377268518052241413>
+[leah-rowe]: https://libreboot.org/news/rms.html#rms-is-not-transphobic
+[fucking-transphobic]: https://twitter.com/mjg59/status/1377406466504544258
+[luis-1]: https://twitter.com/luis_in_brief/status/1377268090258354176
+[luis-2]: https://twitter.com/luis_in_brief/status/1377268518052241413
+
 [^twitter-response-clarification]: I am not suggesting that these 394 people are
     representative of the ~3000 open letter signatories.
 

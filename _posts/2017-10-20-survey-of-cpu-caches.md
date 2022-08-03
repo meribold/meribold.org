@@ -5,6 +5,7 @@ title: A Survey of CPU Caches
 description: Cache-friendliness is key to writing fast code.  This article illuminates how
     CPU caches work with code samples and profiling results.
 image: /assets/cache-paper/access-time-plot.png
+changelog: true
 ---
 
 CPU caches are very fast and small memory.  They are part of the CPU and store a
@@ -69,11 +70,9 @@ order.[^prefetching] To minimize the overhead of picking a random index, the arr
 first set up as a circular, singly linked list where every element except the last points
 to a random successor. When compiled with `-DBASELINE`, only this initialization is done.
 
-[^prefetching]: We use random accesses because the CPU will detect and optimize sequential
-    access by a technique called *[prefetching][]*, which would prevent us from
-    determining access times.
-
-[prefetching]: #prefetching
+[^prefetching]: We access random elements because CPUs detect and optimize sequential
+    access using a technique called *prefetching*, which would prevent us from
+    determining access times.  More on that later.
 
 ```c
 #define N 100000000  // 100 million
@@ -83,7 +82,8 @@ struct elem {
 } array[SIZE];
 
 int main() {
-   for (size_t i = 0; i < SIZE - 1; ++i) array[i].next = &array[i + 1];
+   for (size_t i = 0; i < SIZE - 1; ++i)
+      array[i].next = &array[i + 1];
    array[SIZE - 1].next = array;
    // Fisher-Yates shuffle the array.
    for (size_t i = 0; i < SIZE - 1; ++i) {
@@ -123,7 +123,7 @@ Up to 32 KiB, each access takes almost exactly 3 cycles.  This is the L1d access
 surprising since the cache is shared with other processes and the operating system, so
 some of our data gets evicted.  The first dramatic increase happens at 64 KiB followed by
 smaller increases at 128 and 256 KiB.  I suspect we are seeing a mixture of L2 and L1d
-accesses, with less and less L1d hits and an L2 access time of around 25 cycles.
+access, with less and less L1d hits and an L2 access time of around 25 cycles.
 
 The values from 512 KiB (the size of the L2) to 128 MiB exhibit a similar pattern.  As
 more and more accesses go to main memory, the average delay for one access approaches 200
@@ -187,22 +187,23 @@ These are my results for different values of `STEP`:
 As expected, the time roughly halves whenever the step size is doubled---but only from a
 step size of 16.  For the first 4 step sizes, it is almost constant.
 
-This is because the run times are primarily due to memory accesses.  Up to a step size of
+This is because the run times are primarily due to memory access.  Up to a step size of
 8, every 64-byte line has to be loaded.  At 16, the values we modify are 128 bytes
 apart,[^128-bytes] so every other cache line is skipped.  At 32, three out of four cache
 lines are skipped, and so on.
 
 [^128-bytes]: 16 `int64_t` values of 8 bytes each
 
-Both cache and main memory can be thought of as being partitioned (in the [set-theoretic
-sense](https://en.wikipedia.org/wiki/Partition_of_a_set)) into cache lines.  Data is not
+Both cache and main memory can be thought of as being
+[partitioned](https://en.wikipedia.org/wiki/Partition_of_a_set) into cache lines.  Data is
+not
 read or written starting from arbitrary main memory addresses, but only from addresses
 that are multiples of the cache line size.
 
 ## Prefetching
 
-Consider a simplified version of [the C program accessing elements of an array at
-random](#listing-1) that just walks over the array sequentially.  It still follows the
+Consider a simplified version of the C program accessing elements of an array at
+random that just walks over the array sequentially.  It still follows the
 pointers to do this, but the array is no longer shuffled.  These are my results of
 profiling this new program as before:
 
@@ -324,9 +325,9 @@ processor time needed to sum all of them.  I first ran it with `Container` being
 alias for `std::list`, then for `std::vector`.  Either way, the asymptotic
 complexity is Θ(N).
 
-[^big-os]: This program is adapted from code that appears in an article by Sergey
-    Ignatchenko that was published in [issue 134 of the *Overload*
-    magazine](https://accu.org/journals/overload/24/134/overload134.pdf#page=6).
+[^big-os]: adapted from code that appears in an article by Sergey
+    Ignatchenko published in [issue 134 of the *Overload*
+    magazine](https://accu.org/journals/overload/24/134/overload134.pdf#page=6)
 
 ```cpp
 constexpr int N = 5000;
@@ -386,12 +387,13 @@ Memory*](https://www.akkadia.org/drepper/cpumemory.pdf), which also covers virtu
 cache associativity, write policies, replacement policies, cache coherence, software
 prefetching, instruction caches, TLBs, and more.
 
-## Footnotes
+## Notes
+{:style="display: initial"}
 
 *   This post is based on [a seminar paper][paper] in which you can find some more details
     and a list of sources.  The TeX files, full source code of all utilized
-    microbenchmarks, and a [makefile that automates running them and builds the
-    PDF][makefile] are all [available on GitHub][repo].
+    microbenchmarks, and [a makefile][makefile] that automates running them and builds the
+    PDF are all [available on GitHub][repo].
 
 [paper]: /assets/cache-paper.pdf
 [repo]: https://github.com/meribold/cache-seminar-paper

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MouselookHandler
-description: World of Warcraft interface addon
+description: User interface addon for World of Warcraft
 last_modified_at: 2019-10-10
 ---
 

@@ -7,6 +7,7 @@ description: The number of available programs for managing virtual environments 
     by creating one manually.
 categories: python
 image: /assets/virtual-boy-avgn.jpg
+changelog: true
 ---
 
 <p>
@@ -56,14 +57,13 @@ after having written some thousand lines of Python, I don't even know what probl
 trying to solve here, and the abundance of relevant programs with subtly different names
 has deterred me from reading up on it so far.
 
-## So what *is* a virtual environment?
-
-The [official docs' tutorial][tutorial/venv] describes a virtual environment as
+So what is a virtual environment?  The [official docs' tutorial][tutorial/venv] describes
+it as
 
 >   a self-contained directory tree that contains a Python installation for a particular
 >   version of Python, plus a number of additional packages.
 
-So it's a directory with a Python interpreter?  Easy enough.
+A directory with a Python interpreter?  Easy enough.
 
 ```
 $ mkdir virtual_env
@@ -237,7 +237,7 @@ packages.  Python packages installed into a virtual environment will not interfe
 other Python applications on the same system.  The "[standard tool for creating virtual
 environments](https://docs.python.org/3/installing/)" is venv.
 
-## Appendix: History
+## Appendix: timeline
 
 <!-- TODO: When and by whom was the term "virtual environment" coined? -->
 
@@ -248,11 +248,10 @@ virtual environments.  Based on that, [`virtual-python.py`][] was
 main events.
 
 2005-10-17
-:   [`virtual-python.py`][] is [added][setuptools-commit-3df2aab] to EasyInstall.
+:   `virtual-python.py` is added to EasyInstall.
 
 2006-03-08
-:   Ian Bicking, the author of [`non_root_python.py`][]---on which [`virtual-python.py`][]
-    is based---publishes a blog post about improving [`virtual-python.py`][] titled
+:   Ian Bicking publishes a blog post about improving `virtual-python.py` titled
     "[Working Environment Brainstorm][working-env-brainstorm]".
 
 2006-03-15
@@ -260,37 +259,37 @@ main events.
 
 2006-04-26
 :   Ian Bicking [announces][workingenv-revisited-post] an improved version of
-    [`working-env.py`][] called [workingenv][].
+    `working-env.py` called [workingenv][].
 {::comment}
 TODO: did anything important happen here?
 {:/}
 
 2007-09-14
-:   [virtualenv][virtualenv-initial-commit]'s first commit
+:   [virtualenv][]'s [first commit][virtualenv-initial-commit]
 
 2007-10-10
-:   Ian Bicking announces [virtualenv][]: "[Workingenv is dead, long live
+:   Ian Bicking announces virtualenv: "[Workingenv is dead, long live
 Virtualenv!][virtualenv-post]"
 
 2009-10-24
-:   [`virtual-python.py`] is [removed][setuptools-commit-43d3473] from EasyInstall.
+:   `virtual-python.py` is [removed][setuptools-commit-43d3473] from EasyInstall.
 {::comment}
 TODO: did anything important happen here?
 {:/}
 
 2011-06-13
-:   [PEP 405][] is created.
+:   PEP 405 is created.
 
 2012-05-25
-:   [PEP 405][] is accepted for inclusion in Python 3.3.
+:   PEP 405 is accepted for inclusion in Python 3.3.
 
 2012-09-29
-:   [Python 3.3][] is released; [venv][library/venv] and [pyvenv][] become part of the
+:   [Python 3.3][] is released and venv and [pyvenv][] become part of the
     standard library.
 
 2014-03-16
-:   [Python 3.4][] is released; "[[venv] defaults to installing pip into all created
-    virtual environments.][installing]"
+:   [Python 3.4][] is released and venv "[defaults to installing pip into all created
+    virtual environments][installing]" now.
 
 2015-09-13
 :   [Python 3.5][] is released.  "[The use of venv is now recommended for creating virtual
@@ -316,7 +315,8 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 [workingenv-revisited-post]: http://www.ianbicking.org/workingenv-revisited.html
 [workingenv]: https://web.archive.org/web/20060516191525/http://svn.colorstudy.com:80/home/ianb/workingenv
 
-## Footnotes
+## Notes
+{:style="display: initial"}
 
 *   The "Virtual Boy" image is used with permission from
     [James Rolfe](https://en.wikipedia.org/wiki/James_Rolfe).

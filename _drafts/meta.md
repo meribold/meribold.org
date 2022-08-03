@@ -312,7 +312,8 @@ scrollbar.
 int sometimes_people_use_variable_names_which_are_much_too_long = of_course_this_can_be_somewhat_annoying() + especially_when_all_names_follow_the_same_pattern();
 ```
 
-## Footnotes
+## Notes
+{:style="display: initial"}
 
 *   The comic strip at the top is [*xkcd* number 688](https://xkcd.com/688/) by [Randall
     Munroe](https://en.wikipedia.org/wiki/Randall_Munroe).

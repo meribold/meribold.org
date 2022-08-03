@@ -71,6 +71,10 @@ function initThemeToggle() {
       updateThemeToggle(initialTheme);
    }
    themeToggle.style.display = "revert";
+   themeToggle.addEventListener("click", (e) => {
+      changeTheme();
+      e.stopPropagation();
+   });
 }
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {

@@ -11,8 +11,8 @@ I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking [my dot
 and writing [software]({{ "/projects/" | relative_url }}).
 My name is Lukas Waymann.
 You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
-If you want to use encryption you can get [my PGP key
-here](/pgp-key-meribold-7066ac79c4592c12.txt).
+If you want to use encryption you can [download my PGP
+key](/pgp-key-meribold-7066ac79c4592c12.txt).
 You can also contact me via [Matrix](https://matrix.to/#/@meribold:matrix.org) or find me
 on
 [GitHub](https://github.com/meribold),
@@ -24,8 +24,8 @@ on
 If you really like an [article]({{ "/" | relative_url }}) or [program]({{ "/projects/" |
 relative_url }}) I wrote, you can [buy me a
 coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a C++ or Python
-developer with Linux, UI design, or computer vision experience, you can [find my résumé
-here](/resume.pdf).
+developer with Linux, UI design, or computer vision experience, you can [check out my
+résumé](/resume.pdf).
 
 <p>
 <div class="confined-img-aspect-ratio-box" style="padding-top: calc(100% + 15px)">

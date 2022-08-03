@@ -3,6 +3,7 @@
   {% include head.html %}
   <body>
     <script>
+      document.body.classList.add("js-available");
       // Once `document.body` exists, immediately add the `dark` class if necessary to
       // prevent a white flash while the document loads.
       {% include dark-mode.js %}
@@ -13,4 +14,7 @@
     </main>
     {% include footer.html %}
   </body>
+  <script>
+    {% include inline-notes.js %}
+  </script>
 </html>

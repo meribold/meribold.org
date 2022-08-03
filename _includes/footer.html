@@ -1,9 +1,16 @@
-<footer class="site-footer">
-  <div>
-    <ul class="footer-list">
-      <li><a href="https://github.com/meribold/meribold.org/tree/{{ site.commit_hash }}">Source</a></li>
-      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      <li><a href="{{ "feed.xml" | relative_url }}">Feed</a></li>
-    </ul>
-  </div>
-</footer>
+<div>
+  <div style="min-height: 5vh"></div>
+  <footer class="site-footer">
+    <div>
+      <ul class="footer-list">
+        {% if page.changelog %}
+        <li><a href="https://github.com/meribold/meribold.org/commits/{{ site.commit_hash }}/{{ page.path }}">Changelog</a></li>
+        {% else %}
+        <li><a href="https://github.com/meribold/meribold.org/tree/{{ site.commit_hash }}">Source</a></li>
+        {% endif %}
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="{{ "feed.xml" | relative_url }}">Feed</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
