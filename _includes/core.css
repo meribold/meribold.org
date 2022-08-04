@@ -420,11 +420,6 @@ main {
   float: right;
 }
 
-/* Add gaps between links, but not after the last one. */
-.header-link:not([href="/about/"]) {
-  margin-right: 1.4ch;
-}
-
 .site-footer {
   padding: 0.2em 0;
   border-top: 1px solid #e6dfd2;

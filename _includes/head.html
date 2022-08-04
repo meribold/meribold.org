@@ -1,7 +1,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
+  {% if page.redirect %}
+    <meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}">
+  {% else %}
+    {% seo %}
+  {% endif %}
   <style>
     {% include core.css %}
     {% for path in page.extra_css %}

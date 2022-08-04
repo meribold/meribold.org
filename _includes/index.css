@@ -9,26 +9,6 @@
   padding-left: 0.33ch;
 }
 
-.stealth-link,
-.post-list-link > a {
-  color: #4f321c;
-  text-decoration: none;
-}
-
-.stealth-link:hover,
-.post-list-link > a:hover,
-body.dark .stealth-link:hover,
-body.dark .post-list-link > a:hover {
-  text-decoration: revert;
-  text-decoration-thickness: revert;
-  text-decoration-skip-ink: initial;
-}
-
-body.dark .stealth-link,
-body.dark .post-list-link > a {
-  color: #ccc;
-}
-
 .post-list-meta {
   color: #6e6e6e;
 }
