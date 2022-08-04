@@ -36,9 +36,9 @@ Or you can find me on
 [Twitter](https://twitter.com/mribld).
 
 If you really like an article or program I wrote, you can [buy me a
-coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a C++ or Python
-developer with Linux, UI design, or computer vision experience, you can [check out my
-résumé](/resume.pdf).
+coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a detail-oriented
+C++ or Python developer with Linux, UI design, or computer vision experience, you can
+[check out my résumé](/resume.pdf).
 
 <p>
 <div class="confined-img-aspect-ratio-box" style="padding-top: calc(100% + 15px)">

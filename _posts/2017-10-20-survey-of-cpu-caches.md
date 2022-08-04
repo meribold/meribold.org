@@ -19,8 +19,8 @@ desired access latency.
 
 ## Cache operation overview
 
-Whenever a program requests a memory address the CPU will check its caches.  If the
-location is present, a *cache hit* occurs.  Otherwise, the result is a *cache miss* and
+Whenever a program requests a memory address, the CPU checks its caches.  If the
+location is present, a *cache hit* occurs.  Otherwise, the result is a *cache miss*, and
 the next level of the memory hierarchy, which could be another CPU cache, is accessed.
 
 CPU caches are managed by the CPU directly.  They are generally opaque to the operating
