@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <script>
+      document.body.classList.add("js-available");
+      {% include dark-mode.js %}
+    </script>
+    {% include header.html %}
+    <main>
+      <p>
+        This page has moved to <a href="{{ page.redirect | relative_url }}">
+          {{ page.redirect | relative_url }}</a>.
+      </p>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
