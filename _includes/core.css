@@ -60,6 +60,7 @@ body.dark .site-footer {
   user-select: none;
   display: none;
   margin-left: 1.4ch;
+  float: right;
 }
 
 body.dark #theme-toggle {
@@ -414,10 +415,6 @@ main {
 .site-header {
   padding: 0.2em 0;
   border-bottom: 1px solid #e6dfd2;
-}
-
-.site-nav {
-  float: right;
 }
 
 .site-footer {

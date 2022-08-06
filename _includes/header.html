@@ -1,14 +1,14 @@
 <header class="site-header">
   <nav>
-    {% if page.layout != "post" and page.url != "/" %}
+    {% if page.url == "/" %}
+    <span id="epigraph">Shaka, when the walls fell.</span>
+    {% elsif page.layout != "post" %}
     <a class="header-link" href="{{ "/" | relative_url }}">Home</a>
     {% endif %}
-    <nav class="site-nav">
-      <button type="button" id="theme-toggle" title="Click to use the dark theme">明</button>
-      <script>
-        // Immediately show the theme toggle, but only if JavaScript is enabled.
-        initThemeToggle();
-      </script>
-    </nav>
+    <button type="button" id="theme-toggle" title="Click to use the dark theme">明</button>
+    <script>
+      // Immediately show the theme toggle, but only if JavaScript is enabled.
+      initThemeToggle();
+    </script>
   </nav>
 </header>

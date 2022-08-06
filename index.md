@@ -3,6 +3,10 @@ layout: default
 extra_css: [images.css, index.css]
 ---
 
+<script>
+  {% include epigraph.js %}
+</script>
+
 I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking [my dotfiles][],
 and writing [software](#projects).  My name is Lukas Waymann.  This is my website.
 
