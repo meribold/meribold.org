@@ -11,14 +11,14 @@ title: Lukas Waymann
 description: Website
 author: Lukas Waymann
 email: io@meribold.org
-url: "https://meribold.org"
 twitter:
   username: mribld
 # See <http://shopify.github.io/liquid/filters/date/>.
 date_format: "%Y-%m-%d"
 permalink: pretty
-# See <https://github.com/jekyll/jekyll-feed/issues/94#issuecomment-182026305>.
-show_drafts: true
+show_drafts: false
+future: false
+unpublished: false
 # See <http://jekyllrb.com/docs/collections/>.
 collections:
   projects:

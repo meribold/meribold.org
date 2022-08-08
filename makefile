@@ -1,28 +1,29 @@
-.PHONY: _site _min clean push-to-testing push-to-staging push-to-production \
-	invalidate-staging invalidate-production
+.PHONY: _site/testing _site/staging _site/production _min/testing _min/staging \
+   _min/production clean push-to-testing push-to-staging push-to-production \
+   invalidate-staging invalidate-production
 
-_site:
-	rm -rf _site
-	bundle exec jekyll build
+_site/testing _site/staging _site/production: _site/%:
+	rm -rf $@
+	JEKYLL_ENV=$* bundle exec jekyll build --config _config.yml,_$*.yml --destination $@
 
-_min:
-	rm -rf _min
-	./node_modules/.bin/html-minifier --file-ext html --input-dir _site --output-dir _min \
+_min/testing _min/staging _min/production: _min/%: _site/%
+	rm -rf $@
+	./node_modules/.bin/html-minifier --file-ext html --input-dir $< --output-dir $@ \
 	   --minify-css --minify-js --collapse-whitespace --remove-comments \
 	   --remove-redundant-attributes
-	rsync -a --ignore-existing _site/ _min/
+	rsync -a --ignore-existing $</ $@/
 
 clean:
 	rm -rf _site _min
 
-push-to-testing: _min
-	rclone sync -I --exclude '*.pdf' --checkers 16 --transfers 16 --progress _min fastmail:testing.meribold.org
+push-to-testing: _min/testing
+	rclone sync -I --exclude '*.pdf' --checkers 16 --transfers 16 --progress $< fastmail:testing.meribold.org
 
-push-to-staging: _min
-	s3cmd sync --acl-public --delete-removed _min/ s3://staging.meribold.org
+push-to-staging: _min/staging
+	s3cmd sync --acl-public --delete-removed $</ s3://staging.meribold.org
 
-push-to-production: _min
-	s3cmd sync --acl-public --delete-removed _min/ s3://meribold.org
+push-to-production: _min/production
+	s3cmd sync --acl-public --delete-removed $</ s3://meribold.org
 
 invalidate-staging:
 	aws cloudfront create-invalidation --distribution-id E1S556ZWKNESFX --paths '/*'

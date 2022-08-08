@@ -12,6 +12,15 @@
       {% include {{ path }} %}
     {% endfor %}
   </style>
-  <script data-goatcounter="https://meribold.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+  {% if jekyll.environment != "development" %}
+    {% capture gc_code %}
+      {% if jekyll.environment == "production" %}
+        meribold
+      {% else %}
+        meribold-{{ jekyll.environment }}
+      {% endif %}
+    {% endcapture %}
+    <script data-goatcounter="https://{{ gc_code | strip }}.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
 </head>
