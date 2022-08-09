@@ -8,7 +8,8 @@ extra_css: [images.css, index.css]
 </script>
 
 I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking [my dotfiles][],
-and writing [software](#projects).  My name is Lukas Waymann.  This is my website.
+and writing [software](#projects).  My name is Lukas Waymann and my usual username is
+Meribold.  This is my website.
 
 Once in a while, I write an article for this website.  So far this has happened three
 times.
