@@ -39,3 +39,9 @@ exclude:
   - tags
 include:
   - .well-known
+
+defaults:
+  - scope:
+      path: googled1df7058b163306e.html
+    values:
+      sitemap: false
