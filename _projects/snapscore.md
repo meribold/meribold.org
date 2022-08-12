@@ -5,7 +5,6 @@ title: SnapScore
 description: >
     Android app that automates scoring of the *Take It Easy* board game using computer
     vision
-last_modified_at: 2018-10-23
 ---
 
 <style>

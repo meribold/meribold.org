@@ -2,7 +2,6 @@
 layout: page
 title: Projects
 description: A list of programs I wrote and other projects.
-last_modified_at: 2021-10-30T22:22+08:00
 permalink: /projects/
 sitemap: false
 ---

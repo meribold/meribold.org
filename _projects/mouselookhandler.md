@@ -2,7 +2,6 @@
 layout: page
 title: MouselookHandler
 description: User interface addon for World of Warcraft
-last_modified_at: 2019-10-10
 ---
 
 MouselookHandler is an interface addon for the World of Warcraft MMOG that adapts the game

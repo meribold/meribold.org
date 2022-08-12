@@ -2,7 +2,6 @@
 layout: page
 title: Primal UI
 description: User interface for World of Warcraft
-last_modified_at: 2017-09-12
 ---
 
 <!-- TODO: special favicon? -->

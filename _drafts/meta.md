@@ -5,7 +5,6 @@ title: "Meta"
 description: >
     A webpage about creating this website.
 date: 2017-09-02
-last_modified_at: 2017-09-12
 categories: drafts jekyll
 sitemap: false
 ---
