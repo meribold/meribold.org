@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   {% if jekyll.environment != "production" %}
     <meta name="robots" content="none">
-  {% elsif page.redirect %}
+  {% elsif page.published == false or page.draft or page.sitemap == false or page.redirect %}
     <meta name="robots" content="noindex">
   {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
