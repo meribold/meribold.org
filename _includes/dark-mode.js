@@ -70,7 +70,7 @@ function initThemeToggle() {
    if (initialTheme === "dark" || !followingUaThemePreference) {
       updateThemeToggle(initialTheme);
    }
-   themeToggle.style.display = "revert";
+   themeToggle.style.visibility = "visible";
    themeToggle.addEventListener("click", (e) => {
       changeTheme();
       e.stopPropagation();

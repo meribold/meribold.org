@@ -58,7 +58,7 @@ body.dark .site-footer {
   padding: 0 3px;
   line-height: 1.375;
   user-select: none;
-  display: none;
+  visibility: hidden;
   margin-left: 1.4ch;
   float: right;
 }

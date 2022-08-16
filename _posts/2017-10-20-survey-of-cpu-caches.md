@@ -82,8 +82,7 @@ struct elem {
 } array[SIZE];
 
 int main() {
-   for (size_t i = 0; i < SIZE - 1; ++i)
-      array[i].next = &array[i + 1];
+   for (size_t i = 0; i < SIZE - 1; ++i) array[i].next = &array[i + 1];
    array[SIZE - 1].next = array;
    // Fisher-Yates shuffle the array.
    for (size_t i = 0; i < SIZE - 1; ++i) {
@@ -103,7 +102,41 @@ int main() {
 #endif
 }
 ```
-{:id="listing-1"}
+{:.wide-listing}
+
+```c
+#define N 100000000  // 100 million
+
+struct elem {
+  struct elem *next;
+} array[SIZE];
+
+int main() {
+  for (size_t i = 0; i < SIZE - 1; ++i)
+    array[i].next = &array[i + 1];
+  array[SIZE - 1].next = array;
+  // Fisher-Yates shuffle the array.
+  for (size_t i = 0; i < SIZE - 1; ++i)
+  {
+    // j is in [i, SIZE).
+    size_t j = i + rand() % (SIZE - i);
+    // Swap array[i] and array[j].
+    struct elem temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+#ifndef BASELINE
+  int64_t dummy = 0;
+  struct elem *i = array;
+  for (size_t n = 0; n < N; ++n) {
+    dummy += (int64_t)i;
+    i = i->next;
+  }
+  printf("%d\n", dummy);
+#endif
+}
+```
+{:.narrow-listing}
 
 The difference in CPU cycles used by this program when complied with and without
 `-DBASELINE` is the number of cycles that `N` memory accesses take.  Dividing by `N`
@@ -161,10 +194,10 @@ We can verify this quite easily.  The following program loops over an array with
 increment given at compile time as `STEP` and measures the processor time.
 
 ```c
-#define SIZE 67108864  // 64 * 1024 * 1024.  The array will be 512 MiB.
+#define SIZE 67108864  // 64 * 1024 * 1024
 
 int main() {
-   int64_t* array = (int64_t*)calloc(SIZE, sizeof(int64_t));
+   int64_t* array = (int64_t*)calloc(SIZE, sizeof(int64_t));  // 512 MiB
    clock_t t0 = clock();
    for (size_t i = 0; i < SIZE; i += STEP) {
       array[i] &= 1;  // Do something.  Anything.
@@ -173,7 +206,29 @@ int main() {
    printf("%d %f\n", STEP, 1000. * (t1 - t0) / CLOCKS_PER_SEC);
 }
 ```
-{:id="listing-2"}
+{:.wide-listing}
+
+```c
+// 64 * 1024 * 1024
+#define SIZE 67108864
+
+int main() {
+  // 512 MiB
+  int64_t* array = (int64_t*)calloc(
+      SIZE, sizeof(int64_t));
+  clock_t t0 = clock();
+  for (size_t i = 0; i < SIZE;
+       i += STEP) {
+    // Do something.  Anything.
+    array[i] &= 1;
+  }
+  clock_t t1 = clock();
+  printf("%d %f\n", STEP,
+         1000. * (t1 - t0) /
+             CLOCKS_PER_SEC);
+}
+```
+{:.narrow-listing}
 
 These are my results for different values of `STEP`:
 
@@ -353,7 +408,37 @@ int main() {
    std::cout << sum << '\n' << (t1 - t0) << '\n';
 }
 ```
-{:id="listing-3"}
+{:.wide-listing}
+
+```cpp
+constexpr int N = 5000;
+
+int main() {
+  Container containers[N];
+  std::srand(std::time(nullptr));
+  // Append an average of 5000 random
+  // values to each container.
+  for (int i = 0; i < N * 5000; ++i) {
+    containers[std::rand() % N]
+        .push_back(std::rand());
+  }
+
+  int sum = 0;
+  std::clock_t t0 = std::clock();
+  for (int m = 0; m < N; ++m) {
+    for (int num : containers[m]) {
+      sum += num;
+    }
+  }
+  std::clock_t t1 = std::clock();
+
+  // Also print the sum so the loop
+  // doesn't get optimized out.
+  std::cout << sum << '\n'
+            << (t1 - t0) << '\n';
+}
+```
+{:.narrow-listing}
 
 My result is that computing the sum completes 158 times faster when using
 `std::vector`.[^flags]  Some of this difference can be attributed to space overhead of the

@@ -78,3 +78,16 @@ body.dark .funny-table td:nth-child(2) {
 .funny-table th:nth-child(3) {
   padding-left: 3.75px;
 }
+
+.narrow-listing {
+  display: none;
+}
+
+@media screen and (max-width: 50ch) {
+  .wide-listing {
+    display: none;
+  }
+  .narrow-listing {
+    display: block;
+  }
+}
