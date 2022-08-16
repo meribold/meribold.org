@@ -11,7 +11,7 @@ I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking [my dot
 and writing [software](#projects).  My name is Lukas Waymann and my usual username is
 Meribold.  This is my website.
 
-Once in a while, I write an article for this website.  So far this has happened three
+Once in a while, I write an article for this website.  So far this has happened four
 times.
 
 <div style="display: table;">
