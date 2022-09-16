@@ -6,10 +6,13 @@
   width: min(100vw, 110%);
   background: #f8f8f8;
   padding: 3% min(2em, (100vw - 110%) / 2);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
 }
 
 body.dark .chart-wrapper {
   background: #150f1c;
+  box-shadow: #b987ff 0 0 6px;
+  border-radius: 6px;
 }
 
 img.chart {
@@ -36,27 +39,6 @@ body.dark img[src*="oo-picture"] {
   filter: invert(100%) brightness(80%);
 }
 
-.funny-table,
-body.dark .funny-table {
-  border: none;
-}
-
-.funny-table th {
-  border-top: 2px solid #ccc6bb;
-}
-
-body.dark .funny-table th {
-  border-top: 2px solid #38294d;
-}
-
-.funny-table > tbody > tr:last-child {
-  border-bottom: 2px solid #ccc6bb;
-}
-
-body.dark .funny-table > tbody > tr:last-child {
-  border-bottom: 2px solid #38294d;
-}
-
 .funny-table th,
 .funny-table td {
   text-align: center;
@@ -65,13 +47,13 @@ body.dark .funny-table > tbody > tr:last-child {
 /* TODO: make the width of the border dynamic. */
 .funny-table th:nth-child(2),
 .funny-table td:nth-child(2) {
-  border-right: 2ch solid #f8f1e3;
+  border-right: 7.5px solid #f8f8f8;
   padding-right: 3.75px;
 }
 
 body.dark .funny-table th:nth-child(2),
 body.dark .funny-table td:nth-child(2) {
-  border-right: 2ch solid #000;
+  border-right-color: #150f1c;
 }
 
 .funny-table td:nth-child(3),

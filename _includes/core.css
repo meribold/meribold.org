@@ -289,14 +289,14 @@ pre > code {
 }
 
 div.highlighter-rouge {
-  border-top: 2px solid #ccc6bb;
-  border-bottom: 2px solid #ccc6bb;
-  /* Only darken the background color of code blocks very slightly. */
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
+  color: #000;
   background-color: #f8f8f8;
   min-width: 100%;
   max-width: calc(50% + 50vw - 7.5px);
+  width: min-intrinsic;
   width: -moz-min-content;
-  width: -webkit-min-content;
+  width: min-content;
   margin: 1em -7.5px;
   padding: 0 7.5px;
   overflow-x: hidden;
@@ -304,8 +304,9 @@ div.highlighter-rouge {
 
 body.dark div.highlighter-rouge,
 body.dark table {
-  border-top: 2px solid #38294d;
-  border-bottom: 2px solid #38294d;
+  color: #ccc;
+  box-shadow: #b987ff 0 0 6px;
+  border-radius: 6px;
 }
 
 pre {
@@ -465,7 +466,7 @@ a.footnote {
 
 span.inline-note {
   background: #f8f8f8;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 1px 4px;
   padding: 1px 2px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -473,7 +474,7 @@ span.inline-note {
 
 body.dark span.inline-note {
   background: #251b33;
-  box-shadow: #b987ff 0px 0px 2px 1px;
+  box-shadow: #b987ff 0 0 2px 1px;
   border-radius: 0.2em;
 }
 

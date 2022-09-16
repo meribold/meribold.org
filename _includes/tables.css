@@ -7,10 +7,14 @@
  * [2]: https://github.com/jekyll/minima/blob/affcd93be22e960afd2be08e6891d99b31bcf920/_sass/minima/_base.scss#L220
  */
 table {
+  color: #000;
+  background: #f8f8f8;
   text-align: center;
   border-collapse: collapse;
-  border-top: 2px solid #ccc6bb;
-  border-bottom: 2px solid #ccc6bb;
+  padding: 3.75px 0;
+  border-left: 7.5px solid #f8f8f8;
+  border-right: 7.5px solid #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
   /* Horizontally center tables but don't stretch them to the width of the main text and
    * add a horizontal scrollbar if the table is too wide.  See [1] and [2].
    *
@@ -35,21 +39,32 @@ table {
    *      "Can you make a child div larger than parent without position absolute?"
    */
   display: inline-block; /* TODO: this adds padding at the bottom of the table. */
+  box-sizing: border-box;
   overflow-x: auto;
   /* Eventually add a horizontal scrollbar. */
-  max-width: calc(100vw - 7.5px);
+  max-width: 100vw;
+  width: intrinsic;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: max-content;
   /* This makes `left: 50vw` work. */
   position: relative;
   /* Move the table so it starts at the very left of the viewport.  This is the real magic
    * because it increases how big the automatically calculated width of the table can be
    * to the viewport width.  Taken from [5].  */
-  margin-left: calc(-50vw + 50% - 7.5px);
+  margin-left: calc(-50vw + 50%);
   /* Move the table to the right by half the viewport width.  This will make it start at
    * the center of the viewport when combined with the above line (without it we would use
    * 50%). */
-  left: calc(50vw + 7.5px);
+  left: calc(50vw);
   /* Finally move the table to the left by half of its width.  This will center it. */
   transform: translateX(-50%);
+}
+
+body.dark table {
+  background: #150f1c;
+  border-color: #150f1c;
+  color: #ccc;
 }
 
 tbody {
@@ -71,11 +86,11 @@ th:last-child {
 }
 
 tr:nth-child(even) {
-  background-color: #ebe4d7;
+  background-color: #e8e8e8;
 }
 
 body.dark tr:nth-child(even) {
-  background-color: #150f1c;
+  background-color: #1f1629;
 }
 
 th,
@@ -85,13 +100,12 @@ td {
 
 th {
   font-weight: normal;
-  border-bottom: 1px solid #807c75;
-  padding-top: 0.2em;
+  border-bottom: 1.5px solid #ccc;
   padding-bottom: 0.2em;
 }
 
 body.dark th {
-  border-bottom: 1px solid #8c66bf;
+  border-bottom-color: #4c3666;
 }
 
 /* Add the same abount of vertical padding below the line that seperates the table heading
