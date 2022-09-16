@@ -305,7 +305,7 @@ div.highlighter-rouge {
 body.dark div.highlighter-rouge,
 body.dark table {
   color: #ccc;
-  box-shadow: #b987ff 0 0 6px;
+  box-shadow: #b987ff 0 0 6px -2px;
   border-radius: 6px;
 }
 

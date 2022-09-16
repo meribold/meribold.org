@@ -86,11 +86,11 @@ th:last-child {
 }
 
 tr:nth-child(even) {
-  background-color: #e8e8e8;
+  background-color: #f0ede6;
 }
 
 body.dark tr:nth-child(even) {
-  background-color: #1f1629;
+  background-color: #1b1324;
 }
 
 th,
@@ -100,12 +100,12 @@ td {
 
 th {
   font-weight: normal;
-  border-bottom: 1.5px solid #ccc;
+  border-bottom: 1.5px solid #d4d1cb;
   padding-bottom: 0.2em;
 }
 
 body.dark th {
-  border-bottom-color: #4c3666;
+  border-bottom-color: #40364d
 }
 
 /* Add the same abount of vertical padding below the line that seperates the table heading

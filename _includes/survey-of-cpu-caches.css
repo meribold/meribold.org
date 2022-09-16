@@ -11,12 +11,12 @@
 
 body.dark .chart-wrapper {
   background: #150f1c;
-  box-shadow: #b987ff 0 0 6px;
+  box-shadow: #b987ff 0 0 6px -2px;
   border-radius: 6px;
 }
 
 img.chart {
-  width: calc(100% - 8px);
+  width: calc(100% - 15px);
   margin: auto;
 }
 
@@ -27,8 +27,8 @@ body.dark img.chart {
 }
 
 img[src*="oo-picture"] {
-  width: min(110%, 100vw - 8px);
-  max-width: calc(100vw - 8px);
+  width: min(110%, 100vw - 7.5px);
+  max-width: calc(100vw - 7.5px);
   filter: sepia(15%);
   transform: translate3d(-50%, 0, 0);
   margin-top: 2em;
