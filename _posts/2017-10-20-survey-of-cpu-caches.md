@@ -183,7 +183,7 @@ accessing a single, uncached 4-byte integer entails loading another 60 adjacent 
 
 My E-450 CPU is no exception and both of its data caches have 64-byte cache lines:
 
-```bash
+```
 $ getconf LEVEL1_DCACHE_LINESIZE
 64
 $ getconf LEVEL2_CACHE_LINESIZE

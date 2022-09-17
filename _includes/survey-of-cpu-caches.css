@@ -11,7 +11,7 @@
 
 body.dark .chart-wrapper {
   background: #150f1c;
-  box-shadow: #b987ff 0 0 6px -2px;
+  box-shadow: none;
   border-radius: 6px;
 }
 
