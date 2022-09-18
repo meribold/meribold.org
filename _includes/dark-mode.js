@@ -25,7 +25,9 @@ function updateThemeToggle(currentTheme) {
 function enableTheme(theme) {
    if (theme === "light") {
       document.body.classList.remove("dark");
+      document.body.classList.add("light");
    } else if (theme === "dark") {
+      document.body.classList.remove("light");
       document.body.classList.add("dark");
    }
    updateThemeToggle(theme);
@@ -62,6 +64,7 @@ const initialTheme =
    (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
    "light";
 if (initialTheme === "dark") {
+   document.body.classList.remove("light");
    document.body.classList.add("dark");
 }
 
