@@ -320,6 +320,8 @@ environments for Python 3.3 and 3.4, and is deprecated in Python 3.6.][installin
 
 *   The "Virtual Boy" image is used with permission from
     [James Rolfe](https://en.wikipedia.org/wiki/James_Rolfe).
+*   If you found this article helpful or otherwise worthwhile and want to say thanks, one
+    way you can do so is by [buying me a coffee](https://www.buymeacoffee.com/meribold).
 
 [library/venv]: https://docs.python.org/3/library/venv.html
     "The Python Standard Library: venv — Creation of virtual environments"

@@ -8,9 +8,10 @@ image: /assets/cache-paper/access-time-plot.png
 changelog: true
 ---
 
-CPU caches are very fast and small memory.  They are part of the CPU and store a
-subset of the data present in main memory (RAM) that is expected to be used again soon.
-Their purpose is to reduce the frequency of main memory access.
+CPU caches are the fastest and smallest components of a computer's memory hierarchy except
+for registers.  They are part of the CPU and store a subset of the data present in main
+memory (RAM) that is expected to be used again soon.  Their purpose is to reduce the
+frequency of main memory access.
 
 Why can't we just have one uniform type of memory that's both big and fast?  Cost is one
 reason, but more fundamentally, since no signal can propagate faster than the speed of
@@ -45,7 +46,8 @@ In practice, a currently representative x86 cache hierarchy consists of:
 *   One or more TLBs per core.  These cache virtual-to-physical address associations of
     memory pages.[^tangential]
 
-[^tangential]: You don't need to know what that means to understand the rest of this post.
+[^tangential]: You don't need to know what that means to understand the rest of this
+    article.
 
 Here's a table with approximate access latencies:
 
@@ -200,7 +202,7 @@ int main() {
    int64_t* array = (int64_t*)calloc(SIZE, sizeof(int64_t));  // 512 MiB
    clock_t t0 = clock();
    for (size_t i = 0; i < SIZE; i += STEP) {
-      array[i] &= 1;  // Do something.  Anything.
+      array[i] &= 1;  // Do something (anything).
    }
    clock_t t1 = clock();
    printf("%d %f\n", STEP, 1000. * (t1 - t0) / CLOCKS_PER_SEC);
@@ -219,7 +221,7 @@ int main() {
   clock_t t0 = clock();
   for (size_t i = 0; i < SIZE;
        i += STEP) {
-    // Do something.  Anything.
+    // Do something (anything).
     array[i] &= 1;
   }
   clock_t t1 = clock();
@@ -315,8 +317,7 @@ across all working set sizes:
 <div class="chart-wrapper">
 <img class="normal-img chart"
      src="{{ "/assets/cache-paper/cpu-bound-seq-access-time-plot.svg" | relative_url }}"
-     alt="Plot of the average number of CPU cycles one access takes vs. the array size when the array is not shuffled and the CPU performs some work for every accessed element"
-     title="A table with the numerical results is further down again.">
+     alt="Plot of the average number of CPU cycles one access takes vs. the array size when the array is not shuffled and the CPU performs some work for every accessed element">
 </div>
 
 {::comment}
@@ -339,7 +340,7 @@ by the programmer.[^drepper]
 
 [^drepper]: Software prefetching is discussed by Ulrich Drepper in his paper
     [*What Every Programmer Should Know About Memory*](https://www.akkadia.org/drepper/cpumemory.pdf).
-    He also goes into more detail on practically everything touched on in this post.
+    He also goes into more detail on practically everything touched on in this article.
 
 ## Locality of reference
 
@@ -443,8 +444,7 @@ int main() {
 My result is that computing the sum completes 158 times faster when using
 `std::vector`.[^flags]  Some of this difference can be attributed to space overhead of the
 linked list and the added indirection, but the more cache-friendly memory access pattern
-of `std::vector` is decisive:  using `std::list` as in this example means random memory
-access.
+of `std::vector` is key: using `std::list` as in this example means random memory access.
 
 [^flags]: I used GCC 6.3.1 with `-O3` and `-march=native`.
 
@@ -475,10 +475,12 @@ prefetching, instruction caches, TLBs, and more.
 ## Notes
 {:style="display: initial"}
 
-*   This post is based on [a seminar paper][paper] in which you can find some more details
-    and a list of sources.  The TeX files, full source code of all utilized
+*   This article is based on [a seminar paper][paper] in which you can find some more
+    details and a list of sources.  The TeX files, full source code of all utilized
     microbenchmarks, and [a makefile][makefile] that automates running them and builds the
     PDF are all [available on GitHub][repo].
+*   If you found this article helpful or otherwise worthwhile and want to say thanks, one
+    way you can do so is by [buying me a coffee](https://www.buymeacoffee.com/meribold).
 
 [paper]: /assets/cache-paper.pdf
 [repo]: https://github.com/meribold/cache-seminar-paper
