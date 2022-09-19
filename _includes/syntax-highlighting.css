@@ -65,72 +65,81 @@ body.light .highlight .vg { color: #008080 }
 body.light .highlight .vi { color: #008080 }
 body.light .highlight .il { color: #009999 }
 
-/* This is the Monokai scheme from [1], but I changed the background color from #272822 to
- * #150f1c and all occurences of #f8f8f2 to #ccc.
+/* This is the Zenesque theme from [1], but I changed the background color from #0f1216 to
+ * #150f1c, changed all occurences of #adadad to #ccc, and removed all
+ * `font-style: italic` and `font-weight: bold` declarations.
  *
- * [1]: https://jwarby.github.io/jekyll-pygments-themes/languages/python.html
+ * [1]: https://stylishthemes.github.io/Syntax-Themes/pygments/
  */
-body.dark .highlight { background: #150f1c; }
-body.dark .highlight pre { background-color: #150f1c }
-body.dark .highlight .hll { background-color: #150f1c }
-body.dark .highlight .c { color: #75715e }
-body.dark .highlight .err { color: #960050; background-color: #1e0010 }
-body.dark .highlight .k { color: #66d9ef }
-body.dark .highlight .l { color: #ae81ff }
+body.dark .highlight, body.dark .highlight pre, body.dark .highlight table { background: #150f1c }
+body.dark .highlight .hll { background: #ffffcc }
+body.dark .highlight { background: #150f1c; color: #ccc }
+body.dark .highlight .c { color: #777777 }
+body.dark .highlight .err { color: #ccc }
+body.dark .highlight .g { color: #ccc }
+body.dark .highlight .k { color: #5a89a4 }
+body.dark .highlight .l { color: #ccc }
 body.dark .highlight .n { color: #ccc }
-body.dark .highlight .o { color: #f92672 }
+body.dark .highlight .h { color: #ccc }
+body.dark .highlight .o { color: #ccc }
+body.dark .highlight .x { color: #ccc }
 body.dark .highlight .p { color: #ccc }
-body.dark .highlight .cm { color: #75715e }
-body.dark .highlight .cp { color: #75715e }
-body.dark .highlight .c1 { color: #75715e }
-body.dark .highlight .cs { color: #75715e }
-body.dark .highlight .ge { font-style: italic }
-body.dark .highlight .gs { font-weight: bold }
-body.dark .highlight .kc { color: #66d9ef }
-body.dark .highlight .kd { color: #66d9ef }
-body.dark .highlight .kn { color: #f92672 }
-body.dark .highlight .kp { color: #66d9ef }
-body.dark .highlight .kr { color: #66d9ef }
-body.dark .highlight .kt { color: #66d9ef }
-body.dark .highlight .ld { color: #e6db74 }
-body.dark .highlight .m { color: #ae81ff }
-body.dark .highlight .s { color: #e6db74 }
-body.dark .highlight .na { color: #a6e22e }
+body.dark .highlight .cm { color: #777777 }
+body.dark .highlight .cp { color: #5567a1 }
+body.dark .highlight .c1 { color: #777777 }
+body.dark .highlight .cs { color: #777777 }
+body.dark .highlight .gd { color: #bf6a6a; background: #2d1212 }
+body.dark .highlight .ge { color: #ccc }
+body.dark .highlight .gr { color: #727272 }
+body.dark .highlight .gh { color: #6d6d6d }
+body.dark .highlight .gi { color: #ccc; background: #5a7e5d }
+body.dark .highlight .go { color: #7e7e7e }
+body.dark .highlight .gp { color: #ccc }
+body.dark .highlight .gs { color: #ccc }
+body.dark .highlight .gu { color: #6d6d6d }
+body.dark .highlight .gt { color: #6f6f6f }
+body.dark .highlight .kc { color: #5a89a4 }
+body.dark .highlight .kd { color: #5a89a4 }
+body.dark .highlight .kn { color: #5a89a4 }
+body.dark .highlight .kp { color: #5a89a4 }
+body.dark .highlight .kr { color: #5a89a4 }
+body.dark .highlight .kt { color: #518991 }
+body.dark .highlight .ld { color: #ccc }
+body.dark .highlight .m { color: #ccc }
+body.dark .highlight .s { color: #5d7a64 }
+body.dark .highlight .na { color: #9784a2 }
 body.dark .highlight .nb { color: #ccc }
-body.dark .highlight .nc { color: #a6e22e }
-body.dark .highlight .no { color: #66d9ef }
-body.dark .highlight .nd { color: #a6e22e }
-body.dark .highlight .ni { color: #ccc }
-body.dark .highlight .ne { color: #a6e22e }
-body.dark .highlight .nf { color: #a6e22e }
+body.dark .highlight .nc { color: #ccc }
+body.dark .highlight .no { color: #8d5c57 }
+body.dark .highlight .nd { color: #ccc }
+body.dark .highlight .ni { color: #a7a863 }
+body.dark .highlight .ne { color: #ccc }
+body.dark .highlight .nf { color: #9784a2 }
 body.dark .highlight .nl { color: #ccc }
 body.dark .highlight .nn { color: #ccc }
-body.dark .highlight .nx { color: #a6e22e }
+body.dark .highlight .nx { color: #ccc }
 body.dark .highlight .py { color: #ccc }
-body.dark .highlight .nt { color: #f92672 }
-body.dark .highlight .nv { color: #ccc }
-body.dark .highlight .ow { color: #f92672 }
+body.dark .highlight .nt { color: #5a89a4 }
+body.dark .highlight .nv { color: #a16f51 }
+body.dark .highlight .ow { color: #ccc }
 body.dark .highlight .w { color: #ccc }
-body.dark .highlight .mf { color: #ae81ff }
-body.dark .highlight .mh { color: #ae81ff }
-body.dark .highlight .mi { color: #ae81ff }
-body.dark .highlight .mo { color: #ae81ff }
-body.dark .highlight .sb { color: #e6db74 }
-body.dark .highlight .sc { color: #e6db74 }
-body.dark .highlight .sd { color: #e6db74 }
-body.dark .highlight .s2 { color: #e6db74 }
-body.dark .highlight .se { color: #ae81ff }
-body.dark .highlight .sh { color: #e6db74 }
-body.dark .highlight .si { color: #e6db74 }
-body.dark .highlight .sx { color: #e6db74 }
-body.dark .highlight .sr { color: #e6db74 }
-body.dark .highlight .s1 { color: #e6db74 }
-body.dark .highlight .ss { color: #e6db74 }
+body.dark .highlight .mf { color: #ccc }
+body.dark .highlight .mh { color: #ccc }
+body.dark .highlight .mi { color: #ccc }
+body.dark .highlight .mo { color: #ccc }
+body.dark .highlight .sb { color: #5d7a64 }
+body.dark .highlight .sc { color: #5d7a64 }
+body.dark .highlight .sd { color: #5d7a64 }
+body.dark .highlight .s2 { color: #5d7a64 }
+body.dark .highlight .se { color: #5d7a64 }
+body.dark .highlight .sh { color: #5d7a64 }
+body.dark .highlight .si { color: #5d7a64 }
+body.dark .highlight .sx { color: #5d7a64 }
+body.dark .highlight .sr { color: #5d7a64 }
+body.dark .highlight .s1 { color: #5d7a64 }
+body.dark .highlight .ss { color: #5d7a64 }
 body.dark .highlight .bp { color: #ccc }
-body.dark .highlight .vc { color: #ccc }
-body.dark .highlight .vg { color: #ccc }
-body.dark .highlight .vi { color: #ccc }
-body.dark .highlight .il { color: #ae81ff }
-body.dark .highlight .gu { color: #75715e }
-body.dark .highlight .gd { color: #f92672 }
-body.dark .highlight .gi { color: #a6e22e }
+body.dark .highlight .vc { color: #a16f51 }
+body.dark .highlight .vg { color: #a16f51 }
+body.dark .highlight .vi { color: #a16f51 }
+body.dark .highlight .il { color: #ccc }
