@@ -455,11 +455,15 @@ polymorphic container of such pointers allows for dynamic dispatch of virtual fu
 However, this carries the risk of degrading the performance of a sequential data structure
 to that of a list.
 
-![Graphic of a contiguous array of pointers with pointees that may be scattered pretty
-randomly throughout memory][oo-picture]
-
-[oo-picture]: {{ "/assets/cache-paper/oo-picture.png" | relative_url }}
-    "The numbered boxes represent pointers that are laid out contiguously in memory.  The unlabeled boxes represent the corresponding pointees, which may be scattered across memory pretty randomly."
+<p>
+<picture>
+<source srcset="{{ "/assets/cache-paper/oo-picture.webp" | relative_url }}"
+        type="image/webp">
+<img src="{{ "/assets/cache-paper/oo-picture.png" | relative_url }}"
+     alt="Graphic of a contiguous array of pointers with pointees that may be scattered pretty randomly throughout memory"
+     title="The numbered boxes represent pointers that are laid out contiguously in memory. The unlabeled boxes represent the corresponding pointees, which may be scattered across memory pretty randomly.">
+</picture>
+</p>
 
 ## Conclusion
 
