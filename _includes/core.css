@@ -122,7 +122,9 @@ main a:hover {
 }
 
 body.dark main a:hover {
-  text-decoration: revert;
+  text-decoration-color: revert;
+  text-decoration-line: revert;
+  text-decoration-style: revert;
   text-decoration-thickness: revert;
   text-decoration-skip-ink: initial;
 }
@@ -159,7 +161,9 @@ a.post-meta {
 }
 
 a.post-meta:hover {
-  text-decoration: revert;
+  text-decoration-color: revert;
+  text-decoration-line: revert;
+  text-decoration-style: revert;
   text-decoration-thickness: revert;
   text-decoration-skip-ink: initial;
 }
