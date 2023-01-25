@@ -36,7 +36,7 @@ You can also contact me via [Matrix](https://matrix.to/#/@meribold:matrix.org).
 Or you can find me on
 [GitHub](https://github.com/meribold),
 [YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ),
-[Mastodon](https://mastodon.social/@meribold),
+<a rel=me href="https://mastodon.social/@meribold">Mastodon</a>,
 [LinkedIn](https://www.linkedin.com/in/meribold/), and
 [Twitter](https://twitter.com/mribld).
 
