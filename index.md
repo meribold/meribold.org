@@ -8,7 +8,7 @@ extra_css: [images.css, index.css]
 </script>
 
 I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking [my dotfiles][],
-and writing [software](#projects).  My name is Lukas Waymann and my usual username is
+and writing software.  My name is Lukas Waymann and my usual username is
 Meribold.  This is my website.
 
 Once in a while, I write an article for this website.  So far this has happened four
@@ -37,10 +37,11 @@ Or you can find me on
 [GitHub](https://github.com/meribold),
 [YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ),
 <a rel=me href="https://mastodon.social/@meribold">Mastodon</a>,
-[LinkedIn](https://www.linkedin.com/in/meribold/), and
-[Twitter](https://twitter.com/mribld).
+[Twitter](https://twitter.com/mribld), and
+[LinkedIn](https://www.linkedin.com/in/meribold/).
 
-If you really like an article or program I wrote, you can [buy me a
+If you really like an article or program I wrote and want to say thanks, one way you can
+do so is by [buying me a
 coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a detail-oriented
 C++ or Python developer with Linux, UI design, or computer vision experience, you can
 [check out my résumé](/resume.pdf).

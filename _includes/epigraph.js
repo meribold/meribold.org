@@ -1,15 +1,13 @@
 document.querySelector("header #epigraph").innerText = [
-   "Aurë entuluva!",
    "I summon entropy!",
    "Who grew your hands?",
-   "Aiya elenion ancalima!",
+   "We've been activated!",
    "Curiouser and curiouser!",
    "Move slow and make things.",
    "Everything fast is slow again.",
-   "Don't blink.  Don't even blink.",
-   "All that is gold does not glitter.",
    "Not all those who wander are lost.",
    "Everything not saved will be lost.",
    "What one fool can do, another can.",
    "Und Innos, in seiner Weisheit, tat es.",
-][Math.floor(Math.random() * 13)];
+   "Oh my god, it even has random epigraphs.",
+][Math.floor(Math.random() * 11)];
