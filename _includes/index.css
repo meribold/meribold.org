@@ -9,10 +9,6 @@
   padding-left: 0.33ch;
 }
 
-header #epigraph {
-  font-style: italic;
-}
-
 header #epigraph,
 .post-list-meta {
   color: #6e6e6e;
