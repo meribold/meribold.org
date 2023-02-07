@@ -35,7 +35,7 @@ key](/pgp-key-meribold-7066ac79c4592c12.txt).
 You can also contact me via [Matrix](https://matrix.to/#/@meribold:matrix.org).
 Or you can find me on
 [GitHub](https://github.com/meribold),
-[YouTube](https://www.youtube.com/channel/UCMRSvuI6a4hRfXnNeMKL5cQ),
+[YouTube](https://www.youtube.com/@meribold),
 <a rel=me href="https://mastodon.social/@meribold">Mastodon</a>,
 [Twitter](https://twitter.com/mribld), and
 [LinkedIn](https://www.linkedin.com/in/meribold/).
