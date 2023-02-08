@@ -331,14 +331,18 @@ body.dark pre > code {
   background-color: #150f1c;
 }
 
-/* Inline code */
-code {
-  padding: 0.1em 0.2em;
-  background-color: #f8f8f8;
+:not(pre) > code::before,
+:not(pre) > code::after {
+  content: "`";
+  font-weight: bold;
 }
 
-body.dark code {
-  background-color: #251b33;
+:not(pre) > code {
+  color: #000;
+}
+
+body.dark :not(pre) > code {
+  color: revert;
 }
 
 /* See <https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php>. */
