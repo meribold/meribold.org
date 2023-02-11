@@ -37,7 +37,7 @@ Or you can find me on
 [GitHub](https://github.com/meribold),
 [YouTube](https://www.youtube.com/@meribold),
 <a rel=me href="https://mastodon.social/@meribold">Mastodon</a>,
-[Twitter](https://twitter.com/mribld), and
+[Twitter](https://twitter.com/meribold), and
 [LinkedIn](https://www.linkedin.com/in/meribold/).
 
 If you really like an article or program I wrote and want to say thanks, one way you can
