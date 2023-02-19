@@ -308,11 +308,11 @@ linear.[^stride-example]
 Prefetching happens asynchronously to normal program execution and can therefore almost
 completely hide the main memory latency.  This is not quite what we observed because the
 CPU performs little enough work for memory bandwidth to become the bottleneck.
-[Adding some expensive operations][github-seq-access-times-source] like integer divisions
+[Adding][github-seq-access-times-source] some expensive operations like integer divisions
 every loop iteration changes that and effectively levels the cycles spent per iteration
 across all working set sizes:
 
-[github-seq-access-times-source]: https://github.com/meribold/cache-seminar-paper/blob/a32597fbb2c37c52d54a9b87194cc17760ffbc11/seq-access-times/access-times.c#L26
+[github-seq-access-times-source]: https://github.com/meribold/cache-seminar-paper/blob/a32597fbb2c37c52d54a9b87194cc17760ffbc11/seq-access-times/access-times.c#L27-L29
 
 <div class="chart-wrapper">
 <img class="normal-img chart"
@@ -340,7 +340,7 @@ by the programmer.[^drepper]
 
 [^drepper]: Software prefetching is discussed by Ulrich Drepper in his paper
     [*What Every Programmer Should Know About Memory*](https://www.akkadia.org/drepper/cpumemory.pdf).
-    He also goes into more detail on practically everything touched on in this article.
+    Drepper also goes into more detail on practically everything touched on in this article.
 
 ## Locality of reference
 
@@ -381,7 +381,7 @@ processor time needed to sum all of them.  I first ran it with `Container` being
 alias for `std::list`, then for `std::vector`.  Either way, the asymptotic
 complexity is Θ(N).
 
-[^big-os]: adapted from code that appears in an article by Sergey
+[^big-os]: adapted from an article by Sergey
     Ignatchenko published in [issue 134 of the *Overload*
     magazine](https://accu.org/journals/overload/24/134/overload134.pdf#page=6)
 
@@ -446,7 +446,7 @@ My result is that computing the sum completes 158 times faster when using
 linked list and the added indirection, but the more cache-friendly memory access pattern
 of `std::vector` is key: using `std::list` as in this example means random memory access.
 
-[^flags]: I used GCC 6.3.1 with `-O3` and `-march=native`.
+[^flags]: I&nbsp;used GCC 6.3.1 with `-O3` and `-march=native`.
 
 ### Note: "true" OO style
 

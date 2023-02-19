@@ -151,14 +151,14 @@ during startup: the presence of the `home` key tells Python the binary belongs t
 virtual environment, the key's value (`/usr/bin`) tells it where to find a complete Python
 installation that includes the standard library.
 
-The bottom line is that `./lib/python3.6/site-packages` becomes part of the [module search
+The bottom line is that `./lib​/python3.6​/site-packages` becomes part of the [module search
 path][].  The point is that we can now install packages to that location, in particular,
 specific versions that may conflict with the dependencies of another Python program on the
 same system.[^python-level-isolation]
 
-[^python-level-isolation]: Be aware that we only get [python-level isolation][].
+[^python-level-isolation]: Be aware that we only get [Python-level isolation][].
 
-[python-level isolation]: https://web.archive.org/web/20191129151330/https://pythonrants.wordpress.com/2013/12/06/why-i-hate-virtualenv-and-pip/
+[Python-level isolation]: https://web.archive.org/web/20191129151330/https://pythonrants.wordpress.com/2013/12/06/why-i-hate-virtualenv-and-pip/
 
 [module search path]: https://docs.python.org/3/library/site.html
 

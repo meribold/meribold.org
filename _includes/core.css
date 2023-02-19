@@ -116,6 +116,14 @@ body.dark main a {
   text-decoration: none;
 }
 
+.inline-note a {
+  text-underline-offset: 0;
+}
+
+body.dark .inline-note a {
+  text-underline-offset: revert;
+}
+
 main a:hover {
   text-decoration-line: underline;
   text-decoration-color: #d19600;
@@ -473,16 +481,19 @@ a.footnote {
 }
 
 span.inline-note {
+  color: #000;
   background: #f8f8f8;
   box-shadow: rgba(0, 0, 0, 0.25) 0 1px 4px;
-  padding: 1px 2px;
+  padding: 0.11em 2px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
 body.dark span.inline-note {
+  color: inherit;
   background: #251b33;
   box-shadow: #b987ff 0 0 2px 1px;
+  padding: 1px 2px;
   border-radius: 0.2em;
 }
 

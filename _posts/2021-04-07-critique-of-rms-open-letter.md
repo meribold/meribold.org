@@ -92,8 +92,8 @@ Suggesting that RMS is intolerant is strange.  If anything, he seems to be *too*
 Implying that RMS is hateful is just ridiculous.
 
 I only looked into some of the open letter's contents in depth and can't comment on the
-rest.  Maybe the rest is completely fair.  Martin Tournoij wrote a [better and more
-thorough commentary][Stallman isn't great, but not the devil] on the open letter than I
+rest.  Maybe the rest is completely fair.  Martin Tournoij wrote a better and more
+thorough [commentary][Stallman isn't great, but not the devil] on the open letter than I
 can.  I do wonder how many people looked into the accusations before signing the letter,
 though.  One of the original signatories [told me that][luis-1], "from a practical
 perspective, transphobe or no, [RMS] needs to go" [and that][luis-2] "regardless of
@@ -104,7 +104,7 @@ open letter and likely convinced more than a handful of people to add their sign
 I'll leave you with three more bits of evidence that things are more complex than the open
 letter would have you believe:
 
-1.  A [competing letter in support of RMS][] exists and has accumulated considerably more
+1.  A competing [letter in support of RMS][] exists and has accumulated considerably more
     signatures than the letter condemning RMS.
 2.  In response someone created a Chrome extension that marks repositories owned by a
     signatory of this support letter with red text on GitHub.
@@ -140,6 +140,6 @@ letter would have you believe:
 [genderless-pronouns]: https://www.stallman.org/articles/genderless-pronouns.html
 [rewritten note]: https://stallman.org/archives/2016-sep-dec.html#31_October_2016_(Down's_syndrome)
 [Stallman isn't great, but not the devil]: https://www.arp242.net/rms.html
-[competing letter in support of RMS]: https://rms-support-letter.github.io
+[letter in support of RMS]: https://rms-support-letter.github.io
 [extension-announcement]: https://twitter.com/aaronbassett/status/1376601712379764737
 [f7d04be]: https://github.com/rms-open-letter/rms-open-letter.github.io/commit/f7d04be13369ec1f6933e8de8261d1dcfda4d430

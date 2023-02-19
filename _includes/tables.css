@@ -100,12 +100,12 @@ td {
 
 th {
   font-weight: normal;
-  border-bottom: 1.5px solid #d4d1cb;
+  border-bottom: 1px solid #99958d;
   padding-bottom: 0.2em;
 }
 
 body.dark th {
-  border-bottom-color: #40364d
+  border-bottom-color: #7f6b99;
 }
 
 /* Add the same abount of vertical padding below the line that seperates the table heading
