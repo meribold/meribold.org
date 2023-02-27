@@ -11,3 +11,6 @@ My website's repository.  To serve the site locally:
 Then browse to <http://localhost:4000>.
 
 [1]: https://meribold.org
+
+&copy; 2017–2023 Lukas Waymann.
+[No license is offered](https://choosealicense.com/no-permission/).
