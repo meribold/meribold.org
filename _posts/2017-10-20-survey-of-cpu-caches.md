@@ -10,7 +10,7 @@ changelog: true
 
 CPU caches are the fastest and smallest components of a computer's memory hierarchy except
 for registers.  They are part of the CPU and store a subset of the data present in main
-memory (RAM) that is expected to be used again soon.  Their purpose is to reduce the
+memory (RAM) that is expected to be needed soon.  Their purpose is to reduce the
 frequency of main memory access.
 
 Why can't we just have one uniform type of memory that's both big and fast?  Cost is one
