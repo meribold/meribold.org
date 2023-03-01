@@ -485,6 +485,7 @@ span.inline-note {
   background: #f8f8f8;
   box-shadow: rgba(0, 0, 0, 0.25) 0 1px 4px;
   padding: 0.11em 2px;
+  margin: 0 -2px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }

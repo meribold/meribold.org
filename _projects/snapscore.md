@@ -27,8 +27,8 @@ sizes="(max-width: 75ch) 45vw, 33.75ch">
 </div>
 
 SnapScore is an Android app that automates scoring of the board game [*Take It Easy*][]
-using computer vision.  The user takes a photo of their game board and the app will
-display the score.
+using computer vision.  The user takes a photo of their game board, and the app displays
+the score.
 
 You can find the app on [Google Play][].  The source code is available on [GitHub][].
 
