@@ -15,5 +15,5 @@ description: Python package for reconstructing digital holograms
 RectiPy is a cross-platform Python package for reconstructing digital holograms.  It uses
 a [method suggested by Junwei Min et al.][paper] to correct (rectify) phase aberrations.
 
-[paper]: https://sci-hub.tw/10.1364/OL.42.000227
+[paper]: https://doi.org/10.1364/OL.42.000227
 [GitLab]: https://gitlab.com/meribold/rectipy
