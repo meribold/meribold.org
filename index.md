@@ -46,16 +46,6 @@ coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a detail-
 C++ or Python developer with Linux, UI design, or computer vision experience, you can
 [check out my résumé](/resume.pdf).
 
-<p>
-<div class="confined-img-aspect-ratio-box" style="padding-top: calc(100% + 15px)">
-<picture>
-<source type="image/webp" srcset="/assets/me-683w.webp 683w, /assets/me-1024w.webp 1024w"
-        sizes="(max-width: 75ch) 100vw, 75ch">
-<img class="aspect-ratio-box-inside" src="{{ "/assets/me.jpg" | relative_url }}" alt="Me">
-</picture>
-</div>
-</p>
-
 [my dotfiles]: https://github.com/meribold/dotfiles
 
 # Videos
