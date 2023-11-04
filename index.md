@@ -27,8 +27,6 @@ times.
   {% endfor %}
 </div>
 
-# Contact
-
 You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
 If you want to use encryption you can [download my PGP
 key](/pgp-key-meribold-7066ac79c4592c12.txt).
