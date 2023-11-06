@@ -2,7 +2,7 @@ const followUaThemeLabel = "明";
 const lightThemeLabel = "日";
 const darkThemeLabel = "月";
 
-let uaThemePreference = window.matchMedia("(prefers-color-scheme: dark)").matches
+let uaThemePreference = matchMedia("(prefers-color-scheme: dark)").matches
    ? "dark"
    : "light";
 
@@ -34,11 +34,11 @@ function enableTheme(theme) {
 }
 
 function changeTheme() {
-   const currentTheme = followingUaThemePreference
-      ? uaThemePreference
-      : themeToggle.innerHTML === lightThemeLabel
-      ? "light"
-      : "dark";
+   const currentTheme = {
+      [followUaThemeLabel]: uaThemePreference,
+      [lightThemeLabel]: "light",
+      [darkThemeLabel]: "dark",
+   }[themeToggle.innerHTML];
    if (currentTheme === uaThemePreference) {
       const otherTheme = currentTheme === "light" ? "dark" : "light";
       if (followingUaThemePreference) {
@@ -61,7 +61,7 @@ function changeTheme() {
 
 const initialTheme =
    localStorage.getItem("theme") ||
-   (window.matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
+   (matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
    "light";
 if (initialTheme === "dark") {
    document.body.classList.remove("light");
@@ -69,7 +69,7 @@ if (initialTheme === "dark") {
 }
 
 function initThemeToggle() {
-   window.themeToggle = document.querySelector("#theme-toggle");
+   themeToggle = document.querySelector("#theme-toggle");
    if (initialTheme === "dark" || !followingUaThemePreference) {
       updateThemeToggle(initialTheme);
    }
@@ -80,14 +80,14 @@ function initThemeToggle() {
    });
 }
 
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
    uaThemePreference = e.matches ? "dark" : "light";
    if (followingUaThemePreference) {
       enableTheme(uaThemePreference);
    }
 });
 
-window.addEventListener("storage", (e) => {
+addEventListener("storage", (e) => {
    if (e.key !== "theme") {
       return;
    }
