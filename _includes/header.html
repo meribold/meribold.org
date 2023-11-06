@@ -1,7 +1,7 @@
 <header class="site-header">
   <nav>
     {% if page.url == "/" %}
-    <span id="epigraph">Shaka, when the walls fell.</span>
+    <a id="epigraph" href="{{ "/" | relative_url }}">Shaka, when the walls fell.</a>
     {% elsif page.layout != "post" %}
     <a class="header-link" href="{{ "/" | relative_url }}">Home</a>
     {% endif %}
