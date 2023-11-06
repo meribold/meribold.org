@@ -4,6 +4,7 @@ const darkThemeLabel = "月";
 
 let uaThemePreference = getUaThemePreference();
 let followingUaThemePreference = localStorage.getItem("theme") === null;
+let themeToggle;
 
 function getUaThemePreference() {
    return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
