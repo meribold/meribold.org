@@ -2,11 +2,12 @@ const followUaThemeLabel = "明";
 const lightThemeLabel = "日";
 const darkThemeLabel = "月";
 
-let uaThemePreference = matchMedia("(prefers-color-scheme: dark)").matches
-   ? "dark"
-   : "light";
-
+let uaThemePreference = getUaThemePreference();
 let followingUaThemePreference = localStorage.getItem("theme") === null;
+
+function getUaThemePreference() {
+   return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
 
 function updateThemeToggle(currentTheme) {
    if (followingUaThemePreference || currentTheme !== uaThemePreference) {
@@ -33,12 +34,16 @@ function enableTheme(theme) {
    updateThemeToggle(theme);
 }
 
-function changeTheme() {
-   const currentTheme = {
+function getCurrentTheme() {
+   return {
       [followUaThemeLabel]: uaThemePreference,
       [lightThemeLabel]: "light",
       [darkThemeLabel]: "dark",
    }[themeToggle.innerHTML];
+}
+
+function changeTheme() {
+   const currentTheme = getCurrentTheme();
    if (currentTheme === uaThemePreference) {
       const otherTheme = currentTheme === "light" ? "dark" : "light";
       if (followingUaThemePreference) {
@@ -59,10 +64,7 @@ function changeTheme() {
    }
 }
 
-const initialTheme =
-   localStorage.getItem("theme") ||
-   (matchMedia("(prefers-color-scheme: dark)").matches && "dark") ||
-   "light";
+const initialTheme = localStorage.getItem("theme") || getUaThemePreference();
 if (initialTheme === "dark") {
    document.body.classList.remove("light");
    document.body.classList.add("dark");
@@ -97,5 +99,21 @@ addEventListener("storage", (e) => {
    } else {
       followingUaThemePreference = false;
       enableTheme(e.newValue);
+   }
+});
+
+// Among other things, a return to the page via history navigation triggers this event.
+// Check whether the desired theme has changed and switch the theme if necessary.
+addEventListener("pageshow", (e) => {
+   uaThemePreference = getUaThemePreference();
+   const currentTheme = getCurrentTheme();
+   const desiredTheme = localStorage.getItem("theme") || uaThemePreference;
+   const actuallyFollowingUaThemePreference = localStorage.getItem("theme") === null;
+   if (currentTheme !== desiredTheme) {
+      followingUaThemePreference = actuallyFollowingUaThemePreference;
+      enableTheme(desiredTheme);
+   } else if (followingUaThemePreference !== actuallyFollowingUaThemePreference) {
+      followingUaThemePreference = actuallyFollowingUaThemePreference;
+      updateThemeToggle(currentTheme);
    }
 });
