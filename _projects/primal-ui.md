@@ -16,7 +16,7 @@ possibly useful information.
 It comprises a collection of [original Lua addons](https://github.com/Primal-UI) as well
 as configuration for existing addons[^addons] and includes interface elements that are
 missing from Blizzard's default UI[^missing] and are typically added with poor visual
-integration by addons like [Gladius][].
+integration by addons like Gladius.
 
 <p>
 <div class="youtube-wrapper">
@@ -44,7 +44,6 @@ integration by addons like [Gladius][].
     important) auras for party members and arena opponents, ...
 
 <!-- [MMOG]: https://en.wikipedia.org/wiki/Massively_multiplayer_online_game -->
-[Gladius]: https://mods.curse.com/addons/wow/gladius
 <!-- [DR]: https://wow.gamepedia.com/Diminishing_returns -->
 [DRs]: http://skill-capped.com/guides/shared_drs.php
 [cooldown]: https://wow.gamepedia.com/Cooldown
