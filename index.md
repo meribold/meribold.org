@@ -87,6 +87,12 @@ C++ or Python developer with Linux, UI design, or computer vision experience, yo
 : {{ project.description }}
 {% endfor %}
 
+[Muccadoro](https://github.com/meribold/muccadoro)
+: Pomodoro timer using `figlet`, `cowsay`, and optionally `lolcat`
+
+[Dotfiles](https://github.com/meribold/dotfiles)
+: Personal dotfiles make using computers tolerable
+
 I've also written a couple more small [World of Warcraft addons][curseforge], but most of
 these are probably defunct now.  You can find some more of my work on [GitHub][].
 
