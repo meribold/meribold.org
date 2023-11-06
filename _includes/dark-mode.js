@@ -104,7 +104,8 @@ addEventListener("storage", (e) => {
 });
 
 // Among other things, a return to the page via history navigation triggers this event.
-// Check whether the desired theme has changed and switch the theme if necessary.
+// Check whether the desired theme has changed and switch the theme if necessary.  On
+// Chromium, this doesn't seem to be needed, but on Firefox and Safari, it is.
 addEventListener("pageshow", (e) => {
    uaThemePreference = getUaThemePreference();
    const currentTheme = getCurrentTheme();
