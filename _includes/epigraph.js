@@ -15,5 +15,4 @@ document.querySelector("header #epigraph").innerHTML = [
    "<i>Everything not saved will be lost.</i>",
    "<i>What one fool can do, another can.</i>",
    "<i>Und Innos, in seiner Weisheit, tat es.</i>",
-   "<i>Oh my god, it even has random epigraphs.</i>",
-][Math.floor(Math.random() * 17)];
+][Math.floor(Math.random() * 16)];
