@@ -1,4 +1,4 @@
-const comments = [
+let comments = [
    [
       "Registered just to thank you for making this addon.  No more hand pain due to " +
          "holding that right mouse button down all the time.  I really like the " +
@@ -104,11 +104,19 @@ const comments = [
    ],
 ];
 
-function changeComment() {
-   const [comment, url, author] = comments[Math.floor(Math.random() * comments.length)];
-   document.querySelector("blockquote").innerHTML =
-      comment + `<br>—<a href="${url}">${author}</a>`;
-   setTimeout(changeComment, Math.max(5000, 75 * comment.length));
+// Shuffle the comments.
+for (let i = 0; i < comments.length - 1; i++) {
+   let j = i + Math.floor(Math.random() * (comments.length - i));
+   [comments[i], comments[j]] = [comments[j], comments[i]];
 }
 
-changeComment();
+function substituteComment(i) {
+   const [text, url, author] = comments[i];
+   document.querySelector("blockquote").innerHTML =
+      text + `<br>—<a href="${url}">${author}</a>`;
+   const delay = Math.max(5000, 75 * text.length);
+   const next = (i + 1) % comments.length;
+   setTimeout(substituteComment, delay, next);
+}
+
+substituteComment(0);
