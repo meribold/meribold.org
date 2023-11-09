@@ -45,7 +45,7 @@ let comments = [
       "KonungrJoe",
    ],
    [
-      "I've lostsome use in one of my hands due to injury, and this mod has been " +
+      "I've lost some use in one of my hands due to injury, and this mod has been " +
          "immensely helpful in aiding me to get back into this game again.",
       "https://www.curseforge.com/wow/addons/mouselookhandler?comment=66",
       "DoctorLeeches",
