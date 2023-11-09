@@ -1,14 +1,13 @@
 let comments = [
    [
-      "Registered just to thank you for making this addon.  No more hand pain due to " +
-         "holding that right mouse button down all the time.  I really like the " +
-         "override bindings feature.",
+      "No more hand pain due to holding that right mouse button down all the time.  I " +
+         "really like the override bindings feature.",
       "https://www.curseforge.com/wow/addons/mouselookhandler?comment=14",
       "_ForgeUser17641536",
    ],
    [
       "This addon rocks!  Mouselook is so much more comfortable than holding right " +
-         "click.  Thank you!",
+         "click.",
       "https://www.curseforge.com/wow/addons/mouselookhandler?comment=17",
       "BellewTheBear",
    ],
@@ -46,9 +45,8 @@ let comments = [
       "KonungrJoe",
    ],
    [
-      "First off, thanks for a truly great mod and for the quick updates.  I've lost " +
-         "some use in one of my hands due to injury, and this mod has been immensely " +
-         "helpful in aiding me to get back into this game again.",
+      "I've lostsome use in one of my hands due to injury, and this mod has been " +
+         "immensely helpful in aiding me to get back into this game again.",
       "https://www.curseforge.com/wow/addons/mouselookhandler?comment=66",
       "DoctorLeeches",
    ],
