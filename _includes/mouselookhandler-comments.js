@@ -23,11 +23,6 @@ let comments = [
       "TheDeadEd",
    ],
    [
-      "Man, you are my hero!",
-      "https://www.curseforge.com/wow/addons/mouselookhandler?comment=36",
-      "_ForgeUser617969",
-   ],
-   [
       "Brilliant addon!",
       "https://www.curseforge.com/wow/addons/mouselookhandler?comment=54",
       "ughmeh",
@@ -56,15 +51,6 @@ let comments = [
          "helpful in aiding me to get back into this game again.",
       "https://www.curseforge.com/wow/addons/mouselookhandler?comment=66",
       "DoctorLeeches",
-   ],
-   [
-      "had to recover my password for this... :D<br>" +
-         "anyway, this is literally <u>the best addon for wow ever</u>... i love it, " +
-         "works like a charm... takes little getting used to... and also to anyone, " +
-         "make sure you keybind toggle so you can easy unlock you camera to click " +
-         "things... thank you very much for making this...!!!",
-      "https://www.curseforge.com/wow/addons/mouselookhandler?comment=76",
-      "_ForgeUser12461638",
    ],
    [
       "This addon is simply awesome, allows for a much more enjoyable play style.",
