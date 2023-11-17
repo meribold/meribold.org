@@ -274,7 +274,7 @@ profiling this new program as before:
 Until the working set size matches that of the L1d, the access times are virtually
 unchanged at 3 cycles, but exceeding the L1d and hitting the L2 increases this by no more
 than a single cycle.  More strikingly, exceeding the L2 has similarly limited effect: the
-access time plateaus not much above 6 cycles---about 3% of the maximum we saw for random
+average access time plateaus not much above 6 cycles---about 3% of the maximum we saw for random
 reads.
 
 <!-- Here's a table with the numerical results again: -->
@@ -309,7 +309,7 @@ Prefetching happens asynchronously to normal program execution and can therefore
 completely hide the main memory latency.  This is not quite what we observed because the
 CPU performs little enough work for memory bandwidth to become the bottleneck.
 [Adding][github-seq-access-times-source] some expensive operations like integer divisions
-every loop iteration changes that and effectively levels the cycles spent per iteration
+every loop iteration changes that and effectively levels the cycles spent
 across all working set sizes:
 
 [github-seq-access-times-source]: https://github.com/meribold/cache-seminar-paper/blob/a32597fbb2c37c52d54a9b87194cc17760ffbc11/seq-access-times/access-times.c#L27-L29
