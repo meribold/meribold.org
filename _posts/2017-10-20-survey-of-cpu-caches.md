@@ -154,7 +154,7 @@ Here are my results for different array sizes (set at compile time with the `SIZ
 </div>
 
 Up to 32 KiB, each access takes almost exactly 3 cycles.  This is the L1d access time.  At
-32 KiB (the size of the L1d) the time increases to about 3.5 cycles.  This is not
+32 KiB (the size of the L1d) the average increases to about 3.5 cycles.  This is not
 surprising since the cache is shared with other processes and the operating system, so
 some of our data gets evicted.  The first dramatic increase happens at 64 KiB followed by
 smaller increases at 128 and 256 KiB.  I suspect we are seeing a mixture of L2 and L1d
