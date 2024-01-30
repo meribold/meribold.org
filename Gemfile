@@ -11,3 +11,5 @@ end
 
 # Temporary workaround for <https://github.com/jekyll/jekyll/issues/8523>
 gem 'webrick'
+
+gem 'json'
