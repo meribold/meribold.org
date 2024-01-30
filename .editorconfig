@@ -21,4 +21,5 @@ indent_size = 2
 indent_size = 4
 
 [.git/COMMIT_EDITMSG]
+indent_size = 4
 max_line_length = 72
