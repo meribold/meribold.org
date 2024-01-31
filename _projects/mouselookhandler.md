@@ -9,7 +9,7 @@ controls to enable using [mouselook][] without the [RSI][]-inducing requirement 
 perpetually pressing a mouse button.  This makes the controls resemble those of most
 action games.
 
-The addon is available on [CurseForge][] and the repository can be found on [GitHub][].
+The addon is available on [CurseForge][] and the source code can be found on [GitHub][].
 Here's something someone on CurseForge said about MouselookHandler (any emphasis is copied
 from the original):
 
