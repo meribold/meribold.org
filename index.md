@@ -7,12 +7,11 @@ extra_css: [images.css, index.css]
   {% include epigraph.js %}
 </script>
 
-I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking [my dotfiles][],
+I'm a yak shaver that likes FOSS, Tolkien, TrackPoints, coffee, tweaking my dotfiles,
 and writing software.  My name is Lukas Waymann and my usual username is
 Meribold.  This is my website.
-
-Once in a while, I write an article for this website.  So far this has happened four
-times.
+Once in a while, I write an article for this website.  So far that has happened four
+times:
 
 <div style="display: table;">
   {% for post in site.posts %}
@@ -27,28 +26,9 @@ times.
   {% endfor %}
 </div>
 
-You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
-If you want to use encryption you can [download my PGP
-key](/pgp-key-meribold-7066ac79c4592c12.txt).
-You can also contact me via [Matrix](https://matrix.to/#/@meribold:matrix.org).
-Or you can find me on
-[GitHub](https://github.com/meribold),
-[YouTube](https://www.youtube.com/@meribold),
-<a rel=me href="https://mastodon.social/@meribold">Mastodon</a>,
-[Twitter](https://twitter.com/meribold), and
-[LinkedIn](https://www.linkedin.com/in/meribold/).
+There's also a [TIL page]({{ "/til/" | relative_url }}) (last update from 2024-06-25).
+And I'm an unprolific maker of videos:
 
-If you really like an article or program I wrote and want to say thanks, one way you can
-do so is by [buying me a
-coffee](https://www.buymeacoffee.com/meribold).  If you're looking for a detail-oriented
-C++ or Python developer with Linux, UI design, or computer vision experience, you can
-[check out my résumé](/resume.pdf).
-
-[my dotfiles]: https://github.com/meribold/dotfiles
-
-# Videos
-
-<p>
 <div style="display: table;">
   {% for post in site.categories["video"] %}
     <div>
@@ -59,28 +39,18 @@ C++ or Python developer with Linux, UI design, or computer vision experience, yo
     </div>
   {% endfor %}
 </div>
-</p>
 
-# PDFs
+You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a> or on
+<a rel=me href="https://mastodon.social/@meribold">Mastodon</a>.  If you want to use
+encryption you can [download my PGP key](/pgp-key-meribold-7066ac79c4592c12.txt).
+If you really like an article or program I wrote and want to say thanks, one way you can
+do so is by [buying me a coffee](https://www.buymeacoffee.com/meribold).
+If you're looking for a detail-oriented C++ or Python developer with Linux or UI design
+experience, you can [peruse my résumé](/resume.pdf) or find me on
+[LinkedIn](https://www.linkedin.com/in/meribold/).
 
-<p>
-<div style="display: table;">
-  <div>
-    <span class="post-list-meta">{{ "2018-04-23" | date: site.date_format }}</span>
-    <span class="post-list-link">
-      <a href="{{ "/scoring-board-games-with-computer-vision/" | relative_url }}">Scoring Board Games with Computer Vision</a>
-    </span>
-  </div>
-  <div>
-    <span class="post-list-meta">{{ "2017-06-27" | date: site.date_format }}</span>
-    <span class="post-list-link">
-      <a href="{{ "/assets/cache-paper.pdf" | relative_url }}">Hardware Caches and Optimization</a>
-    </span>
-  </div>
-</div>
-</p>
-
-# Projects
+Projects.  Here's some stuff I've worked on over the years:
+{:#projects}
 
 {% for project in site.projects %}
 [{{ project.title | escape }}]({{ project.url | relative_url }})
@@ -90,6 +60,9 @@ C++ or Python developer with Linux, UI design, or computer vision experience, yo
 [Muccadoro](https://github.com/meribold/muccadoro)
 : Pomodoro timer using `figlet`, `cowsay`, and optionally `lolcat`
 
+[`btry`](https://github.com/meribold/btry)
+: A (marginally) useful x86-64 ELF executable in 384 bytes
+
 [Dotfiles](https://github.com/meribold/dotfiles)
 : Personal dotfiles make using computers tolerable
 
@@ -98,9 +71,9 @@ these are probably defunct now.  You can find some more of my work on [GitHub][]
 
 [GitHub]: https://github.com/meribold
 [curseforge]: https://www.curseforge.com/members/meribold/projects
-[flutterrust]: https://github.com/meribold/flutterrust
 
-# Blogroll
+Last but not least, I like the idea of blogrolls, so here are some sites I recommend:
+{:#blogroll}
 
 [noahfrederick.com](https://noahfrederick.com)
 : Noah Frederick's website.  So far the main theme here has been Vim.

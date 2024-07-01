@@ -14,5 +14,6 @@ document.querySelector("header #epigraph").innerHTML = [
    "<i>Not all those who wander are lost.</i>",
    "<i>Everything not saved will be lost.</i>",
    "<i>What one fool can do, another can.</i>",
+   "<i>This is old, therefore it is good.</i>",
    "<i>Und Innos, in seiner Weisheit, tat es.</i>",
-][Math.floor(Math.random() * 16)];
+][Math.floor(Math.random() * 17)];
