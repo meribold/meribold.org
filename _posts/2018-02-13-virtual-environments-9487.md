@@ -194,7 +194,7 @@ TODO: talk about isolation from the system-level and user-level site-packages di
 
 In practice, one does not simply create virtual environments by hand, which brings us back
 to the dauntingly long list of tools above.  Fortunately, one of them is not like the
-others.  While it's predated by most of them, this one ships with Python as part of the
+others, because it ships with Python as part of the
 standard library: [*venv*][library/venv].[^venv-and-pyvenv]
 
 [^venv-and-pyvenv]: pyvenv also ships with Python, but was deprecated in version 3.6.
