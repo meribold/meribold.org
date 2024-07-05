@@ -23,6 +23,13 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+    order:
+      - mouselookhandler.md
+      - snapscore.md
+      - primal-ui.md
+      - rectipy.md
+      - nutshell_dynamics.md
+      - trackhack.md
 
 # Build settings
 markdown: kramdown
