@@ -66,8 +66,9 @@ Projects.  Here's some stuff I've worked on over the years:
 [Dotfiles](https://github.com/meribold/dotfiles)
 : Personal dotfiles make using computers tolerable
 
-I've also written a couple more small [World of Warcraft addons][curseforge], but most of
-these are probably defunct now.  You can find some more of my work on [GitHub][].
+I've also written a couple more small [<cite>World of Warcraft</cite> addons][curseforge],
+but most of these are probably defunct now.  You can find some more of my work on
+[GitHub][].
 
 [GitHub]: https://github.com/meribold
 [curseforge]: https://www.curseforge.com/members/meribold/projects
@@ -87,5 +88,5 @@ Last but not least, I like the idea of blogrolls, so here are some sites I recom
 : Alexander Batischev's website.  Themes include Linux, programming, and life lessons.
 
 [usesthis.com](https://usesthis.com)
-: Uses This is a website where hundreds of people have shared what tools they use to do
-  whatever it is that they do.
+: <cite>Uses This</cite> is a website where hundreds of people have shared what tools they
+  use to do whatever it is that they do.

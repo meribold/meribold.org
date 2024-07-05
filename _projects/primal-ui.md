@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Primal UI
-description: User interface for World of Warcraft
+description: User interface for <cite>World of Warcraft</cite>
 ---
 
 <!-- TODO: special favicon? -->
 
 Primal UI is a highly functional<!--, yet clean and minimal--> user interface for the
-World of Warcraft MMOG that is optimized for competitive PvP[^gladiator]
+<cite>World of Warcraft</cite> MMOG that is optimized for competitive PvP[^gladiator]
 and achieves a consistent, minimal, and clean look without omitting <!-- hiding -->
 possibly useful information.
 <!-- while showing all possibly useful information. -->
@@ -28,7 +28,8 @@ integration by addons like Gladius.
 ## Notes
 {:style="display: initial"}
 
-*   Primal UI is no longer compatible with the latest version of World of Warcraft.
+*   Primal UI is no longer compatible with the latest version of <cite>World of
+    Warcraft</cite>.
 
 [^addons]:
     primarily [TellMeWhen](https://wow.curseforge.com/projects/tellmewhen) and
