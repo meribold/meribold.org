@@ -1,0 +1,15 @@
+- name: MouselookHandler
+- name: SnapScore
+- name: Primal UI
+- name: RectiPy
+- name: Muccadoro
+  url: https://github.com/meribold/muccadoro
+  description: Pomodoro timer using `figlet`, `cowsay`, and optionally `lolcat`
+- name: "`btry`"
+  url: https://github.com/meribold/btry
+  description: A (marginally) useful x86-64 ELF executable in 384 bytes
+- name: Nutshell Dynamics
+- name: TrackHack
+- name: Dotfiles
+  url: https://github.com/meribold/dotfiles
+  description: Personal dotfiles make using computers tolerable

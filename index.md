@@ -52,19 +52,16 @@ experience, you can [peruse my résumé](/resume.pdf) or find me on
 Projects.  Here's some stuff I've worked on over the years:
 {:#projects}
 
-{% for project in site.projects %}
-[{{ project.title | escape }}]({{ project.url | relative_url }})
+{% for project in site.data.projects %}
+{% assign project_page = site.projects | find: "title", project.name %}
+{% if project_page %}
+[{{ project_page.title | escape }}]({{ project_page.url | relative_url }})
+: {{ project_page.description }}
+{% else %}
+[{{ project.name }}]({{ project.url }})
 : {{ project.description }}
+{% endif %}
 {% endfor %}
-
-[Muccadoro](https://github.com/meribold/muccadoro)
-: Pomodoro timer using `figlet`, `cowsay`, and optionally `lolcat`
-
-[`btry`](https://github.com/meribold/btry)
-: A (marginally) useful x86-64 ELF executable in 384 bytes
-
-[Dotfiles](https://github.com/meribold/dotfiles)
-: Personal dotfiles make using computers tolerable
 
 I've also written a couple more small [<cite>World of Warcraft</cite> addons][curseforge],
 but most of these are probably defunct now.  You can find some more of my work on
