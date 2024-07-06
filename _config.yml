@@ -30,7 +30,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/bundle/
-  - README.md
+  - readme.md
   - makefile
   - node_modules/
   - package.json
