@@ -9,6 +9,9 @@
   url: https://github.com/meribold/btry
   description: A (marginally) useful x86-64 ELF executable in 384 bytes
 - name: Nutshell Dynamics
+  url: https://github.com/meribold/nutshell_dynamics
+  description:
+    C++ library for detecting and resolving collisions of rigid bodies in 3D space
 - name: TrackHack
 - name: Dotfiles
   url: https://github.com/meribold/dotfiles
