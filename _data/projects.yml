@@ -5,7 +5,7 @@
 - name: Muccadoro
   url: https://github.com/meribold/muccadoro
   description: Pomodoro timer using `figlet`, `cowsay`, and optionally `lolcat`
-- name: "`btry`"
+- name: Btry
   url: https://github.com/meribold/btry
   description: A (marginally) useful x86-64 ELF executable in 384 bytes
 - name: Nutshell Dynamics
@@ -13,6 +13,9 @@
   description:
     C++ library for detecting and resolving collisions of rigid bodies in 3D space
 - name: TrackHack
+- name: meribold.org
+  url: https://github.com/meribold/meribold.org
+  description: This website
 - name: Dotfiles
   url: https://github.com/meribold/dotfiles
   description: Personal dotfiles make using computers tolerable
