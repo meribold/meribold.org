@@ -13,9 +13,6 @@
   description:
     C++ library for detecting and resolving collisions of rigid bodies in 3D space
 - name: TrackHack
-- name: meribold.org
-  url: https://github.com/meribold/meribold.org
-  description: This website
 - name: Dotfiles
   url: https://github.com/meribold/dotfiles
   description: Personal dotfiles make using computers tolerable
