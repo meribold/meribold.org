@@ -18,3 +18,15 @@ body.dark header #epigraph,
 body.dark .post-list-meta {
   color: #888;
 }
+
+a[href^="http"] {
+  background-image: url("data:image/svg+xml,<svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path fill='%234f321c' d='M6 1h5v5L8.86 3.85 4.7 8 4 7.3l4.15-4.16zM2 3h2v1H2v6h6V8h1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1'/></svg>");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 0.857em;
+  padding-right: 1em;
+}
+
+body.dark a[href^="http"] {
+  background-image: url("data:image/svg+xml,<svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path fill='%23b8f' d='M6 1h5v5L8.86 3.85 4.7 8 4 7.3l4.15-4.16zM2 3h2v1H2v6h6V8h1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1'/></svg>");
+}
