@@ -13,7 +13,6 @@ img {
   left: 50vw;
   transform: translateX(-50%);
   margin-left: calc(-50vw + 50%);
-  vertical-align: middle;
 }
 
 /* Class for images that disables most weird hacks. */
@@ -49,17 +48,6 @@ img.aspect-ratio-box-inside {
   transform: initial;
   vertical-align: initial;
   margin: 0 auto;
-}
-
-/* For images that shouldn't be (significantly) wider than the line length.  FIXME: I
- * think small images aren't centered. */
-.confined-img {
-  display: initial;
-  max-width: calc(100% + 15px);
-  position: initial;
-  left: initial;
-  transform: initial;
-  margin: 0 -7.5px;
 }
 
 div.confined-img-aspect-ratio-box {

@@ -13,7 +13,7 @@ microscopy][dhm].
 The program is written in C++ using some [Boost][] libraries (Filesystem, Regex, Thread)
 and [wxWidgets][] for the GUI.  The source code is available on [GitHub][].
 
-![screenshot]
+![screenshot]{:style="max-width: min(100vw - 15px, 110%)"}
 
 [dhm]: https://en.wikipedia.org/wiki/Digital_holographic_microscopy
 [Boost]: https://en.wikipedia.org/wiki/Boost_(C%2B%2B_libraries)
