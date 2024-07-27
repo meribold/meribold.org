@@ -4,7 +4,7 @@ title: Today I Learned…
 ---
 
 **2024-06-25.**  You can make Less (the pager program) behave a bit more like programs
-that use GNU Readline do by creating a `~/.config/lesskey` file with these contents:
+that use GNU Readline do by creating a `~/.config​/lesskey` file with these contents:
 
     #line-edit
     ^A home
