@@ -351,9 +351,7 @@ measures of how well the code's memory access patterns match certain principles.
 ### Temporal locality
 
 One access suggests another.  That is, once referenced memory locations tend to be used
-again within a short time frame.  This is really the intrinsic motivation for having a
-memory hierarchy in the first place.  When a cache line is loaded but not accessed again
-before being evicted, the cache provided no benefit.
+again within a short time frame.
 
 ### Spatial locality
 
