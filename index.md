@@ -70,7 +70,7 @@ but most of these are probably defunct now.  You can find some more of my work o
 [GitHub]: https://github.com/meribold
 [curseforge]: https://www.curseforge.com/members/meribold/projects
 
-Last but not least, I like the idea of blogrolls, so here's mine:
+Last but not least, I like blogrolls, so here's mine:
 {:#blogroll}
 
 [noahfrederick.com](https://noahfrederick.com)
