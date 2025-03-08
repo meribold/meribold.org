@@ -346,7 +346,7 @@ by the programmer.[^drepper]
 
 Two properties exhibited by computer code to varying degrees distinctly impact cache
 effectiveness.  One is *temporal locality*.  The other is *spatial locality*.  Both are
-measures of how well the code's memory access pattern matches certain principles.
+measures of how well the code's memory access patterns match certain principles.
 
 ### Temporal locality
 
