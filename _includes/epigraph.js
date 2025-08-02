@@ -8,6 +8,7 @@ document.querySelector("header #epigraph").innerHTML = [
    "🍄",
    "<i>Elbereth</i>",
    "<i>E?be?eth</i>",
+   "<i>Live and learn.</i>",
    "<i>I summon entropy!</i>",
    "<i>Who grew your hands?</i>",
    "<i>We've been activated!</i>",
@@ -20,4 +21,4 @@ document.querySelector("header #epigraph").innerHTML = [
    "<i>What one fool can do, another can.</i>",
    "<i>This is old, therefore it is good.</i>",
    "<i>Und Innos, in seiner Weisheit, tat es.</i>",
-][Math.floor(Math.random() * 21)];
+][Math.floor(Math.random() * 22)];
