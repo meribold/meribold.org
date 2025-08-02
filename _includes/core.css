@@ -15,7 +15,7 @@ body {
    * Someone could even set their default sans-serif font to a font with serifs.  When I
    * don't set `font-family` some browsers use a serif font by default, though.
    */
-  font-family: sans-serif;
+  font-family: Ubuntu, sans-serif;
   /* See <https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering>. */
   text-rendering: optimizeLegibility;
   /* overflow-y: scroll; */
@@ -290,7 +290,7 @@ code,
 kbd,
 samp,
 tt {
-  font-family: monospace, monospace;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 0.9375em; /* 15/16 */
   hyphens: none;
 }
