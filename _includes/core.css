@@ -290,8 +290,8 @@ code,
 kbd,
 samp,
 tt {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 0.9375em; /* 15/16 */
+  font-family: monospace, monospace;
+  font-size: 0.875em; /* 14/16 */
   hyphens: none;
 }
 
