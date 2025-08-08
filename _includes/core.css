@@ -290,7 +290,7 @@ code,
 kbd,
 samp,
 tt {
-  font-family: monospace, monospace;
+  font-family: "Cascadia Mono", monospace;
   font-size: 0.875em; /* 14/16 */
   hyphens: none;
 }
@@ -343,14 +343,6 @@ body.dark pre > code {
 :not(pre) > code::after {
   content: "`";
   font-weight: bold;
-}
-
-:not(pre) > code {
-  color: #000;
-}
-
-body.dark :not(pre) > code {
-  color: revert;
 }
 
 /* See <https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php>. */
