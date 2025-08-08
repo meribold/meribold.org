@@ -81,7 +81,7 @@ Last but not least, I like blogrolls, so here's mine:
   programming, empathy, FOSS, command-line tools, and society.  Liberal usage of fleurons
   makes having ended up on a post from this blog easy to notice.
 
-[blog.debiania.in.ua](https://blog.debiania.in.ua)
+[blog.tty8.org](https://blog.tty8.org)
 : Alexander Batischev's website.  Themes include Linux, programming, and life lessons.
 
 [usesthis.com](https://usesthis.com)
