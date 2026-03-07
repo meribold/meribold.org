@@ -2,7 +2,6 @@
 layout: post
 extra_css: [images.css, syntax-highlighting.css, tables.css]
 title: "Meta"
-description: A webpage about creating this website.
 date: 2017-09-02
 categories: drafts jekyll
 sitemap: false

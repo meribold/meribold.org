@@ -3,15 +3,10 @@
 
 # Site settings.  These are accessed in the HTML files via {{ site.title }},
 # {{ site.email }}, and so on.  Any custom variable can be created and will be accessible
-# in the templates via {{ site.my_variable }}.  Some of these are used by
-# [jekyll-seo-tag][1].
-#
-# [1]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# in the templates via {{ site.my_variable }}.
 description: Personal Site
 author: Lukas Waymann
 email: io@meribold.org
-twitter:
-  username: meribold
 # See <http://shopify.github.io/liquid/filters/date/>.
 date_format: "%Y-%m-%d"
 permalink: pretty

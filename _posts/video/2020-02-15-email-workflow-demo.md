@@ -1,9 +1,6 @@
 ---
 layout: minimal
 title: "Email Workflow Demo"
-description: >
-    This video shows off my workflow for composing and sending an email using Neovim,
-    NeoMutt, UltiSnips, and Khard/omnifunc contact completion.
 categories: video
 ---
 

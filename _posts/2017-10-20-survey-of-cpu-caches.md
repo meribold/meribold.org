@@ -2,8 +2,6 @@
 layout: post
 extra_css: [images.css, syntax-highlighting.css, tables.css, survey-of-cpu-caches.css]
 title: A Survey of CPU Caches
-description: Cache-friendliness is key to writing fast code.  This article illuminates how
-    CPU caches work with code samples and profiling results.
 image: /assets/cache-paper/access-time-plot.png
 changelog: true
 ---
